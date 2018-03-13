@@ -16,4 +16,9 @@
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <signal>xRotationChanged(int)</signal>
+  <signal>yRotationChanged(int)</signal>
+  <signal>zRotationChanged(int)</signal>
+ </slots>
 </ui>

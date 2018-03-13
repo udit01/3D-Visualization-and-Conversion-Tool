@@ -19,6 +19,8 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *event);
 
+private slots:
+
 private:
     Ui::MainWindow *ui;
 };
