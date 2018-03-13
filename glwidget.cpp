@@ -5,7 +5,7 @@
 #include <QtWidgets>
 #include <QtOpenGL>
 #include <QGLWidget>
-#include <QtOpenGL/QGLWidget>
+//#include <QtOpenGL/QGLWidget>
 #include <QGL>
 
 Glwidget::Glwidget(QWidget *parent)
@@ -84,6 +84,9 @@ void Glwidget::initializeGL()
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
 
+    glColorMaterial ( GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE );
+    glEnable ( GL_COLOR_MATERIAL );
+
     static GLfloat lightPosition[4] = { 0, 0, 10, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 }
@@ -138,7 +141,29 @@ void Glwidget::mouseMoveEvent(QMouseEvent *event)
 
 void Glwidget::draw()
 {
-    qglColor(Qt::red);
+    glLineWidth(5);
+
+    glColor3f (1.0f,0.0f,0.0f);
+    glBegin(GL_LINES);
+        glVertex3f(0,0,0);
+        glVertex3f(5.0,0.0,0.0);
+    glEnd();
+
+    glColor3f (0.0f,1.0f,0.0f);
+    glBegin(GL_LINES);
+        glVertex3f(0,0,0);
+        glVertex3f(0.0,5.0,0.0);
+    glEnd();
+
+    glColor3f (0.0f,0.0f,1.0f);
+    glBegin(GL_LINES);
+        glVertex3f(0,0,0);
+        glVertex3f(0.0,0.0,5.0);
+    glEnd();
+
+
+    glColor3f(1.0,1.0,1.0);
+//    qglColor(Qt::red);
     glBegin(GL_QUADS);
         glNormal3f(0,0,-1);
         glVertex3f(-1,-1,0);
