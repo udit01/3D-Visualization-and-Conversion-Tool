@@ -24,6 +24,8 @@ public:
 
     DirectionCosines(float xa, float ya, float za);
     ~DirectionCosines();
+
+    float magnitude();
 };
 
 class Point
@@ -32,25 +34,28 @@ public:
     float x;
     float y;
     float z;
+//    string label; // is this required ?
+
+    //Important Concern below
+    //Shouldn't we label points because we don't know which point here, corresponds to which points in edges?
 
     Point(float x,float y, float z);
     ~Point();
-//    string label; // is this required ?
+    bool equals(Point p);
 };
 
 class Face
 {
 public:
-    std::vector<Point*> points; // Use vector of Point* or Point ?
+    std::vector<Point*> *points; // Use vector of Point* or Point ?
 
     // now how will you use pointers in 2d array ?
-    std::vector<std::vector<bool>> edges; // update both things edges[i][j] and edges[j][i] at the same time.
     std::string type;// TRIANGLE or QUADILATREL or POLYGON ?
 //    string flabel; // is this required ?
 
-    DirectionCosines normal;
+    DirectionCosines *normal;
 
-    Face(DirectionCosines normal, std::vector<Point*> pts, std::vector<std::vector<bool>> edges);
+    Face(DirectionCosines *normal, std::vector<Point*> *pts);
     ~Face();
 
     // to store what ?
@@ -59,17 +64,19 @@ public:
 class Model
 {
 public:
-    std::vector<Face*> faces; // is the pointer a good idea ?
+    std::vector<Face*> *faces; // is the pointer a good idea ?
+    std::vector<Point*> *points;
+    std::vector<std::vector<bool>> edges; // update both things edges[i][j] and edges[j][i] at the same time.
 
-    Model( std::vector<Face*> faces );
+    Model( std::vector<Face*> faces, std::vector<std::vector<bool>> edges );
     ~Model();
 
     //add face etc functions ?
     //projections won't be needed because opengl will do it for me.
 
     /*below 2 functions are for generating wireframes, but they could be hard to make*/
-    std::vector<Point*> getPointSet(); // Construct this by differnet smaller edge sets
-    std::vector<std::vector<bool>>getEdgeSet(); // We will have to construct this from differnt smaller edge sets
+    std::vector<Point*> getPointSet(); // Construct this by differnet smaller point sets
+//    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     std::string serialize(); // Will be used for file save/load // import/export .
     static Model deserialize(std::string s);
