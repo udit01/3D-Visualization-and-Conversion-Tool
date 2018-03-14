@@ -1,5 +1,6 @@
 #include "glwidget.h"
 //#include "ui_glwidget.h"
+
 #include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
@@ -15,14 +16,10 @@ Glwidget::Glwidget(QWidget *parent)
         zRot = 0;
         scl = 20.0f;
     }
-//    ui(new Ui::Glwidget)
-//{
-//    ui->setupUi(this);
-//}
 
 Glwidget::~Glwidget()
 {
-//    delete ui;
+
 }
 
 QSize Glwidget::minimumSizeHint() const

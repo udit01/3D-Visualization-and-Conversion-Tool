@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     glwidget.cpp \
-    model.cpp
+    model.cpp \
+    samplemodels.cpp
 
 HEADERS += \
         mainwindow.h \
     glwidget.h \
-    model.h
+    model.h \
+    samplemodels.h
 
 FORMS += \
         mainwindow.ui \

@@ -17,7 +17,12 @@
 ****************************************************************************/
 class DirectionCosines
 {
-    DirectionCosines();
+public:
+    float xl;
+    float yl;
+    float zl;
+
+    DirectionCosines(float xa, float ya, float za);
     ~DirectionCosines();
 };
 
@@ -28,7 +33,7 @@ public:
     float y;
     float z;
 
-    Point();
+    Point(float x,float y, float z);
     ~Point();
 //    string label; // is this required ?
 };
@@ -45,7 +50,7 @@ public:
 
     DirectionCosines normal;
 
-    Face();
+    Face(DirectionCosines normal, std::vector<Point*> pts, std::vector<std::vector<bool>> edges);
     ~Face();
 
     // to store what ?
@@ -56,11 +61,13 @@ class Model
 public:
     std::vector<Face*> faces; // is the pointer a good idea ?
 
-    Model();
+    Model( std::vector<Face*> faces );
     ~Model();
 
     //add face etc functions ?
     //projections won't be needed because opengl will do it for me.
+
+    /*below 2 functions are for generating wireframes, but they could be hard to make*/
     std::vector<Point*> getPointSet(); // Construct this by differnet smaller edge sets
     std::vector<std::vector<bool>>getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 

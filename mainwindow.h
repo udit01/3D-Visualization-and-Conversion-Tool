@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSlider>
+#include "model.h"
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +15,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    Model* model;
     ~MainWindow();
 
 protected:
