@@ -31,18 +31,21 @@ public slots:
     void setXRotation(int angle);
     void setYRotation(int angle);
     void setZRotation(int angle);
+    void setScale(int factor);
 
 signals:
     // signaling rotation from mouse movement
     void xRotationChanged(int angle);
     void yRotationChanged(int angle);
     void zRotationChanged(int angle);
+    void scaleChanged(int factor);
 
 private:
 //    Ui::Glwidget *ui;
     int xRot;
     int yRot;
     int zRot;
+    int scl;
     void draw();
     QPoint lastPos;
 };

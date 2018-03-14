@@ -5,7 +5,6 @@
 #include <QtWidgets>
 #include <QtOpenGL>
 #include <QGLWidget>
-//#include <QtOpenGL/QGLWidget>
 #include <QGL>
 
 Glwidget::Glwidget(QWidget *parent)
@@ -14,6 +13,7 @@ Glwidget::Glwidget(QWidget *parent)
         xRot = 0;
         yRot = 0;
         zRot = 0;
+        scl = 20.0f;
     }
 //    ui(new Ui::Glwidget)
 //{
@@ -73,7 +73,13 @@ void Glwidget::setZRotation(int angle)
         updateGL();
     }
 }
-
+void Glwidget::setScale(int factor){
+    if(factor != 1){
+        scl = factor;
+        emit scaleChanged(factor);
+        updateGL();
+    }
+}
 void Glwidget::initializeGL()
 {
     qglClearColor(Qt::black);
@@ -99,6 +105,11 @@ void Glwidget::paintGL()
     glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
     glRotatef(yRot / 16.0, 0.0, 1.0, 0.0);
     glRotatef(zRot / 16.0, 0.0, 0.0, 1.0);
+    if(scl > 0){
+        float sc = (scl) / 20.0f;
+        glScalef(sc, sc, sc);
+    }
+
     draw();
 }
 
@@ -160,7 +171,6 @@ void Glwidget::draw()
         glVertex3f(0,0,0);
         glVertex3f(0.0,0.0,5.0);
     glEnd();
-
 
     glColor3f(1.0,1.0,1.0);
 //    qglColor(Qt::red);

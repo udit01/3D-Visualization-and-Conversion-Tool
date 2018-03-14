@@ -119,9 +119,6 @@
       </item>
      </layout>
     </item>
-    <item row="2" column="0">
-     <widget class="QDial" name="dial"/>
-    </item>
     <item row="2" column="1">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -169,6 +166,19 @@
        </widget>
       </item>
      </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QDial" name="scaleDial">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="wrapping">
+       <bool>true</bool>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -233,7 +243,9 @@
     <signal>xRotationChanged(int)</signal>
     <signal>yRotationChanged(int)</signal>
     <signal>zRotationChanged(int)</signal>
+    <signal>scaleChanged(int)</signal>
     <slot>resize(int,int)</slot>
+    <slot>slot1()</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -250,8 +262,8 @@
      <y>149</y>
     </hint>
     <hint type="destinationlabel">
-     <x>492</x>
-     <y>185</y>
+     <x>529</x>
+     <y>234</y>
     </hint>
    </hints>
   </connection>
@@ -284,6 +296,22 @@
     <hint type="destinationlabel">
      <x>605</x>
      <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>scaleChanged(int)</signal>
+   <receiver>scaleDial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>379</y>
     </hint>
    </hints>
   </connection>
