@@ -47,7 +47,7 @@ Model SampleModels::squareBasedPyramid(float side)
     Face* f3 = new Face(norm3, pts3);
 
     std::vector<Point*> *pts4 = new std::vector<Point*>(3);
-    pts4->push_back(c); pts4->push_back(d); pts4->push_back(O);
+    pts4->push_back(c); pts4->push_back(d); pts4->push_back(o);
     Face* f4 = new Face(norm4, pts4);
 
 

@@ -64,8 +64,8 @@ public:
 class Model
 {
 public:
-    std::vector<Face*> *faces; // is the pointer a good idea ?
-    std::vector<Point*> *points;
+    std::vector<Face*> faces; // is the pointer a good idea ?
+    std::vector<Point*> points;
     std::vector<std::vector<bool>> edges; // update both things edges[i][j] and edges[j][i] at the same time.
 
     Model( std::vector<Face*> faces, std::vector<std::vector<bool>> edges );
@@ -75,7 +75,7 @@ public:
     //projections won't be needed because opengl will do it for me.
 
     /*below 2 functions are for generating wireframes, but they could be hard to make*/
-    std::vector<Point*> getPointSet(); // Construct this by differnet smaller point sets
+//    std::vector<Point*> getPointSet(); // Construct this by differnet smaller point sets
 //    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     std::string serialize(); // Will be used for file save/load // import/export .

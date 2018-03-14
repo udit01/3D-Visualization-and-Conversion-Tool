@@ -1,6 +1,6 @@
 #include "model.h"
 
-Model::Model( std::vector<Face*> faces)
+Model::Model( std::vector<Face*> faces, std::vector<std::vector<bool>> edges)
 {
 
 }
