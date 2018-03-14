@@ -152,6 +152,7 @@ void Glwidget::mouseMoveEvent(QMouseEvent *event)
 
 void Glwidget::draw()
 {
+    //Drawing the Axis lines
     glLineWidth(5);
 
     glColor3f (1.0f,0.0f,0.0f);
@@ -172,6 +173,7 @@ void Glwidget::draw()
         glVertex3f(0.0,0.0,5.0);
     glEnd();
 
+    // Drawing the model
     glColor3f(1.0,1.0,1.0);
 //    qglColor(Qt::red);
     glBegin(GL_QUADS);
