@@ -1,6 +1,24 @@
 #include "model.h"
 
-Model::Model( std::vector<Face*> faces, std::vector<std::vector<bool>> edges)
-{
-
+Face::Face(float * pts){
+    this->points = pts;
 }
+
+Face::~Face(){
+    delete this;
+}
+
+
+Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face> faces ){
+    this->numPoints = numPoints;
+    this->points = pts;
+    this->edges = edges;
+    this->faces = faces;
+}
+Model::~Model(){
+    delete this;
+}
+//Model::Model( std::vector<Face*> faces, bool** edges)
+//{
+
+//}

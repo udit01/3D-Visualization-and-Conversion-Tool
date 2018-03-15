@@ -1,6 +1,7 @@
 #include "glwidget.h"
 //#include "ui_glwidget.h"
 
+#include <vector>
 #include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
@@ -37,7 +38,7 @@ static void qNormalizeAngle(int &angle)
 {
     while (angle < 0)
         angle += 360 * 16;
-    while (angle > 360)
+    while (angle > 5760)
         angle -= 360 * 16;
 }
 
@@ -173,6 +174,7 @@ void Glwidget::draw()
     // Drawing the model
     glColor3f(1.0,1.0,1.0);
 //    qglColor(Qt::red);
+
     glBegin(GL_QUADS);
         glNormal3f(0,0,-1);
         glVertex3f(-1,-1,0);
@@ -181,6 +183,18 @@ void Glwidget::draw()
         glVertex3f(1,-1,0);
 
     glEnd();
+
+   float vertices[] = {
+      -2.0,0.0,0.0,
+        1.5,0.0,0.0,
+        0.0,3.0,1.0
+    };
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer( 3, GL_FLOAT, 0 , vertices);
+    glDrawArrays(GL_POLYGON, 0, 3);
+    glDisableClientState(GL_VERTEX_ARRAY);
+
     glBegin(GL_TRIANGLES);
         glNormal3f(0,-1,0.707);
         glVertex3f(-1,-1,0);

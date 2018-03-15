@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-
+#include <QGL>
 /****************************************************************************
  *  Another model could be to include the points and lines seperately, also in faces we don't need the edges, we minimally need points,
  *  but we'll go with edges to generate wireframe anyway
@@ -15,7 +15,8 @@
  *
  *  How should be label the points also keep in mind serialization
 ****************************************************************************/
-class DirectionCosines
+
+/*class DirectionCosines
 {
 public:
     float xl;
@@ -43,19 +44,13 @@ public:
     ~Point();
     bool equals(Point p);
 };
-
+*/
 class Face
 {
 public:
-    std::vector<Point*> *points; // Use vector of Point* or Point ?
+    float *points;
 
-    // now how will you use pointers in 2d array ?
-    std::string type;// TRIANGLE or QUADILATREL or POLYGON ?
-//    string flabel; // is this required ?
-
-    DirectionCosines *normal;
-
-    Face(DirectionCosines *normal, std::vector<Point*> *pts);
+    Face( float *pts);
     ~Face();
 
     // to store what ?
@@ -64,11 +59,12 @@ public:
 class Model
 {
 public:
-    std::vector<Face*> faces; // is the pointer a good idea ?
-    std::vector<Point*> points;
-    std::vector<std::vector<bool>> edges; // update both things edges[i][j] and edges[j][i] at the same time.
+    int numPoints;
+    std::vector<Face> faces; // is the pointer a good idea ?
+    float* points; // array of points in 3d, all points
+    bool** edges; // update both things edges[i][j] and edges[j][i] at the same time.
 
-    Model( std::vector<Face*> faces, std::vector<std::vector<bool>> edges );
+    Model( int numPoints, float* pts, bool** edges, std::vector<Face> faces );
     ~Model();
 
     //add face etc functions ?

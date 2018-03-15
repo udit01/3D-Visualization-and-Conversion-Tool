@@ -29,7 +29,7 @@
       <item>
        <widget class="QSlider" name="xRot">
         <property name="maximum">
-         <number>360</number>
+         <number>5760</number>
         </property>
         <property name="singleStep">
          <number>16</number>
@@ -44,14 +44,14 @@
          <enum>QSlider::TicksAbove</enum>
         </property>
         <property name="tickInterval">
-         <number>15</number>
+         <number>150</number>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QSlider" name="yRot">
         <property name="maximum">
-         <number>360</number>
+         <number>5760</number>
         </property>
         <property name="singleStep">
          <number>16</number>
@@ -66,14 +66,14 @@
          <enum>QSlider::TicksAbove</enum>
         </property>
         <property name="tickInterval">
-         <number>15</number>
+         <number>150</number>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QSlider" name="zRot">
         <property name="maximum">
-         <number>360</number>
+         <number>5760</number>
         </property>
         <property name="singleStep">
          <number>16</number>
@@ -88,7 +88,7 @@
          <enum>QSlider::TicksAbove</enum>
         </property>
         <property name="tickInterval">
-         <number>15</number>
+         <number>150</number>
         </property>
        </widget>
       </item>
