@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QGLWidget>
+#include "model.h"
 
 namespace Ui {
 class Glwidget;
@@ -15,6 +16,7 @@ class Glwidget : public QGLWidget
 public:
     explicit Glwidget(QWidget *parent = 0);
     ~Glwidget();
+    Model model;
 
 protected:
     void initializeGL();

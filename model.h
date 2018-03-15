@@ -49,8 +49,8 @@ class Face
 {
 public:
     float *points;
-
-    Face( float *pts);
+    int npts;
+    Face( float *pts, int npts);
     ~Face();
 
     // to store what ?

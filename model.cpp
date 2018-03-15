@@ -1,7 +1,8 @@
 #include "model.h"
 
-Face::Face(float * pts){
+Face::Face(float * pts, int npts){
     this->points = pts;
+    this->npts = npts;
 }
 
 Face::~Face(){

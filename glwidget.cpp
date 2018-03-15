@@ -8,6 +8,8 @@
 #include <QtOpenGL>
 #include <QGLWidget>
 #include <QGL>
+#include "model.h"
+#include "samplemodels.h"
 
 Glwidget::Glwidget(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
@@ -16,6 +18,7 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
+        model = SampleModels.SquareBasedPyramid(1.0);
     }
 
 Glwidget::~Glwidget()
@@ -171,9 +174,58 @@ void Glwidget::draw()
         glVertex3f(0.0,0.0,5.0);
     glEnd();
 
+    /////////////////////////////////////////////////////////////////////////////////
     // Drawing the model
-    glColor3f(1.0,1.0,1.0);
 //    qglColor(Qt::red);
+
+    Model m = this->model;
+// Code to draw the solid model
+    glColor3f(1.0, 0.0, 1.0);
+    std::vector<Face>::iterator it ;//= this->model.faces.begin();
+    for (it = m.faces.begin(); it!= m.faces.end(); it++){
+        Face f = *it;
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glVertexPointer( 3, GL_FLOAT, 0 , f.points);
+        glDrawArrays(GL_POLYGON, 0, f.npts);
+        glDisableClientState(GL_VERTEX_ARRAY);
+    }
+
+// Code to draw wireframe of the model
+    for(int i = 0 ; i < m.numPoints ; i++){
+        for(int j = 0 ; j < m.numPoints ; j++){
+            if(m.edges[i][j]){
+                // a new array each time, to construct the line
+                float* verti = new float [3*2];
+                std::copy(m.points[i],m.points[i]+3,verti);
+                std::copy(m.points[j],m.points[j]+3,verti+3);
+
+                //chose a random colour here
+                glEnableClientState(GL_VERTEX_ARRAY);
+                glVertexPointer( 3, GL_FLOAT, 0 , verti);
+                glDrawArrays(GL_LINES, 0, 2);
+                glDisableClientState(GL_VERTEX_ARRAY);
+
+            }
+        }
+    }
+
+
+    //trial model
+    glColor3f(1.0,1.0,1.0);
+
+    float vertices[] = {
+       -2.0,0.0,0.0,
+         1.5,0.0,0.0,
+         0.0,3.0,1.0
+     };
+
+     glEnableClientState(GL_VERTEX_ARRAY);
+     glVertexPointer( 3, GL_FLOAT, 0 , vertices);
+     glDrawArrays(GL_POLYGON, 0, 3);
+     glDisableClientState(GL_VERTEX_ARRAY);
+
+
+
 
     glBegin(GL_QUADS);
         glNormal3f(0,0,-1);
@@ -183,17 +235,6 @@ void Glwidget::draw()
         glVertex3f(1,-1,0);
 
     glEnd();
-
-   float vertices[] = {
-      -2.0,0.0,0.0,
-        1.5,0.0,0.0,
-        0.0,3.0,1.0
-    };
-
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glVertexPointer( 3, GL_FLOAT, 0 , vertices);
-    glDrawArrays(GL_POLYGON, 0, 3);
-    glDisableClientState(GL_VERTEX_ARRAY);
 
     glBegin(GL_TRIANGLES);
         glNormal3f(0,-1,0.707);

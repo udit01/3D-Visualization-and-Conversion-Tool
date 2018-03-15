@@ -19,10 +19,11 @@ public:
     SampleModels();
     ~SampleModels();
 
-    static Model axes(float len);
-    static Model squareBasedPyramid(float side);
-    static Model octahedron(float side);
-    static Model cube(float side);
+    static Model Empty();
+    static Model Axes(float len);
+    static Model SquareBasedPyramid(float side);
+    static Model Octahedron(float side);
+    static Model Cube(float side);
 };
 
 #endif // SAMPLEMODELS_H

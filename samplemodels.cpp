@@ -36,7 +36,7 @@ Model SampleModels::squareBasedPyramid(float side)
     copy(d, d+3, f4);copy(a, a+3, f4+3);copy(o, o+3, f4+2*3);
 
     vector<Face> faces ;
-    faces.push_back(Face(base)); faces.push_back(Face(f1)); faces.push_back(Face(f2)); faces.push_back(Face(f3)); faces.push_back(Face(f4));
+    faces.push_back(Face(base,4)); faces.push_back(Face(f1,3)); faces.push_back(Face(f2,3)); faces.push_back(Face(f3,3)); faces.push_back(Face(f4,3));
 
     bool edges[numPts][numPts] = {//in order of a b c d o
         {false, true , false, true , true},
@@ -46,7 +46,7 @@ Model SampleModels::squareBasedPyramid(float side)
         {true , true , true , true , false},
     };
 
-    return Model(numPts, points, edges, faces);
+    return (new Model(numPts, points, edges, faces));
 
     ////    Shouldn't we label points because we don't know which point here, corresponds to which points in edges?
 //    Point* o = new Point(0, 0, side*1.2);
