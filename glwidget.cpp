@@ -18,7 +18,8 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        model = &(SampleModels.SquareBasedPyramid(1.0));
+        Model m = SampleModels::SquareBasedPyramid(1.0);
+        model = &(m);
     }
 
 Glwidget::~Glwidget()
