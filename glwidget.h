@@ -16,7 +16,7 @@ class Glwidget : public QGLWidget
 public:
     explicit Glwidget(QWidget *parent = 0);
     ~Glwidget();
-    Model model;
+    Model* model;
 
 protected:
     void initializeGL();

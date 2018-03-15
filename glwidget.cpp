@@ -18,7 +18,7 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        model = SampleModels.SquareBasedPyramid(1.0);
+        model = &(SampleModels.SquareBasedPyramid(1.0));
     }
 
 Glwidget::~Glwidget()
@@ -178,7 +178,7 @@ void Glwidget::draw()
     // Drawing the model
 //    qglColor(Qt::red);
 
-    Model m = this->model;
+    Model m = *(this->model);
 // Code to draw the solid model
     glColor3f(1.0, 0.0, 1.0);
     std::vector<Face>::iterator it ;//= this->model.faces.begin();
