@@ -18,7 +18,9 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        *model = (SampleModels.SquareBasedPyramid(1.0));
+
+        Model m = SampleModels::SquareBasedPyramid(1.0);
+        model = &(m);
     }
 
 Glwidget::~Glwidget()
@@ -192,7 +194,7 @@ void Glwidget::draw()
 
 // Code to draw wireframe of the model
 
-//    or in the above code, you can directly sepecify the drawing mode of polygon.
+//    or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
 
     for(int i = 0 ; i < m.numPoints ; i++){
         for(int j = 0 ; j < m.numPoints ; j++){
