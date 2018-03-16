@@ -1,11 +1,13 @@
 #ifndef PROJECTIONX_H
 #define PROJECTIONX_H
 
-
 #include <QWidget>
 #include <QGLWidget>
 #include "model.h"
 
+namespace Ui{
+    class ProjectionX;
+}
 
 class ProjectionX :  public QGLWidget
 {
@@ -24,8 +26,7 @@ protected:
 
 //    QSize minimumSizeHint() const;
     QSize sizeHint() const;
-//    void mousePressEvent(QMouseEvent *event);
-//    void mouseMoveEvent(QMouseEvent *event);
+
 
 public slots:
     void setScale(int factor);

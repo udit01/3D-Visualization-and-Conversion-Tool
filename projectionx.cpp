@@ -2,11 +2,13 @@
 //#include "ui_glwidget.h"
 
 #include <vector>
+#include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
 #include <QtOpenGL>
 #include <QGLWidget>
 #include <QGL>
+#include "model.h"
 #include "samplemodels.h"
 
 ProjectionX::ProjectionX(QWidget *parent)
@@ -39,36 +41,6 @@ static void qNormalizeAngle(int &angle)
     while (angle > 5760)
         angle -= 360 * 16;
 }
-
-//void Glwidget::setXRotation(int angle)
-//{
-//    qNormalizeAngle(angle);
-//    if (angle != xRot) {
-//        xRot = angle;
-//        emit xRotationChanged(angle);
-//        updateGL();
-//    }
-//}
-
-//void Glwidget::setYRotation(int angle)
-//{
-//    qNormalizeAngle(angle);
-//    if (angle != yRot) {
-//        yRot = angle;
-//        emit yRotationChanged(angle);
-//        updateGL();
-//    }
-//}
-
-//void Glwidget::setZRotation(int angle)
-//{
-//    qNormalizeAngle(angle);
-//    if (angle != zRot) {
-//        zRot = angle;
-//        emit zRotationChanged(angle);
-//        updateGL();
-//    }
-//}
 void ProjectionX::setScale(int factor){
     if(factor != 1){
         scl = factor;
@@ -131,27 +103,6 @@ void ProjectionX::resizeGL(int width, int height)
     glMatrixMode(GL_MODELVIEW);
 
 }
-
-//void ProjectionX::mousePressEvent(QMouseEvent *event)
-//{
-//    lastPos = event->pos();
-//}
-
-//void ProjectionX::mouseMoveEvent(QMouseEvent *event)
-//{
-//    int dx = event->x() - lastPos.x();
-//    int dy = event->y() - lastPos.y();
-
-//    if (event->buttons() & Qt::LeftButton) {
-//        setXRotation(xRot + 8 * dy);
-//        setYRotation(yRot + 8 * dx);
-//    } else if (event->buttons() & Qt::RightButton) {
-//        setXRotation(xRot + 8 * dy);
-//        setZRotation(zRot + 8 * dx);
-//    }
-
-//    lastPos = event->pos();
-//}
 
 void ProjectionX::draw()
 {
@@ -230,41 +181,6 @@ void ProjectionX::draw()
      glDisableClientState(GL_VERTEX_ARRAY);
 
 //Why is the lighting and shaders so erratic?
-
-
-//    glBegin(GL_QUADS);
-//        glNormal3f(0,0,-1);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(1,-1,0);
-
-//    glEnd();
-
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,-1,0.707);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(1,0, 0.707);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,1,0.707);
-//        glVertex3f(1,1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(-1,0,0.707);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
 
 }
 
