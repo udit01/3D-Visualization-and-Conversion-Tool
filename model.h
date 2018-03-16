@@ -60,11 +60,11 @@ class Model
 {
 public:
     int numPoints;
-    std::vector<Face> faces; // is the pointer a good idea ?
+    std::vector<Face*> faces; // is the pointer a good idea ?
     float* points; // array of points in 3d, all points
     bool** edges; // update both things edges[i][j] and edges[j][i] at the same time.
 
-    Model( int numPoints, float* pts, bool** edges, std::vector<Face> faces );
+    Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces );
     ~Model();
 
     //add face etc functions ?

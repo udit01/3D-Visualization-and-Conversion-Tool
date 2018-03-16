@@ -10,7 +10,7 @@ Face::~Face(){
 }
 
 
-Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face> faces ){
+Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces ){
     this->numPoints = numPoints;
     this->points = pts;
     this->edges = edges;

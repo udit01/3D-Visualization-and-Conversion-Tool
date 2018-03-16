@@ -7,14 +7,9 @@ SampleModels::SampleModels()
 
 }
 
-Model SampleModels::axes(float len)
+Model* SampleModels::SquareBasedPyramid(float side)
 {
-//    Point* o = new Point(0.0, 0.0, 0.0);
-//    Point* a =
-}
-Model SampleModels::squareBasedPyramid(float side)
-{
-    int numPts = 5;
+    const int numPts = 5;
     float o[] = { 0.0 , 0.0 , side*1.2};
     float a[] = { side , side, 0.0};
     float b[] = {-side , side, 0.0};
@@ -35,18 +30,29 @@ Model SampleModels::squareBasedPyramid(float side)
     float * f4 = new float[3*3];
     copy(d, d+3, f4);copy(a, a+3, f4+3);copy(o, o+3, f4+2*3);
 
-    vector<Face> faces ;
-    faces.push_back(Face(base,4)); faces.push_back(Face(f1,3)); faces.push_back(Face(f2,3)); faces.push_back(Face(f3,3)); faces.push_back(Face(f4,3));
+    vector<Face*> faces ;
+    faces.push_back(new Face(base,4)); faces.push_back(new Face(f1,3)); faces.push_back(new Face(f2,3)); faces.push_back(new Face(f3,3)); faces.push_back(new Face(f4,3));
 
-    bool edges[numPts][numPts] = {//in order of a b c d o
-        {false, true , false, true , true},
-        {true , false, true , false, true},
-        {false, true , false, true , true},
-        {true , false, true , false, true},
-        {true , true , true , true , false},
-    };
+    bool **edges= new bool*[numPts];
+    for(int i = 0; i < numPts ; i++){
+        edges[i] = new bool[numPts];
+    }
 
-    return (new Model(numPts, points, edges, faces));
+    edges[0][0] = false; edges[0][1] = true ; edges[0][2] = false; edges[0][3] = true ; edges[0][4] = true;
+    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = true ; edges[0][3] = false; edges[0][4] = true;
+    edges[0][0] = false; edges[0][1] = true ; edges[0][2] = false; edges[0][3] = true ; edges[0][4] = true;
+    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = true ; edges[0][3] = false; edges[0][4] = true;
+    edges[0][0] = true ; edges[0][1] = true ; edges[0][2] = true ; edges[0][3] = true ; edges[0][4] = false;
+//    {//in order of a b c d o
+//        {false, true , false, true , true},
+//        {true , false, true , false, true},
+//        {false, true , false, true , true},
+//        {true , false, true , false, true},
+//        {true , true , true , true , false},
+//    };
+
+    Model *m = new Model(numPts, points, edges, faces);
+    return m;
 
     ////    Shouldn't we label points because we don't know which point here, corresponds to which points in edges?
 //    Point* o = new Point(0, 0, side*1.2);
