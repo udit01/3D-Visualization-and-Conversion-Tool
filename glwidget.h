@@ -17,6 +17,7 @@ public:
     explicit Glwidget(QWidget *parent = 0);
     ~Glwidget();
     Model *model;
+    bool wireframe;
 
 protected:
     void initializeGL();

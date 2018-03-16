@@ -8,6 +8,8 @@
 #include <QtOpenGL>
 #include <QGLWidget>
 #include <QGL>
+
+#include "mainwindow.h"
 #include "model.h"
 #include "samplemodels.h"
 
@@ -16,6 +18,7 @@ ProjectionX::ProjectionX(QWidget *parent)
     {
         scl = 20.0f;
         model = SampleModels::SquareBasedPyramid(1.0);
+        wireframe = ((MainWindow*)parent)->wireframe ;
     }
 
 ProjectionX::~ProjectionX()
@@ -137,6 +140,12 @@ void ProjectionX::draw()
 // Code to draw the solid model
     glColor3f(1.0, 0.0, 1.0);
 //    std::vector<Face>::iterator it ;//= this->model.faces.begin();
+    if(wireframe){
+        glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+    }
+    else{
+         glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+    }
     for (int i = 0 ; i < this->model->faces.size() ; i++){
         Face* f = this->model->faces[i];
         glEnableClientState(GL_VERTEX_ARRAY);

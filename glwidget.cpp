@@ -21,8 +21,10 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-
-        model = ((MainWindow*)parentWidget())->model;
+        wireframe = ((MainWindow*)parent)->wireframe ;
+        model = SampleModels::SquareBasedPyramid(1.0);
+        //Application crashes on doing what's below
+//        model = ((MainWindow*)parent)->model ;
     }
 Glwidget::~Glwidget()
 {
@@ -189,8 +191,17 @@ void Glwidget::draw()
 
 //    Model m = *(this->model);
 // Code to draw the solid model
+
+
     glColor3f(1.0, 0.0, 1.0);
 //    std::vector<Face>::iterator it ;//= this->model.faces.begin();
+
+    if(wireframe){
+        glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+    }
+    else{
+         glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+    }
     for (int i = 0 ; i < this->model->faces.size() ; i++){
         Face* f = this->model->faces[i];
         glEnableClientState(GL_VERTEX_ARRAY);
@@ -237,41 +248,6 @@ void Glwidget::draw()
      glDisableClientState(GL_VERTEX_ARRAY);
 
 //Why is the lighting and shaders so erratic?
-
-
-//    glBegin(GL_QUADS);
-//        glNormal3f(0,0,-1);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(1,-1,0);
-
-//    glEnd();
-
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,-1,0.707);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(1,0, 0.707);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,1,0.707);
-//        glVertex3f(1,1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(-1,0,0.707);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
 
 }
 

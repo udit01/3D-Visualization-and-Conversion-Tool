@@ -13,10 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    wireframe = false;
     model = SampleModels::SquareBasedPyramid(1.0);
-
-//    model = new Model(); // do we need to make a new one here ?
+    ui->setupUi(this);
 
     connect(ui->xRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setXRotation(int)));
     connect(ui->yRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setYRotation(int)));

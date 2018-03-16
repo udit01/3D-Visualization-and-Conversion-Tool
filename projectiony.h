@@ -17,6 +17,7 @@ public:
     explicit ProjectionY (QWidget *parent = 0);
     ~ProjectionY();
     Model *model;
+    bool wireframe;
 
 
 protected:

@@ -17,6 +17,7 @@ public:
     explicit ProjectionX (QWidget *parent = 0);
     ~ProjectionX();
     Model *model;
+    bool wireframe;
 
 
 protected:

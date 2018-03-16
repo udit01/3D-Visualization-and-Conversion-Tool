@@ -17,7 +17,7 @@ public:
     explicit ProjectionZ (QWidget *parent = 0);
     ~ProjectionZ();
     Model *model;
-
+    bool wireframe;
 
 protected:
     void initializeGL();
