@@ -23,6 +23,7 @@ protected:
     void initializeGL();
     void paintGL();
     void resizeGL(int width, int height);
+    void draw();
 
     QSize minimumSizeHint() const;
     QSize sizeHint() const;
@@ -49,7 +50,6 @@ private:
     int yRot;
     int zRot;
     int scl;
-    void draw();
     QPoint lastPos;
 };
 

@@ -12,6 +12,7 @@
 #include "mainwindow.h"
 #include "model.h"
 #include "samplemodels.h"
+#include "glwidget.h"
 
 ProjectionX::ProjectionX(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
@@ -111,6 +112,8 @@ void ProjectionX::resizeGL(int width, int height)
 
 void ProjectionX::draw()
 {
+//    ((MainWindow*)parent)->children();
+//    Glwidget::draw();
     //Drawing the Axis lines
     glLineWidth(5);
 
