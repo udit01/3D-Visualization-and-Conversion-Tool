@@ -1,5 +1,5 @@
-#include "projectionx.h"
-//#include "ui_glwidget.h"
+#include "projectiony.h"
+
 
 #include <vector>
 #include <QMainWindow>
@@ -11,14 +11,14 @@
 #include "model.h"
 #include "samplemodels.h"
 
-ProjectionX::ProjectionX(QWidget *parent)
+ProjectionY::ProjectionY(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
     {
         scl = 20.0f;
         model = SampleModels::SquareBasedPyramid(1.0);
     }
 
-ProjectionX::~ProjectionX()
+ProjectionY::~ProjectionY()
 {
 
 }
@@ -29,7 +29,7 @@ ProjectionX::~ProjectionX()
 //}
 
 
-QSize ProjectionX::sizeHint() const
+QSize ProjectionY::sizeHint() const
 {
     return QSize(400, 400);
 }
@@ -41,14 +41,14 @@ static void qNormalizeAngle(int &angle)
     while (angle > 5760)
         angle -= 360 * 16;
 }
-void ProjectionX::setScale(int factor){
+void ProjectionY::setScale(int factor){
     if(factor != 1){
         scl = factor;
 //        emit scaleChanged(factor);
         updateGL();
     }
 }
-void ProjectionX::initializeGL()
+void ProjectionY::initializeGL()
 {
     qglClearColor(Qt::black);
 
@@ -67,14 +67,14 @@ void ProjectionX::initializeGL()
 
 }
 
-void ProjectionX::paintGL()
+void ProjectionY::paintGL()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0.0, 0.0, -10.0);
 
-    glRotatef(0.0, 1.0,0.0,0.0);
-    glRotatef(270.0,0.0,1.0,0.0);
+    glRotatef(90.0, 1.0,0.0,0.0);
+    glRotatef(0.0,0.0,1.0,0.0);
     glRotatef(0.0 ,0.0,0.0,1.0);
 
 //    glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
@@ -89,7 +89,7 @@ void ProjectionX::paintGL()
     draw();
 }
 
-void ProjectionX::resizeGL(int width, int height)
+void ProjectionY::resizeGL(int width, int height)
 {
     int side = qMin(width, height);
     glViewport((width - side) / 2, (height - side) / 2, side, side);
@@ -106,7 +106,7 @@ void ProjectionX::resizeGL(int width, int height)
 
 }
 
-void ProjectionX::draw()
+void ProjectionY::draw()
 {
     //Drawing the Axis lines
     glLineWidth(5);

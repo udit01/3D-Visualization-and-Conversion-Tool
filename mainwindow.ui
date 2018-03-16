@@ -136,7 +136,7 @@
      <widget class="ProjectionX" name="proj_x" native="true"/>
     </item>
     <item row="3" column="2">
-     <widget class="QWidget" name="proj_y" native="true"/>
+     <widget class="ProjectionY" name="proj_y" native="true"/>
     </item>
    </layout>
   </widget>
@@ -210,6 +210,15 @@
    <class>ProjectionX</class>
    <extends>QWidget</extends>
    <header>projectionx.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setScale(int)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ProjectionY</class>
+   <extends>QWidget</extends>
+   <header>projectiony.h</header>
    <container>1</container>
    <slots>
     <slot>setScale(int)</slot>
@@ -295,6 +304,22 @@
     <hint type="destinationlabel">
      <x>415</x>
      <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scaleDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>proj_y</receiver>
+   <slot>setScale(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>718</x>
+     <y>423</y>
     </hint>
    </hints>
   </connection>
