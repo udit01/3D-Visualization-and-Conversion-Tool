@@ -20,7 +20,7 @@ Glwidget::Glwidget(QWidget *parent)
         scl = 20.0f;
 
         Model m = SampleModels::SquareBasedPyramid(1.0);
-        model = &(m);
+        *model = (m);
     }
 
 Glwidget::~Glwidget()
@@ -180,15 +180,16 @@ void Glwidget::draw()
     // Drawing the model
 //    qglColor(Qt::red);
 
-    Model m = *(this->model);
+//    Model m = *(this->model);
 // Code to draw the solid model
     glColor3f(1.0, 0.0, 1.0);
-    std::vector<Face>::iterator it ;//= this->model.faces.begin();
-    for (it = m.faces.begin(); it!= m.faces.end(); it++){
-        Face f = *it;
+    std::vector<Face*>::iterator it ;//= this->model.faces.begin();
+
+    for (it = this->model->faces.begin(); it != this->model->faces.end(); it++){
+        Face* f = *it;
         glEnableClientState(GL_VERTEX_ARRAY);
-        glVertexPointer( 3, GL_FLOAT, 0 , f.points);
-        glDrawArrays(GL_POLYGON, 0, f.npts);
+        glVertexPointer( 3, GL_FLOAT, 0 , f->points);
+        glDrawArrays(GL_POLYGON, 0, f->npts);
         glDisableClientState(GL_VERTEX_ARRAY);
     }
 
@@ -196,13 +197,13 @@ void Glwidget::draw()
 
 //    or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
 
-    for(int i = 0 ; i < m.numPoints ; i++){
-        for(int j = 0 ; j < m.numPoints ; j++){
-            if(m.edges[i][j]){
+    for(int i = 0 ; i < this->model->numPoints ; i++){
+        for(int j = 0 ; j < this->model->numPoints ; j++){
+            if(this->model->edges[i][j]){
                 // a new array each time, to construct the line
                 float* verti = new float [3*2];
-                std::copy(m.points[i],m.points[i]+3,verti);
-                std::copy(m.points[j],m.points[j]+3,verti+3);
+                std::copy(this->model->points[i],this->model->points[i]+3,verti);
+                std::copy(this->model->points[j],this->model->points[j]+3,verti+3);
 
                 //chose a random colour here
                 glEnableClientState(GL_VERTEX_ARRAY);

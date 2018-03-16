@@ -35,8 +35,12 @@ Model SampleModels::squareBasedPyramid(float side)
     float * f4 = new float[3*3];
     copy(d, d+3, f4);copy(a, a+3, f4+3);copy(o, o+3, f4+2*3);
 
-    vector<Face> faces ;
-    faces.push_back(Face(base,4)); faces.push_back(Face(f1,3)); faces.push_back(Face(f2,3)); faces.push_back(Face(f3,3)); faces.push_back(Face(f4,3));
+//    vector<Face*> faces ;
+//    faces.push_back(&Face(base,4)); faces.push_back(&Face(f1,3)); faces.push_back(&Face(f2,3)); faces.push_back(&Face(f3,3)); faces.push_back(&Face(f4,3));
+    int numFaces = 5;
+    Face** faces ;
+    faces.push_back(&Face(base,4)); faces.push_back(&Face(f1,3)); faces.push_back(&Face(f2,3)); faces.push_back(&Face(f3,3)); faces.push_back(&Face(f4,3));
+
 
     bool edges[numPts][numPts] = {//in order of a b c d o
         {false, true , false, true , true},
