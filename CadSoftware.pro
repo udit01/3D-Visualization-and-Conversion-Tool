@@ -30,7 +30,8 @@ SOURCES += \
     model.cpp \
     samplemodels.cpp \
     projectionx.cpp \
-    projectiony.cpp
+    projectiony.cpp \
+    projectionz.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +39,8 @@ HEADERS += \
     model.h \
     samplemodels.h \
     projectionx.h \
-    projectiony.h
+    projectiony.h \
+    projectionz.h
 
 FORMS += \
         mainwindow.ui \

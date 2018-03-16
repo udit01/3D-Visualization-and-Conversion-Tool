@@ -80,7 +80,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QWidget" name="proj_z" native="true">
+         <widget class="ProjectionZ" name="proj_z" native="true">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(46, 52, 54);</string>
           </property>
@@ -701,6 +701,12 @@
    <class>ProjectionY</class>
    <extends>QWidget</extends>
    <header>projectiony.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProjectionZ</class>
+   <extends>QWidget</extends>
+   <header>projectionz.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
