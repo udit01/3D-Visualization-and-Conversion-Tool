@@ -228,7 +228,7 @@ void Glwidget::draw()
      glDrawArrays(GL_POLYGON, 0, 3);
      glDisableClientState(GL_VERTEX_ARRAY);
 
-
+//Why is the lighting and shaders so erratic?
 
 
 //    glBegin(GL_QUADS);
