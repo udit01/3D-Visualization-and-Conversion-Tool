@@ -28,13 +28,15 @@ SOURCES += \
         mainwindow.cpp \
     glwidget.cpp \
     model.cpp \
-    samplemodels.cpp
+    samplemodels.cpp \
+    projectionx.cpp
 
 HEADERS += \
         mainwindow.h \
     glwidget.h \
     model.h \
-    samplemodels.h
+    samplemodels.h \
+    projectionx.h
 
 FORMS += \
         mainwindow.ui \

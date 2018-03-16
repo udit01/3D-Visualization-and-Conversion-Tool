@@ -1,8 +1,7 @@
-#include "glwidget.h"
+#include "projectionx.h"
 //#include "ui_glwidget.h"
 
 #include <vector>
-#include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
 #include <QtOpenGL>
@@ -11,29 +10,29 @@
 #include "model.h"
 #include "samplemodels.h"
 
-Glwidget::Glwidget(QWidget *parent)
+ProjectionX::ProjectionX(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
     {
-        xRot = 0;
-        yRot = 0;
-        zRot = 0;
+//        xRot = 90;
+//        yRot = 0;
+//        zRot = 0;
         scl = 20.0f;
 
         model = SampleModels::SquareBasedPyramid(1.0);
     }
 
-Glwidget::~Glwidget()
+ProjectionX::~ProjectionX()
 {
 
 }
 
-QSize Glwidget::minimumSizeHint() const
-{
-    return QSize(50, 50);
-}
+//QSize Glwidget::minimumSizeHint() const
+//{
+//    return QSize(50, 50);
+//}
 
 
-QSize Glwidget::sizeHint() const
+QSize ProjectionX::sizeHint() const
 {
     return QSize(400, 400);
 }
@@ -46,43 +45,43 @@ static void qNormalizeAngle(int &angle)
         angle -= 360 * 16;
 }
 
-void Glwidget::setXRotation(int angle)
-{
-    qNormalizeAngle(angle);
-    if (angle != xRot) {
-        xRot = angle;
-        emit xRotationChanged(angle);
-        updateGL();
-    }
-}
+//void Glwidget::setXRotation(int angle)
+//{
+//    qNormalizeAngle(angle);
+//    if (angle != xRot) {
+//        xRot = angle;
+//        emit xRotationChanged(angle);
+//        updateGL();
+//    }
+//}
 
-void Glwidget::setYRotation(int angle)
-{
-    qNormalizeAngle(angle);
-    if (angle != yRot) {
-        yRot = angle;
-        emit yRotationChanged(angle);
-        updateGL();
-    }
-}
+//void Glwidget::setYRotation(int angle)
+//{
+//    qNormalizeAngle(angle);
+//    if (angle != yRot) {
+//        yRot = angle;
+//        emit yRotationChanged(angle);
+//        updateGL();
+//    }
+//}
 
-void Glwidget::setZRotation(int angle)
-{
-    qNormalizeAngle(angle);
-    if (angle != zRot) {
-        zRot = angle;
-        emit zRotationChanged(angle);
-        updateGL();
-    }
-}
-void Glwidget::setScale(int factor){
+//void Glwidget::setZRotation(int angle)
+//{
+//    qNormalizeAngle(angle);
+//    if (angle != zRot) {
+//        zRot = angle;
+//        emit zRotationChanged(angle);
+//        updateGL();
+//    }
+//}
+void ProjectionX::setScale(int factor){
     if(factor != 1){
         scl = factor;
         emit scaleChanged(factor);
         updateGL();
     }
 }
-void Glwidget::initializeGL()
+void ProjectionX::initializeGL()
 {
     qglClearColor(Qt::black);
 
@@ -104,14 +103,15 @@ void Glwidget::initializeGL()
 
 }
 
-void Glwidget::paintGL()
+void ProjectionX::paintGL()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0.0, 0.0, -10.0);
-    glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
-    glRotatef(yRot / 16.0, 0.0, 1.0, 0.0);
-    glRotatef(zRot / 16.0, 0.0, 0.0, 1.0);
+//    glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
+//    glRotatef(yRot / 16.0, 0.0, 1.0, 0.0);
+//    glRotatef(zRot / 16.0, 0.0, 0.0, 1.0);
+
     if(scl > 0){
         float sc = (scl) / 20.0f;
         glScalef(sc, sc, sc);
@@ -120,7 +120,7 @@ void Glwidget::paintGL()
     draw();
 }
 
-void Glwidget::resizeGL(int width, int height)
+void ProjectionX::resizeGL(int width, int height)
 {
     int side = qMin(width, height);
     glViewport((width - side) / 2, (height - side) / 2, side, side);
@@ -137,28 +137,28 @@ void Glwidget::resizeGL(int width, int height)
 
 }
 
-void Glwidget::mousePressEvent(QMouseEvent *event)
-{
-    lastPos = event->pos();
-}
+//void ProjectionX::mousePressEvent(QMouseEvent *event)
+//{
+//    lastPos = event->pos();
+//}
 
-void Glwidget::mouseMoveEvent(QMouseEvent *event)
-{
-    int dx = event->x() - lastPos.x();
-    int dy = event->y() - lastPos.y();
+//void ProjectionX::mouseMoveEvent(QMouseEvent *event)
+//{
+//    int dx = event->x() - lastPos.x();
+//    int dy = event->y() - lastPos.y();
 
-    if (event->buttons() & Qt::LeftButton) {
-        setXRotation(xRot + 8 * dy);
-        setYRotation(yRot + 8 * dx);
-    } else if (event->buttons() & Qt::RightButton) {
-        setXRotation(xRot + 8 * dy);
-        setZRotation(zRot + 8 * dx);
-    }
+//    if (event->buttons() & Qt::LeftButton) {
+//        setXRotation(xRot + 8 * dy);
+//        setYRotation(yRot + 8 * dx);
+//    } else if (event->buttons() & Qt::RightButton) {
+//        setXRotation(xRot + 8 * dy);
+//        setZRotation(zRot + 8 * dx);
+//    }
 
-    lastPos = event->pos();
-}
+//    lastPos = event->pos();
+//}
 
-void Glwidget::draw()
+void ProjectionX::draw()
 {
     //Drawing the Axis lines
     glLineWidth(5);
