@@ -7,17 +7,12 @@
 #include <QtOpenGL>
 #include <QGLWidget>
 #include <QGL>
-#include "model.h"
 #include "samplemodels.h"
 
 ProjectionX::ProjectionX(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
     {
-//        xRot = 90;
-//        yRot = 0;
-//        zRot = 0;
         scl = 20.0f;
-
         model = SampleModels::SquareBasedPyramid(1.0);
     }
 
@@ -77,7 +72,7 @@ static void qNormalizeAngle(int &angle)
 void ProjectionX::setScale(int factor){
     if(factor != 1){
         scl = factor;
-        emit scaleChanged(factor);
+//        emit scaleChanged(factor);
         updateGL();
     }
 }

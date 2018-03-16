@@ -211,6 +211,9 @@
    <extends>QWidget</extends>
    <header>projectionx.h</header>
    <container>1</container>
+   <slots>
+    <slot>setScale(int)</slot>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
@@ -226,8 +229,8 @@
      <y>149</y>
     </hint>
     <hint type="destinationlabel">
-     <x>529</x>
-     <y>234</y>
+     <x>643</x>
+     <y>283</y>
     </hint>
    </hints>
   </connection>
@@ -242,8 +245,8 @@
      <y>77</y>
     </hint>
     <hint type="destinationlabel">
-     <x>558</x>
-     <y>119</y>
+     <x>719</x>
+     <y>168</y>
     </hint>
    </hints>
   </connection>
@@ -258,8 +261,8 @@
      <y>207</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>254</y>
+     <x>795</x>
+     <y>303</y>
     </hint>
    </hints>
   </connection>
@@ -274,8 +277,24 @@
      <y>306</y>
     </hint>
     <hint type="destinationlabel">
-     <x>104</x>
-     <y>379</y>
+     <x>113</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scaleDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>proj_x</receiver>
+   <slot>setScale(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>454</y>
     </hint>
    </hints>
   </connection>

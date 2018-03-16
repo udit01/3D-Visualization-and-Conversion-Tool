@@ -9,6 +9,8 @@
 
 class ProjectionX :  public QGLWidget
 {
+    Q_OBJECT
+
 public:
     explicit ProjectionX (QWidget *parent = 0);
     ~ProjectionX();
@@ -26,23 +28,10 @@ protected:
 //    void mouseMoveEvent(QMouseEvent *event);
 
 public slots:
-    // slots for xyz-rotation slider
-//    void setXRotation(int angle);
-//    void setYRotation(int angle);
-//    void setZRotation(int angle);
     void setScale(int factor);
 
-signals:
-//    // signaling rotation from mouse movement
-//    void xRotationChanged(int angle);
-//    void yRotationChanged(int angle);
-//    void zRotationChanged(int angle);
-    void scaleChanged(int factor);
 
 private:
-//    int xRot;
-//    int yRot;
-//    int zRot;
     int scl;
     void draw();
 
