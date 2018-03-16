@@ -43,7 +43,7 @@ signals:
     void scaleChanged(int factor);
 
 private:
-//    Ui::Glwidget *ui;
+    // Ui::Glwidget *ui;
     int xRot;
     int yRot;
     int zRot;

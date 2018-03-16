@@ -1,5 +1,5 @@
 #include "glwidget.h"
-//#include "ui_glwidget.h"
+#include "ui_glwidget.h"
 
 #include <vector>
 #include <QMainWindow>
@@ -18,7 +18,6 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-
         model = SampleModels::SquareBasedPyramid(1.0);
     }
 
@@ -154,7 +153,7 @@ void Glwidget::mouseMoveEvent(QMouseEvent *event)
 
 void Glwidget::draw()
 {
-    //Drawing the Axis lines
+    // Drawing the Axis lines
     glLineWidth(5);
 
     glColor3f (1.0f,0.0f,0.0f);
@@ -175,14 +174,16 @@ void Glwidget::draw()
         glVertex3f(0.0,0.0,5.0);
     glEnd();
 
-    /////////////////////////////////////////////////////////////////////////////////
     // Drawing the model
-//    qglColor(Qt::red);
+    // qglColor(Qt::red);
 
-//    Model m = *(this->model);
-// Code to draw the solid model
+    // Model m = *(this->model);
+    // Code to draw the solid model
+
     glColor3f(1.0, 0.0, 1.0);
-//    std::vector<Face>::iterator it ;//= this->model.faces.begin();
+
+    // std::vector<Face>::iterator it ;//= this->model.faces.begin();
+
     for (int i = 0 ; i < this->model->faces.size() ; i++){
         Face* f = this->model->faces[i];
         glEnableClientState(GL_VERTEX_ARRAY);
@@ -191,30 +192,30 @@ void Glwidget::draw()
         glDisableClientState(GL_VERTEX_ARRAY);
     }
 
-// Code to draw wireframe of the model
+    // Code to draw wireframe of the model
 
-//    or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
+    // or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
 
-//    for(int i = 0 ; i < this->model->numPoints; i++){
-//        for(int j = 0 ; j < this->model->numPoints ; j++){
-//            if(this->model->edges[i][j]){
-//                // a new array each time, to construct the line
-//                float* verti = new float [3*2];
-//                std::copy(this->model->points[i],this->model->points[i]+3,verti);
-//                std::copy(this->model->points[j],this->model->points[j]+3,verti+3);
+    // for(int i = 0 ; i < this->model->numPoints; i++){
+    //      for(int j = 0 ; j < this->model->numPoints ; j++){
+    //            if(this->model->edges[i][j]){
+    //                // a new array each time, to construct the line
+    //                float* verti = new float [3*2];
+    //                std::copy(this->model->points[i],this->model->points[i]+3,verti);
+    //                std::copy(this->model->points[j],this->model->points[j]+3,verti+3);
 
-//                //chose a random colour here
-//                glEnableClientState(GL_VERTEX_ARRAY);
-//                glVertexPointer( 3, GL_FLOAT, 0 , verti);
-//                glDrawArrays(GL_LINES, 0, 2);
-//                glDisableClientState(GL_VERTEX_ARRAY);
-
-//            }
-//        }
-//    }
+    //                // chose a random colour here
+    //                glEnableClientState(GL_VERTEX_ARRAY);
+    //                glVertexPointer( 3, GL_FLOAT, 0 , verti);
+    //                glDrawArrays(GL_LINES, 0, 2);
+    //                glDisableClientState(GL_VERTEX_ARRAY);
+    //            }
+    //        }
+    //    }
 
 
     //trial model
+
     glColor3f(1.0,1.0,1.0);
 
     float vertices[] = {
@@ -231,39 +232,39 @@ void Glwidget::draw()
 //Why is the lighting and shaders so erratic?
 
 
-//    glBegin(GL_QUADS);
-//        glNormal3f(0,0,-1);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(1,-1,0);
+    // glBegin(GL_QUADS);
+    //     glNormal3f(0,0,-1);
+    //     glVertex3f(-1,-1,0);
+    //     glVertex3f(-1,1,0);
+    //     glVertex3f(1,1,0);
+    //     glVertex3f(1,-1,0);
 
-//    glEnd();
+    // glEnd();
 
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,-1,0.707);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(1,0, 0.707);
-//        glVertex3f(1,-1,0);
-//        glVertex3f(1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(0,1,0.707);
-//        glVertex3f(1,1,0);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
-//    glBegin(GL_TRIANGLES);
-//        glNormal3f(-1,0,0.707);
-//        glVertex3f(-1,1,0);
-//        glVertex3f(-1,-1,0);
-//        glVertex3f(0,0,1.2);
-//    glEnd();
+    // glBegin(GL_TRIANGLES);
+    //     glNormal3f(0,-1,0.707);
+    //     glVertex3f(-1,-1,0);
+    //     glVertex3f(1,-1,0);
+    //     glVertex3f(0,0,1.2);
+    // glEnd();
+    // glBegin(GL_TRIANGLES);
+    //     glNormal3f(1,0, 0.707);
+    //     glVertex3f(1,-1,0);
+    //     glVertex3f(1,1,0);
+    //     glVertex3f(0,0,1.2);
+    // glEnd();
+    // glBegin(GL_TRIANGLES);
+    //     glNormal3f(0,1,0.707);
+    //     glVertex3f(1,1,0);
+    //     glVertex3f(-1,1,0);
+    //     glVertex3f(0,0,1.2);
+    // glEnd();
+    // glBegin(GL_TRIANGLES);
+    //     glNormal3f(-1,0,0.707);
+    //     glVertex3f(-1,1,0);
+    //     glVertex3f(-1,-1,0);
+    //     glVertex3f(0,0,1.2);
+    // glEnd();
 
 }
 

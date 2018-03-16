@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <QGL>
+
 /****************************************************************************
  *  Another model could be to include the points and lines seperately, also in faces we don't need the edges, we minimally need points,
  *  but we'll go with edges to generate wireframe anyway
@@ -17,6 +18,7 @@
 ****************************************************************************/
 
 /*class DirectionCosines
+ *
 {
 public:
     float xl;
@@ -45,6 +47,7 @@ public:
     bool equals(Point p);
 };
 */
+
 class Face
 {
 public:
@@ -69,10 +72,9 @@ public:
 
     //add face etc functions ?
     //projections won't be needed because opengl will do it for me.
-
-    /*below 2 functions are for generating wireframes, but they could be hard to make*/
-//    std::vector<Point*> getPointSet(); // Construct this by differnet smaller point sets
-//    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
+    // below 2 functions are for generating wireframes, but they could be hard to make
+    // std::vector<Point*> getPointSet(); // Construct this by differnet smaller point sets
+    // std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     std::string serialize(); // Will be used for file save/load // import/export .
     static Model deserialize(std::string s);
