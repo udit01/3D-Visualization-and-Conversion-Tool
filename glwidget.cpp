@@ -8,8 +8,11 @@
 #include <QtOpenGL>
 #include <QGLWidget>
 #include <QGL>
+
+#include "mainwindow.h"
 #include "model.h"
 #include "samplemodels.h"
+
 
 Glwidget::Glwidget(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
@@ -19,9 +22,8 @@ Glwidget::Glwidget(QWidget *parent)
         zRot = 0;
         scl = 20.0f;
 
-        model = SampleModels::SquareBasedPyramid(1.0);
+        model = ((MainWindow*)parentWidget())->model;
     }
-
 Glwidget::~Glwidget()
 {
 

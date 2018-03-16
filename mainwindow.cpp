@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QtWidgets>
 
+#include <model.h>
+#include <samplemodels.h>
 #include "glwidget.h"
 #include "projectionx.h"
 #include "projectiony.h"
@@ -12,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    model = SampleModels::SquareBasedPyramid(1.0);
 
 //    model = new Model(); // do we need to make a new one here ?
 
