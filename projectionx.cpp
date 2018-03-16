@@ -64,9 +64,6 @@ void ProjectionX::initializeGL()
     static GLfloat lightPosition[4] = { 0, 0, 10, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 
-//    glRotatef(30, 0.0,1.0,0.0);
-//    glRotatef(320,1.0,0.0,0.0);
-//    glRotatef(0 ,0.0,0.0,1.0);
 
 }
 
@@ -75,6 +72,11 @@ void ProjectionX::paintGL()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0.0, 0.0, -10.0);
+
+    glRotatef(0, 1.0,0.0,0.0);
+    glRotatef(270.0,0.0,1.0,0.0);
+    glRotatef(0.0 ,0.0,0.0,1.0);
+
 //    glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
 //    glRotatef(yRot / 16.0, 0.0, 1.0, 0.0);
 //    glRotatef(zRot / 16.0, 0.0, 0.0, 1.0);
