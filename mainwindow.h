@@ -27,6 +27,8 @@ private slots:
 
     void on_actionImport_triggered();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainWindow *newWindow;

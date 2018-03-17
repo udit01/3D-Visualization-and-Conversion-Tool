@@ -56,39 +56,41 @@ void MainWindow::on_actionNew_triggered()
 
 void MainWindow::on_actionImport_triggered()
 {
-    // Opening import file dialog box
-//    QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
+    QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
 
-//    QChar ext;
-//    if(!file_name.isNull())
-//    {
-//        ext = file_name[(file_name.length()-2)];
-//    }
+    QChar ext;
+    if(!file_name.isNull())
+    {
+        ext = file_name[(file_name.length()-2)];
+    }
 
-//    // if file is not null then open a new window base on extension else do nothing
-//    if(!file_name.isNull() && (ext == '2' || ext == '3'))
-//    {
-//        QMessageBox msgBox;
-//        msgBox.setText(file_name);
-//        msgBox.setInformativeText("Do you want to open this file?");
-//        msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
-//        msgBox.setDefaultButton(QMessageBox::Open);
-//        msgBox.setWindowTitle("Open Design");
+    if(!file_name.isNull() && (ext == '2' || ext == '3'))
+    {
+        QMessageBox msgBox;
+        msgBox.setText(file_name);
+        msgBox.setInformativeText("Do you want to open this file?");
+        msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
+        msgBox.setDefaultButton(QMessageBox::Open);
+        msgBox.setWindowTitle("Open Design");
 
-//        int ret = msgBox.exec();
+        int ret = msgBox.exec();
 
-//        switch (ret) {
-//            case QMessageBox::Open:
-//                // opening a 2d/3d window based on extension
-//                hide();
-//                if(ext == '2')
-//                {
-//                    generator2D = new Generator2D(this);
-//                    generator2D -> show();
-//                }
-//                break;
-//            default:
-//                break;
-//        }
-//    }
+        switch (ret) {
+            case QMessageBox::Open:
+                break;
+        case QMessageBox::Discard:
+                file_name = QString();
+            default:
+                break;
+        }
+    }
+    else
+    {
+        file_name = QString();
+    }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+
 }
