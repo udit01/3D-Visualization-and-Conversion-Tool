@@ -714,8 +714,62 @@
    <extends>QWidget</extends>
    <header>glwidget.h</header>
    <container>1</container>
+   <slots>
+    <signal>xRotationChanged(int)</signal>
+    <signal>yRotationChanged(int)</signal>
+    <signal>zRotationChanged(int)</signal>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>widget</sender>
+   <signal>xRotationChanged(int)</signal>
+   <receiver>xRot</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1070</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1205</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>yRotationChanged(int)</signal>
+   <receiver>yRot</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>998</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1265</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>zRotationChanged(int)</signal>
+   <receiver>zRot</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>994</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1342</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

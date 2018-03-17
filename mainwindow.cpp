@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     wireframe = false;
     model = SampleModels::SquareBasedPyramid(1.0);
+//    std::delay(100);
     ui->setupUi(this);
 
     connect(ui->xRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setXRotation(int)));
