@@ -46,19 +46,49 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
         QWidget::keyPressEvent(e);
 }
 
-void MainWindow::slotReboot()
+void MainWindow::on_actionNew_triggered()
 {
- qDebug() << "Performing application reboot...";
- qApp->exit( MainWindow::EXIT_CODE_REBOOT );
+    // Closing this window, opening a new one
+    this -> close();
+    newWindow = new MainWindow(this);
+    newWindow -> show();
 }
 
-void MainWindow::createActions()
+void MainWindow::on_actionImport_triggered()
 {
-    actionNew = new QAction( this );
-    actionNew->setText( tr("Restart") );
-    actionNew->setStatusTip( tr("Restarts the application") );
-    connect( actionNew, SIGNAL (triggered()),this, SLOT (slotReboot()));
+    // Opening import file dialog box
+//    QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
+
+//    QChar ext;
+//    if(!file_name.isNull())
+//    {
+//        ext = file_name[(file_name.length()-2)];
+//    }
+
+//    // if file is not null then open a new window base on extension else do nothing
+//    if(!file_name.isNull() && (ext == '2' || ext == '3'))
+//    {
+//        QMessageBox msgBox;
+//        msgBox.setText(file_name);
+//        msgBox.setInformativeText("Do you want to open this file?");
+//        msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
+//        msgBox.setDefaultButton(QMessageBox::Open);
+//        msgBox.setWindowTitle("Open Design");
+
+//        int ret = msgBox.exec();
+
+//        switch (ret) {
+//            case QMessageBox::Open:
+//                // opening a 2d/3d window based on extension
+//                hide();
+//                if(ext == '2')
+//                {
+//                    generator2D = new Generator2D(this);
+//                    generator2D -> show();
+//                }
+//                break;
+//            default:
+//                break;
+//        }
+//    }
 }
-
-
-

@@ -17,21 +17,19 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     Model* model;
     bool wireframe;
-
-    QAction *actionNew;
-    static int const EXIT_CODE_REBOOT = -123456789;
     ~MainWindow();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
-    void slotReboot();
-    void createActions();
 
 private slots:
+    void on_actionNew_triggered();
 
+    void on_actionImport_triggered();
 
 private:
     Ui::MainWindow *ui;
+    MainWindow *newWindow;
 };
 
 #endif // MAINWINDOW_H
