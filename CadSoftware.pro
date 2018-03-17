@@ -31,7 +31,8 @@ SOURCES += \
     samplemodels.cpp \
     projectionx.cpp \
     projectiony.cpp \
-    projectionz.cpp
+    projectionz.cpp \
+    window2d.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,8 +41,10 @@ HEADERS += \
     samplemodels.h \
     projectionx.h \
     projectiony.h \
-    projectionz.h
+    projectionz.h \
+    window2d.h
 
 FORMS += \
         mainwindow.ui \
-    glwidget.ui
+    glwidget.ui \
+    window2d.ui

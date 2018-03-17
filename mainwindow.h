@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSlider>
 #include "model.h"
+#include "window2d.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,7 +16,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    Model* model;
+    Model *model;
     bool wireframe;
     ~MainWindow();
 
@@ -24,12 +25,12 @@ protected:
 
 private slots:
     void on_actionNew_triggered();
-
     void on_actionImport_triggered();
 
 private:
     Ui::MainWindow *ui;
     MainWindow *newWindow;
+    Window2D *window2d;
 };
 
 #endif // MAINWINDOW_H
