@@ -75,7 +75,7 @@ public:
 //    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     std::string serialize(); // Will be used for file save/load // import/export .
-    static Model deserialize(std::string s);
+    static Model* deserialize(std::string s);
 
 private:
 

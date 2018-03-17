@@ -2,6 +2,8 @@
 #define WINDOW2D_H
 
 #include <QMainWindow>
+#include "window2d.h"
+#include "model.h"
 
 namespace Ui {
 class Window2D;

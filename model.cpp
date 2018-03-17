@@ -16,8 +16,13 @@ Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces 
     this->edges = edges;
     this->faces = faces;
 }
+
 Model::~Model(){
     delete this;
+}
+
+Model* Model::deserialize(std::string s){
+
 }
 //Model::Model( std::vector<Face*> faces, bool** edges)
 //{
