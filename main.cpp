@@ -3,10 +3,15 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-       MainWindow window;
-       window.setWindowTitle("Auto CAD Software");
+    int currentExitCode = 0;
+    do
+    {
+        QApplication app(argc, argv);
+        MainWindow window;
+        window.setWindowTitle("Auto CAD Software");
+        window.show();
+        currentExitCode = app.exec();
+    } while(currentExitCode == MainWindow::EXIT_CODE_REBOOT);
 
-       window.show();
-       return app.exec();
+    return currentExitCode;
 }

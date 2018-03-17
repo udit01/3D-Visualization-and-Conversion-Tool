@@ -25,10 +25,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_y, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_z, SLOT(setScale(int)));
 
-//    connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
-//    connect(ui->widget, SIGNAL(yRotationChanged(int)), ui->yRot, SLOT(setValue(int)));
-//    connect(ui->widget, SIGNAL(zRotationChanged(int)), ui->zRot, SLOT(setValue(int)));
-//
+    //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
+
+    // connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
+    // connect(ui->widget, SIGNAL(yRotationChanged(int)), ui->yRot, SLOT(setValue(int)));
+    // connect(ui->widget, SIGNAL(zRotationChanged(int)), ui->zRot, SLOT(setValue(int)));
+
 }
 
 MainWindow::~MainWindow()
@@ -43,3 +45,20 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
     else
         QWidget::keyPressEvent(e);
 }
+
+void MainWindow::slotReboot()
+{
+ qDebug() << "Performing application reboot...";
+ qApp->exit( MainWindow::EXIT_CODE_REBOOT );
+}
+
+void MainWindow::createActions()
+{
+    actionNew = new QAction( this );
+    actionNew->setText( tr("Restart") );
+    actionNew->setStatusTip( tr("Restarts the application") );
+    connect( actionNew, SIGNAL (triggered()),this, SLOT (slotReboot()));
+}
+
+
+
