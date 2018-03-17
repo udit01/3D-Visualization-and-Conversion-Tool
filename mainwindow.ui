@@ -91,22 +91,42 @@
      </layout>
     </item>
     <item row="2" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
+      <property name="spacing">
+       <number>40</number>
+      </property>
       <property name="sizeConstraint">
        <enum>QLayout::SetMinimumSize</enum>
       </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
-       <widget class="QDial" name="scaleDial">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(244, 196, 196);</string>
-        </property>
-        <property name="maximum">
-         <number>99</number>
-        </property>
-        <property name="notchesVisible">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QDial" name="scaleDial">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 196, 196);</string>
+          </property>
+          <property name="maximum">
+           <number>99</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(136, 138, 133);</string>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -129,14 +149,14 @@
         <item>
          <widget class="QLabel" name="label_16">
           <property name="text">
-           <string>Rotate x</string>
+           <string>   Rotate x</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_17">
           <property name="text">
-           <string>Rotate y</string>
+           <string>  Rotate y</string>
           </property>
          </widget>
         </item>
@@ -519,6 +539,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="separator"/>
     <addaction name="actionNew"/>
     <addaction name="actionImport"/>
     <addaction name="actionExport"/>
