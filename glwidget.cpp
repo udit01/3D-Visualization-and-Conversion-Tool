@@ -22,10 +22,10 @@ Glwidget::Glwidget(QWidget *parent)
         zRot = 0;
         scl = 20.0f;
         wireframe = ((MainWindow*)parent)->wireframe ;
-        // model = SampleModels::SquareBasedPyramid(1.0);
+        model = SampleModels::SquareBasedPyramid(1.0);
         // Application crashes on doing what's below
         // model = ((MainWindow*)parent) -> model ;
-        model =
+        //model = MainWindow::parent()->model
     }
 Glwidget::~Glwidget()
 {
