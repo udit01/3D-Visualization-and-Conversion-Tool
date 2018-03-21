@@ -6,189 +6,470 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1235</width>
-    <height>709</height>
+    <width>1406</width>
+    <height>836</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="2" colspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="16,0,0,0" columnstretch="14,0,0">
+    <item row="0" column="0" rowspan="3" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,10">
       <item>
-       <widget class="QSlider" name="horizontalSlider">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
+        <property name="spacing">
+         <number>5</number>
         </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBelow</enum>
+        <property name="bottomMargin">
+         <number>20</number>
         </property>
-        <property name="tickInterval">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="2,3,3,3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(190, 218, 232);</string>
+            </property>
+            <property name="text">
+             <string>Rotate the Object :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Alpha      :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Beta        :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Gamma   :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3,3,3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(190, 218, 232);</string>
+            </property>
+            <property name="text">
+             <string>Translate the Object :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Translate x :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tx">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Translate y :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ty">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Translate z :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tz">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
          <number>10</number>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSlider" name="horizontalSlider_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+        <property name="rightMargin">
+         <number>5</number>
         </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBelow</enum>
-        </property>
-        <property name="tickInterval">
-         <number>10</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0" rowspan="3" colspan="3">
-     <widget class="Glwidget" name="widget" native="true"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QDial" name="scaleDial">
-      <property name="maximum">
-       <number>100</number>
-      </property>
-      <property name="wrapping">
-       <bool>true</bool>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="3">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="xrlab">
-        <property name="text">
-         <string>Xrot</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="yrlab">
-        <property name="text">
-         <string>Yrot</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="zrlab">
-        <property name="text">
-         <string>Zrot</string>
-        </property>
-       </widget>
+        <item>
+         <widget class="Glwidget" name="widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
-    <item row="3" column="1">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Width Resize</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Height Resize</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="3">
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
       <property name="spacing">
+       <number>40</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="bottomMargin">
        <number>0</number>
       </property>
-      <property name="leftMargin">
-       <number>0</number>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QDial" name="scaleDial">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 196, 196);</string>
+          </property>
+          <property name="maximum">
+           <number>99</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(136, 138, 133);</string>
+            </property>
+            <property name="text">
+             <string>Update</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Wireframe</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,10">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
       </property>
       <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
+       <number>5</number>
       </property>
       <item>
-       <widget class="QSlider" name="xRot">
-        <property name="maximum">
-         <number>5760</number>
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
         </property>
-        <property name="singleStep">
-         <number>16</number>
+        <property name="leftMargin">
+         <number>200</number>
         </property>
-        <property name="pageStep">
-         <number>15</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksAbove</enum>
-        </property>
-        <property name="tickInterval">
-         <number>150</number>
-        </property>
-       </widget>
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>TOP View</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>        FRONT View</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_20">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(91, 5, 5);</string>
+          </property>
+          <property name="text">
+           <string>                                     SIDE View</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QSlider" name="yRot">
-        <property name="maximum">
-         <number>5760</number>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
         </property>
-        <property name="singleStep">
-         <number>16</number>
+        <item>
+         <widget class="ProjectionX" name="proj_x" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ProjectionY" name="proj_y" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ProjectionZ" name="proj_z" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,12">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
         </property>
-        <property name="pageStep">
-         <number>15</number>
+        <property name="leftMargin">
+         <number>5</number>
         </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksAbove</enum>
-        </property>
-        <property name="tickInterval">
-         <number>150</number>
-        </property>
-       </widget>
+        <item>
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>   Rotate x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>  Rotate y</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Rotate z</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QSlider" name="zRot">
-        <property name="maximum">
-         <number>5760</number>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
         </property>
-        <property name="singleStep">
-         <number>16</number>
-        </property>
-        <property name="pageStep">
-         <number>15</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksAbove</enum>
-        </property>
-        <property name="tickInterval">
-         <number>150</number>
-        </property>
-       </widget>
+        <item>
+         <widget class="QSlider" name="xRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="yRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="zRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -199,53 +480,211 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1235</width>
-     <height>22</height>
+     <width>1406</width>
+     <height>19</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuAuto_CAD_Software">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>FIle</string>
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionImport"/>
+    <addaction name="actionExport"/>
+    <addaction name="actionCapture"/>
+   </widget>
+   <widget class="QMenu" name="menuTemplates">
+    <property name="title">
+     <string>Templates</string>
+    </property>
+    <widget class="QMenu" name="menu2D_Templates">
+     <property name="title">
+      <string>2D Templates</string>
+     </property>
+     <addaction name="actionTriangle"/>
+     <addaction name="actionSquare"/>
+     <addaction name="actionn_sided_Polygon"/>
+     <addaction name="actionAdd_2D_Template"/>
+    </widget>
+    <widget class="QMenu" name="menu3D_Templates">
+     <property name="title">
+      <string>3D Templates</string>
+     </property>
+     <addaction name="actionTriangular_Pyramid"/>
+     <addaction name="actionSquare_Pyramid"/>
+     <addaction name="actionn_base_Pyramid"/>
+     <addaction name="actionTriangular_Prism"/>
+     <addaction name="actionCube"/>
+     <addaction name="actionn_base_Prism"/>
+     <addaction name="actionAdd_3D_Template"/>
+    </widget>
+    <addaction name="menu2D_Templates"/>
+    <addaction name="menu3D_Templates"/>
+    <addaction name="actionAdd_Template"/>
+   </widget>
+   <widget class="QMenu" name="menuView_2D">
+    <property name="title">
+     <string>View 2D</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuEdit">
+   <widget class="QMenu" name="menuView_3D">
     <property name="title">
-     <string>Edit</string>
+     <string>View 3D</string>
     </property>
-   </widget>
-   <widget class="QMenu" name="menuView">
-    <property name="title">
-     <string>View</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuTools">
-    <property name="title">
-     <string>Tools</string>
-    </property>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp_2">
     <property name="title">
      <string>Help</string>
     </property>
    </widget>
-   <addaction name="menuAuto_CAD_Software"/>
-   <addaction name="menuEdit"/>
-   <addaction name="menuView"/>
-   <addaction name="menuTools"/>
+   <widget class="QMenu" name="menuConvert_To">
+    <property name="title">
+     <string>Convert To</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action2D_View"/>
+    <addaction name="action3D_Model"/>
+    <addaction name="actionSectional_View"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuConvert_To"/>
+   <addaction name="menuTemplates"/>
+   <addaction name="menuView_2D"/>
+   <addaction name="menuView_3D"/>
    <addaction name="menuHelp"/>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
+   <addaction name="menuHelp_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a New Window</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Import a Saved Design</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionCapture">
+   <property name="text">
+    <string>Capture</string>
+   </property>
+  </action>
+  <action name="actionAdd_Template">
+   <property name="text">
+    <string>Add Template</string>
+   </property>
+  </action>
+  <action name="actionTriangle">
+   <property name="text">
+    <string>Triangle</string>
+   </property>
+  </action>
+  <action name="actionSquare">
+   <property name="text">
+    <string>Square</string>
+   </property>
+  </action>
+  <action name="actionn_sided_Polygon">
+   <property name="text">
+    <string>n-sided Polygon</string>
+   </property>
+  </action>
+  <action name="actionTriangular_Pyramid">
+   <property name="text">
+    <string>Triangular Pyramid</string>
+   </property>
+  </action>
+  <action name="actionSquare_Pyramid">
+   <property name="text">
+    <string>Square Pyramid</string>
+   </property>
+  </action>
+  <action name="actionn_base_Pyramid">
+   <property name="text">
+    <string>n-base Pyramid</string>
+   </property>
+  </action>
+  <action name="actionTriangular_Prism">
+   <property name="text">
+    <string>Triangular Prism</string>
+   </property>
+  </action>
+  <action name="actionCube">
+   <property name="text">
+    <string>Cube</string>
+   </property>
+  </action>
+  <action name="actionn_base_Prism">
+   <property name="text">
+    <string>n-base Prism</string>
+   </property>
+  </action>
+  <action name="actionAdd_3D_Template">
+   <property name="text">
+    <string>Add 3D Template</string>
+   </property>
+  </action>
+  <action name="actionAdd_2D_Template">
+   <property name="text">
+    <string>Add 2D Template</string>
+   </property>
+  </action>
+  <action name="action2D_View">
+   <property name="text">
+    <string>2D View</string>
+   </property>
+  </action>
+  <action name="action3D_Model">
+   <property name="text">
+    <string>3D Model</string>
+   </property>
+  </action>
+  <action name="actionSectional_View">
+   <property name="text">
+    <string>Sectional View</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
+  <customwidget>
+   <class>ProjectionX</class>
+   <extends>QWidget</extends>
+   <header>projectionx.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProjectionY</class>
+   <extends>QWidget</extends>
+   <header>projectiony.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProjectionZ</class>
+   <extends>QWidget</extends>
+   <header>projectionz.h</header>
+   <container>1</container>
+  </customwidget>
   <customwidget>
    <class>Glwidget</class>
    <extends>QWidget</extends>
@@ -255,9 +694,6 @@
     <signal>xRotationChanged(int)</signal>
     <signal>yRotationChanged(int)</signal>
     <signal>zRotationChanged(int)</signal>
-    <signal>scaleChanged(int)</signal>
-    <slot>resize(int,int)</slot>
-    <slot>slot1()</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -270,12 +706,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>148</x>
-     <y>149</y>
+     <x>1070</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>529</x>
-     <y>234</y>
+     <x>1205</x>
+     <y>177</y>
     </hint>
    </hints>
   </connection>
@@ -286,12 +722,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
-     <y>77</y>
+     <x>998</x>
+     <y>292</y>
     </hint>
     <hint type="destinationlabel">
-     <x>558</x>
-     <y>119</y>
+     <x>1265</x>
+     <y>255</y>
     </hint>
    </hints>
   </connection>
@@ -302,28 +738,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>225</x>
-     <y>207</y>
+     <x>994</x>
+     <y>311</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>254</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>widget</sender>
-   <signal>scaleChanged(int)</signal>
-   <receiver>scaleDial</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>106</x>
-     <y>306</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>104</x>
-     <y>379</y>
+     <x>1342</x>
+     <y>298</y>
     </hint>
    </hints>
   </connection>
