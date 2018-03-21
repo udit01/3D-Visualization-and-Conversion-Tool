@@ -12,6 +12,8 @@
 #include "projectiony.h"
 #include "projectionz.h"
 
+#define PI 3.14159265
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -84,6 +86,8 @@ void MainWindow::on_pushButton_clicked()
 {
 //    emit getModel(this->model);
     model->translate(tr_x,tr_y,tr_z);
+    model->rotate(dalpha,dbeta,dgamma);
+
     emit getModel(model);
     emit update();
 //    qApp->processEvents();
@@ -172,4 +176,20 @@ void MainWindow::on_tz_textEdited(const QString &arg1)
         v = 0.0;
     }
     this->tr_z = v;
+}
+
+void MainWindow::on_alphaSlider_valueChanged(int value)
+{
+    this->dalpha = ((float) value * (PI))/180.0;
+
+}
+
+void MainWindow::on_betaSlider_valueChanged(int value)
+{
+        this->dbeta = ((float) value * (PI))/180.0;
+}
+
+void MainWindow::on_gammaSlider_valueChanged(int value)
+{
+        this->dgamma = ((float) value * (PI))/180.0;
 }

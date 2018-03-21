@@ -27,6 +27,7 @@ signals:
 
 protected:
     float tr_x ; float tr_y ; float tr_z ;
+    float dalpha; float dbeta; float dgamma;
     void keyPressEvent(QKeyEvent *event);
 
 private slots:
@@ -34,12 +35,14 @@ private slots:
     void on_pushButton_clicked();
     void on_actionNew_triggered();
     void on_actionImport_triggered();
-\
     void on_tx_textEdited(const QString &arg1);
-
     void on_ty_textEdited(const QString &arg1);
-
     void on_tz_textEdited(const QString &arg1);
+    void on_alphaSlider_valueChanged(int value);
+
+    void on_betaSlider_valueChanged(int value);
+
+    void on_gammaSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;

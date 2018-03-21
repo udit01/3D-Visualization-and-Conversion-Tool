@@ -62,7 +62,10 @@
              </widget>
             </item>
             <item>
-             <widget class="QScrollBar" name="horizontalScrollBar_2">
+             <widget class="QScrollBar" name="alphaSlider">
+              <property name="maximum">
+               <number>180</number>
+              </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -83,9 +86,12 @@
              </widget>
             </item>
             <item>
-             <widget class="QScrollBar" name="horizontalScrollBar">
+             <widget class="QScrollBar" name="betaSlider">
               <property name="styleSheet">
                <string notr="true"/>
+              </property>
+              <property name="maximum">
+               <number>180</number>
               </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -107,7 +113,10 @@
              </widget>
             </item>
             <item>
-             <widget class="QScrollBar" name="horizontalScrollBar_3">
+             <widget class="QScrollBar" name="gammaSlider">
+              <property name="maximum">
+               <number>180</number>
+              </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
