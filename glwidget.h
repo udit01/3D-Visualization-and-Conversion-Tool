@@ -20,11 +20,11 @@ public:
     bool wireframe;
 
 protected:
+    float r1 ; float r2; float r3;
     void initializeGL();
     void paintGL();
     void resizeGL(int width, int height);
     void draw();
-
     QSize minimumSizeHint() const;
     QSize sizeHint() const;
     void mousePressEvent(QMouseEvent *event);
@@ -36,6 +36,9 @@ public slots:
     void setYRotation(int angle);
     void setZRotation(int angle);
     void setScale(int factor);
+    void setWireframe(bool b);
+    void update();
+    void setModel(Model* m);
 
 signals:
     // signaling rotation from mouse movement

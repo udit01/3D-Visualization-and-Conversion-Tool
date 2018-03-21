@@ -1,7 +1,10 @@
 #include "glwidget.h"
 //#include "ui_glwidget.h"
 
+#include <iostream>
 #include <vector>
+#include <cstdlib>
+
 #include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
@@ -21,8 +24,7 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        wireframe = ((MainWindow*)parent)->wireframe ;
-        model = SampleModels::SquareBasedPyramid(1.0);
+//        model = SampleModels::SquareBasedPyramid(1.0);
         //Application crashes on doing what's below
 //        model = ((MainWindow*)parent)->model ;
     }
@@ -30,7 +32,16 @@ Glwidget::~Glwidget()
 {
 
 }
-
+void Glwidget::setWireframe(bool b){
+    this->wireframe = b;
+//    updateGL();
+}
+void Glwidget::update(){
+    updateGL();
+}
+void Glwidget::setModel(Model *m){
+    this->model = m;
+}
 QSize Glwidget::minimumSizeHint() const
 {
     return QSize(50, 50);
@@ -165,36 +176,59 @@ void Glwidget::mouseMoveEvent(QMouseEvent *event)
 void Glwidget::draw()
 {
     //Drawing the Axis lines
+
+    glLineWidth(4);
+    Model* axes = SampleModels::Axes(4.0);
+
+    for(int i = 0 ; i < axes->numPoints; i++){
+        for(int j = i ; j < axes->numPoints ; j++){
+//            std::cout << axes->edges[i][j] << " Edges "<<i <<"  " << j <<" Glwidget Line 180\n";
+            if(axes->edges[i][j]){
+                // a new array each time, to construct the line
+
+//                Randomness
+                r1 = ((float) rand() / (RAND_MAX)) ;
+                r2 = ((float) rand() / (RAND_MAX)) ;
+                r3 = ((float) rand() / (RAND_MAX)) ;
+                glColor3f(r1,r2,r3);
+
+                float* verti = new float [3*2];
+                std::copy(axes->points + i,axes->points + i +3,verti);
+                std::copy(axes->points + j,axes->points + j +3,verti+3);
+
+                //chose a random colour here
+                glEnableClientState(GL_VERTEX_ARRAY);
+                glVertexPointer( 3, GL_FLOAT, 0 , verti);
+                glDrawArrays(GL_LINES, 0, 2);
+                glDisableClientState(GL_VERTEX_ARRAY);
+
+            }
+        }
+    }
+/*
+
+    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+    for (int i = 0 ; i < axes->faces.size() ; i++){
+        r1 = ((float) rand() / (RAND_MAX)) ;
+        r2 = ((float) rand() / (RAND_MAX)) ;
+        r3 = ((float) rand() / (RAND_MAX)) ;
+        glColor3f(r1,r2,r3);
+
+        Face* f = axes->faces[i];
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glVertexPointer( 3, GL_FLOAT, 0 , f->points);
+        glDrawArrays(GL_POLYGON, 0, f->npts);
+        glDisableClientState(GL_VERTEX_ARRAY);
+    }
+    */
+// Drawing the model
+
+    if(!this->model){
+        return;
+    }
+
     glLineWidth(5);
-
-    glColor3f (1.0f,0.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(5.0,0.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,1.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,5.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,0.0f,1.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,0.0,5.0);
-    glEnd();
-
-    /////////////////////////////////////////////////////////////////////////////////
-    // Drawing the model
-//    qglColor(Qt::red);
-
-//    Model m = *(this->model);
-// Code to draw the solid model
-
-
     glColor3f(1.0, 0.0, 1.0);
-//    std::vector<Face>::iterator it ;//= this->model.faces.begin();
 
     if(wireframe){
         glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
@@ -214,13 +248,21 @@ void Glwidget::draw()
 
 //    or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
 
-//    for(int i = 0 ; i < this->model->numPoints; i++){
-//        for(int j = 0 ; j < this->model->numPoints ; j++){
-//            if(this->model->edges[i][j]){
+//    for(int i = 0 ; i < axes->numPoints; i++){
+//        for(int j = i ; j < axes->numPoints ; j++){
+//            std::cout << axes->edges[i][j] << " Edges "<<i <<"  " << j <<" Glwidget Line 180\n";
+//            if(axes->edges[i][j]){
 //                // a new array each time, to construct the line
+
+////                Randomness
+//                r1 = ((float) rand() / (RAND_MAX)) ;
+//                r2 = ((float) rand() / (RAND_MAX)) ;
+//                r3 = ((float) rand() / (RAND_MAX)) ;
+//                glColor3f(r1,r2,r3);
+
 //                float* verti = new float [3*2];
-//                std::copy(this->model->points[i],this->model->points[i]+3,verti);
-//                std::copy(this->model->points[j],this->model->points[j]+3,verti+3);
+//                std::copy(axes->points + i,axes->points + i +3,verti);
+//                std::copy(axes->points + j,axes->points + j +3,verti+3);
 
 //                //chose a random colour here
 //                glEnableClientState(GL_VERTEX_ARRAY);
@@ -233,19 +275,6 @@ void Glwidget::draw()
 //    }
 
 
-    //trial model
-    glColor3f(1.0,1.0,1.0);
-
-    float vertices[] = {
-       -2.0,0.0,0.0,
-         1.5,0.0,0.0,
-         0.0,3.0,1.0
-     };
-
-     glEnableClientState(GL_VERTEX_ARRAY);
-     glVertexPointer( 3, GL_FLOAT, 0 , vertices);
-     glDrawArrays(GL_POLYGON, 0, 3);
-     glDisableClientState(GL_VERTEX_ARRAY);
 
 //Why is the lighting and shaders so erratic?
 

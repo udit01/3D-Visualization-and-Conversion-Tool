@@ -17,7 +17,276 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_3" rowstretch="16,16,16,25" columnstretch="14,40,12">
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="16,0,0,0" columnstretch="14,0,0">
+    <item row="0" column="0" rowspan="3" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,10">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="2,3,3,3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(190, 218, 232);</string>
+            </property>
+            <property name="text">
+             <string>Rotate the Object :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Alpha      :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Beta        :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Gamma   :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollBar" name="horizontalScrollBar_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3,3,3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(190, 218, 232);</string>
+            </property>
+            <property name="text">
+             <string>Translate the Object :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Translate x :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tx">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Translate y :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ty">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Translate z :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tz">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="Glwidget" name="widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
+      <property name="spacing">
+       <number>40</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QDial" name="scaleDial">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 196, 196);</string>
+          </property>
+          <property name="maximum">
+           <number>99</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(136, 138, 133);</string>
+            </property>
+            <property name="text">
+             <string>Update</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Wireframe</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
     <item row="3" column="0" colspan="3">
      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,10">
       <property name="sizeConstraint">
@@ -83,46 +352,6 @@
          <widget class="ProjectionZ" name="proj_z" native="true">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(46, 52, 54);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
-      <property name="spacing">
-       <number>40</number>
-      </property>
-      <property name="sizeConstraint">
-       <enum>QLayout::SetMinimumSize</enum>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <item>
-         <widget class="QDial" name="scaleDial">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(244, 196, 196);</string>
-          </property>
-          <property name="maximum">
-           <number>99</number>
-          </property>
-          <property name="notchesVisible">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(136, 138, 133);</string>
-          </property>
-          <property name="text">
-           <string>Update</string>
           </property>
          </widget>
         </item>
@@ -244,286 +473,6 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="0" rowspan="3" colspan="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,10">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0">
-        <property name="spacing">
-         <number>5</number>
-        </property>
-        <property name="bottomMargin">
-         <number>20</number>
-        </property>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout" stretch="2,3,3,3">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetMinimumSize</enum>
-          </property>
-          <property name="rightMargin">
-           <number>10</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(190, 218, 232);</string>
-            </property>
-            <property name="text">
-             <string>Rotate the Object :</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,5">
-            <property name="spacing">
-             <number>0</number>
-            </property>
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>Alpha      :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QScrollBar" name="horizontalScrollBar_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,5">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="text">
-               <string>Beta        :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QScrollBar" name="horizontalScrollBar">
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="text">
-               <string>Gamma   :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QScrollBar" name="horizontalScrollBar_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,3,3,3">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetMinimumSize</enum>
-          </property>
-          <item>
-           <widget class="QLabel" name="label_5">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(190, 218, 232);</string>
-            </property>
-            <property name="text">
-             <string>Scale the Object :</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_6">
-              <property name="text">
-               <string>Scale x :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_8">
-              <property name="text">
-               <string>Scale y :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_7">
-              <property name="text">
-               <string>Scale z :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3,3,3">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetMinimumSize</enum>
-          </property>
-          <item>
-           <widget class="QLabel" name="label_9">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(190, 218, 232);</string>
-            </property>
-            <property name="text">
-             <string>Translate the Object :</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_9">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_11">
-              <property name="text">
-               <string>Translate x :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit"/>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_10">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_12">
-              <property name="text">
-               <string>Translate y :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_2"/>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_10">
-              <property name="text">
-               <string>Translate z :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_3"/>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_11">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <property name="leftMargin">
-         <number>5</number>
-        </property>
-        <property name="topMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>5</number>
-        </property>
-        <item>
-         <widget class="Glwidget" name="widget" native="true">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -532,7 +481,7 @@
      <x>0</x>
      <y>0</y>
      <width>1406</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

@@ -20,6 +20,7 @@ public:
     bool wireframe;
 
 protected:
+    float r1; float r2; float r3;
     void initializeGL();
     void paintGL();
     void resizeGL(int width, int height);
@@ -30,7 +31,9 @@ protected:
 
 public slots:
     void setScale(int factor);
-
+    void setWireframe(bool b);
+    void update();
+    void setModel(Model* m);
 
 private:
     int scl;

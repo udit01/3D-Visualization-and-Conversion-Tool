@@ -66,6 +66,7 @@ public:
 
     Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces );
     ~Model();
+    void translate(float dx, float dy, float dz);
 
     //add face etc functions ?
     //projections won't be needed because opengl will do it for me.

@@ -3,6 +3,7 @@
 #include <QtWidgets>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <exception>
 
 #include <model.h>
 #include <samplemodels.h>
@@ -15,8 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    wireframe = false;
+
     model = SampleModels::SquareBasedPyramid(1.0);
+    wireframe = false;
+
+
 //    std::delay(100);
     ui->setupUi(this);
 
@@ -24,15 +28,34 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->yRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setYRotation(int)));
     connect(ui->zRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setZRotation(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->widget, SLOT(setScale(int)));
-    connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_x, SLOT(setScale(int)));    
+    connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_x, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_y, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_z, SLOT(setScale(int)));
+
+    connect(this, SIGNAL(wireframeVal(bool)), ui->widget , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->widget, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->widget , SLOT(setModel(Model*)));
+
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_x , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_x, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_x , SLOT(setModel(Model*)));
+
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_y , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_y, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_y , SLOT(setModel(Model*)));
+
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_z , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_z, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_z , SLOT(setModel(Model*)));
 
     //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
 
     // connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(yRotationChanged(int)), ui->yRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(zRotationChanged(int)), ui->zRot, SLOT(setValue(int)));
+
+    emit wireframeVal(this->wireframe);
+    emit getModel(this->model);
 
 }
 
@@ -49,6 +72,23 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
         QWidget::keyPressEvent(e);
 }
 
+void MainWindow::on_pushButton_2_clicked()
+{
+    this->wireframe= !(this->wireframe) ;
+    emit wireframeVal(this->wireframe);
+//    model = SampleModels::SquareBasedPyramid(1.0);
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+//    emit getModel(this->model);
+    model->translate(tr_x,tr_y,tr_z);
+    emit getModel(model);
+    emit update();
+//    qApp->processEvents();
+//    ui->setupUi(this);
+}
 void MainWindow::on_actionNew_triggered()
 {
     // Closing this window, opening a new one
@@ -96,4 +136,40 @@ void MainWindow::on_actionImport_triggered()
     {
         file_name = QString();
     }
+}
+
+void MainWindow::on_tx_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_x = v;
+}
+
+void MainWindow::on_ty_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_y = v;
+}
+
+void MainWindow::on_tz_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_z = v;
 }
