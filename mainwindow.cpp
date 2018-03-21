@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
     model = SampleModels::SquareBasedPyramid(1.0);
     wireframe = false;
 
-
     // std::delay(100);
     ui->setupUi(this);
 
@@ -75,18 +74,18 @@ void MainWindow::on_pushButton_2_clicked()
 {
     this->wireframe= !(this->wireframe) ;
     emit wireframeVal(this->wireframe);
-//    model = SampleModels::SquareBasedPyramid(1.0);
+    // model = SampleModels::SquareBasedPyramid(1.0);
 
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-//    emit getModel(this->model);
+    // emit getModel(this->model);
     model->translate(tr_x,tr_y,tr_z);
     emit getModel(model);
     emit update();
-//    qApp->processEvents();
-//    ui->setupUi(this);
+    // qApp->processEvents();
+    // ui->setupUi(this);
 }
 void MainWindow::on_actionNew_triggered()
 {

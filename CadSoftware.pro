@@ -45,6 +45,7 @@ HEADERS += \
     projectiony.h \
     projectionz.h \
     window2d.h
+
 #    include/* \
 
 #MOC_DIR     = ./build/moc
