@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+
 #include <QMainWindow>
 #include <QtGui>
 #include <QtWidgets>
@@ -22,7 +24,7 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        model = SampleModels::SquareBasedPyramid(1.0);
+//        model = SampleModels::SquareBasedPyramid(1.0);
         //Application crashes on doing what's below
 //        model = ((MainWindow*)parent)->model ;
     }
@@ -36,6 +38,9 @@ void Glwidget::setWireframe(bool b){
 }
 void Glwidget::update(){
     updateGL();
+}
+void Glwidget::setModel(Model *m){
+    this->model = m;
 }
 QSize Glwidget::minimumSizeHint() const
 {
@@ -171,38 +176,34 @@ void Glwidget::mouseMoveEvent(QMouseEvent *event)
 void Glwidget::draw()
 {
     //Drawing the Axis lines
+
+    glLineWidth(4);
+    Model* axes = SampleModels::Axes(4.0);
+//    std::cout << axes->faces.size() << " Glwidget Line 180\n";
+
+    float r1 ; float r2; float r3;
+
+    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+    for (int i = 0 ; i < axes->faces.size() ; i++){
+        r1 = ((float) rand() / (RAND_MAX)) ;
+        r2 = ((float) rand() / (RAND_MAX)) ;
+        r3 = ((float) rand() / (RAND_MAX)) ;
+        glColor3f(r1,r2,r3);
+
+        Face* f = axes->faces[i];
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glVertexPointer( 3, GL_FLOAT, 0 , f->points);
+        glDrawArrays(GL_POLYGON, 0, f->npts);
+        glDisableClientState(GL_VERTEX_ARRAY);
+    }
+// Drawing the model
+
+    if(!this->model){
+        return;
+    }
+
     glLineWidth(5);
-
-    glColor3f (1.0f,0.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(5.0,0.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,1.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,5.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,0.0f,1.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,0.0,5.0);
-    glEnd();
-
-    /////////////////////////////////////////////////////////////////////////////////
-    // Drawing the model
-//    qglColor(Qt::red);
-
-//    Model m = *(this->model);
-// Code to draw the solid model
-
-
     glColor3f(1.0, 0.0, 1.0);
-
-//    wireframe = false;
-//    std::cout  << wireframe << "Glwidget line 203\n";
 
     if(wireframe){
         glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);

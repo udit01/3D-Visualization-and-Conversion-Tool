@@ -33,6 +33,7 @@ public slots:
     void setScale(int factor);
     void setWireframe(bool b);
     void update();
+//    void setModel(Model* m);
 
 private:
     int scl;

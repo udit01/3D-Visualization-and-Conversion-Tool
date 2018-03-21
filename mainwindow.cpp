@@ -15,7 +15,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
+    model = SampleModels::SquareBasedPyramid(1.0);
     wireframe = false;
+
 
 //    std::delay(100);
     ui->setupUi(this);
@@ -30,17 +33,23 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(this, SIGNAL(wireframeVal(bool)), ui->widget , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->widget, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->widget , SLOT(setModel(Model*)));
+
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_x , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_x, SLOT(update()) );
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_y , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_y, SLOT(update()) );
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_z , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_z, SLOT(update()) );
+
     //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
 
     // connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(yRotationChanged(int)), ui->yRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(zRotationChanged(int)), ui->zRot, SLOT(setValue(int)));
+
+    emit wireframeVal(this->wireframe);
+    emit getModel(this->model);
 
 }
 
@@ -67,6 +76,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
+//    emit getModel(this->model);
     emit update();
 //    qApp->processEvents();
 //    ui->setupUi(this);

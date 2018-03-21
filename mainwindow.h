@@ -22,13 +22,13 @@ public:
 
 signals:
     void wireframeVal(bool b);
+    void getModel(Model* m);
     void update();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
 
 private slots:
-
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
     void on_actionNew_triggered();
