@@ -39,9 +39,7 @@ private slots:
     void on_ty_textEdited(const QString &arg1);
     void on_tz_textEdited(const QString &arg1);
     void on_alphaSlider_valueChanged(int value);
-
     void on_betaSlider_valueChanged(int value);
-
     void on_gammaSlider_valueChanged(int value);
 
 private:
