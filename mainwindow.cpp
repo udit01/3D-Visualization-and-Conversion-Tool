@@ -37,10 +37,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_x , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_x, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_x , SLOT(setModel(Model*)));
+
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_y , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_y, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_y , SLOT(setModel(Model*)));
+
     connect(this, SIGNAL(wireframeVal(bool)), ui->proj_z , SLOT(setWireframe(bool)));
     connect(this, SIGNAL(update()), ui->proj_z, SLOT(update()) );
+    connect(this, SIGNAL(getModel(Model*)), ui->proj_z , SLOT(setModel(Model*)));
 
     //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
 

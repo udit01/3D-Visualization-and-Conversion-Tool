@@ -17,7 +17,7 @@ ProjectionZ::ProjectionZ(QWidget *parent)
     : QGLWidget( QGLFormat(QGL::SampleBuffers), parent)
     {
         scl = 20.0f;
-        model = SampleModels::SquareBasedPyramid(1.0);
+//        model = SampleModels::SquareBasedPyramid(1.0);
 //        wireframe = ((MainWindow*)parent)->wireframe ;
     }
 
@@ -43,7 +43,9 @@ void ProjectionZ::setWireframe(bool b){
 void ProjectionZ::update(){
     updateGL();
 }
-
+void ProjectionZ::setModel(Model *m){
+    this->model = m;
+}
 void ProjectionZ::setScale(int factor){
     if(factor != 1){
         scl = factor;
@@ -111,33 +113,40 @@ void ProjectionZ::resizeGL(int width, int height)
 
 void ProjectionZ::draw()
 {
-    //Drawing the Axis lines
+    glLineWidth(4);
+    Model* axes = SampleModels::Axes(4.0);
+
+    for(int i = 0 ; i < axes->numPoints; i++){
+        for(int j = i ; j < axes->numPoints ; j++){
+//            std::cout << axes->edges[i][j] << " Edges "<<i <<"  " << j <<" Glwidget Line 180\n";
+            if(axes->edges[i][j]){
+                // a new array each time, to construct the line
+
+//                Randomness
+                r1 = ((float) rand() / (RAND_MAX)) ;
+                r2 = ((float) rand() / (RAND_MAX)) ;
+                r3 = ((float) rand() / (RAND_MAX)) ;
+                glColor3f(r1,r2,r3);
+
+                float* verti = new float [3*2];
+                std::copy(axes->points + i,axes->points + i +3,verti);
+                std::copy(axes->points + j,axes->points + j +3,verti+3);
+
+                //chose a random colour here
+                glEnableClientState(GL_VERTEX_ARRAY);
+                glVertexPointer( 3, GL_FLOAT, 0 , verti);
+                glDrawArrays(GL_LINES, 0, 2);
+                glDisableClientState(GL_VERTEX_ARRAY);
+
+            }
+        }
+    }
+
+    if(!this->model){
+        return;
+    }
+
     glLineWidth(5);
-
-    glColor3f (1.0f,0.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(5.0,0.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,1.0f,0.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,5.0,0.0);
-    glEnd();
-
-    glColor3f (0.0f,0.0f,1.0f);
-    glBegin(GL_LINES);
-        glVertex3f(0,0,0);
-        glVertex3f(0.0,0.0,5.0);
-    glEnd();
-
-    /////////////////////////////////////////////////////////////////////////////////
-    // Drawing the model
-//    qglColor(Qt::red);
-
-//    Model m = *(this->model);
-// Code to draw the solid model
     glColor3f(1.0, 0.0, 1.0);
 
     if(wireframe){
@@ -153,43 +162,6 @@ void ProjectionZ::draw()
         glDrawArrays(GL_POLYGON, 0, f->npts);
         glDisableClientState(GL_VERTEX_ARRAY);
     }
-
-// Code to draw wireframe of the model
-
-//    or in the above code, you can directly sepecify the drawing mode of polygon. IMPORTANT
-
-//    for(int i = 0 ; i < this->model->numPoints; i++){
-//        for(int j = 0 ; j < this->model->numPoints ; j++){
-//            if(this->model->edges[i][j]){
-//                // a new array each time, to construct the line
-//                float* verti = new float [3*2];
-//                std::copy(this->model->points[i],this->model->points[i]+3,verti);
-//                std::copy(this->model->points[j],this->model->points[j]+3,verti+3);
-
-//                //chose a random colour here
-//                glEnableClientState(GL_VERTEX_ARRAY);
-//                glVertexPointer( 3, GL_FLOAT, 0 , verti);
-//                glDrawArrays(GL_LINES, 0, 2);
-//                glDisableClientState(GL_VERTEX_ARRAY);
-
-//            }
-//        }
-//    }
-
-
-    //trial model
-    glColor3f(1.0,1.0,1.0);
-
-    float vertices[] = {
-       -2.0,0.0,0.0,
-         1.5,0.0,0.0,
-         0.0,3.0,1.0
-     };
-
-     glEnableClientState(GL_VERTEX_ARRAY);
-     glVertexPointer( 3, GL_FLOAT, 0 , vertices);
-     glDrawArrays(GL_POLYGON, 0, 3);
-     glDisableClientState(GL_VERTEX_ARRAY);
 
 //Why is the lighting and shaders so erratic?
 

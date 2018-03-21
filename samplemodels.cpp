@@ -38,9 +38,9 @@ Model* SampleModels::Axes(float side)
     }
 
     edges[0][0] = false; edges[0][1] = true ; edges[0][2] = true ; edges[0][3] = true ;
-    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = false ; edges[0][3] = false;
-    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = false ; edges[0][3] = false;
-    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = false ; edges[0][3] = false;
+    edges[1][0] = true ; edges[1][1] = false; edges[1][2] = false; edges[1][3] = false;
+    edges[2][0] = true ; edges[2][1] = false; edges[2][2] = false; edges[2][3] = false;
+    edges[3][0] = true ; edges[3][1] = false; edges[3][2] = false; edges[3][3] = false;
 //    {//in order of o a b c
 //        {false, true , true , true },
 //        {true , false, false, false},
@@ -85,10 +85,10 @@ Model* SampleModels::SquareBasedPyramid(float side)
     }
 
     edges[0][0] = false; edges[0][1] = true ; edges[0][2] = false; edges[0][3] = true ; edges[0][4] = true;
-    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = true ; edges[0][3] = false; edges[0][4] = true;
-    edges[0][0] = false; edges[0][1] = true ; edges[0][2] = false; edges[0][3] = true ; edges[0][4] = true;
-    edges[0][0] = true ; edges[0][1] = false; edges[0][2] = true ; edges[0][3] = false; edges[0][4] = true;
-    edges[0][0] = true ; edges[0][1] = true ; edges[0][2] = true ; edges[0][3] = true ; edges[0][4] = false;
+    edges[1][0] = true ; edges[1][1] = false; edges[1][2] = true ; edges[1][3] = false; edges[1][4] = true;
+    edges[2][0] = false; edges[2][1] = true ; edges[2][2] = false; edges[2][3] = true ; edges[2][4] = true;
+    edges[3][0] = true ; edges[3][1] = false; edges[3][2] = true ; edges[3][3] = false; edges[3][4] = true;
+    edges[4][0] = true ; edges[4][1] = true ; edges[4][2] = true ; edges[4][3] = true ; edges[4][4] = false;
 //    {//in order of a b c d o //above is correct, maybe some wrong editing  below
 //        {false, true , false, true , true},
 //        {true , false, true , false, true},
