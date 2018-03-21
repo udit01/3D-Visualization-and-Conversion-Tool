@@ -21,7 +21,7 @@
     <item row="0" column="0" rowspan="3" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,10">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0">
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
         <property name="spacing">
          <number>5</number>
         </property>
@@ -118,86 +118,6 @@
          </layout>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,3,3,3">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetMinimumSize</enum>
-          </property>
-          <item>
-           <widget class="QLabel" name="label_5">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(190, 218, 232);</string>
-            </property>
-            <property name="text">
-             <string>Scale the Object :</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_6">
-              <property name="text">
-               <string>Scale x :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_8">
-              <property name="text">
-               <string>Scale y :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMinimumSize</enum>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_7">
-              <property name="text">
-               <string>Scale z :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="horizontalSlider">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3,3,3">
           <property name="sizeConstraint">
            <enum>QLayout::SetMinimumSize</enum>
@@ -225,7 +145,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit"/>
+             <widget class="QLineEdit" name="tx">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -242,7 +166,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_2"/>
+             <widget class="QLineEdit" name="ty">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -259,7 +187,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_3"/>
+             <widget class="QLineEdit" name="tz">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

@@ -3,6 +3,7 @@
 #include <QtWidgets>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <exception>
 
 #include <model.h>
 #include <samplemodels.h>
@@ -82,6 +83,8 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_clicked()
 {
 //    emit getModel(this->model);
+    model->translate(tr_x,tr_y,tr_z);
+    emit getModel(model);
     emit update();
 //    qApp->processEvents();
 //    ui->setupUi(this);
@@ -133,4 +136,40 @@ void MainWindow::on_actionImport_triggered()
     {
         file_name = QString();
     }
+}
+
+void MainWindow::on_tx_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_x = v;
+}
+
+void MainWindow::on_ty_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_y = v;
+}
+
+void MainWindow::on_tz_textEdited(const QString &arg1)
+{
+    float v = 0.0;
+    try{
+        v = arg1.toFloat();
+    }
+    catch(std::exception e){
+        v = 0.0;
+    }
+    this->tr_z = v;
 }

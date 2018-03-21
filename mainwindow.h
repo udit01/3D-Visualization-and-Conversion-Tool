@@ -26,6 +26,7 @@ signals:
     void update();
 
 protected:
+    float tr_x ; float tr_y ; float tr_z ;
     void keyPressEvent(QKeyEvent *event);
 
 private slots:
@@ -34,6 +35,12 @@ private slots:
     void on_actionNew_triggered();
     void on_actionImport_triggered();
 \
+    void on_tx_textEdited(const QString &arg1);
+
+    void on_ty_textEdited(const QString &arg1);
+
+    void on_tz_textEdited(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     MainWindow *newWindow;
