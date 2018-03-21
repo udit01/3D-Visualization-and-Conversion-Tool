@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QtWidgets>
+#include <QFileDialog>
+#include <QMessageBox>
 
 #include <model.h>
 #include <samplemodels.h>
@@ -22,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->yRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setYRotation(int)));
     connect(ui->zRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setZRotation(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->widget, SLOT(setScale(int)));
-    connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_x, SLOT(setScale(int)));    
+    connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_x, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_y, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_z, SLOT(setScale(int)));
 
@@ -55,23 +57,6 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
         QWidget::keyPressEvent(e);
 }
 
-void MainWindow::slotReboot()
-{
- qDebug() << "Performing application reboot...";
- qApp->exit( MainWindow::EXIT_CODE_REBOOT );
-}
-
-void MainWindow::createActions()
-{
-    actionNew = new QAction( this );
-    actionNew->setText( tr("Restart") );
-    actionNew->setStatusTip( tr("Restarts the application") );
-    connect( actionNew, SIGNAL (triggered()),this, SLOT (slotReboot()));
-}
-
-
-
-
 void MainWindow::on_pushButton_2_clicked()
 {
     this->wireframe= !(this->wireframe) ;
@@ -85,4 +70,52 @@ void MainWindow::on_pushButton_clicked()
     emit update();
 //    qApp->processEvents();
 //    ui->setupUi(this);
+}
+void MainWindow::on_actionNew_triggered()
+{
+    // Closing this window, opening a new one
+    this -> close();
+    newWindow = new MainWindow(this);
+    newWindow -> show();
+}
+
+void MainWindow::on_actionImport_triggered()
+{
+    // Opening import file dialog box
+    QString file_name = QFileDialog::getOpenFileName(this, "Open a 2D Design", ".");
+
+    QChar ext;
+    if(!file_name.isNull())
+    {
+        ext = file_name[(file_name.length()-2)];
+    }
+
+    // if file is not null then open a new window base on extension else do nothing
+    if(!file_name.isNull() && (ext == '2'))
+    {
+        QMessageBox msgBox;
+        msgBox.setText(file_name);
+        msgBox.setInformativeText("Do you want to open this file?");
+        msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
+        msgBox.setDefaultButton(QMessageBox::Open);
+        msgBox.setWindowTitle("Open 2D Design");
+
+        int ret = msgBox.exec();
+
+        switch (ret) {
+            case QMessageBox::Open:
+                // opening a 2d window based on extension
+                hide();
+                window2d = new Window2D(this, file_name);
+                window2d -> show();
+                break;
+            default:
+                break;
+        }
+    }
+
+    if(!file_name.isNull() && ext != '3' && ext != '2')
+    {
+        file_name = QString();
+    }
 }

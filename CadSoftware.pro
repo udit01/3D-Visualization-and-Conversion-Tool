@@ -31,7 +31,8 @@ SOURCES += \
     samplemodels.cpp \
     projectionx.cpp \
     projectiony.cpp \
-    projectionz.cpp
+    projectionz.cpp \
+    window2d.cpp
 
 #INCLUDEPATH = /home/udit01/cop290/qGL/include/
 
@@ -42,14 +43,18 @@ HEADERS += \
     samplemodels.h \
     projectionx.h \
     projectiony.h \
-    projectionz.h
+    projectionz.h \
+    window2d.h
 #    include/* \
-
-FORMS += \
-    mainwindow.ui \
-    glwidget.ui
 
 #MOC_DIR     = ./build/moc
 #OBJECTS_DIR = ./build/obj
 #RCC_DIR     = ./build/qrc
 #UI_DIR      = ./build/uic
+
+
+
+FORMS += \
+    mainwindow.ui \
+    glwidget.ui \
+    window2d.ui

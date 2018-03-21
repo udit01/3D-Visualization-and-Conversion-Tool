@@ -635,10 +635,16 @@
    <property name="text">
     <string>New</string>
    </property>
+   <property name="toolTip">
+    <string>Open a New Window</string>
+   </property>
   </action>
   <action name="actionImport">
    <property name="text">
     <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Import a Saved Design</string>
    </property>
   </action>
   <action name="actionExport">
