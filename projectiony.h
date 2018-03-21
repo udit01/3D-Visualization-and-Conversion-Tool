@@ -31,6 +31,8 @@ protected:
 
 public slots:
     void setScale(int factor);
+    void setWireframe(bool b);
+    void update();
 
 
 private:

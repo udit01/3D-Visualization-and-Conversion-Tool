@@ -22,6 +22,10 @@ public:
     static int const EXIT_CODE_REBOOT = -123456789;
     ~MainWindow();
 
+signals:
+    void wireframeVal(bool b);
+    void update();
+
 protected:
     void keyPressEvent(QKeyEvent *event);
     void slotReboot();
@@ -29,6 +33,8 @@ protected:
 
 private slots:
 
+    void on_pushButton_2_clicked();
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

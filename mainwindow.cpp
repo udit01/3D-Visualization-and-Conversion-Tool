@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     wireframe = false;
-    model = SampleModels::SquareBasedPyramid(1.0);
+
 //    std::delay(100);
     ui->setupUi(this);
 
@@ -26,6 +26,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_y, SLOT(setScale(int)));
     connect(ui->scaleDial, SIGNAL(valueChanged(int)), ui->proj_z, SLOT(setScale(int)));
 
+    connect(this, SIGNAL(wireframeVal(bool)), ui->widget , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->widget, SLOT(update()) );
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_x , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_x, SLOT(update()) );
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_y , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_y, SLOT(update()) );
+    connect(this, SIGNAL(wireframeVal(bool)), ui->proj_z , SLOT(setWireframe(bool)));
+    connect(this, SIGNAL(update()), ui->proj_z, SLOT(update()) );
     //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
 
     // connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
@@ -63,3 +71,18 @@ void MainWindow::createActions()
 
 
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    this->wireframe= !(this->wireframe) ;
+    emit wireframeVal(this->wireframe);
+//    model = SampleModels::SquareBasedPyramid(1.0);
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    emit update();
+//    qApp->processEvents();
+//    ui->setupUi(this);
+}

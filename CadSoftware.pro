@@ -24,8 +24,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     glwidget.cpp \
     model.cpp \
     samplemodels.cpp \
@@ -33,15 +33,23 @@ SOURCES += \
     projectiony.cpp \
     projectionz.cpp
 
+#INCLUDEPATH = /home/udit01/cop290/qGL/include/
+
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     glwidget.h \
     model.h \
     samplemodels.h \
     projectionx.h \
     projectiony.h \
     projectionz.h
+#    include/* \
 
 FORMS += \
-        mainwindow.ui \
+    mainwindow.ui \
     glwidget.ui
+
+#MOC_DIR     = ./build/moc
+#OBJECTS_DIR = ./build/obj
+#RCC_DIR     = ./build/qrc
+#UI_DIR      = ./build/uic

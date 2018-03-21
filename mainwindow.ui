@@ -17,233 +17,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_3" rowstretch="16,16,16,25" columnstretch="14,40,12">
-    <item row="3" column="0" colspan="3">
-     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,10">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetMinimumSize</enum>
-      </property>
-      <property name="topMargin">
-       <number>5</number>
-      </property>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_16">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <property name="leftMargin">
-         <number>200</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="label_18">
-          <property name="text">
-           <string>TOP View</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_19">
-          <property name="text">
-           <string>        FRONT View</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_20">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(91, 5, 5);</string>
-          </property>
-          <property name="text">
-           <string>                                     SIDE View</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_17">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <item>
-         <widget class="ProjectionX" name="proj_x" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(46, 52, 54);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="ProjectionY" name="proj_y" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(46, 52, 54);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="ProjectionZ" name="proj_z" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(46, 52, 54);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
-      <property name="spacing">
-       <number>40</number>
-      </property>
-      <property name="sizeConstraint">
-       <enum>QLayout::SetMinimumSize</enum>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <item>
-         <widget class="QDial" name="scaleDial">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(244, 196, 196);</string>
-          </property>
-          <property name="maximum">
-           <number>99</number>
-          </property>
-          <property name="notchesVisible">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(136, 138, 133);</string>
-          </property>
-          <property name="text">
-           <string>Update</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="2" rowspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,12">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetMinimumSize</enum>
-      </property>
-      <property name="topMargin">
-       <number>10</number>
-      </property>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_14">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <property name="leftMargin">
-         <number>5</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="label_16">
-          <property name="text">
-           <string>   Rotate x</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_17">
-          <property name="text">
-           <string>  Rotate y</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_15">
-          <property name="text">
-           <string>Rotate z</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_15">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <item>
-         <widget class="QSlider" name="xRot">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(244, 241, 223);</string>
-          </property>
-          <property name="maximum">
-           <number>5760</number>
-          </property>
-          <property name="singleStep">
-           <number>150</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::TicksAbove</enum>
-          </property>
-          <property name="tickInterval">
-           <number>150</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="yRot">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(244, 241, 223);</string>
-          </property>
-          <property name="maximum">
-           <number>5760</number>
-          </property>
-          <property name="singleStep">
-           <number>150</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::TicksAbove</enum>
-          </property>
-          <property name="tickInterval">
-           <number>150</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="zRot">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(244, 241, 223);</string>
-          </property>
-          <property name="maximum">
-           <number>5760</number>
-          </property>
-          <property name="singleStep">
-           <number>150</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::TicksAbove</enum>
-          </property>
-          <property name="tickInterval">
-           <number>150</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="16,0,0,0" columnstretch="14,0,0">
     <item row="0" column="0" rowspan="3" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,10">
       <item>
@@ -524,6 +298,249 @@
       </item>
      </layout>
     </item>
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
+      <property name="spacing">
+       <number>40</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QDial" name="scaleDial">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 196, 196);</string>
+          </property>
+          <property name="maximum">
+           <number>99</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(136, 138, 133);</string>
+            </property>
+            <property name="text">
+             <string>Update</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Wireframe</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,10">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>200</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>TOP View</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>        FRONT View</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_20">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(91, 5, 5);</string>
+          </property>
+          <property name="text">
+           <string>                                     SIDE View</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <item>
+         <widget class="ProjectionX" name="proj_x" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ProjectionY" name="proj_y" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ProjectionZ" name="proj_z" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 52, 54);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,12">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>   Rotate x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>  Rotate y</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Rotate z</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <item>
+         <widget class="QSlider" name="xRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="yRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="zRot">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(244, 241, 223);</string>
+          </property>
+          <property name="maximum">
+           <number>5760</number>
+          </property>
+          <property name="singleStep">
+           <number>150</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+          <property name="tickInterval">
+           <number>150</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -532,7 +549,7 @@
      <x>0</x>
      <y>0</y>
      <width>1406</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

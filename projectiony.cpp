@@ -18,7 +18,7 @@ ProjectionY::ProjectionY(QWidget *parent)
     {
         scl = 20.0f;
         model = SampleModels::SquareBasedPyramid(1.0);
-        wireframe = ((MainWindow*)parent)->wireframe ;
+//        wireframe = ((MainWindow*)parent)->wireframe ;
     }
 
 ProjectionY::~ProjectionY()
@@ -37,12 +37,11 @@ QSize ProjectionY::sizeHint() const
     return QSize(400, 400);
 }
 
-static void qNormalizeAngle(int &angle)
-{
-    while (angle < 0)
-        angle += 360 * 16;
-    while (angle > 5760)
-        angle -= 360 * 16;
+void ProjectionY::setWireframe(bool b){
+    this->wireframe = b;
+}
+void ProjectionY::update(){
+    updateGL();
 }
 void ProjectionY::setScale(int factor){
     if(factor != 1){
@@ -139,8 +138,6 @@ void ProjectionY::draw()
 //    Model m = *(this->model);
 // Code to draw the solid model
     glColor3f(1.0, 0.0, 1.0);
-//    std::vector<Face>::iterator it ;//= this->model.faces.begin();
-
 
     if(wireframe){
         glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);

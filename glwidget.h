@@ -36,6 +36,8 @@ public slots:
     void setYRotation(int angle);
     void setZRotation(int angle);
     void setScale(int factor);
+    void setWireframe(bool b);
+    void update();
 
 signals:
     // signaling rotation from mouse movement

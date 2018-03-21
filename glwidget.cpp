@@ -1,6 +1,7 @@
 #include "glwidget.h"
 //#include "ui_glwidget.h"
 
+#include <iostream>
 #include <vector>
 #include <QMainWindow>
 #include <QtGui>
@@ -21,7 +22,6 @@ Glwidget::Glwidget(QWidget *parent)
         yRot = 0;
         zRot = 0;
         scl = 20.0f;
-        wireframe = ((MainWindow*)parent)->wireframe ;
         model = SampleModels::SquareBasedPyramid(1.0);
         //Application crashes on doing what's below
 //        model = ((MainWindow*)parent)->model ;
@@ -30,7 +30,13 @@ Glwidget::~Glwidget()
 {
 
 }
-
+void Glwidget::setWireframe(bool b){
+    this->wireframe = b;
+//    updateGL();
+}
+void Glwidget::update(){
+    updateGL();
+}
 QSize Glwidget::minimumSizeHint() const
 {
     return QSize(50, 50);
@@ -194,7 +200,9 @@ void Glwidget::draw()
 
 
     glColor3f(1.0, 0.0, 1.0);
-//    std::vector<Face>::iterator it ;//= this->model.faces.begin();
+
+//    wireframe = false;
+//    std::cout  << wireframe << "Glwidget line 203\n";
 
     if(wireframe){
         glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
