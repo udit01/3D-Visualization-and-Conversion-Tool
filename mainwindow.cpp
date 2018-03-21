@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     wireframe = false;
 
 
-//    std::delay(100);
+    // std::delay(100);
     ui->setupUi(this);
 
     connect(ui->xRot, SIGNAL(valueChanged(int)), ui->widget, SLOT(setXRotation(int)));
@@ -48,8 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(update()), ui->proj_z, SLOT(update()) );
     connect(this, SIGNAL(getModel(Model*)), ui->proj_z , SLOT(setModel(Model*)));
 
-    //connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
-
+    // connect(ui -> actionNew, SIGNAL(valueChanged(int)), ui->actionNew, SLOT(slotReboot));
     // connect(ui->widget, SIGNAL(xRotationChanged(int)), ui->xRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(yRotationChanged(int)), ui->yRot, SLOT(setValue(int)));
     // connect(ui->widget, SIGNAL(zRotationChanged(int)), ui->zRot, SLOT(setValue(int)));

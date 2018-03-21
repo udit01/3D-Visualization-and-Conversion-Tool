@@ -34,11 +34,8 @@ private slots:
     void on_pushButton_clicked();
     void on_actionNew_triggered();
     void on_actionImport_triggered();
-\
     void on_tx_textEdited(const QString &arg1);
-
     void on_ty_textEdited(const QString &arg1);
-
     void on_tz_textEdited(const QString &arg1);
 
 private:
