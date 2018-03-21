@@ -30,7 +30,7 @@ void Model::translate(float dx, float dy, float dz){
 
     for (int i = 0 ; i < this->faces.size() ; i++){
         Face* f = this->faces[i];
-        for(int j = 0 ; j < f->npts ; j+=3){
+        for(int j = 0 ; j < 3*(f->npts) ; j+=3){
             f->points[ j ] += dx;
             f->points[j+1] += dy;
             f->points[j+2] += dz;
