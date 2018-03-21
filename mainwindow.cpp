@@ -186,10 +186,10 @@ void MainWindow::on_alphaSlider_valueChanged(int value)
 
 void MainWindow::on_betaSlider_valueChanged(int value)
 {
-        this->dbeta = ((float) value * (PI))/180.0;
+    this->dbeta = ((float) value * (PI))/180.0;
 }
 
 void MainWindow::on_gammaSlider_valueChanged(int value)
 {
-        this->dgamma = ((float) value * (PI))/180.0;
+    this->dgamma = ((float) value * (PI))/180.0;
 }

@@ -41,6 +41,7 @@ void Model::translate(float dx, float dy, float dz){
 
 void Model::rotate(float alpha, float beta, float gamma){
 // angles lie between 0 to 180 deg
+    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
     for (int i=0; i < 3 * numPoints ; i+=3){
         this->points[ i ] = this->points[i]+ 0 + 0 ;
         this->points[i+1] = 0 + this->points[i+1]*cos(alpha)  - this->points[i+2]*sin(alpha);
@@ -58,6 +59,7 @@ void Model::rotate(float alpha, float beta, float gamma){
     for (int k = 0 ;  k < this->faces.size() ; k++){
         Face* f = this->faces[k];
         for(int i = 0 ; i < 3*(f->npts) ; i+=3){
+            f->points[i] = f->points[i] + 0 + 0 ;
             f->points[i+1] = 0 + f->points[i+1]*cos(alpha)  - f->points[i+2]*sin(alpha);
             f->points[i+2] = 0 + f->points[i+1]*sin(alpha)  + f->points[i+2]*cos(alpha);
 
