@@ -22,13 +22,10 @@ public:
     float xl;
     float yl;
     float zl;
-
     DirectionCosines(float xa, float ya, float za);
     ~DirectionCosines();
-
     float magnitude();
 };
-
 class Point
 {
 public:
@@ -36,10 +33,8 @@ public:
     float y;
     float z;
 //    string label; // is this required ?
-
     //Important Concern below
     //Shouldn't we label points because we don't know which point here, corresponds to which points in edges?
-
     Point(float x,float y, float z);
     ~Point();
     bool equals(Point p);
@@ -77,7 +72,7 @@ public:
 //    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     //s if filename
-    std::string serialize(std::string s); // Will be used for file save/load // import/export .
+    void serialize(std::string s); // Will be used for file save/load // import/export .
     static Model* deserialize(std::string s);
 
 private:

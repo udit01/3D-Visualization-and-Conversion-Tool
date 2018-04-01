@@ -81,38 +81,41 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
     //check if file has the extension 3d or not ?
 
-      ofstream outFile;
-      outFile.open (s);
 
-      outFile << "POINTS:\n" ;
-      outFile << this->numPoints;
-      outFile << std::endl;
+      std::ofstream newFile;
+      newFile.open(s);
+
+      newFile << "POINTS:\n" ;
+      newFile << this->numPoints;
+      newFile << std::endl;
 
       for(int i = 0 ; i < 3*this->numPoints; i+=3){
-          outFile << points[i] << " " << points[i+1] << " " << points[i+2] << "\n" ;
+          newFile << points[i] << " " << points[i+1] << " " << points[i+2] << "\n" ;
        }
 
-      outFile << "EDGES:\n";
+      newFile << "EDGES:\n";
 
       for(int i=0 ; i < this->numPoints ; i++){
           for(int j=0 ; j < this->numPoints ; j++){
-              outFile << this->edges[i][j] << " ";
+              newFile << this->edges[i][j] << " ";
           }
-          outFile << "\n" ;
+          newFile << "\n" ;
       }
 
-      outFile << "FACES:\n";
-      outFile << this->faces.size() << "\n" ;
+      newFile << "FACES:\n";
+      newFile << this->faces.size() << "\n" ;
 
       for ( int i=0; i < this->faces.size() ; i++){
           Face *f = this->faces[i];
-          outFile << f->points << "\n";
+
+          newFile << i << "\n";
           for(int j=0; j < 3*f->npts; j+=3){
-               outFile << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
+               newFile  << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
           }
       }
 
-      outFile.close();
+
+      newFile.close();
       return ;
 }
 

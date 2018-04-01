@@ -41,6 +41,7 @@ private slots:
     void on_alphaSlider_valueChanged(int value);
     void on_betaSlider_valueChanged(int value);
     void on_gammaSlider_valueChanged(int value);
+    void on_actionExport_triggered();
 
 private:
     Ui::MainWindow *ui;
