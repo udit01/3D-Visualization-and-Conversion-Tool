@@ -81,8 +81,8 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
     //check if file has the extension 3d or not ?
 
-      ofstream newfile;
-      newfile.open (s);
+      std::ofstream newFile;
+      newFile.open(s);
 
       newFile << "POINTS:\n" ;
       newFile << this->numPoints;
@@ -106,13 +106,13 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
       for ( int i=0; i < this->faces.size() ; i++){
           Face *f = this->faces[i];
-          newfile << f->points << "\n";
+          newFile << i << "\n";
           for(int j=0; j < 3*f->npts; j+=3){
                newFile << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
           }
       }
 
-      newfile.close();
+      newFile.close();
       return ;
 }
 

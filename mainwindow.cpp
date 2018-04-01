@@ -224,11 +224,11 @@ void MainWindow::on_actionExport_triggered()
             case QMessageBox::Save:
                 if(ext == '2')
                 {
-                    Model::serialize(file_name.toStdString());
+                    this-> model-> serialize(file_name.toStdString());
                 }
                 else
                 {
-                    Model::serialize(file_name.toStdString());
+                    this-> model-> serialize(file_name.toStdString());
                 }
                 break;
             default:
