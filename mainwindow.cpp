@@ -84,11 +84,14 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-//    emit getModel(this->model);
+
+
     model->translate(tr_x,tr_y,tr_z);
+    tr_x = 0 ; tr_y = 0; tr_z = 0;
+    ui->tx->setText("0.0") ; ui->ty->setText("0.0") ; ui->tz->setText("0.0") ;
     model->rotate(dalpha,dbeta,dgamma);
 
-    emit getModel(model);
+//    emit getModel(model);
     emit update();
 //    qApp->processEvents();
 //    ui->setupUi(this);

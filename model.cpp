@@ -1,6 +1,7 @@
+#include <iostream>
 #include <math.h>
 #include "model.h"
-#include <QDebug>
+#include <fstream>
 
 Face::Face(float * pts, int npts){
     this->points = pts;
@@ -38,11 +39,12 @@ void Model::translate(float dx, float dy, float dz){
             f->points[j+2] += dz;
         }
     }
+    return;
 }
 
 void Model::rotate(float alpha, float beta, float gamma){
 // angles lie between 0 to 180 deg
-    qDebug() << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
+    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
     for (int i=0; i < 3 * numPoints ; i+=3){
         this->points[ i ] = this->points[i]+ 0 + 0 ;
         this->points[i+1] = 0 + this->points[i+1]*cos(alpha)  - this->points[i+2]*sin(alpha);
@@ -73,10 +75,25 @@ void Model::rotate(float alpha, float beta, float gamma){
             f->points[i+2]= 0 + 0 + f->points[i+2];
         }
     }
+    return;
 }
+void Model::serialize(string s){//string is the absolute? filepath where file is to be stored
+      ofstream newfile;
+      newfile.open (s);
+
+      newFile << "POINTS:\n" ;
+
+      newfile << "Writing this to a file.\n";
+
+      newfile.close();
+      return ;
+}
+
 Model* Model::deserialize(std::string s){
 
 }
+
+
 //Model::Model( std::vector<Face*> faces, bool** edges)
 //{
 
