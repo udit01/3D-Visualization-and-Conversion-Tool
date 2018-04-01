@@ -125,5 +125,219 @@ Model* Model::deserialize(std::string s){
 }
 
 Model2d* Model::convertTo2d(){
+    int numPoints = this-> numPoints;
 
+    float* pointsXY_temp = new float[2*numPoints];
+    float* pointsYZ_temp = new float[2*numPoints];
+    float* pointsZX_temp = new float[2*numPoints];
+
+    int countXY = 0;
+    int countYZ = 0;
+    int countZX = 0;
+
+    int* deletedXY = new int[numPoints];
+    int* deletedYZ = new int[numPoints];
+    int* deletedZX = new int[numPoints];
+
+    int deletedLocationXY = 0;
+    int deletedLocationYZ = 0;
+    int deletedLocationZX = 0;
+
+    int check;
+
+    for(int i = 0; i < 3*numPoints ; i+=3)
+    {
+        check = 0;
+        for(int j = 0; j < deletedXY; j+=2)
+        {
+            if((pointsXY_temp[ j ] == this-> points[ i ]) && (pointsXY_temp[j+1] == this-> points[i+1]))
+            {
+                check = 1;
+                deletedXY[ deletedLocationXY ] = j;
+                deletedXY[deletedLocationXY+1] = i/3;
+                deletedLocationXY+=2;
+                break;
+            }
+
+        }
+        if(check == 0)
+        {
+            pointsXY_temp[ countXY ] = this-> points[ i ] ;
+            pointsXY_temp[countXY+1] = this-> points[i+1] ;
+            deletedXY+=2;
+        }
+
+        check = 0;
+        for(int j = 0; j < deletedYZ; j+=2)
+        {
+            if((pointsYZ_temp[ j ] == this-> points[i+1]) && (pointsYZ_temp[j+1] == this-> points[i+2]))
+            {
+                check = 1;
+                deletedYZ[ deletedLocationYZ ] = j;
+                deletedYZ[deletedLocationYZ+1] = i/3;
+                deletedLocationYZ+=2;
+                break;
+            }
+
+        }
+        if(check == 0)
+        {
+            pointsYZ_temp[ countYZ ] = this-> points[i+1] ;
+            pointsYZ_temp[countYZ+1] = this-> points[i+2] ;
+            deletedYZ+=2;
+        }
+
+        check = 0;
+        for(int j = 0; j < deletedZX; j+=2)
+        {
+            if((pointsZX_temp[ j ] == this-> points[i+2]) && (pointsZX_temp[j+1] == this-> points[i]))
+            {
+                check = 1;
+                deletedZX[ deletedLocationZX ] = j;
+                deletedZX[deletedLocationZX+1] = i/3;
+                deletedLocationZX+=2;
+                break;
+            }
+
+        }
+        if(check == 0)
+        {
+            pointsZX_temp[ countZX ] = this-> points[i+2] ;
+            pointsZX_temp[countZX+1] = this-> points[i] ;
+            deletedXY+=2;
+        }
+    }
+
+    float* pointsXY = new float[countXY];
+    float* pointsYZ = new float[countYZ];
+    float* pointsZX = new float[countZX];
+
+    copy(pointsXY_temp, pointsXY_temp+countXY, pointsXY);
+    copy(pointsYZ_temp, pointsYZ_temp+countYZ, pointsYZ);
+    copy(pointsZX_temp, pointsZX_temp+countZX, pointsZX);
+
+    bool** edgesXY_temp= new bool*[numPoints];
+    bool** edgesYZ_temp= new bool*[numPoints];
+    bool** edgesZX_temp= new bool*[numPoints];
+    for(int i = 0; i < numPoints ; i++){
+        edgesXY_temp[i] = new bool[numPoints];
+        edgesYZ_temp[i] = new bool[numPoints];
+        edgesZX_temp[i] = new bool[numPoints];
+    }
+
+    for(int j = 0; j < numPoints; j++)
+    {
+        for(int i = 0; i < deletedLocationXY; i+=2)
+        {
+            edgesXY_temp[i][j] = edgesXY_temp[i][j] || edgesXY_temp[i+1][j];
+        }
+
+        for(int i = 0; i < deletedLocationYZ; i+=2)
+        {
+            edgesYZ_temp[i][j] = edgesYZ_temp[i][j] || edgesYZ_temp[i+1][j];
+        }
+
+        for(int i = 0; i < deletedLocationZX; i+=2)
+        {
+            edgesZX_temp[i][j] = edgesZX_temp[i][j] || edgesZX_temp[i+1][j];
+        }
+    }
+
+    int* presentEdgesXY = new int[countXY/2];
+    int* presentEdgesYZ = new int[countYZ/2];
+    int* presentEdgesZX = new int[countZX/2];
+    int presentLocationXY = 0;
+    int presentLocationYZ = 0;
+    int presentLocationZX = 0;
+
+    for(int i = 0; i < numPoints; i++)
+    {
+        check = 0;
+        for(int j = 0; j < deletedLocationXY/2; j++)
+        {
+            if(i == deletedXY[j])
+            {
+                check = 1;
+                break;
+            }
+        }
+        if(check == 0)
+        {
+            presentEdgesXY[presentLocationXY] = i;
+            presentLocationXY++;
+        }
+
+        check = 0;
+        for(int j = 0; j < deletedLocationYZ/2; j++)
+        {
+            if(i == deletedYZ[j])
+            {
+                check = 1;
+                break;
+            }
+        }
+        if(check2 == 0)
+        {
+            presentEdgesYZ[presentLocationYZ] = i;
+            presentLocationYZ++;
+        }
+
+        check = 0;
+        for(int j = 0; j < deletedLocationZX/2; j++)
+        {
+            if(i == deletedZX[j])
+            {
+                check = 1;
+                break;
+            }
+        }
+        if(check == 0)
+        {
+            presentEdgesZX[presentLocationZX] = i;
+            presentLocationZX++;
+        }
+
+    }
+
+    bool** edgesXY= new bool*[countXY/2];
+    bool** edgesYZ= new bool*[countYZ/2];
+    bool** edgesZX= new bool*[countZX/2];
+    for(int i = 0; i < countXY/2 ; i++)
+    {
+        edgesXY[i] = new bool[countXY/2];
+    }
+    for(int i = 0; i < countYZ/2 ; i++)
+    {
+        edgesXY[i] = new bool[countYZ/2];
+    }
+    for(int i = 0; i < countZX/2 ; i++)
+    {
+        edgesXY[i] = new bool[countZX/2];
+    }
+
+    for(int i = 0; i < countXY/2; i++)
+    {
+        for(int j = 0; j < countXY/2; j++)
+        {
+            edgesXY[i][j] = edgesXY_temp[presentEdgesXY[i]][presentEdgesXY[j]];
+        }
+    }
+    for(int i = 0; i < countYZ/2; i++)
+    {
+        for(int j = 0; j < countYZ/2; j++)
+        {
+            edgesYZ[i][j] = edgesYZ_temp[presentEdgesYZ[i]][presentEdgesYZ[j]];
+        }
+    }
+    for(int i = 0; i < countZX/2; i++)
+    {
+        for(int j = 0; j < countZX/2; j++)
+        {
+            edgesZX[i][j] = edgesZX_temp[presentEdgesZX[i]][presentEdgesZX[j]];
+        }
+    }
+
+    Projection* xy = new Projection(countXY/2, pointsXY, edgesXY);
+    Projection* yz = new Projection(countYZ/2, pointsYZ, edgesYZ);;
+    Projection* zx = new Projection(countZX/2, pointsZX, edgesZX);;
 }
