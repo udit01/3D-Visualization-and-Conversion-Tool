@@ -9,11 +9,6 @@ Model2d::Model2d(Projection* xy, Projection* yz, Projection* zx)
     this->zx = zx;
 }
 
-Model2d* Model2d::deserialize(std::string s)
-{
-
-}
-
 Model* Model2d::convertTo3d(){
 
 }
@@ -25,65 +20,35 @@ void Model2d::serialize(std::string s){//string is the absolute? filepath where 
       std::ofstream newFile;
       newFile.open(s);
 
-//-------------------------------------------------------------------------------
-      newFile << "PROJECTION X-Y:\n";
-      newFile << "POINTS:\n" ;
-      newFile << this->xy->npts;
-      newFile << std::endl;
+     // Reduction thus preventing copy paste of code
+     Projection* ps[3] = {this->xy, this->yz, this->zx};
+     std::string strs[3] = {"PROJECTION X-Y:\n", "PROJECTION Y-Z:\n", "PROJECTION Z-X:\n"};
 
-      for(int i = 0 ; i < 3*this->xy->npts; i+=3){
-          newFile << this->xy->points[i] << " " << this->xy->points[i+1] << " " << this->xy->points[i+2] << "\n" ;
-       }
+     for(int k = 0; k < 3; k++){
+         newFile << strs[k];
+         newFile << "POINTS:\n" ;
+         newFile << ps[k]->npts;
+         newFile << std::endl;
 
-      newFile << "EDGES:\n";
-
-      for(int i=0 ; i < this->xy->npts; i++){
-          for(int j=0 ; j < this->xy->npts ; j++){
-              newFile << this->xy->edges[i][j] << " ";
+         for(int i = 0 ; i < 3*ps[k]->npts; i+=3){
+             newFile << ps[k]->points[i] << " " << ps[k]->points[i+1] << " " << ps[k]->points[i+2] << "\n" ;
           }
-          newFile << "\n" ;
-      }
 
-//-------------------------------------------------------------------------------
-      newFile << "PROJECTION Y-Z:\n";
-      newFile << "POINTS:\n" ;
-      newFile << this->yz->npts;
-      newFile << std::endl;
 
-      for(int i = 0 ; i < 3*this->yz->npts; i+=3){
-          newFile << this->yz->points[i] << " " << this->yz->points[i+1] << " " << this->yz->points[i+2] << "\n" ;
-       }
-
-      newFile << "EDGES:\n";
-
-      for(int i=0 ; i < this->yz->npts; i++){
-          for(int j=0 ; j < this->yz->npts ; j++){
-              newFile << this->yz->edges[i][j] << " ";
-          }
-          newFile << "\n" ;
-      }
-//-------------------------------------------------------------------------------
-
-      newFile << "PROJECTION Z-X:\n";
-      newFile << "POINTS:\n" ;
-      newFile << this->zx->npts;
-      newFile << std::endl;
-
-      for(int i = 0 ; i < 3*this->zx->npts; i+=3){
-          newFile << this->zx->points[i] << " " << this->zx->points[i+1] << " " << this->zx->points[i+2] << "\n" ;
-       }
-
-      newFile << "EDGES:\n";
-
-      for(int i=0 ; i < this->zx->npts; i++){
-          for(int j=0 ; j < this->zx->npts ; j++){
-              newFile << this->zx->edges[i][j] << " ";
-          }
-          newFile << "\n" ;
-      }
-//-------------------------------------------------------------------------------
-
+         newFile << "EDGES:\n";
+         for(int i=0 ; i < ps[k]->npts; i++){
+             for(int j=0 ; j < ps[k]->npts ; j++){
+                 newFile << ps[k]->edges[i][j] << " ";
+             }
+             newFile << "\n" ;
+         }
+     }
       newFile.close();
       return ;
 }
 
+
+Model2d* Model2d::deserialize(std::string s)
+{
+
+}
