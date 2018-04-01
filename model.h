@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 #include <QGL>
+#include "model2d.h"
+
 /****************************************************************************
  *  Another model could be to include the points and lines seperately, also in faces we don't need the edges, we minimally need points,
  *  but we'll go with edges to generate wireframe anyway
@@ -40,6 +42,9 @@ public:
     bool equals(Point p);
 };
 */
+
+class Model2d;
+
 class Face
 {
 public:
@@ -72,6 +77,7 @@ public:
 //    std::vector<std::vector<bool>> getEdgeSet(); // We will have to construct this from differnt smaller edge sets
 
     //s if filename
+    Model2d* convertTo2d();
     void serialize(std::string s); // Will be used for file save/load // import/export .
     static Model* deserialize(std::string s);
 

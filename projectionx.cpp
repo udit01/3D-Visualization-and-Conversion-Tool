@@ -1,5 +1,4 @@
 #include "projectionx.h"
-//#include "ui_glwidget.h"
 
 #include <vector>
 #include <QMainWindow>

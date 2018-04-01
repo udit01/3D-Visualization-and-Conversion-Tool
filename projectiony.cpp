@@ -1,6 +1,5 @@
 #include "projectiony.h"
 
-
 #include <vector>
 #include <QMainWindow>
 #include <QtGui>

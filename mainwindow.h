@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QSlider>
 #include "model.h"
-#include "window2d.h"
 
 namespace Ui {
 class MainWindow;
@@ -46,7 +45,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MainWindow *newWindow;
-    Window2D *window2d;
 };
 
 #endif // MAINWINDOW_H

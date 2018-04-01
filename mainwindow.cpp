@@ -1,13 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include <QtWidgets>
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <exception>
 
-#include <model.h>
-#include <samplemodels.h>
+#include "model.h"
+#include "model2d.h"
+#include "samplemodels.h"
 #include "glwidget.h"
 #include "projectionx.h"
 #include "projectiony.h"
@@ -97,6 +99,7 @@ void MainWindow::on_pushButton_clicked()
 //    qApp->processEvents();
 //    ui->setupUi(this);
 }
+
 void MainWindow::on_actionNew_triggered()
 {
     // Closing this window, opening a new one
@@ -108,7 +111,7 @@ void MainWindow::on_actionNew_triggered()
 void MainWindow::on_actionImport_triggered()
 {
     // Opening import file dialog box
-    QString file_name = QFileDialog::getOpenFileName(this, "Open a 2D Design", ".");
+    QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
 
     QChar ext;
     if(!file_name.isNull())
@@ -117,23 +120,27 @@ void MainWindow::on_actionImport_triggered()
     }
 
     // if file is not null then open a new window base on extension else do nothing
-    if(!file_name.isNull() && (ext == '2'))
+    if(!file_name.isNull() && (ext == '2' || ext == '3'))
     {
         QMessageBox msgBox;
         msgBox.setText(file_name);
         msgBox.setInformativeText("Do you want to open this file?");
         msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
         msgBox.setDefaultButton(QMessageBox::Open);
-        msgBox.setWindowTitle("Open 2D Design");
+        msgBox.setWindowTitle("Open Design");
 
         int ret = msgBox.exec();
 
         switch (ret) {
             case QMessageBox::Open:
-                // opening a 2d window based on extension
-                hide();
-                window2d = new Window2D(this, file_name);
-                window2d -> show();
+                if(ext == '2')
+                {
+                    this-> model = (Model2d::deserialize(file_name.toStdString()))->convertTo3d();
+                }
+                else
+                {
+                    this-> model = Model::deserialize(file_name.toStdString());
+                }
                 break;
             default:
                 break;
@@ -202,7 +209,7 @@ void MainWindow::on_actionExport_triggered()
 {
     QString filter = "All File (*.*) ;; 2D File (*.2d) ;; 3D File (*.3d)";
     QString file_name = QFileDialog::getSaveFileName(this, "Save a Design", ".",filter);
-
+    qDebug() << file_name;
     QChar ext;
     if(!file_name.isNull())
     {

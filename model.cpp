@@ -1,9 +1,12 @@
+#include "model.h"
 #include <iostream>
 #include <math.h>
 #include <vector>
 #include <fstream>
 #include "model.h"
 #include "samplemodels.h"
+#include "model2d.h"
+
 Face::Face(float * pts, int npts){
     this->points = pts;
     this->npts = npts;
@@ -12,7 +15,6 @@ Face::Face(float * pts, int npts){
 Face::~Face(){
     delete this;
 }
-
 
 Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces ){
     this->numPoints = numPoints;
@@ -24,6 +26,7 @@ Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces 
 Model::~Model(){
     delete this;
 }
+
 void Model::translate(float dx, float dy, float dz){
 
     for (int i=0; i < 3 * numPoints ; i+=3){
@@ -78,11 +81,11 @@ void Model::rotate(float alpha, float beta, float gamma){
     }
     return;
 }
+
 void Model::serialize(std::string s){//string is the absolute? filepath where file is to be stored
 
     //check if file has the extension 3d or not ?
-
-
+//out file is a new file
       std::ofstream newFile;
       newFile.open(s);
 
@@ -121,6 +124,7 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 }
 
 Model* Model::deserialize(std::string s){
+
     //s is the path
 
     try{
@@ -193,8 +197,6 @@ Model* Model::deserialize(std::string s){
     return  (SampleModels::Empty());
 }
 
+Model2d* Model::convertTo2d(){
 
-//Model::Model( std::vector<Face*> faces, bool** edges)
-//{
-
-//}
+}
