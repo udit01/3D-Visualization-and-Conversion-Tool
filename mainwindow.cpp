@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QtWidgets>
+#include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <exception>
@@ -195,4 +196,43 @@ void MainWindow::on_betaSlider_valueChanged(int value)
 void MainWindow::on_gammaSlider_valueChanged(int value)
 {
     this->dgamma = ((float) value * (PI))/180.0;
+}
+
+void MainWindow::on_actionExport_triggered()
+{
+    QString filter = "All File (*.*) ;; 2D File (*.2d) ;; 3D File (*.3d)";
+    QString file_name = QFileDialog::getSaveFileName(this, "Save a Design", ".",filter);
+
+    QChar ext;
+    if(!file_name.isNull())
+    {
+        ext = file_name[(file_name.length()-2)];
+    }
+
+    if(!file_name.isNull() && (ext == '2' or ext == '3'))
+    {
+        QMessageBox msgBox;
+        msgBox.setText(file_name);
+        msgBox.setInformativeText("Do you want to save this file?");
+        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard);
+        msgBox.setDefaultButton(QMessageBox::Save);
+        msgBox.setWindowTitle("Save Design");
+
+        int ret = msgBox.exec();
+
+        switch (ret) {
+            case QMessageBox::Save:
+                if(ext == '2')
+                {
+                    Model::serialize(file_name.toStdString());
+                }
+                else
+                {
+                    Model::serialize(file_name.toStdString());
+                }
+                break;
+            default:
+                break;
+        }
+    }
 }
