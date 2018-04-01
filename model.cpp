@@ -113,12 +113,11 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
       for ( int i=0; i < this->faces.size() ; i++){
           Face *f = this->faces[i];
 
-          newFile << i << "\n";
+          newFile << f->npts << "\n";
           for(int j=0; j < 3*f->npts; j+=3){
                newFile  << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
           }
       }
-
 
       newFile.close();
       return ;
@@ -141,8 +140,7 @@ Model* Model::deserialize(std::string s){
         std::ifstream inFile;
         inFile.open(s);
         std::string STRING;
-        inFile >> STRING ;// Haves
-//        cout<<STRING; // Prints our STRING.
+        inFile >> STRING ;// gulps POINTS
         int numPoints = 0;
         inFile >> numPoints;
         float* points = new float[3*numPoints];
@@ -150,7 +148,7 @@ Model* Model::deserialize(std::string s){
         for(int i=0; i < 3*numPoints; i+=3){
             inFile >> points[i] >> points[i+1] >> points[i+2];
         }// does it take return  into account ?
-        inFile >> STRING; // gulps edges namak string
+        inFile >> STRING; // gulps EDGES
 
         bool **edges= new bool*[numPoints];
         for(int i = 0; i < numPoints ; i++){
@@ -163,28 +161,30 @@ Model* Model::deserialize(std::string s){
             }
         }
 
-        inFile >> STRING; //gulps Faces namak string
+        inFile >> STRING; //gulps FACES
 
         int numFaces = 0;
         inFile >> numFaces;
 
-        int *fnumpts = new int[numFaces];
-        float **fpts = new float*[numFaces];
+        //could also write alternate code for below , which hogs less memory, and probably is simpler?
+//        int *fnumpts = new int[numFaces];//num points in the i'th face
+//        float **fpts = new float*[numFaces];// points in the i'th face
+        std::vector<Face*> faces;
 
         for(int i=0; i < numFaces ; i++){
+            int fnpts = 0;
+            inFile >> fnpts;
 
-            inFile >> fnumpts[i];
+            float* fpts = new float[ 3*fnpts ];
 
-            fpts[i] = new float[ 3*fnumpts[i] ];
-
-            for(int j=0; j < 3*fnumpts[i] ; j+=3){
-                inFile >> fpts[i][j] >> fpts[i][j+1] >> fpts[i][j+2];
+            for(int j=0; j < 3*fnpts ; j+=3){
+                inFile >> fpts[j] >> fpts[j+1] >> fpts[j+2];
             }
+            faces.push_back((new Face(fpts,fnpts)));
         }
-        std::vector<Face*> faces;
-        for(int i=0; i < numFaces; i++){
-            faces.push_back(new Face(fpts[i],fnumpts[i]));
-        }
+//        for(int i=0; i < numFaces; i++){
+//            faces.push_back(new Face(fpts[i],fnumpts[i]));
+//        }
 
         Model *m = new Model(numPoints, points, edges, faces);
         inFile.close();

@@ -10,17 +10,21 @@ Projection::Projection(int numPoints, float* points, bool** edges){
     this->points = points;
     this->edges = edges;
 }
-
+Projection::~Projection(){
+    delete  this;
+}
 Model2d::Model2d(Projection* xy, Projection* yz, Projection* zx)
 {
     this->xy = xy;
     this->yz = yz;
     this->zx = zx;
 }
-
+Model2d::~Model2d(){
+    delete this;
+}
 Model* Model2d::convertTo3d(){ // check the correctness of points once
     // no need to write 'this' , it's implicit
-    int tempNumPoints = xy->npts * yz->npts * zx->npts; // very big memory allocations ?
+    int tempNumPoints = xy->npts * yz->npts * zx->npts; // very big memory allocations ? but it's  the max num of points possible
     float* tempPoints = new float[3*tempNumPoints];
     int* backIndices = new int[3*tempNumPoints]; // back pointers to extract edges
     int realNumPoints = 0;
@@ -164,7 +168,7 @@ Model2d* Model2d::deserialize(std::string s)
         Projection* ps[3] ;
 
         for (int k=0 ; k < 3; k++){
-            inFile >> STRING;
+            inFile >> STRING; // POINTS string
             int numPoints = 0;
             inFile >> numPoints;
 
@@ -173,7 +177,7 @@ Model2d* Model2d::deserialize(std::string s)
                 inFile >> points[i] >> points[i+1];
             }
 
-            inFile >> STRING; //edges string
+            inFile >> STRING; // EDGES string
 
             bool **edges= new bool*[numPoints];
             for(int i = 0; i < numPoints ; i++){
