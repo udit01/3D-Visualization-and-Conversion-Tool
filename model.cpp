@@ -1,8 +1,9 @@
 #include <iostream>
 #include <math.h>
-#include "model.h"
+#include <vector>
 #include <fstream>
-
+#include "model.h"
+#include "samplemodels.h"
 Face::Face(float * pts, int npts){
     this->points = pts;
     this->npts = npts;
@@ -121,23 +122,75 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
 Model* Model::deserialize(std::string s){
     //s is the path
-    std::string ext(".3d");
-    s.compare(s.length()-3,3,ext);
 
     try{
+        std::string ext(".3d");
+        //check if the extension name is 3d;
+        //else return error code;
+
+        int cmp = s.compare(s.length()-3,3,ext);
+        if(cmp!=0){// if comparision is insufficient
+            return (SampleModels::Empty());
+        }
+
+        std::ifstream inFile;
+        inFile.open(s);
+        std::string STRING;
+        inFile >> STRING ;// Haves
+//        cout<<STRING; // Prints our STRING.
+        int numPoints = 0;
+        inFile >> numPoints;
+        float* points = new float[3*numPoints];
+
+        for(int i=0; i < 3*numPoints; i+=3){
+            inFile >> points[i] >> points[i+1] >> points[i+2];
+        }// does it take return  into account ?
+        inFile >> STRING; // gulps edges namak string
+
+        bool **edges= new bool*[numPoints];
+        for(int i = 0; i < numPoints ; i++){
+            edges[i] = new bool[numPoints];
+        }
+
+        for(int i=0; i < numPoints; i+=3){
+            for(int j=0; j < numPoints; j+=3){
+                inFile >> edges[i][j];
+            }
+        }
+
+        inFile >> STRING; //gulps Faces namak string
+
+        int numFaces = 0;
+        inFile >> numFaces;
+
+        int *fnumpts = new int[numFaces];
+        float **fpts = new float*[numFaces];
+
+        for(int i=0; i < numFaces ; i++){
+
+            inFile >> fnumpts[i];
+
+            fpts[i] = new float[ 3*fnumpts[i] ];
+
+            for(int j=0; j < 3*fnumpts[i] ; j+=3){
+                inFile >> fpts[i][j] >> fpts[i][j+1] >> fpts[i][j+2];
+            }
+        }
+        std::vector<Face*> faces;
+        for(int i=0; i < numFaces; i++){
+            faces.push_back(new Face(fpts[i],fnumpts[i]));
+        }
+
+        Model *m = new Model(numPoints, points, edges, faces);
+        inFile.close();
+
+        return m;
 
     }
     catch ( std::exception e){
-
+       // do nothing but return below
     }
-
-    //check if the extension name is 3d;
-//    else return error code;
-
-
-    ifstream inFile;
-    ifstream.open(s);
-
+    return  (SampleModels::Empty());
 }
 
 

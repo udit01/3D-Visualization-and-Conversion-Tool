@@ -7,6 +7,53 @@ SampleModels::SampleModels()
 
 }
 
+
+Model* SampleModels::Empty()
+{
+    const int numPts = 0;
+//    float o[] = { 0.0 , 0.0 , 0.0};
+//    float a[] = { side , 0.0, 0.0};
+//    float b[] = {0.0 , side, 0.0};
+//    float c[] = {0.0 , 0.0, side};
+
+    float* points;// = new float[3*numPts];
+//    copy(o,o+3,points);copy(a, a+3, points + 3);copy(b, b+3, points + 2*3);copy(c, c+3, points + 3*3);
+
+//    float * base = new float[3*4];
+//    copy(a, a+3, base);copy(b, b+3, base+3);copy(c, c+3, base+2*3);copy(d, d+3, base+3*3);
+//    float * f1 = new float[3*3];
+//    copy(a, a+3, f1);copy(b, b+3, f1+3);copy(o, o+3, f1+2*3);
+//    float * f2 = new float[3*3];
+//    copy(b, b+3, f2);copy(c, c+3, f2+3);copy(o, o+3, f2+2*3);
+//    float * f3 = new float[3*3];
+//    copy(c, c+3, f3);copy(a, a+3, f3+3);copy(o, o+3, f3+2*3);
+//    float * f4 = new float[3*3];
+//    copy(d, d+3, f4);copy(a, a+3, f4+3);copy(o, o+3, f4+2*3);
+
+    vector<Face*> faces;
+//    faces.push_back(new Face(f1,3)); faces.push_back(new Face(f2,3)); faces.push_back(new Face(f3,3));
+
+    bool **edges ;//= new bool*[numPts];
+//    for(int i = 0; i < numPts ; i++){
+//        edges[i] = new bool[numPts];
+//    }
+
+//    edges[0][0] = false; edges[0][1] = true ; edges[0][2] = true ; edges[0][3] = true ;
+//    edges[1][0] = true ; edges[1][1] = false; edges[1][2] = false; edges[1][3] = false;
+//    edges[2][0] = true ; edges[2][1] = false; edges[2][2] = false; edges[2][3] = false;
+//    edges[3][0] = true ; edges[3][1] = false; edges[3][2] = false; edges[3][3] = false;
+//    {//in order of o a b c
+//        {false, true , true , true },
+//        {true , false, false, false},
+//        {true , false, false, false},
+//        {true , false, false, false},
+//    };
+
+    Model *m = new Model(numPts, points, edges, faces);
+    return m;
+
+}
+
 Model* SampleModels::Axes(float side)
 {
     const int numPts = 4;
