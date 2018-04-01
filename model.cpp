@@ -222,7 +222,7 @@ Model2d* Model::convertTo2d(){
     for(int i = 0; i < 3*numPoints ; i+=3)
     {
         check = 0;
-        for(int j = 0; j < deletedXY; j+=2)
+        for(int j = 0; j < deletedLocationXY; j+=2)
         {
             if((pointsXY_temp[ j ] == this-> points[ i ]) && (pointsXY_temp[j+1] == this-> points[i+1]))
             {
@@ -242,7 +242,7 @@ Model2d* Model::convertTo2d(){
         }
 
         check = 0;
-        for(int j = 0; j < deletedYZ; j+=2)
+        for(int j = 0; j < deletedLocationYZ; j+=2)
         {
             if((pointsYZ_temp[ j ] == this-> points[i+1]) && (pointsYZ_temp[j+1] == this-> points[i+2]))
             {
@@ -262,7 +262,7 @@ Model2d* Model::convertTo2d(){
         }
 
         check = 0;
-        for(int j = 0; j < deletedZX; j+=2)
+        for(int j = 0; j < deletedLocationZX; j+=2)
         {
             if((pointsZX_temp[ j ] == this-> points[i+2]) && (pointsZX_temp[j+1] == this-> points[i]))
             {
@@ -286,9 +286,9 @@ Model2d* Model::convertTo2d(){
     float* pointsYZ = new float[countYZ];
     float* pointsZX = new float[countZX];
 
-    copy(pointsXY_temp, pointsXY_temp+countXY, pointsXY);
-    copy(pointsYZ_temp, pointsYZ_temp+countYZ, pointsYZ);
-    copy(pointsZX_temp, pointsZX_temp+countZX, pointsZX);
+    std::copy(pointsXY_temp, pointsXY_temp+countXY, pointsXY);
+    std::copy(pointsYZ_temp, pointsYZ_temp+countYZ, pointsYZ);
+    std::copy(pointsZX_temp, pointsZX_temp+countZX, pointsZX);
 
     bool** edgesXY_temp= new bool*[numPoints];
     bool** edgesYZ_temp= new bool*[numPoints];
@@ -350,7 +350,7 @@ Model2d* Model::convertTo2d(){
                 break;
             }
         }
-        if(check2 == 0)
+        if(check == 0)
         {
             presentEdgesYZ[presentLocationYZ] = i;
             presentLocationYZ++;
