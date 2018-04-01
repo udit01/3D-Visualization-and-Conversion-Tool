@@ -1,9 +1,10 @@
 #include "model.h"
-
 #include <iostream>
 #include <math.h>
+#include <vector>
 #include <fstream>
-
+#include "model.h"
+#include "samplemodels.h"
 #include "model2d.h"
 
 Face::Face(float * pts, int npts){
@@ -84,6 +85,7 @@ void Model::rotate(float alpha, float beta, float gamma){
 void Model::serialize(std::string s){//string is the absolute? filepath where file is to be stored
 
     //check if file has the extension 3d or not ?
+//out file is a new file
 
       std::ofstream newFile;
       newFile.open(s);
@@ -110,9 +112,10 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
       for ( int i=0; i < this->faces.size() ; i++){
           Face *f = this->faces[i];
-          newFile << i << "\n";
+
+          newFile << f->npts << "\n";
           for(int j=0; j < 3*f->npts; j+=3){
-               newFile << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
+               newFile  << f->points[j] << " " << f->points[j+1] << " " << f->points[j+2] << "\n" ;
           }
       }
 
@@ -122,6 +125,77 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
 Model* Model::deserialize(std::string s){
 
+    //s is the path
+
+    try{
+        std::string ext(".3d");
+        //check if the extension name is 3d;
+        //else return error code;
+
+        int cmp = s.compare(s.length()-3,3,ext);
+        if(cmp!=0){// if comparision is insufficient
+            return (SampleModels::Empty());
+        }
+
+        std::ifstream inFile;
+        inFile.open(s);
+        std::string STRING;
+        inFile >> STRING ;// gulps POINTS
+        int numPoints = 0;
+        inFile >> numPoints;
+        float* points = new float[3*numPoints];
+
+        for(int i=0; i < 3*numPoints; i+=3){
+            inFile >> points[i] >> points[i+1] >> points[i+2];
+        }// does it take return  into account ?
+        inFile >> STRING; // gulps EDGES
+
+        bool **edges= new bool*[numPoints];
+        for(int i = 0; i < numPoints ; i++){
+            edges[i] = new bool[numPoints];
+        }
+
+        for(int i=0; i < numPoints; i++){
+            for(int j=0; j < numPoints; j++){
+                inFile >> edges[i][j];
+            }
+        }
+
+        inFile >> STRING; //gulps FACES
+
+        int numFaces = 0;
+        inFile >> numFaces;
+
+        //could also write alternate code for below , which hogs less memory, and probably is simpler?
+//        int *fnumpts = new int[numFaces];//num points in the i'th face
+//        float **fpts = new float*[numFaces];// points in the i'th face
+        std::vector<Face*> faces;
+
+        for(int i=0; i < numFaces ; i++){
+            int fnpts = 0;
+            inFile >> fnpts;
+
+            float* fpts = new float[ 3*fnpts ];
+
+            for(int j=0; j < 3*fnpts ; j+=3){
+                inFile >> fpts[j] >> fpts[j+1] >> fpts[j+2];
+            }
+            faces.push_back((new Face(fpts,fnpts)));
+        }
+//        for(int i=0; i < numFaces; i++){
+//            faces.push_back(new Face(fpts[i],fnumpts[i]));
+//        }
+
+        Model *m = new Model(numPoints, points, edges, faces);
+        inFile.close();
+
+        return m;
+
+    }
+    catch ( std::exception e){
+       // do nothing but return below
+    }
+    return  (SampleModels::Empty());
 }
 
 Model2d* Model::convertTo2d(){
