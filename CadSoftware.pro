@@ -32,7 +32,7 @@ SOURCES += \
     projectionx.cpp \
     projectiony.cpp \
     projectionz.cpp \
-    window2d.cpp
+    model2d.cpp
 
 #INCLUDEPATH = /home/udit01/cop290/qGL/include/
 
@@ -44,7 +44,7 @@ HEADERS += \
     projectionx.h \
     projectiony.h \
     projectionz.h \
-    window2d.h
+    model2d.h
 #    include/* \
 
 #MOC_DIR     = ./build/moc
@@ -56,5 +56,4 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui \
-    glwidget.ui \
-    window2d.ui
+    glwidget.ui

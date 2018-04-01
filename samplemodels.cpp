@@ -1,6 +1,7 @@
 #include "samplemodels.h"
+
 #include "model.h"
-//#define PROJ 3
+
 using namespace std;
 SampleModels::SampleModels()
 {
