@@ -157,8 +157,8 @@ Model* Model::deserialize(std::string s){
             edges[i] = new bool[numPoints];
         }
 
-        for(int i=0; i < numPoints; i+=3){
-            for(int j=0; j < numPoints; j+=3){
+        for(int i=0; i < numPoints; i++){
+            for(int j=0; j < numPoints; j++){
                 inFile >> edges[i][j];
             }
         }
