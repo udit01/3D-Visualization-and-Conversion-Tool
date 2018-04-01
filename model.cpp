@@ -86,6 +86,7 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 
     //check if file has the extension 3d or not ?
 //out file is a new file
+
       std::ofstream newFile;
       newFile.open(s);
 
