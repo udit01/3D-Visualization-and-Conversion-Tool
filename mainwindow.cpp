@@ -231,7 +231,7 @@ void MainWindow::on_actionExport_triggered()
             case QMessageBox::Save:
                 if(ext == '2')
                 {
-                    this-> model-> serialize(file_name.toStdString());
+                    (this-> model-> convertTo2d())-> serialize(file_name.toStdString());
                 }
                 else
                 {

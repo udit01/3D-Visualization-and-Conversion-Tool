@@ -3,6 +3,7 @@
 #include <math.h>
 #include <vector>
 #include <fstream>
+#include <QDebug>
 #include "model.h"
 #include "samplemodels.h"
 #include "model2d.h"
@@ -219,15 +220,20 @@ Model2d* Model::convertTo2d(){
 
     int check;
 
+    for(int i = 0; i < 3*numPoints;i+=3)
+    {
+        qDebug() << this->points[i]<<this->points[i+1]<<this->points[i+2]<<"\n";
+    }
+
     for(int i = 0; i < 3*numPoints ; i+=3)
     {
         check = 0;
-        for(int j = 0; j < deletedLocationXY; j+=2)
+        for(int j = 0; j < countXY-1; j+=2)
         {
             if((pointsXY_temp[ j ] == this-> points[ i ]) && (pointsXY_temp[j+1] == this-> points[i+1]))
             {
                 check = 1;
-                deletedXY[ deletedLocationXY ] = j;
+                deletedXY[ deletedLocationXY ] = j/2;
                 deletedXY[deletedLocationXY+1] = i/3;
                 deletedLocationXY+=2;
                 break;
@@ -238,16 +244,16 @@ Model2d* Model::convertTo2d(){
         {
             pointsXY_temp[ countXY ] = this-> points[ i ] ;
             pointsXY_temp[countXY+1] = this-> points[i+1] ;
-            deletedXY+=2;
+            countXY+=2;
         }
 
         check = 0;
-        for(int j = 0; j < deletedLocationYZ; j+=2)
+        for(int j = 0; j < countYZ-1; j+=2)
         {
             if((pointsYZ_temp[ j ] == this-> points[i+1]) && (pointsYZ_temp[j+1] == this-> points[i+2]))
             {
                 check = 1;
-                deletedYZ[ deletedLocationYZ ] = j;
+                deletedYZ[ deletedLocationYZ ] = j/2;
                 deletedYZ[deletedLocationYZ+1] = i/3;
                 deletedLocationYZ+=2;
                 break;
@@ -258,16 +264,16 @@ Model2d* Model::convertTo2d(){
         {
             pointsYZ_temp[ countYZ ] = this-> points[i+1] ;
             pointsYZ_temp[countYZ+1] = this-> points[i+2] ;
-            deletedYZ+=2;
+            countYZ+=2;
         }
 
         check = 0;
-        for(int j = 0; j < deletedLocationZX; j+=2)
+        for(int j = 0; j < countZX-1; j+=2)
         {
             if((pointsZX_temp[ j ] == this-> points[i+2]) && (pointsZX_temp[j+1] == this-> points[i]))
             {
                 check = 1;
-                deletedZX[ deletedLocationZX ] = j;
+                deletedZX[ deletedLocationZX ] = j/2;
                 deletedZX[deletedLocationZX+1] = i/3;
                 deletedLocationZX+=2;
                 break;
@@ -278,8 +284,26 @@ Model2d* Model::convertTo2d(){
         {
             pointsZX_temp[ countZX ] = this-> points[i+2] ;
             pointsZX_temp[countZX+1] = this-> points[i] ;
-            deletedXY+=2;
+            countZX+=2;
         }
+    }
+
+    qDebug() << "pointXY_temp \n";
+    for(int i = 0; i < countXY;i+=2)
+    {
+        qDebug() << pointsXY_temp[i]<<pointsXY_temp[i+1]<<"\n";
+    }
+
+    qDebug() << "pointYZ_temp \n";
+    for(int i = 0; i < countYZ;i+=2)
+    {
+        qDebug() << pointsYZ_temp[i]<<pointsYZ_temp[i+1]<<"\n";
+    }
+
+    qDebug() << "pointZX_temp \n";
+    for(int i = 0; i < countZX;i+=2)
+    {
+        qDebug() << pointsZX_temp[i]<<pointsZX_temp[i+1]<<"\n";
     }
 
     float* pointsXY = new float[countXY];
@@ -290,31 +314,79 @@ Model2d* Model::convertTo2d(){
     std::copy(pointsYZ_temp, pointsYZ_temp+countYZ, pointsYZ);
     std::copy(pointsZX_temp, pointsZX_temp+countZX, pointsZX);
 
+    qDebug() << "pointXY \n";
+    for(int i = 0; i < countXY;i+=2)
+    {
+        qDebug() << pointsXY[i]<<pointsXY[i+1]<<"\n";
+    }
+
+    qDebug() << "pointYZ \n";
+    for(int i = 0; i < countYZ;i+=2)
+    {
+        qDebug() << pointsYZ[i]<<pointsYZ[i+1]<<"\n";
+    }
+
+    qDebug() << "pointZX \n";
+    for(int i = 0; i < countZX;i+=2)
+    {
+        qDebug() << pointsZX[i]<<pointsZX[i+1]<<"\n";
+    }
+
     bool** edgesXY_temp= new bool*[numPoints];
     bool** edgesYZ_temp= new bool*[numPoints];
     bool** edgesZX_temp= new bool*[numPoints];
-    for(int i = 0; i < numPoints ; i++){
-        edgesXY_temp[i] = new bool[numPoints];
-        edgesYZ_temp[i] = new bool[numPoints];
-        edgesZX_temp[i] = new bool[numPoints];
+    for(int i = 0; i < numPoints ; i++)
+    {
+        for(int j = 0; j < numPoints; j++)
+        {
+            edgesXY_temp[i][j] = edges[i][j];
+            edgesYZ_temp[i][j] = edges[i][j];
+            edgesZX_temp[i][j] = edges[i][j];
+        }
     }
 
     for(int j = 0; j < numPoints; j++)
     {
         for(int i = 0; i < deletedLocationXY; i+=2)
         {
-            edgesXY_temp[i][j] = edgesXY_temp[i][j] || edgesXY_temp[i+1][j];
+            edgesXY_temp[i][j] = edges[i][j] || edges[i+1][j];
         }
 
         for(int i = 0; i < deletedLocationYZ; i+=2)
         {
-            edgesYZ_temp[i][j] = edgesYZ_temp[i][j] || edgesYZ_temp[i+1][j];
+            edgesYZ_temp[i][j] = edges[i][j] || edges[i+1][j];
         }
 
         for(int i = 0; i < deletedLocationZX; i+=2)
         {
-            edgesZX_temp[i][j] = edgesZX_temp[i][j] || edgesZX_temp[i+1][j];
+            edgesZX_temp[i][j] = edges[i][j] || edges[i+1][j];
         }
+    }
+
+    qDebug() << deletedLocationXY;
+
+    qDebug() << "deletedXY \n";
+    for(int i = 0; i < deletedLocationXY;i++)
+    {
+        qDebug() << deletedXY[i]<<"\n";
+    }
+    qDebug() << "edgesXY_Temp \n";
+    for(int i = 0; i < numPoints;i++)
+    {
+        for(int j = 0; j < numPoints; j++)
+        {
+            qDebug() << edgesXY_temp[i][j];;
+        }
+        qDebug() <<"\n";
+    }
+    qDebug() << "edges\n";
+    for(int i = 0; i < numPoints;i++)
+    {
+        for(int j = 0; j < numPoints; j++)
+        {
+            qDebug() << this->edges[i][j];;
+        }
+        qDebug() <<"\n";
     }
 
     int* presentEdgesXY = new int[countXY/2];
@@ -411,7 +483,10 @@ Model2d* Model::convertTo2d(){
         }
     }
 
-    Projection* xy = new Projection(countXY/2, pointsXY, edgesXY);
-    Projection* yz = new Projection(countYZ/2, pointsYZ, edgesYZ);;
-    Projection* zx = new Projection(countZX/2, pointsZX, edgesZX);;
+//    Projection* xy = new Projection(countXY/2, pointsXY, edgesXY);
+//    Projection* yz = new Projection(countYZ/2, pointsYZ, edgesYZ);;
+//    Projection* zx = new Projection(countZX/2, pointsZX, edgesZX);;
+
+    Model2d* m2 = new Model2d(new Projection(countXY/2, pointsXY, edgesXY), new Projection(countYZ/2, pointsYZ, edgesYZ), new Projection(countZX/2, pointsZX, edgesZX) );
+    return m2;
 }
