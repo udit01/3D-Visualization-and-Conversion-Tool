@@ -1,5 +1,6 @@
 #include <math.h>
 #include "model.h"
+#include <QDebug>
 
 Face::Face(float * pts, int npts){
     this->points = pts;
@@ -41,7 +42,7 @@ void Model::translate(float dx, float dy, float dz){
 
 void Model::rotate(float alpha, float beta, float gamma){
 // angles lie between 0 to 180 deg
-    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
+    qDebug() << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
     for (int i=0; i < 3 * numPoints ; i+=3){
         this->points[ i ] = this->points[i]+ 0 + 0 ;
         this->points[i+1] = 0 + this->points[i+1]*cos(alpha)  - this->points[i+2]*sin(alpha);
