@@ -200,141 +200,150 @@ Model* Model::deserialize(std::string s){
 }
 
 Model2d* Model::convertTo2d(){
+    // Number of points in the original 3d model
     int numPoints = this-> numPoints;
 
+    // points_temp contains unique points in the projection
     float* pointsXY_temp = new float[2*numPoints];
     float* pointsYZ_temp = new float[2*numPoints];
     float* pointsZX_temp = new float[2*numPoints];
 
+    // points to the last location where the point was added in points_temp
     int countXY = 0;
     int countYZ = 0;
     int countZX = 0;
 
+    // deleted is a continuous array of two positions that have to be orred(that is they coincide in the projection)
     int* deletedXY = new int[numPoints];
     int* deletedYZ = new int[numPoints];
     int* deletedZX = new int[numPoints];
 
+    // points to the last location where the points were added in deleted
     int deletedLocationXY = 0;
     int deletedLocationYZ = 0;
     int deletedLocationZX = 0;
 
-    int check;
+    // checks for duplicacy
+    int check1;
+    int check2;
+    int check3;
 
-    for(int i = 0; i < 3*numPoints;i+=3)
-    {
-        qDebug() << this->points[i]<<this->points[i+1]<<this->points[i+2]<<"\n";
-    }
+//    qDebug() << "original points array \n";
+//    for(int i = 0; i < 3*numPoints;i+=3)
+//    {
+//        qDebug() << this->points[i]<<this->points[i+1]<<this->points[i+2]<<"\n";
+//    }
 
+    // constructing the points_temp and deleted arrays
     for(int i = 0; i < 3*numPoints ; i+=3)
     {
-        check = 0;
-        for(int j = 0; j < countXY-1; j+=2)
+        check1 = 0;
+        check2 = 0;
+        check3 = 0;
+
+        for(int j = 0; j < i; j+=3)
         {
-            if((pointsXY_temp[ j ] == this-> points[ i ]) && (pointsXY_temp[j+1] == this-> points[i+1]))
+            if((check1 == 0) && (points[ j ] == this-> points[i]) && (points[j+1] == this-> points[i+1]))
             {
-                check = 1;
-                deletedXY[ deletedLocationXY ] = j/2;
+                check1 = 1;
+                deletedXY[ deletedLocationXY ] = j/3;
                 deletedXY[deletedLocationXY+1] = i/3;
                 deletedLocationXY+=2;
-                break;
             }
-
+            if((check2 == 0) && (points[j+1] == this-> points[i+1]) && (points[j+2] == this-> points[i+2]))
+            {
+                check2 = 1;
+                deletedYZ[ deletedLocationYZ ] = j/3;
+                deletedYZ[deletedLocationYZ+1] = i/3;
+                deletedLocationYZ+=2;
+            }
+            if((check3 == 0) && (points[j+2] == this-> points[i+2]) && (points[ j ] == this-> points[ i ]))
+            {
+                check3 = 1;
+                deletedZX[ deletedLocationZX ] = j/3;
+                deletedZX[deletedLocationZX+1] = i/3;
+                deletedLocationZX+=2;
+            }
         }
-        if(check == 0)
+
+        if(check1 == 0)
         {
             pointsXY_temp[ countXY ] = this-> points[ i ] ;
             pointsXY_temp[countXY+1] = this-> points[i+1] ;
             countXY+=2;
         }
 
-        check = 0;
-        for(int j = 0; j < countYZ-1; j+=2)
-        {
-            if((pointsYZ_temp[ j ] == this-> points[i+1]) && (pointsYZ_temp[j+1] == this-> points[i+2]))
-            {
-                check = 1;
-                deletedYZ[ deletedLocationYZ ] = j/2;
-                deletedYZ[deletedLocationYZ+1] = i/3;
-                deletedLocationYZ+=2;
-                break;
-            }
-
-        }
-        if(check == 0)
+        if(check2 == 0)
         {
             pointsYZ_temp[ countYZ ] = this-> points[i+1] ;
             pointsYZ_temp[countYZ+1] = this-> points[i+2] ;
             countYZ+=2;
         }
 
-        check = 0;
-        for(int j = 0; j < countZX-1; j+=2)
-        {
-            if((pointsZX_temp[ j ] == this-> points[i+2]) && (pointsZX_temp[j+1] == this-> points[i]))
-            {
-                check = 1;
-                deletedZX[ deletedLocationZX ] = j/2;
-                deletedZX[deletedLocationZX+1] = i/3;
-                deletedLocationZX+=2;
-                break;
-            }
-
-        }
-        if(check == 0)
+        if(check3 == 0)
         {
             pointsZX_temp[ countZX ] = this-> points[i+2] ;
-            pointsZX_temp[countZX+1] = this-> points[i] ;
+            pointsZX_temp[countZX+1] = this-> points[ i ] ;
             countZX+=2;
         }
     }
 
-    qDebug() << "pointXY_temp \n";
-    for(int i = 0; i < countXY;i+=2)
-    {
-        qDebug() << pointsXY_temp[i]<<pointsXY_temp[i+1]<<"\n";
-    }
+//    qDebug() << "pointXY_temp \n";
+//    for(int i = 0; i < countXY;i+=2)
+//    {
+//        qDebug() << pointsXY_temp[i]<<pointsXY_temp[i+1]<<"\n";
+//    }
 
-    qDebug() << "pointYZ_temp \n";
-    for(int i = 0; i < countYZ;i+=2)
-    {
-        qDebug() << pointsYZ_temp[i]<<pointsYZ_temp[i+1]<<"\n";
-    }
+//    qDebug() << "pointYZ_temp \n";
+//    for(int i = 0; i < countYZ;i+=2)
+//    {
+//        qDebug() << pointsYZ_temp[i]<<pointsYZ_temp[i+1]<<"\n";
+//    }
 
-    qDebug() << "pointZX_temp \n";
-    for(int i = 0; i < countZX;i+=2)
-    {
-        qDebug() << pointsZX_temp[i]<<pointsZX_temp[i+1]<<"\n";
-    }
+//    qDebug() << "pointZX_temp \n";
+//    for(int i = 0; i < countZX;i+=2)
+//    {
+//        qDebug() << pointsZX_temp[i]<<pointsZX_temp[i+1]<<"\n";
+//    }
 
+    // same as points_temp but with smaller size
     float* pointsXY = new float[countXY];
     float* pointsYZ = new float[countYZ];
     float* pointsZX = new float[countZX];
 
+    // copying from points_temp to points array
     std::copy(pointsXY_temp, pointsXY_temp+countXY, pointsXY);
     std::copy(pointsYZ_temp, pointsYZ_temp+countYZ, pointsYZ);
     std::copy(pointsZX_temp, pointsZX_temp+countZX, pointsZX);
 
-    qDebug() << "pointXY \n";
-    for(int i = 0; i < countXY;i+=2)
-    {
-        qDebug() << pointsXY[i]<<pointsXY[i+1]<<"\n";
-    }
+//    qDebug() << "pointXY \n";
+//    for(int i = 0; i < countXY;i+=2)
+//    {
+//        qDebug() << pointsXY[i]<<pointsXY[i+1]<<"\n";
+//    }
 
-    qDebug() << "pointYZ \n";
-    for(int i = 0; i < countYZ;i+=2)
-    {
-        qDebug() << pointsYZ[i]<<pointsYZ[i+1]<<"\n";
-    }
+//    qDebug() << "pointYZ \n";
+//    for(int i = 0; i < countYZ;i+=2)
+//    {
+//        qDebug() << pointsYZ[i]<<pointsYZ[i+1]<<"\n";
+//    }
 
-    qDebug() << "pointZX \n";
-    for(int i = 0; i < countZX;i+=2)
-    {
-        qDebug() << pointsZX[i]<<pointsZX[i+1]<<"\n";
-    }
+//    qDebug() << "pointZX \n";
+//    for(int i = 0; i < countZX;i+=2)
+//    {
+//        qDebug() << pointsZX[i]<<pointsZX[i+1]<<"\n";
+//    }
 
+    // contain the orred edges of coinciding points but with redundant rows
     bool** edgesXY_temp= new bool*[numPoints];
     bool** edgesYZ_temp= new bool*[numPoints];
     bool** edgesZX_temp= new bool*[numPoints];
+    for(int i = 0; i < numPoints ; i++)
+    {
+        edgesXY_temp[i] = new bool[numPoints];
+        edgesYZ_temp[i] = new bool[numPoints];
+        edgesZX_temp[i] = new bool[numPoints];
+    }
     for(int i = 0; i < numPoints ; i++)
     {
         for(int j = 0; j < numPoints; j++)
@@ -345,50 +354,84 @@ Model2d* Model::convertTo2d(){
         }
     }
 
+    // orring the matrix columns
     for(int j = 0; j < numPoints; j++)
     {
         for(int i = 0; i < deletedLocationXY; i+=2)
         {
-            edgesXY_temp[i][j] = edges[i][j] || edges[i+1][j];
+            edgesXY_temp[deletedXY[i]][j] = edges[deletedXY[i]][j] || edges[deletedXY[i+1]][j];
         }
 
         for(int i = 0; i < deletedLocationYZ; i+=2)
         {
-            edgesYZ_temp[i][j] = edges[i][j] || edges[i+1][j];
+            edgesYZ_temp[deletedYZ[i]][j] = edges[deletedYZ[i]][j] || edges[deletedYZ[i+1]][j];
         }
 
         for(int i = 0; i < deletedLocationZX; i+=2)
         {
-            edgesZX_temp[i][j] = edges[i][j] || edges[i+1][j];
+            edgesZX_temp[deletedZX[i]][j] = edges[deletedZX[i]][j] || edges[deletedZX[i+1]][j];
         }
     }
 
-    qDebug() << deletedLocationXY;
+//    qDebug() << "edges\n";
+//    for(int i = 0; i < numPoints;i++)
+//    {
+//        for(int j = 0; j < numPoints; j++)
+//        {
+//            qDebug() << this->edges[i][j];;
+//        }
+//        qDebug() <<"\n";
+//    }
 
-    qDebug() << "deletedXY \n";
-    for(int i = 0; i < deletedLocationXY;i++)
-    {
-        qDebug() << deletedXY[i]<<"\n";
-    }
-    qDebug() << "edgesXY_Temp \n";
-    for(int i = 0; i < numPoints;i++)
-    {
-        for(int j = 0; j < numPoints; j++)
-        {
-            qDebug() << edgesXY_temp[i][j];;
-        }
-        qDebug() <<"\n";
-    }
-    qDebug() << "edges\n";
-    for(int i = 0; i < numPoints;i++)
-    {
-        for(int j = 0; j < numPoints; j++)
-        {
-            qDebug() << this->edges[i][j];;
-        }
-        qDebug() <<"\n";
-    }
+//    qDebug() << deletedLocationXY;
+//    qDebug() << "deletedXY \n";
+//    for(int i = 0; i < deletedLocationXY;i++)
+//    {
+//        qDebug() << deletedXY[i]<<"\n";
+//    }
+//    qDebug() << "edgesXY_Temp \n";
+//    for(int i = 0; i < numPoints;i++)
+//    {
+//        for(int j = 0; j < numPoints; j++)
+//        {
+//            qDebug() << edgesXY_temp[i][j];;
+//        }
+//        qDebug() <<"\n";
+//    }
 
+//    qDebug() << deletedLocationYZ;
+//    qDebug() << "deletedYZ \n";
+//    for(int i = 0; i < deletedLocationYZ;i++)
+//    {
+//        qDebug() << deletedYZ[i]<<"\n";
+//    }
+//    qDebug() << "edgesYZ_Temp \n";
+//    for(int i = 0; i < numPoints;i++)
+//    {
+//        for(int j = 0; j < numPoints; j++)
+//        {
+//            qDebug() << edgesYZ_temp[i][j];;
+//        }
+//        qDebug() <<"\n";
+//    }
+
+//    qDebug() << deletedLocationZX;
+//    qDebug() << "deletedZX \n";
+//    for(int i = 0; i < deletedLocationZX;i++)
+//    {
+//        qDebug() << deletedZX[i]<<"\n";
+//    }
+//    qDebug() << "edgesZX_Temp \n";
+//    for(int i = 0; i < numPoints;i++)
+//    {
+//        for(int j = 0; j < numPoints; j++)
+//        {
+//            qDebug() << edgesZX_temp[i][j];;
+//        }
+//        qDebug() <<"\n";
+//    }
+
+    // presentEdges contain the index of non-redundant columns/rows
     int* presentEdgesXY = new int[countXY/2];
     int* presentEdgesYZ = new int[countYZ/2];
     int* presentEdgesZX = new int[countZX/2];
@@ -396,12 +439,15 @@ Model2d* Model::convertTo2d(){
     int presentLocationYZ = 0;
     int presentLocationZX = 0;
 
+    int check = 0;
+
+    // creating the present location arrays
     for(int i = 0; i < numPoints; i++)
     {
         check = 0;
-        for(int j = 0; j < deletedLocationXY/2; j++)
+        for(int j = 0; j < deletedLocationXY; j+=2)
         {
-            if(i == deletedXY[j])
+            if(i == deletedXY[j+1])
             {
                 check = 1;
                 break;
@@ -414,9 +460,9 @@ Model2d* Model::convertTo2d(){
         }
 
         check = 0;
-        for(int j = 0; j < deletedLocationYZ/2; j++)
+        for(int j = 0; j < deletedLocationYZ; j+=2)
         {
-            if(i == deletedYZ[j])
+            if(i == deletedYZ[j+1])
             {
                 check = 1;
                 break;
@@ -429,9 +475,9 @@ Model2d* Model::convertTo2d(){
         }
 
         check = 0;
-        for(int j = 0; j < deletedLocationZX/2; j++)
+        for(int j = 0; j < deletedLocationZX; j+=2)
         {
-            if(i == deletedZX[j])
+            if(i == deletedZX[j+1])
             {
                 check = 1;
                 break;
@@ -445,6 +491,26 @@ Model2d* Model::convertTo2d(){
 
     }
 
+//    qDebug() << "Present Edges XY \n";
+//    for(int i = 0; i < countXY/2; i++)
+//    {
+//        qDebug() << presentEdgesXY[i];
+//    }
+//    qDebug() << "\n";
+//    qDebug() << "Present Edges YZ \n";
+//    for(int i = 0; i < countYZ/2; i++)
+//    {
+//        qDebug() << presentEdgesYZ[i];
+//    }
+//    qDebug() << "\n";
+//    qDebug() << "Present Edges ZX \n";
+//    for(int i = 0; i < countZX/2; i++)
+//    {
+//        qDebug() << presentEdgesZX[i];
+//    }
+//    qDebug() << "\n";
+
+    // contain the squeezed edges in the projection
     bool** edgesXY= new bool*[countXY/2];
     bool** edgesYZ= new bool*[countYZ/2];
     bool** edgesZX= new bool*[countZX/2];
@@ -454,13 +520,14 @@ Model2d* Model::convertTo2d(){
     }
     for(int i = 0; i < countYZ/2 ; i++)
     {
-        edgesXY[i] = new bool[countYZ/2];
+        edgesYZ[i] = new bool[countYZ/2];
     }
     for(int i = 0; i < countZX/2 ; i++)
     {
-        edgesXY[i] = new bool[countZX/2];
+        edgesZX[i] = new bool[countZX/2];
     }
 
+    // squeezing the edgestemp to edges
     for(int i = 0; i < countXY/2; i++)
     {
         for(int j = 0; j < countXY/2; j++)
@@ -483,9 +550,36 @@ Model2d* Model::convertTo2d(){
         }
     }
 
-//    Projection* xy = new Projection(countXY/2, pointsXY, edgesXY);
-//    Projection* yz = new Projection(countYZ/2, pointsYZ, edgesYZ);;
-//    Projection* zx = new Projection(countZX/2, pointsZX, edgesZX);;
+//    qDebug() << "Edges XY \n";
+//    for(int i = 0; i < countXY/2; i++)
+//    {
+//        for(int j = 0; j < countXY/2; j++)
+//        {
+//            qDebug() << edgesXY[i][j];
+//        }
+//        qDebug() << "\n";
+//    }
+//    qDebug() << "\n";
+//    qDebug() << "Edges YZ \n";
+//    for(int i = 0; i < countYZ/2; i++)
+//    {
+//        for(int j = 0; j < countYZ/2; j++)
+//        {
+//            qDebug() << edgesYZ[i][j];
+//        }
+//        qDebug() << "\n";
+//    }
+//    qDebug() << "\n";
+//    qDebug() << "Edges ZX \n";
+//    for(int i = 0; i < countZX/2; i++)
+//    {
+//        for(int j = 0; j < countZX/2; j++)
+//        {
+//            qDebug() << edgesZX[i][j];
+//        }
+//        qDebug() << "\n";
+//    }
+//    qDebug() << "\n";
 
     Model2d* m2 = new Model2d(new Projection(countXY/2, pointsXY, edgesXY), new Projection(countYZ/2, pointsYZ, edgesYZ), new Projection(countZX/2, pointsZX, edgesZX) );
     return m2;

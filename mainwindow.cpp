@@ -209,7 +209,7 @@ void MainWindow::on_actionExport_triggered()
 {
     QString filter = "All File (*.*) ;; 2D File (*.2d) ;; 3D File (*.3d)";
     QString file_name = QFileDialog::getSaveFileName(this, "Save a Design", ".",filter);
-    qDebug() << file_name;
+
     QChar ext;
     if(!file_name.isNull())
     {
