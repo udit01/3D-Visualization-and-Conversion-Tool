@@ -490,7 +490,7 @@
      <x>0</x>
      <y>0</y>
      <width>1406</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -532,18 +532,6 @@
     <addaction name="menu3D_Templates"/>
     <addaction name="actionAdd_Template"/>
    </widget>
-   <widget class="QMenu" name="menuView_2D">
-    <property name="title">
-     <string>View 2D</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuView_3D">
-    <property name="title">
-     <string>View 3D</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-   </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>About</string>
@@ -561,13 +549,10 @@
     <addaction name="separator"/>
     <addaction name="action2D_View"/>
     <addaction name="action3D_Model"/>
-    <addaction name="actionSectional_View"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConvert_To"/>
    <addaction name="menuTemplates"/>
-   <addaction name="menuView_2D"/>
-   <addaction name="menuView_3D"/>
    <addaction name="menuHelp"/>
    <addaction name="menuHelp_2"/>
   </widget>
