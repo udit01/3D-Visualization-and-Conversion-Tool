@@ -51,7 +51,7 @@ public:
     float *points;
     int npts;
     Face( float *pts, int npts);
-    ~Face();
+//    ~Face();
 
     // to store what ?
 };
@@ -65,7 +65,7 @@ public:
     bool** edges; // update both things edges[i][j] and edges[j][i] at the same time.
 
     Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces );
-    ~Model();
+//    ~Model();
     void translate(float dx, float dy, float dz);
     void rotate(float alpha, float beta, float gamma);
 

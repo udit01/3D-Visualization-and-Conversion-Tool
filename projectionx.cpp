@@ -105,8 +105,12 @@ void ProjectionX::resizeGL(int width, int height)
 
 void ProjectionX::draw()
 {
+//    Glwidget::draw();
     glLineWidth(4);
     Model* axes = SampleModels::Axes(4.0);
+
+    float r[] = {1.0,0.0,0.0};
+    int k=0;
 
     for(int i = 0 ; i < axes->numPoints; i++){
         for(int j = i ; j < axes->numPoints ; j++){
@@ -114,11 +118,8 @@ void ProjectionX::draw()
             if(axes->edges[i][j]){
                 // a new array each time, to construct the line
 
-//                Randomness
-                r1 = ((float) rand() / (RAND_MAX)) ;
-                r2 = ((float) rand() / (RAND_MAX)) ;
-                r3 = ((float) rand() / (RAND_MAX)) ;
-                glColor3f(r1,r2,r3);
+                glColor3f(r[ k%3 ],r[(k+1)%3],r[(k+2)%3]);
+                k++;
 
                 float* verti = new float [3*2];
                 std::copy(axes->points + i,axes->points + i +3,verti);
@@ -155,7 +156,7 @@ void ProjectionX::draw()
     }
 
 
-//Why is the lighting and shaders so erratic?
+////Why is the lighting and shaders so erratic?
 
 }
 

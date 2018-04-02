@@ -1,4 +1,5 @@
 #include "model.h"
+#include <ios>
 #include <iostream>
 #include <math.h>
 #include <vector>
@@ -13,9 +14,9 @@ Face::Face(float * pts, int npts){
     this->npts = npts;
 }
 
-Face::~Face(){
-    delete this;
-}
+//Face::~Face(){
+//    delete this;
+//}
 
 Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces ){
     this->numPoints = numPoints;
@@ -24,9 +25,9 @@ Model::Model( int numPoints, float* pts, bool** edges, std::vector<Face*> faces 
     this->faces = faces;
 }
 
-Model::~Model(){
-    delete this;
-}
+//Model::~Model(){
+//    delete this;
+//}
 
 void Model::translate(float dx, float dy, float dz){
 
@@ -49,7 +50,7 @@ void Model::translate(float dx, float dy, float dz){
 
 void Model::rotate(float alpha, float beta, float gamma){
 // angles lie between 0 to 180 deg
-    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
+//    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
     for (int i=0; i < 3 * numPoints ; i+=3){
         this->points[ i ] = this->points[i]+ 0 + 0 ;
         this->points[i+1] = 0 + this->points[i+1]*cos(alpha)  - this->points[i+2]*sin(alpha);
@@ -91,6 +92,12 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
       std::ofstream newFile;
       newFile.open(s);
 
+
+      newFile.precision(2);
+      newFile.setf(std::ios::fixed);
+      newFile.setf(std::ios::showpoint);
+
+
       newFile << "POINTS:\n" ;
       newFile << this->numPoints;
       newFile << std::endl;
@@ -127,7 +134,7 @@ void Model::serialize(std::string s){//string is the absolute? filepath where fi
 Model* Model::deserialize(std::string s){
 
     //s is the path
-
+    Model *m ;
     try{
         std::string ext(".3d");
         //check if the extension name is 3d;
@@ -187,16 +194,18 @@ Model* Model::deserialize(std::string s){
 //            faces.push_back(new Face(fpts[i],fnumpts[i]));
 //        }
 
-        Model *m = new Model(numPoints, points, edges, faces);
+        m = new Model(numPoints, points, edges, faces);
         inFile.close();
 
-        return m;
+//        return m;
 
     }
     catch ( std::exception e){
-       // do nothing but return below
+        m = SampleModels::Empty();
+    // do nothing but return below
     }
-    return  (SampleModels::Empty());
+
+    return  (m);
 }
 
 Model2d* Model::convertTo2d(){

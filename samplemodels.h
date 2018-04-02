@@ -17,7 +17,7 @@ class SampleModels
 {
 public:
     SampleModels();
-    ~SampleModels();
+//    ~SampleModels();
 
     static Model* SquareBasedPyramid(float side);
     static Model* Empty();

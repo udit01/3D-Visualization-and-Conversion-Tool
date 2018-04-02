@@ -1,5 +1,7 @@
 ﻿#include "model2d.h"
 #include <fstream>
+#include <iostream>
+#include <ios>
 #include <string>
 #include <vector>
 #include "model.h"
@@ -10,18 +12,18 @@ Projection::Projection(int numPoints, float* points, bool** edges){
     this->points = points;
     this->edges = edges;
 }
-Projection::~Projection(){
-    delete  this;
-}
+//Projection::~Projection(){
+//    delete  this;
+//}
 Model2d::Model2d(Projection* xy, Projection* yz, Projection* zx)
 {
     this->xy = xy;
     this->yz = yz;
     this->zx = zx;
 }
-Model2d::~Model2d(){
-    delete this;
-}
+//Model2d::~Model2d(){
+//    delete this;
+//}
 Model* Model2d::convertTo3d(){ // check the correctness of points once
     // no need to write 'this' , it's implicit
     int tempNumPoints = xy->npts * yz->npts * zx->npts; // very big memory allocations ? but it's  the max num of points possible
@@ -33,8 +35,8 @@ Model* Model2d::convertTo3d(){ // check the correctness of points once
         for(int j=0; j < 2*yz->npts; j+=2){
             if((xy->points[i+1])==(yz->points[j])){ // if the y's match
                 for(int k=0; k < 2*zx->npts; k+=2){
-                    if((yz->points[j+1])==(yz->points[k])){ // if the z's match
-                        if((xy->points[k+1])==(yz->points[i])){ // if the x's match
+                    if((yz->points[j+1])==(zx->points[k])){ // if the z's match
+                        if((zx->points[k+1])==(xy->points[i])){ // if the x's match
 
                             //congratulations! it's a valid point!
                             tempPoints[3*realNumPoints  ] = xy->points[i];
@@ -108,6 +110,7 @@ Model* Model2d::convertTo3d(){ // check the correctness of points once
     }
 
     Model* m = new Model(numPoints, points, edges, faces);
+
     return m;
 }
 
@@ -118,9 +121,13 @@ void Model2d::serialize(std::string s){//string is the absolute? filepath where 
       std::ofstream newFile;
       newFile.open(s);
 
+      newFile.precision(2);
+      newFile.setf(std::ios::fixed);
+      newFile.setf(std::ios::showpoint);
+
      // Reduction thus preventing copy paste of code
      Projection* ps[3] = {this->xy, this->yz, this->zx};
-     std::string strs[3] = {"PROJECTION X-Y:\n", "PROJECTION Y-Z:\n", "PROJECTION Z-X:\n"};
+     std::string strs[3] = {"PROJECTION_X-Y:\n", "PROJECTION_Y-Z:\n", "PROJECTION_Z-X:\n"};
 
      for(int k = 0; k < 3; k++){
          newFile << strs[k];
@@ -148,9 +155,10 @@ void Model2d::serialize(std::string s){//string is the absolute? filepath where 
 
 Model2d* Model2d::deserialize(std::string s)
 {
+    std::cout << "Deserializer was called: args: " << s << std::endl;
 
     //s is the path
-
+    Model2d* m2;
     try{
         std::string ext(".2d");
         //check if the extension name is 2d;
@@ -168,6 +176,7 @@ Model2d* Model2d::deserialize(std::string s)
         Projection* ps[3] ;
 
         for (int k=0 ; k < 3; k++){
+            inFile >> STRING; // PROJECTION string
             inFile >> STRING; // POINTS string
             int numPoints = 0;
             inFile >> numPoints;
@@ -193,16 +202,17 @@ Model2d* Model2d::deserialize(std::string s)
             ps[k] = new Projection(numPoints, points, edges);
         }
 
-        Model2d *m2 = new Model2d(ps[0], ps[1], ps[2]);
+        m2 = new Model2d(ps[0], ps[1], ps[2]);
 
         inFile.close();
-
-        return m2;
 
     }
     catch ( std::exception e){
        // do nothing but return below
+        m2 = (SampleModels::Empty())->convertTo2d();
     }
-    return  ((SampleModels::Empty())->convertTo2d());
+
+
+    return m2;
 
 }

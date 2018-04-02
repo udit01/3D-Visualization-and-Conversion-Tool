@@ -15,7 +15,7 @@ public:
     int npts;
     bool** edges;
     Projection(int numPoints, float* points, bool** edges);
-    ~Projection();
+//    ~Projection();
 };
 
 class Model2d
@@ -26,7 +26,7 @@ public:
     Projection* zx;
 
     Model2d(Projection* xy, Projection* yz, Projection* zx);
-    ~Model2d();
+//    ~Model2d();
 //    void translate(float dx, float dy, float dz);
 //    void rotate(float alpha, float beta, float gamma);
     Model* convertTo3d();

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <iostream>
 #include <QtWidgets>
 #include <QFile>
 #include <QFileDialog>
@@ -137,9 +138,13 @@ void MainWindow::on_actionImport_triggered()
                 {
                     this-> model = (Model2d::deserialize(file_name.toStdString()))->convertTo3d();
                 }
-                else
+                else if (ext == '3')
                 {
+//                    std::cout << "IN open action 3d ?";
                     this-> model = Model::deserialize(file_name.toStdString());
+                }
+                else{
+                    this->model = SampleModels::SquareBasedPyramid(1.0);
                 }
                 break;
             default:
@@ -151,6 +156,8 @@ void MainWindow::on_actionImport_triggered()
     {
         file_name = QString();
     }
+    emit getModel(this->model);
+    emit update();
 }
 
 void MainWindow::on_tx_textEdited(const QString &arg1)

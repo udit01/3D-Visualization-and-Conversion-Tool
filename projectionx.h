@@ -21,7 +21,7 @@ public:
 
 
 protected:
-    float r1 ; float r2; float r3;
+//    float r1 ; float r2; float r3;
     void initializeGL();
     void paintGL();
     void resizeGL(int width, int height);
