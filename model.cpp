@@ -543,6 +543,7 @@ Model2d* Model::convertTo2d(){
         {
             edgesXY[i][j] = edgesXY_temp[presentEdgesXY[i]][presentEdgesXY[j]];
         }
+        edgesXY[i][i] = 0;
     }
     for(int i = 0; i < countYZ/2; i++)
     {
@@ -550,6 +551,7 @@ Model2d* Model::convertTo2d(){
         {
             edgesYZ[i][j] = edgesYZ_temp[presentEdgesYZ[i]][presentEdgesYZ[j]];
         }
+        edgesYZ[i][i] = 0;
     }
     for(int i = 0; i < countZX/2; i++)
     {
@@ -557,6 +559,7 @@ Model2d* Model::convertTo2d(){
         {
             edgesZX[i][j] = edgesZX_temp[presentEdgesZX[i]][presentEdgesZX[j]];
         }
+        edgesZX[i][i] = 0;
     }
 
 //    qDebug() << "Edges XY \n";
