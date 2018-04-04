@@ -42,9 +42,12 @@ Math Classes are the conceptual classes. [Documented in the subfolder]     </br>
 ## Platform compatibility
 Built and tested on Ubuntu-16.04 .
 
+## Technologies Used
+
+
 ## Compilation and Execution Instructions
 
-##Authors:
+##Authors: </br>
 Udit Jain       - 2016CS10327 [@udit01](https://github.com/udit01/)         </br>
 Shashank Goel   - 2016CS10332 [@ShashuBoy](https://github.com/ShashuBoy)    </br>
 
