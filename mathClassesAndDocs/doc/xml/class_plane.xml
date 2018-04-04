@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_plane" kind="class" language="C++" prot="public">
+    <compoundname>Plane</compoundname>
+    <includes refid="_plane_8hpp" local="no">Plane.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_plane_1aafdc7fc15019da566e4cdf760f1eaf17" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Plane::l</definition>
+        <argsstring></argsstring>
+        <name>l</name>
+        <briefdescription>
+<para>the direction cosines of the normal to the plane </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="18" column="1" bodyfile="Plane.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plane_1ad289dccce2529d46275e4fb6878a8625" prot="public" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Plane::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+<para>a point that lies on the plane to fix it to a location in the space </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="20" column="1" bodyfile="Plane.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_plane_1a9a1420228e8baa632c7e8ba66f27772f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Plane::Plane</definition>
+        <argsstring>(float a, float b, float c, float d)</argsstring>
+        <name>Plane</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for plane in form of ax + by + cz + d = 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="23" column="1" bodyfile="Plane.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1aa3f7f255d3a4118e39ae6f0f6fd6e908" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Plane::Plane</definition>
+        <argsstring>(Line l, Point p)</argsstring>
+        <name>Plane</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for plane in from of it&apos;s normal line l and the point p. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="26" column="1" bodyfile="Plane.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1a14592fa1140200468ddcbeb5ace8dde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Plane::Plane</definition>
+        <argsstring>(Point p1, Point p2, Point p3)</argsstring>
+        <name>Plane</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p3</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for plane in form of 3 points p1, p2, p3 lying on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="29" column="1" bodyfile="Plane.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1a69abd86051c880dcb44b249ad10c4436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Plane::~Plane</definition>
+        <argsstring>()</argsstring>
+        <name>~Plane</name>
+        <briefdescription>
+<para>Destructor for the plane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="32" column="1" bodyfile="Plane.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1ab00163f615128de1c6bddd2169995e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Plane::isParallelToPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>isParallelToPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if a plane is parallel to another plane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="35" column="1" bodyfile="Plane.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1a6b175c15e8964820c56686aa19bf18e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Plane::isPerpendicularToPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>isPerpendicularToPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if a plane is perpendicular to another plane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="38" column="1" bodyfile="Plane.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plane_1a04a259828a74830947a30834885b9240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_line" kindref="compound">Line</ref></type>
+        <definition>Line Plane::lineOfIntersection</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>lineOfIntersection</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns the line of intersection of two Non-Parallel Planes, otherwise null. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Plane.hpp" line="41" column="1" bodyfile="Plane.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Class for representation of a plane in the 3D space. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>Point</label>
+        <link refid="class_point"/>
+      </node>
+      <node id="18">
+        <label>Plane</label>
+        <link refid="class_plane"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Plane.hpp" line="11" column="1" bodyfile="Plane.hpp" bodystart="10" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_plane_1ab00163f615128de1c6bddd2169995e0a" prot="public" virt="non-virtual"><scope>Plane</scope><name>isParallelToPlane</name></member>
+      <member refid="class_plane_1a6b175c15e8964820c56686aa19bf18e8" prot="public" virt="non-virtual"><scope>Plane</scope><name>isPerpendicularToPlane</name></member>
+      <member refid="class_plane_1aafdc7fc15019da566e4cdf760f1eaf17" prot="public" virt="non-virtual"><scope>Plane</scope><name>l</name></member>
+      <member refid="class_plane_1a04a259828a74830947a30834885b9240" prot="public" virt="non-virtual"><scope>Plane</scope><name>lineOfIntersection</name></member>
+      <member refid="class_plane_1ad289dccce2529d46275e4fb6878a8625" prot="public" virt="non-virtual"><scope>Plane</scope><name>p</name></member>
+      <member refid="class_plane_1a9a1420228e8baa632c7e8ba66f27772f" prot="public" virt="non-virtual"><scope>Plane</scope><name>Plane</name></member>
+      <member refid="class_plane_1aa3f7f255d3a4118e39ae6f0f6fd6e908" prot="public" virt="non-virtual"><scope>Plane</scope><name>Plane</name></member>
+      <member refid="class_plane_1a14592fa1140200468ddcbeb5ace8dde6" prot="public" virt="non-virtual"><scope>Plane</scope><name>Plane</name></member>
+      <member refid="class_plane_1a69abd86051c880dcb44b249ad10c4436" prot="public" virt="non-virtual"><scope>Plane</scope><name>~Plane</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

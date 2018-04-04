@@ -1,0 +1,106 @@
+.TH "Projection" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Projection \- The \fBProjection\fP Class which simply defines the detailed graph required for our software\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Projection\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBserialize\fP ()"
+.br
+.RI "Serializes the \fBProjection\fP object for storage/transfer\&. "
+.ti -1c
+.RI "void \fBscale\fP (float factor)"
+.br
+.RI "scales the view by the specified factor "
+.ti -1c
+.RI "void \fBrotate\fP (\fBDirectionCosines\fP dc)"
+.br
+.RI "rotates the view anticlockwise by the specifies angles "
+.ti -1c
+.RI "void \fBtranslate\fP (\fBPoint\fP p)"
+.br
+.RI "translates the view by the given vector/point "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBProjection\fP \fBdeserialize\fP (string s)"
+.br
+.RI "Deserializes the String object , makes this object from string\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGraph\fP \fBG\fP"
+.br
+.RI "defining a graph "
+.ti -1c
+.RI "\fBPoint\fP \fBO\fP"
+.br
+.RI "defining the reference origin "
+.ti -1c
+.RI "DirectionCosine \fBl1\fP"
+.br
+.RI "defining the Direction cosines of reference axis 1 "
+.ti -1c
+.RI "DirectionCosine \fBl2\fP"
+.br
+.RI "defining the Direction cosines of reference axis 2 "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProjection\fP Class which simply defines the detailed graph required for our software\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBProjection\fP Projection::deserialize (string s)\fC [static]\fP"
+
+.PP
+Deserializes the String object , makes this object from string\&. 
+.SS "void Projection::rotate (\fBDirectionCosines\fP dc)"
+
+.PP
+rotates the view anticlockwise by the specifies angles 
+.SS "void Projection::scale (float factor)"
+
+.PP
+scales the view by the specified factor 
+.SS "string Projection::serialize ()"
+
+.PP
+Serializes the \fBProjection\fP object for storage/transfer\&. 
+.SS "void Projection::translate (\fBPoint\fP p)"
+
+.PP
+translates the view by the given vector/point 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBGraph\fP Projection::G"
+
+.PP
+defining a graph 
+.SS "DirectionCosine Projection::l1"
+
+.PP
+defining the Direction cosines of reference axis 1 
+.SS "DirectionCosine Projection::l2"
+
+.PP
+defining the Direction cosines of reference axis 2 
+.SS "\fBPoint\fP Projection::O"
+
+.PP
+defining the reference origin 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

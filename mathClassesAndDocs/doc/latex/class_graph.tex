@@ -1,0 +1,167 @@
+\hypertarget{class_graph}{}\section{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+A \mbox{\hyperlink{class_graph}{Graph}} Class to model a 3D or a 2D view. Determine whether to use an Adjcancey List or Adjanceny Matrix representation.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_graph}{Graph}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_graph}{Graph}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_ae807fc072ac3e93c9718ee326a0d0822}{contains\+Node}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em Returns True if it contains the specified Node else False. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_af7eefeaacac324886fa73f3a2e85f20a}{contains\+Edge}} (\mbox{\hyperlink{class_line}{Line}} E)
+\begin{DoxyCompactList}\small\item\em Returns True if it contains the specified Node else False. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_aaf5ccb68d053bd64b6b057783c99608c}{add\+Node}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em adds a node to the \mbox{\hyperlink{class_graph}{Graph}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a5c30bae1d7a0bbb2f9d9f0d5ad40f78f}{add\+Edge}} (\mbox{\hyperlink{class_line}{Line}} E)
+\begin{DoxyCompactList}\small\item\em adds an edge to the \mbox{\hyperlink{class_graph}{Graph}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a285f720a5e75fc099dcc32fd4a37786a}{update\+Node}} (\mbox{\hyperlink{class_point}{Point}} P1, \mbox{\hyperlink{class_point}{Point}} P2)
+\begin{DoxyCompactList}\small\item\em updates a Node in the \mbox{\hyperlink{class_graph}{Graph}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a74d50f92f6f2291675020e038132c85f}{delete\+Node}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em deletes a node from the \mbox{\hyperlink{class_graph}{Graph}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a39031d4b9f6527501333e612cb91cca6}{delete\+Edge}} (Edge E)
+\begin{DoxyCompactList}\small\item\em deletes an edge from the \mbox{\hyperlink{class_graph}{Graph}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_graph_abbffb935f6c2c6723a149d70bdb0762f}{Node}}
+\begin{DoxyCompactList}\small\item\em the abstract Node data member that describes the corners/vertices of the View \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{class_line}{Line}} $>$ \mbox{\hyperlink{class_graph_aa8bbd434abc0c7a804ad7687b3ec2511}{Edge\+Set}}
+\begin{DoxyCompactList}\small\item\em the abstract Edge\+Set data member that describes the solid/dashed edges of the View \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{class_graph}{Graph}} Class to model a 3D or a 2D view. Determine whether to use an Adjcancey List or Adjanceny Matrix representation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_graph}{Graph}} object. 
+
+\mbox{\Hypertarget{class_graph_a902c5b3eacb66d60752525ab23297a95}\label{class_graph_a902c5b3eacb66d60752525ab23297a95}} 
+\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{$\sim$\+Graph()}{~Graph()}}
+{\footnotesize\ttfamily Graph\+::$\sim$\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{class_graph}{Graph}} object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a5c30bae1d7a0bbb2f9d9f0d5ad40f78f}\label{class_graph_a5c30bae1d7a0bbb2f9d9f0d5ad40f78f}} 
+\index{Graph@{Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{add\+Edge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{E }\end{DoxyParamCaption})}
+
+
+
+adds an edge to the \mbox{\hyperlink{class_graph}{Graph}} 
+
+\mbox{\Hypertarget{class_graph_aaf5ccb68d053bd64b6b057783c99608c}\label{class_graph_aaf5ccb68d053bd64b6b057783c99608c}} 
+\index{Graph@{Graph}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{add\+Node()}{addNode()}}
+{\footnotesize\ttfamily void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+adds a node to the \mbox{\hyperlink{class_graph}{Graph}} 
+
+\mbox{\Hypertarget{class_graph_af7eefeaacac324886fa73f3a2e85f20a}\label{class_graph_af7eefeaacac324886fa73f3a2e85f20a}} 
+\index{Graph@{Graph}!contains\+Edge@{contains\+Edge}}
+\index{contains\+Edge@{contains\+Edge}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{contains\+Edge()}{containsEdge()}}
+{\footnotesize\ttfamily bool Graph\+::contains\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{E }\end{DoxyParamCaption})}
+
+
+
+Returns True if it contains the specified Node else False. 
+
+\mbox{\Hypertarget{class_graph_ae807fc072ac3e93c9718ee326a0d0822}\label{class_graph_ae807fc072ac3e93c9718ee326a0d0822}} 
+\index{Graph@{Graph}!contains\+Node@{contains\+Node}}
+\index{contains\+Node@{contains\+Node}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{contains\+Node()}{containsNode()}}
+{\footnotesize\ttfamily bool Graph\+::contains\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns True if it contains the specified Node else False. 
+
+\mbox{\Hypertarget{class_graph_a39031d4b9f6527501333e612cb91cca6}\label{class_graph_a39031d4b9f6527501333e612cb91cca6}} 
+\index{Graph@{Graph}!delete\+Edge@{delete\+Edge}}
+\index{delete\+Edge@{delete\+Edge}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{delete\+Edge()}{deleteEdge()}}
+{\footnotesize\ttfamily void Graph\+::delete\+Edge (\begin{DoxyParamCaption}\item[{Edge}]{E }\end{DoxyParamCaption})}
+
+
+
+deletes an edge from the \mbox{\hyperlink{class_graph}{Graph}} 
+
+\mbox{\Hypertarget{class_graph_a74d50f92f6f2291675020e038132c85f}\label{class_graph_a74d50f92f6f2291675020e038132c85f}} 
+\index{Graph@{Graph}!delete\+Node@{delete\+Node}}
+\index{delete\+Node@{delete\+Node}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{delete\+Node()}{deleteNode()}}
+{\footnotesize\ttfamily void Graph\+::delete\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+deletes a node from the \mbox{\hyperlink{class_graph}{Graph}} 
+
+\mbox{\Hypertarget{class_graph_a285f720a5e75fc099dcc32fd4a37786a}\label{class_graph_a285f720a5e75fc099dcc32fd4a37786a}} 
+\index{Graph@{Graph}!update\+Node@{update\+Node}}
+\index{update\+Node@{update\+Node}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{update\+Node()}{updateNode()}}
+{\footnotesize\ttfamily void Graph\+::update\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P1,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{P2 }\end{DoxyParamCaption})}
+
+
+
+updates a Node in the \mbox{\hyperlink{class_graph}{Graph}} 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_aa8bbd434abc0c7a804ad7687b3ec2511}\label{class_graph_aa8bbd434abc0c7a804ad7687b3ec2511}} 
+\index{Graph@{Graph}!Edge\+Set@{Edge\+Set}}
+\index{Edge\+Set@{Edge\+Set}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{Edge\+Set}{EdgeSet}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{class_line}{Line}}$>$ Graph\+::\+Edge\+Set}
+
+
+
+the abstract Edge\+Set data member that describes the solid/dashed edges of the View 
+
+\mbox{\Hypertarget{class_graph_abbffb935f6c2c6723a149d70bdb0762f}\label{class_graph_abbffb935f6c2c6723a149d70bdb0762f}} 
+\index{Graph@{Graph}!Node@{Node}}
+\index{Node@{Node}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{Node}{Node}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{class_point}{Point}}$>$ Graph\+::\+Node}
+
+
+
+the abstract Node data member that describes the corners/vertices of the View 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8hpp}{Graph.\+hpp}}\item 
+\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

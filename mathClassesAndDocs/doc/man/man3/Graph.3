@@ -1,0 +1,120 @@
+.TH "Graph" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Graph \- A \fBGraph\fP Class to model a 3D or a 2D view\&. Determine whether to use an Adjcancey List or Adjanceny Matrix representation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Graph\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGraph\fP ()"
+.br
+.RI "Constructor for \fBGraph\fP object\&. "
+.ti -1c
+.RI "\fB~Graph\fP ()"
+.br
+.RI "Destructor for \fBGraph\fP object\&. "
+.ti -1c
+.RI "bool \fBcontainsNode\fP (\fBPoint\fP P)"
+.br
+.RI "Returns True if it contains the specified Node else False\&. "
+.ti -1c
+.RI "bool \fBcontainsEdge\fP (\fBLine\fP E)"
+.br
+.RI "Returns True if it contains the specified Node else False\&. "
+.ti -1c
+.RI "void \fBaddNode\fP (\fBPoint\fP P)"
+.br
+.RI "adds a node to the \fBGraph\fP "
+.ti -1c
+.RI "void \fBaddEdge\fP (\fBLine\fP E)"
+.br
+.RI "adds an edge to the \fBGraph\fP "
+.ti -1c
+.RI "void \fBupdateNode\fP (\fBPoint\fP P1, \fBPoint\fP P2)"
+.br
+.RI "updates a Node in the \fBGraph\fP "
+.ti -1c
+.RI "void \fBdeleteNode\fP (\fBPoint\fP P)"
+.br
+.RI "deletes a node from the \fBGraph\fP "
+.ti -1c
+.RI "void \fBdeleteEdge\fP (Edge E)"
+.br
+.RI "deletes an edge from the \fBGraph\fP "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "list< \fBPoint\fP > \fBNode\fP"
+.br
+.RI "the abstract Node data member that describes the corners/vertices of the View "
+.ti -1c
+.RI "list< \fBLine\fP > \fBEdgeSet\fP"
+.br
+.RI "the abstract EdgeSet data member that describes the solid/dashed edges of the View "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBGraph\fP Class to model a 3D or a 2D view\&. Determine whether to use an Adjcancey List or Adjanceny Matrix representation\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Graph::Graph ()"
+
+.PP
+Constructor for \fBGraph\fP object\&. 
+.SS "Graph::~Graph ()"
+
+.PP
+Destructor for \fBGraph\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Graph::addEdge (\fBLine\fP E)"
+
+.PP
+adds an edge to the \fBGraph\fP 
+.SS "void Graph::addNode (\fBPoint\fP P)"
+
+.PP
+adds a node to the \fBGraph\fP 
+.SS "bool Graph::containsEdge (\fBLine\fP E)"
+
+.PP
+Returns True if it contains the specified Node else False\&. 
+.SS "bool Graph::containsNode (\fBPoint\fP P)"
+
+.PP
+Returns True if it contains the specified Node else False\&. 
+.SS "void Graph::deleteEdge (Edge E)"
+
+.PP
+deletes an edge from the \fBGraph\fP 
+.SS "void Graph::deleteNode (\fBPoint\fP P)"
+
+.PP
+deletes a node from the \fBGraph\fP 
+.SS "void Graph::updateNode (\fBPoint\fP P1, \fBPoint\fP P2)"
+
+.PP
+updates a Node in the \fBGraph\fP 
+.SH "Member Data Documentation"
+.PP 
+.SS "list<\fBLine\fP> Graph::EdgeSet"
+
+.PP
+the abstract EdgeSet data member that describes the solid/dashed edges of the View 
+.SS "list<\fBPoint\fP> Graph::Node"
+
+.PP
+the abstract Node data member that describes the corners/vertices of the View 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

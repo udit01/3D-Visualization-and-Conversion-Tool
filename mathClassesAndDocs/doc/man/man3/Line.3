@@ -1,0 +1,160 @@
+.TH "Line" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Line \- A Class to define a line in the space 2D/3D\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Line\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLine\fP (\fBDirectionCosines\fP dc, \fBPoint\fP \fBp\fP)"
+.br
+.RI "Constructor for line of the form of direction cosines and a point\&. "
+.ti -1c
+.RI "\fBLine\fP (\fBPoint\fP p1, \fBPoint\fP p2)"
+.br
+.RI "Constructor for line of the form of two points p1, p2\&. "
+.ti -1c
+.RI "\fB~Line\fP ()"
+.br
+.RI "Destructor for line object\&. "
+.ti -1c
+.RI "bool \fBisParallel\fP (\fBLine\fP L)"
+.br
+.RI "Returns True when line is parallel to given line\&. "
+.ti -1c
+.RI "bool \fBisPerpendicular\fP (\fBLine\fP L)"
+.br
+.RI "Returns True when line is perpendicular to given line\&. "
+.ti -1c
+.RI "float \fBangleWithLine\fP (\fBLine\fP L)"
+.br
+.RI "Returns angle made with given \fBLine\fP\&. "
+.ti -1c
+.RI "float \fBangleWithPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns angle made with given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBLine\fP \fBprojectionOnPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns projection of line on the given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBLine\fP \fBimageInPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns image of line in the given \fBPlane\fP\&. "
+.ti -1c
+.RI "bool \fBliesInPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns True if line lies in the given \fBPlane\fP\&. "
+.ti -1c
+.RI "bool \fBintersects\fP (\fBLine\fP L)"
+.br
+.RI "Returns True if line intersect with the given \fBLine\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBpointOfIntersection\fP (\fBLine\fP L)"
+.br
+.RI "Returns the \fBPoint\fP of intersection of the two lines, null if they don't intersect\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBpointOfIntersection\fP (\fBPlane\fP P)"
+.br
+.RI "Returns the \fBPoint\fP of intersection of line and the given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBLine\fP \fBlineOfShortestDistance\fP (\fBLine\fP L)"
+.br
+.RI "Returns the line of shortest distance of two skew lines, null if they intersect\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "DirectionCosine \fBl\fP"
+.br
+.RI "the direction cosines of the line "
+.ti -1c
+.RI "\fBPoint\fP \fBp\fP"
+.br
+.RI "a point that lies on theline to fix it to a location in the space "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Class to define a line in the space 2D/3D\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Line::Line (\fBDirectionCosines\fP dc, \fBPoint\fP p)"
+
+.PP
+Constructor for line of the form of direction cosines and a point\&. 
+.SS "Line::Line (\fBPoint\fP p1, \fBPoint\fP p2)"
+
+.PP
+Constructor for line of the form of two points p1, p2\&. 
+.SS "Line::~Line ()"
+
+.PP
+Destructor for line object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float Line::angleWithLine (\fBLine\fP L)"
+
+.PP
+Returns angle made with given \fBLine\fP\&. 
+.SS "float Line::angleWithPlane (\fBPlane\fP P)"
+
+.PP
+Returns angle made with given \fBPlane\fP\&. 
+.SS "\fBLine\fP Line::imageInPlane (\fBPlane\fP P)"
+
+.PP
+Returns image of line in the given \fBPlane\fP\&. 
+.SS "bool Line::intersects (\fBLine\fP L)"
+
+.PP
+Returns True if line intersect with the given \fBLine\fP\&. 
+.SS "bool Line::isParallel (\fBLine\fP L)"
+
+.PP
+Returns True when line is parallel to given line\&. 
+.SS "bool Line::isPerpendicular (\fBLine\fP L)"
+
+.PP
+Returns True when line is perpendicular to given line\&. 
+.SS "bool Line::liesInPlane (\fBPlane\fP P)"
+
+.PP
+Returns True if line lies in the given \fBPlane\fP\&. 
+.SS "\fBLine\fP Line::lineOfShortestDistance (\fBLine\fP L)"
+
+.PP
+Returns the line of shortest distance of two skew lines, null if they intersect\&. 
+.SS "\fBPoint\fP Line::pointOfIntersection (\fBLine\fP L)"
+
+.PP
+Returns the \fBPoint\fP of intersection of the two lines, null if they don't intersect\&. 
+.SS "\fBPoint\fP Line::pointOfIntersection (\fBPlane\fP P)"
+
+.PP
+Returns the \fBPoint\fP of intersection of line and the given \fBPlane\fP\&. 
+.SS "\fBLine\fP Line::projectionOnPlane (\fBPlane\fP P)"
+
+.PP
+Returns projection of line on the given \fBPlane\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "DirectionCosine Line::l"
+
+.PP
+the direction cosines of the line 
+.SS "\fBPoint\fP Line::p"
+
+.PP
+a point that lies on theline to fix it to a location in the space 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

@@ -1,0 +1,323 @@
+\hypertarget{class_point}{}\section{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D \mbox{\hyperlink{class_point}{Point}} Abstract Data Types with appropriate methods.  
+
+
+
+
+{\ttfamily \#include $<$Point.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_a30bc8409287de4f43e160664be834636}{Point}} (float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}, float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}})
+\begin{DoxyCompactList}\small\item\em Constructor for unlabelled 2D point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point_aede82dc8eff80efec382853ecd2d31b0}{Point}} (float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}, float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}}, string \mbox{\hyperlink{class_point_a1e929419353f9bec46732af977adb55a}{label}})
+\begin{DoxyCompactList}\small\item\em Constructor for labelled 2D point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}{Point}} (float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}, float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}}, float \mbox{\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}})
+\begin{DoxyCompactList}\small\item\em Constructor for unlabelled 3D point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point_a1336b3425f9c080d170f036c336eaa64}{Point}} (float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}, float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}}, float \mbox{\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}}, string \mbox{\hyperlink{class_point_a1e929419353f9bec46732af977adb55a}{label}})
+\begin{DoxyCompactList}\small\item\em Constructor for labelled 3D point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point_a395fa04b4ec126b66fc053f829a30cc1}{$\sim$\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the point object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_a94bcbad2f7120c466739610bfd84932c}{distance\+From\+Point}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Returns distance from given \mbox{\hyperlink{class_point}{Point}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_a4975f26f6258a4d5ebd57d180f7677fd}{distance\+From\+Line}} (\mbox{\hyperlink{class_line}{Line}} L)
+\begin{DoxyCompactList}\small\item\em Returns distance from given \mbox{\hyperlink{class_line}{Line}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_a965dffb2059032cc1ce8c1a33c4d6684}{distance\+From\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns distance from given \mbox{\hyperlink{class_plane}{Plane}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_point_addde199c01d6de0ce974fd7b89e4cba4}{lies\+On\+Line}} (\mbox{\hyperlink{class_line}{Line}} L)
+\begin{DoxyCompactList}\small\item\em Returns True if \mbox{\hyperlink{class_point}{Point}} lies on given \mbox{\hyperlink{class_line}{Line}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_point_ace2ed8e26893f5659e9f4fe94dc67094}{lies\+On\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns True if \mbox{\hyperlink{class_point}{Point}} lies on given \mbox{\hyperlink{class_plane}{Plane}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a61cefcc9a49eed720f97ccea7bed5981}{projection\+On\+Line}} (\mbox{\hyperlink{class_line}{Line}} L)
+\begin{DoxyCompactList}\small\item\em Returns projection of point on given \mbox{\hyperlink{class_line}{Line}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a6db21f293bd4a7eab01b04882a5021fd}{image\+In\+Line}} (\mbox{\hyperlink{class_line}{Line}} L)
+\begin{DoxyCompactList}\small\item\em Returns mirror image of point in given \mbox{\hyperlink{class_line}{Line}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a1085bffb18e2e514d415cdcc2fdb0aff}{projection\+On\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns projection of point on the given \mbox{\hyperlink{class_plane}{Plane}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a2350375c6bb6c3bb810ae79c99d2a53c}{image\+In\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns image of point on the given \mbox{\hyperlink{class_plane}{Plane}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a8a2ee9e0febd224f86391229e77c2aee}{add}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Returns the added point, treating them as vectors. Doesn\textquotesingle{}t change coordinates of current point. \mbox{[}this + p\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_ab1d94b20de98b5e73345599d33145195}{sub}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Returns the subtracted point, treating them as vectors. Doesn\textquotesingle{}t change coordinates of current point. \mbox{[}this -\/ p\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_acf25ade0104bfa1c292eeb2da4d5aa2c}{dot\+Product}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Returns the dot product with given point, treating them as vectors. \mbox{[}this . p\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a99b9491fe4a5527eff77a2db8bd01ecf}{cross\+Product}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Returns the point obtained from cross product, treating them as vectors. \mbox{[}this x p\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_acf38257ee8ba425115bab283b777ad17}{translate}} (float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}, float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}}, float \mbox{\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}})
+\begin{DoxyCompactList}\small\item\em Returns the translated point. Changes the coordinates of current point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_point_a3f42404773430a36407ee22224518f39}{rotate}} (\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}} dc)
+\begin{DoxyCompactList}\small\item\em Returns the translated point. Changes the coordinates of current point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}}
+\begin{DoxyCompactList}\small\item\em X-\/\+Coordinate of the point. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}}
+\begin{DoxyCompactList}\small\item\em Y-\/\+Coordinate of the point. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}}
+\begin{DoxyCompactList}\small\item\em Z-\/\+Coordinate of the point. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_point_a1e929419353f9bec46732af977adb55a}{label}}
+\begin{DoxyCompactList}\small\item\em label of the \mbox{\hyperlink{class_point}{Point}} -\/ set to Null in case of Unlabelled \mbox{\hyperlink{class_point}{Point}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D \mbox{\hyperlink{class_point}{Point}} Abstract Data Types with appropriate methods. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_point_a30bc8409287de4f43e160664be834636}\label{class_point_a30bc8409287de4f43e160664be834636}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Constructor for unlabelled 2D point. 
+
+\mbox{\Hypertarget{class_point_aede82dc8eff80efec382853ecd2d31b0}\label{class_point_aede82dc8eff80efec382853ecd2d31b0}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{string}]{label }\end{DoxyParamCaption})}
+
+
+
+Constructor for labelled 2D point. 
+
+\mbox{\Hypertarget{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}\label{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Constructor for unlabelled 3D point. 
+
+\mbox{\Hypertarget{class_point_a1336b3425f9c080d170f036c336eaa64}\label{class_point_a1336b3425f9c080d170f036c336eaa64}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{string}]{label }\end{DoxyParamCaption})}
+
+
+
+Constructor for labelled 3D point. 
+
+\mbox{\Hypertarget{class_point_a395fa04b4ec126b66fc053f829a30cc1}\label{class_point_a395fa04b4ec126b66fc053f829a30cc1}} 
+\index{Point@{Point}!````~Point@{$\sim$\+Point}}
+\index{````~Point@{$\sim$\+Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{$\sim$\+Point()}{~Point()}}
+{\footnotesize\ttfamily Point\+::$\sim$\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the point object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_point_a8a2ee9e0febd224f86391229e77c2aee}\label{class_point_a8a2ee9e0febd224f86391229e77c2aee}} 
+\index{Point@{Point}!add@{add}}
+\index{add@{add}!Point@{Point}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Returns the added point, treating them as vectors. Doesn\textquotesingle{}t change coordinates of current point. \mbox{[}this + p\mbox{]}. 
+
+\mbox{\Hypertarget{class_point_a99b9491fe4a5527eff77a2db8bd01ecf}\label{class_point_a99b9491fe4a5527eff77a2db8bd01ecf}} 
+\index{Point@{Point}!cross\+Product@{cross\+Product}}
+\index{cross\+Product@{cross\+Product}!Point@{Point}}
+\subsubsection{\texorpdfstring{cross\+Product()}{crossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::cross\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Returns the point obtained from cross product, treating them as vectors. \mbox{[}this x p\mbox{]}. 
+
+\mbox{\Hypertarget{class_point_a4975f26f6258a4d5ebd57d180f7677fd}\label{class_point_a4975f26f6258a4d5ebd57d180f7677fd}} 
+\index{Point@{Point}!distance\+From\+Line@{distance\+From\+Line}}
+\index{distance\+From\+Line@{distance\+From\+Line}!Point@{Point}}
+\subsubsection{\texorpdfstring{distance\+From\+Line()}{distanceFromLine()}}
+{\footnotesize\ttfamily float Point\+::distance\+From\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Returns distance from given \mbox{\hyperlink{class_line}{Line}}. 
+
+\mbox{\Hypertarget{class_point_a965dffb2059032cc1ce8c1a33c4d6684}\label{class_point_a965dffb2059032cc1ce8c1a33c4d6684}} 
+\index{Point@{Point}!distance\+From\+Plane@{distance\+From\+Plane}}
+\index{distance\+From\+Plane@{distance\+From\+Plane}!Point@{Point}}
+\subsubsection{\texorpdfstring{distance\+From\+Plane()}{distanceFromPlane()}}
+{\footnotesize\ttfamily float Point\+::distance\+From\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns distance from given \mbox{\hyperlink{class_plane}{Plane}}. 
+
+\mbox{\Hypertarget{class_point_a94bcbad2f7120c466739610bfd84932c}\label{class_point_a94bcbad2f7120c466739610bfd84932c}} 
+\index{Point@{Point}!distance\+From\+Point@{distance\+From\+Point}}
+\index{distance\+From\+Point@{distance\+From\+Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{distance\+From\+Point()}{distanceFromPoint()}}
+{\footnotesize\ttfamily float Point\+::distance\+From\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Returns distance from given \mbox{\hyperlink{class_point}{Point}}. 
+
+\mbox{\Hypertarget{class_point_acf25ade0104bfa1c292eeb2da4d5aa2c}\label{class_point_acf25ade0104bfa1c292eeb2da4d5aa2c}} 
+\index{Point@{Point}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!Point@{Point}}
+\subsubsection{\texorpdfstring{dot\+Product()}{dotProduct()}}
+{\footnotesize\ttfamily float Point\+::dot\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Returns the dot product with given point, treating them as vectors. \mbox{[}this . p\mbox{]}. 
+
+\mbox{\Hypertarget{class_point_a6db21f293bd4a7eab01b04882a5021fd}\label{class_point_a6db21f293bd4a7eab01b04882a5021fd}} 
+\index{Point@{Point}!image\+In\+Line@{image\+In\+Line}}
+\index{image\+In\+Line@{image\+In\+Line}!Point@{Point}}
+\subsubsection{\texorpdfstring{image\+In\+Line()}{imageInLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::image\+In\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Returns mirror image of point in given \mbox{\hyperlink{class_line}{Line}}. 
+
+\mbox{\Hypertarget{class_point_a2350375c6bb6c3bb810ae79c99d2a53c}\label{class_point_a2350375c6bb6c3bb810ae79c99d2a53c}} 
+\index{Point@{Point}!image\+In\+Plane@{image\+In\+Plane}}
+\index{image\+In\+Plane@{image\+In\+Plane}!Point@{Point}}
+\subsubsection{\texorpdfstring{image\+In\+Plane()}{imageInPlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::image\+In\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns image of point on the given \mbox{\hyperlink{class_plane}{Plane}}. 
+
+\mbox{\Hypertarget{class_point_addde199c01d6de0ce974fd7b89e4cba4}\label{class_point_addde199c01d6de0ce974fd7b89e4cba4}} 
+\index{Point@{Point}!lies\+On\+Line@{lies\+On\+Line}}
+\index{lies\+On\+Line@{lies\+On\+Line}!Point@{Point}}
+\subsubsection{\texorpdfstring{lies\+On\+Line()}{liesOnLine()}}
+{\footnotesize\ttfamily bool Point\+::lies\+On\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Returns True if \mbox{\hyperlink{class_point}{Point}} lies on given \mbox{\hyperlink{class_line}{Line}}. 
+
+\mbox{\Hypertarget{class_point_ace2ed8e26893f5659e9f4fe94dc67094}\label{class_point_ace2ed8e26893f5659e9f4fe94dc67094}} 
+\index{Point@{Point}!lies\+On\+Plane@{lies\+On\+Plane}}
+\index{lies\+On\+Plane@{lies\+On\+Plane}!Point@{Point}}
+\subsubsection{\texorpdfstring{lies\+On\+Plane()}{liesOnPlane()}}
+{\footnotesize\ttfamily bool Point\+::lies\+On\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns True if \mbox{\hyperlink{class_point}{Point}} lies on given \mbox{\hyperlink{class_plane}{Plane}}. 
+
+\mbox{\Hypertarget{class_point_a61cefcc9a49eed720f97ccea7bed5981}\label{class_point_a61cefcc9a49eed720f97ccea7bed5981}} 
+\index{Point@{Point}!projection\+On\+Line@{projection\+On\+Line}}
+\index{projection\+On\+Line@{projection\+On\+Line}!Point@{Point}}
+\subsubsection{\texorpdfstring{projection\+On\+Line()}{projectionOnLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::projection\+On\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Returns projection of point on given \mbox{\hyperlink{class_line}{Line}}. 
+
+\mbox{\Hypertarget{class_point_a1085bffb18e2e514d415cdcc2fdb0aff}\label{class_point_a1085bffb18e2e514d415cdcc2fdb0aff}} 
+\index{Point@{Point}!projection\+On\+Plane@{projection\+On\+Plane}}
+\index{projection\+On\+Plane@{projection\+On\+Plane}!Point@{Point}}
+\subsubsection{\texorpdfstring{projection\+On\+Plane()}{projectionOnPlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::projection\+On\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns projection of point on the given \mbox{\hyperlink{class_plane}{Plane}}. 
+
+\mbox{\Hypertarget{class_point_a3f42404773430a36407ee22224518f39}\label{class_point_a3f42404773430a36407ee22224518f39}} 
+\index{Point@{Point}!rotate@{rotate}}
+\index{rotate@{rotate}!Point@{Point}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}}}]{dc }\end{DoxyParamCaption})}
+
+
+
+Returns the translated point. Changes the coordinates of current point. 
+
+\mbox{\Hypertarget{class_point_ab1d94b20de98b5e73345599d33145195}\label{class_point_ab1d94b20de98b5e73345599d33145195}} 
+\index{Point@{Point}!sub@{sub}}
+\index{sub@{sub}!Point@{Point}}
+\subsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Returns the subtracted point, treating them as vectors. Doesn\textquotesingle{}t change coordinates of current point. \mbox{[}this -\/ p\mbox{]}. 
+
+\mbox{\Hypertarget{class_point_acf38257ee8ba425115bab283b777ad17}\label{class_point_acf38257ee8ba425115bab283b777ad17}} 
+\index{Point@{Point}!translate@{translate}}
+\index{translate@{translate}!Point@{Point}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Point\+::translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Returns the translated point. Changes the coordinates of current point. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_point_a1e929419353f9bec46732af977adb55a}\label{class_point_a1e929419353f9bec46732af977adb55a}} 
+\index{Point@{Point}!label@{label}}
+\index{label@{label}!Point@{Point}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily string Point\+::label}
+
+
+
+label of the \mbox{\hyperlink{class_point}{Point}} -\/ set to Null in case of Unlabelled \mbox{\hyperlink{class_point}{Point}} 
+
+\mbox{\Hypertarget{class_point_a05dfe2dfbde813ad234b514f30e662f1}\label{class_point_a05dfe2dfbde813ad234b514f30e662f1}} 
+\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Point\+::x}
+
+
+
+X-\/\+Coordinate of the point. 
+
+\mbox{\Hypertarget{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}\label{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}} 
+\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Point\+::y}
+
+
+
+Y-\/\+Coordinate of the point. 
+
+\mbox{\Hypertarget{class_point_a9a666531e0e99adff132be93d2407d0c}\label{class_point_a9a666531e0e99adff132be93d2407d0c}} 
+\index{Point@{Point}!z@{z}}
+\index{z@{z}!Point@{Point}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily float Point\+::z}
+
+
+
+Z-\/\+Coordinate of the point. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_point_8hpp}{Point.\+hpp}}\item 
+\mbox{\hyperlink{_point_8cpp}{Point.\+cpp}}\end{DoxyCompactItemize}

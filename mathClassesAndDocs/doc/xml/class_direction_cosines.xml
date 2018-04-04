@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_direction_cosines" kind="class" language="C++" prot="public">
+    <compoundname>DirectionCosines</compoundname>
+    <includes refid="_direction_cosines_8hpp" local="no">DirectionCosines.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_direction_cosines_1a6fde43a3e699635fecf3296c72fe7045" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DirectionCosines::xl</definition>
+        <argsstring></argsstring>
+        <name>xl</name>
+        <briefdescription>
+<para>cosine of the angle made by the line/segment with the x-axis </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="18" column="1" bodyfile="DirectionCosines.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_direction_cosines_1a277b009af5e287e276d445a6aecef108" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DirectionCosines::yl</definition>
+        <argsstring></argsstring>
+        <name>yl</name>
+        <briefdescription>
+<para>cosine of the angle made by the line/segment with the y-axis </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="20" column="1" bodyfile="DirectionCosines.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_direction_cosines_1afb263bbd031ba13d68380e367403ec65" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DirectionCosines::zl</definition>
+        <argsstring></argsstring>
+        <name>zl</name>
+        <briefdescription>
+<para>cosine of the angle made by the line/segment with the z-axis </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="22" column="1" bodyfile="DirectionCosines.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DirectionCosines::DirectionCosine</definition>
+        <argsstring>(float a, float b, float c)</argsstring>
+        <name>DirectionCosine</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Class might be initialized with direction cosines or ratios, to make it inclusive of both. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="14" column="1" bodyfile="DirectionCosines.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_cosines_1a595e87c5e381f0d877eee26ba75283c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DirectionCosines::~DirectionCosines</definition>
+        <argsstring>()</argsstring>
+        <name>~DirectionCosines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="15" column="1" bodyfile="DirectionCosines.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_cosines_1a734a1153319e8e5b16d794085a74fe21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DirectionCosines::dotProduct</definition>
+        <argsstring>(DirectionCosine l)</argsstring>
+        <name>dotProduct</name>
+        <param>
+          <type><ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref></type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="25" column="1" bodyfile="DirectionCosines.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_cosines_1afc5844a79ed93bc86c96ce5c303d816a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref></type>
+        <definition>DirectionCosines DirectionCosines::crossProduct</definition>
+        <argsstring>(DirectionCosine l)</argsstring>
+        <name>crossProduct</name>
+        <param>
+          <type><ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref></type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DirectionCosines.hpp" line="26" column="1" bodyfile="DirectionCosines.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to define the direction cosines in 3d space. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DirectionCosines.hpp" line="11" column="1" bodyfile="DirectionCosines.hpp" bodystart="10" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_direction_cosines_1afc5844a79ed93bc86c96ce5c303d816a" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>crossProduct</name></member>
+      <member refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>DirectionCosine</name></member>
+      <member refid="class_direction_cosines_1a734a1153319e8e5b16d794085a74fe21" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>dotProduct</name></member>
+      <member refid="class_direction_cosines_1a6fde43a3e699635fecf3296c72fe7045" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>xl</name></member>
+      <member refid="class_direction_cosines_1a277b009af5e287e276d445a6aecef108" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>yl</name></member>
+      <member refid="class_direction_cosines_1afb263bbd031ba13d68380e367403ec65" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>zl</name></member>
+      <member refid="class_direction_cosines_1a595e87c5e381f0d877eee26ba75283c7" prot="public" virt="non-virtual"><scope>DirectionCosines</scope><name>~DirectionCosines</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

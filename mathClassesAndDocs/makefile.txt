@@ -1,0 +1,29 @@
+LDIR = ./lib
+ODIR = ./build
+IDIR = ./include
+SDIR = ./src
+BDIR = ./bin
+
+CC = gcc
+CFLAG = -I$(IDIR)
+LIBS = -lm
+
+_DEPS = DirectionCosines.hpp Graph.hpp Line.hpp Model3d.hpp OrthographicViews.hpp Plane.hpp Point.hpp Projection.hpp
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = DirectionCosines.o Graph.o Line.o Model3d.o OrthographicViews.o Plane.o Point.o Projection.o
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+_BUILDS = DirectionCosines Graph Line Model3d OrthographicViews Plane Point Projection
+BUILDS = $(patsubst %,$(BDIR)/%,$(_BUILDS))
+
+$(ODIR)/%.o: $(SDIR)/%.cpp $(ODIR)/$(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+ROF = $(ODIR)/*.o	
+
+all: $(BUILDS)
+	@echo "Building...."
+
+$(BDIR)/%: ROF
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS

@@ -1,0 +1,224 @@
+.TH "Point" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Point \- A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D \fBPoint\fP Abstract Data Types with appropriate methods\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Point\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint\fP (float \fBx\fP, float \fBy\fP)"
+.br
+.RI "Constructor for unlabelled 2D point\&. "
+.ti -1c
+.RI "\fBPoint\fP (float \fBx\fP, float \fBy\fP, string \fBlabel\fP)"
+.br
+.RI "Constructor for labelled 2D point\&. "
+.ti -1c
+.RI "\fBPoint\fP (float \fBx\fP, float \fBy\fP, float \fBz\fP)"
+.br
+.RI "Constructor for unlabelled 3D point\&. "
+.ti -1c
+.RI "\fBPoint\fP (float \fBx\fP, float \fBy\fP, float \fBz\fP, string \fBlabel\fP)"
+.br
+.RI "Constructor for labelled 3D point\&. "
+.ti -1c
+.RI "\fB~Point\fP ()"
+.br
+.RI "Destructor for the point object\&. "
+.ti -1c
+.RI "float \fBdistanceFromPoint\fP (\fBPoint\fP p)"
+.br
+.RI "Returns distance from given \fBPoint\fP\&. "
+.ti -1c
+.RI "float \fBdistanceFromLine\fP (\fBLine\fP L)"
+.br
+.RI "Returns distance from given \fBLine\fP\&. "
+.ti -1c
+.RI "float \fBdistanceFromPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns distance from given \fBPlane\fP\&. "
+.ti -1c
+.RI "bool \fBliesOnLine\fP (\fBLine\fP L)"
+.br
+.RI "Returns True if \fBPoint\fP lies on given \fBLine\fP\&. "
+.ti -1c
+.RI "bool \fBliesOnPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns True if \fBPoint\fP lies on given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBprojectionOnLine\fP (\fBLine\fP L)"
+.br
+.RI "Returns projection of point on given \fBLine\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBimageInLine\fP (\fBLine\fP L)"
+.br
+.RI "Returns mirror image of point in given \fBLine\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBprojectionOnPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns projection of point on the given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBimageInPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns image of point on the given \fBPlane\fP\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBadd\fP (\fBPoint\fP p)"
+.br
+.RI "Returns the added point, treating them as vectors\&. Doesn't change coordinates of current point\&. [this + p]\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBsub\fP (\fBPoint\fP p)"
+.br
+.RI "Returns the subtracted point, treating them as vectors\&. Doesn't change coordinates of current point\&. [this - p]\&. "
+.ti -1c
+.RI "float \fBdotProduct\fP (\fBPoint\fP p)"
+.br
+.RI "Returns the dot product with given point, treating them as vectors\&. [this \&. p]\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBcrossProduct\fP (\fBPoint\fP p)"
+.br
+.RI "Returns the point obtained from cross product, treating them as vectors\&. [this x p]\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBtranslate\fP (float \fBx\fP, float \fBy\fP, float \fBz\fP)"
+.br
+.RI "Returns the translated point\&. Changes the coordinates of current point\&. "
+.ti -1c
+.RI "\fBPoint\fP \fBrotate\fP (\fBDirectionCosines\fP dc)"
+.br
+.RI "Returns the translated point\&. Changes the coordinates of current point\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.RI "X-Coordinate of the point\&. "
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.RI "Y-Coordinate of the point\&. "
+.ti -1c
+.RI "float \fBz\fP"
+.br
+.RI "Z-Coordinate of the point\&. "
+.ti -1c
+.RI "string \fBlabel\fP"
+.br
+.RI "label of the \fBPoint\fP - set to Null in case of Unlabelled \fBPoint\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D \fBPoint\fP Abstract Data Types with appropriate methods\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Point::Point (float x, float y)"
+
+.PP
+Constructor for unlabelled 2D point\&. 
+.SS "Point::Point (float x, float y, string label)"
+
+.PP
+Constructor for labelled 2D point\&. 
+.SS "Point::Point (float x, float y, float z)"
+
+.PP
+Constructor for unlabelled 3D point\&. 
+.SS "Point::Point (float x, float y, float z, string label)"
+
+.PP
+Constructor for labelled 3D point\&. 
+.SS "Point::~Point ()"
+
+.PP
+Destructor for the point object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBPoint\fP Point::add (\fBPoint\fP p)"
+
+.PP
+Returns the added point, treating them as vectors\&. Doesn't change coordinates of current point\&. [this + p]\&. 
+.SS "\fBPoint\fP Point::crossProduct (\fBPoint\fP p)"
+
+.PP
+Returns the point obtained from cross product, treating them as vectors\&. [this x p]\&. 
+.SS "float Point::distanceFromLine (\fBLine\fP L)"
+
+.PP
+Returns distance from given \fBLine\fP\&. 
+.SS "float Point::distanceFromPlane (\fBPlane\fP P)"
+
+.PP
+Returns distance from given \fBPlane\fP\&. 
+.SS "float Point::distanceFromPoint (\fBPoint\fP p)"
+
+.PP
+Returns distance from given \fBPoint\fP\&. 
+.SS "float Point::dotProduct (\fBPoint\fP p)"
+
+.PP
+Returns the dot product with given point, treating them as vectors\&. [this \&. p]\&. 
+.SS "\fBPoint\fP Point::imageInLine (\fBLine\fP L)"
+
+.PP
+Returns mirror image of point in given \fBLine\fP\&. 
+.SS "\fBPoint\fP Point::imageInPlane (\fBPlane\fP P)"
+
+.PP
+Returns image of point on the given \fBPlane\fP\&. 
+.SS "bool Point::liesOnLine (\fBLine\fP L)"
+
+.PP
+Returns True if \fBPoint\fP lies on given \fBLine\fP\&. 
+.SS "bool Point::liesOnPlane (\fBPlane\fP P)"
+
+.PP
+Returns True if \fBPoint\fP lies on given \fBPlane\fP\&. 
+.SS "\fBPoint\fP Point::projectionOnLine (\fBLine\fP L)"
+
+.PP
+Returns projection of point on given \fBLine\fP\&. 
+.SS "\fBPoint\fP Point::projectionOnPlane (\fBPlane\fP P)"
+
+.PP
+Returns projection of point on the given \fBPlane\fP\&. 
+.SS "\fBPoint\fP Point::rotate (\fBDirectionCosines\fP dc)"
+
+.PP
+Returns the translated point\&. Changes the coordinates of current point\&. 
+.SS "\fBPoint\fP Point::sub (\fBPoint\fP p)"
+
+.PP
+Returns the subtracted point, treating them as vectors\&. Doesn't change coordinates of current point\&. [this - p]\&. 
+.SS "\fBPoint\fP Point::translate (float x, float y, float z)"
+
+.PP
+Returns the translated point\&. Changes the coordinates of current point\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "string Point::label"
+
+.PP
+label of the \fBPoint\fP - set to Null in case of Unlabelled \fBPoint\fP 
+.SS "float Point::x"
+
+.PP
+X-Coordinate of the point\&. 
+.SS "float Point::y"
+
+.PP
+Y-Coordinate of the point\&. 
+.SS "float Point::z"
+
+.PP
+Z-Coordinate of the point\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.
