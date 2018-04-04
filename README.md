@@ -12,26 +12,26 @@ Source Code, Mathematical Model, Functional Specification and Documentation is i
 
 ## Directory Structure
 
-.                             </br>          
-├── docs                      </br>                 
-│   ├── html                  </br>                     
-│   │   └── search            </br>                           
-│   ├── latex                 </br>                      
-│   └── xml                   </br>                    
-├── mathClassesAndDocs        </br>                               
-│   ├── doc                   </br>                    
-│   │   ├── html              </br>                         
-│   │   │   └── search        </br>                               
-│   │   ├── latex             </br>                          
-│   │   ├── man               </br>                        
-│   │   │   └── man3          </br>                             
-│   │   ├── rtf               </br>                        
-│   │   └── xml               </br>                        
-│   ├── include               </br>                        
-│   └── src                   </br>                    
-├── screens                   </br>                    
-├── src                       </br>                
-└── templates                 </br>                      
+.                                       
+├── docs                                       
+│   ├── html                                       
+│   │   └── search                                       
+│   ├── latex                                       
+│   └── xml                                       
+├── mathClassesAndDocs                                       
+│   ├── doc                                       
+│   │   ├── html                                       
+│   │   │   └── search                                       
+│   │   ├── latex                                       
+│   │   ├── man                                       
+│   │   │   └── man3                                       
+│   │   ├── rtf                                       
+│   │   └── xml                                       
+│   ├── include                                       
+│   └── src                                       
+├── screens                                       
+├── src                                       
+└── templates                                       
 
 src contains the main project source files wich have to be built for different platforms.
 
