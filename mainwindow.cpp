@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    model = SampleModels::SquareBasedPyramid(1.0);
+    model = SampleModels::SquareBasedPyramid(0.5);
     wireframe = false;
 
 
