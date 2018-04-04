@@ -155,7 +155,7 @@ void Model2d::serialize(std::string s){//string is the absolute? filepath where 
 
 Model2d* Model2d::deserialize(std::string s)
 {
-    std::cout << "Deserializer was called: args: " << s << std::endl;
+//    std::cout << "Deserializer was called: args: " << s << std::endl;
 
     //s is the path
     Model2d* m2;
