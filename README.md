@@ -18,7 +18,7 @@ Source Code, Mathematical Model, Functional Specification and Documentation is i
 │   │   └── search                                       
 │   ├── latex                                       
 │   └── xml                                       
-├── mathClassesAndDocs                                       
+├── mathClasses&Doc                                       
 │   ├── doc                                       
 │   │   ├── html                                       
 │   │   │   └── search                                       
@@ -30,7 +30,8 @@ Source Code, Mathematical Model, Functional Specification and Documentation is i
 │   ├── include                                       
 │   └── src                                       
 ├── screens                                       
-├── src                                       
+├── src 
+├── models       
 └── templates                                       
 
 src contains the main project source files wich have to be built for different platforms.
