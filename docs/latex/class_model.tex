@@ -1,0 +1,57 @@
+\hypertarget{class_model}{}\section{Model Class Reference}
+\label{class_model}\index{Model@{Model}}
+
+
+Collaboration diagram for Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a39cf79e51da0f52f1031f98f1bebd118}\label{class_model_a39cf79e51da0f52f1031f98f1bebd118}} 
+{\bfseries Model} (int num\+Points, float $\ast$pts, bool $\ast$$\ast$edges, std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$$>$ faces)
+\item 
+\mbox{\Hypertarget{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}\label{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}} 
+void {\bfseries translate} (float dx, float dy, float dz)
+\item 
+\mbox{\Hypertarget{class_model_ae5999fb77646320aed8d81a669568caa}\label{class_model_ae5999fb77646320aed8d81a669568caa}} 
+void {\bfseries rotate} (float alpha, float beta, float gamma)
+\item 
+\mbox{\Hypertarget{class_model_ac62fb1874a6597955c89fe3a9a1663e1}\label{class_model_ac62fb1874a6597955c89fe3a9a1663e1}} 
+\mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ {\bfseries convert\+To2d} ()
+\item 
+\mbox{\Hypertarget{class_model_abc71b3488f7f944f1c99727a491ee985}\label{class_model_abc71b3488f7f944f1c99727a491ee985}} 
+void {\bfseries serialize} (std\+::string s)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a98946d1c8d49b43f541dbd6b98b31e52}\label{class_model_a98946d1c8d49b43f541dbd6b98b31e52}} 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries deserialize} (std\+::string s)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a39ac6e91375d5ac5799a9845c3479d9c}\label{class_model_a39ac6e91375d5ac5799a9845c3479d9c}} 
+int {\bfseries num\+Points}
+\item 
+\mbox{\Hypertarget{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}\label{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}} 
+std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$ $>$ {\bfseries faces}
+\item 
+\mbox{\Hypertarget{class_model_a6436acbcf42bece5621666fe37c71309}\label{class_model_a6436acbcf42bece5621666fe37c71309}} 
+float $\ast$ {\bfseries points}
+\item 
+\mbox{\Hypertarget{class_model_a723a0c631c2ff688fed06c5652879ef7}\label{class_model_a723a0c631c2ff688fed06c5652879ef7}} 
+bool $\ast$$\ast$ {\bfseries edges}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/model.\+h\item 
+src/model.\+cpp\end{DoxyCompactItemize}

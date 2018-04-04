@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_face" kind="class"><name>Face</name>
+    <member refid="class_face_1a402240ad45f918a772d83f3022f9589f" kind="variable"><name>points</name></member>
+    <member refid="class_face_1ac35360914de7ce1903058a598b9fe7ab" kind="variable"><name>npts</name></member>
+    <member refid="class_face_1a890f52c15855e434e6c0f853bcf7f40d" kind="function"><name>Face</name></member>
+  </compound>
+  <compound refid="class_glwidget" kind="class"><name>Glwidget</name>
+    <member refid="class_glwidget_1a160da762ff1b4a6c1bf6f09bfb71e15c" kind="variable"><name>model</name></member>
+    <member refid="class_glwidget_1abe8b6e5adc693200d652414fd8929f46" kind="variable"><name>wireframe</name></member>
+    <member refid="class_glwidget_1a41380bd593af94c0cd950f276d911473" kind="variable"><name>xRot</name></member>
+    <member refid="class_glwidget_1a4729252c6eaf29ad3648cb58a9b8ef5c" kind="variable"><name>yRot</name></member>
+    <member refid="class_glwidget_1a34b2b9501570fdfff5bc5e53c7650235" kind="variable"><name>zRot</name></member>
+    <member refid="class_glwidget_1ace249c021d2413b95e0a6e17efd2d90d" kind="variable"><name>scl</name></member>
+    <member refid="class_glwidget_1a36f878afb0f8fff1debd4f2e27df6b33" kind="variable"><name>lastPos</name></member>
+    <member refid="class_glwidget_1a498977aa216afadd4adba780063356ac" kind="function"><name>Glwidget</name></member>
+    <member refid="class_glwidget_1acaef15b194db8b00381aaa0e7e4c9389" kind="function"><name>~Glwidget</name></member>
+    <member refid="class_glwidget_1a5f266609dcd89e1291539a498ce42cbb" kind="function"><name>initializeGL</name></member>
+    <member refid="class_glwidget_1a440fe507a9bd647c1a961cf72305da31" kind="function"><name>paintGL</name></member>
+    <member refid="class_glwidget_1a36bd98ea1696cf1a7f5830fde3a16a72" kind="function"><name>resizeGL</name></member>
+    <member refid="class_glwidget_1ac54d1b859e11037f3e86f3193e84970b" kind="function"><name>draw</name></member>
+    <member refid="class_glwidget_1a9768cbeb06b6ccfaff47ff443dda1c98" kind="function"><name>minimumSizeHint</name></member>
+    <member refid="class_glwidget_1a0dfc5b597184e106d7bcf921ba24b09a" kind="function"><name>sizeHint</name></member>
+    <member refid="class_glwidget_1a0e3f033e0fa941505114a32d35823c70" kind="function"><name>mousePressEvent</name></member>
+    <member refid="class_glwidget_1afc8a6da76c5ead92b1c1a4ba8f931310" kind="function"><name>mouseMoveEvent</name></member>
+    <member refid="class_glwidget_1abdb807d1e98041d3813543dd2f043d9e" kind="slot"><name>setXRotation</name></member>
+    <member refid="class_glwidget_1a980d52bca9bf5817911029877a68e584" kind="slot"><name>setYRotation</name></member>
+    <member refid="class_glwidget_1ad9318fc18c0abc761ce038c6afbf1814" kind="slot"><name>setZRotation</name></member>
+    <member refid="class_glwidget_1a2ea79df264aadd3584488296749f370c" kind="slot"><name>setScale</name></member>
+    <member refid="class_glwidget_1a52a956313956890bf13741c218f8fa3d" kind="slot"><name>setWireframe</name></member>
+    <member refid="class_glwidget_1a2b49ec71ab84e52adc78ba062c235ac0" kind="slot"><name>update</name></member>
+    <member refid="class_glwidget_1a2786dcfd2ee92efbbd2c457dc1ac7063" kind="slot"><name>setModel</name></member>
+    <member refid="class_glwidget_1a179006a4c52b573f9e6791deb16f1f2a" kind="signal"><name>xRotationChanged</name></member>
+    <member refid="class_glwidget_1a7c8d9abf4c47760ea6c6fff8ed12e0a5" kind="signal"><name>yRotationChanged</name></member>
+    <member refid="class_glwidget_1ab1b7ea4daa9671708ba4dd12fa8c52a9" kind="signal"><name>zRotationChanged</name></member>
+    <member refid="class_glwidget_1a874d1da9fed05d5063176ec5195aa483" kind="signal"><name>scaleChanged</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" kind="variable"><name>model</name></member>
+    <member refid="class_main_window_1aa63776c884a82936064be5aabe3da6e8" kind="variable"><name>wireframe</name></member>
+    <member refid="class_main_window_1a243e9877c34fca99ca8eb8233e602e80" kind="variable"><name>tr_x</name></member>
+    <member refid="class_main_window_1a93fc2a7aa546e29b1ec00c81d278d9c2" kind="variable"><name>tr_y</name></member>
+    <member refid="class_main_window_1a48e1e4cfdaa4d52f32b46ece5e1e785b" kind="variable"><name>tr_z</name></member>
+    <member refid="class_main_window_1a8a40d17a32ac50fc54faf17a3ddc1b21" kind="variable"><name>dalpha</name></member>
+    <member refid="class_main_window_1a7a6b42f86582dd883162c70d4a4915c8" kind="variable"><name>dbeta</name></member>
+    <member refid="class_main_window_1ac10de49b138c1c838d53e12da4c24d6d" kind="variable"><name>dgamma</name></member>
+    <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="class_main_window_1ae5cf2f452c5786bd84db5c6ed4408a67" kind="variable"><name>newWindow</name></member>
+    <member refid="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1a482b2d965f153134f11f834fcd28fed5" kind="signal"><name>wireframeVal</name></member>
+    <member refid="class_main_window_1a9bd4c07ced537631f1e93c8b5888e78d" kind="signal"><name>getModel</name></member>
+    <member refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" kind="signal"><name>update</name></member>
+    <member refid="class_main_window_1a9c4f542263838b9ecd06eae839a42a34" kind="function"><name>keyPressEvent</name></member>
+    <member refid="class_main_window_1ae0e46dc3da4ee07bf66e73e20300220c" kind="slot"><name>on_pushButton_2_clicked</name></member>
+    <member refid="class_main_window_1a4de79c63c7fa0b8d7c468ac71f20be81" kind="slot"><name>on_pushButton_clicked</name></member>
+    <member refid="class_main_window_1aed8d4c16aaa87ae02a2de2edd5fc91c7" kind="slot"><name>on_actionNew_triggered</name></member>
+    <member refid="class_main_window_1a73be2df93057d846aa541dffb00e7144" kind="slot"><name>on_actionImport_triggered</name></member>
+    <member refid="class_main_window_1a189c5a0db0912274f25238a4ea59c8b3" kind="slot"><name>on_tx_textEdited</name></member>
+    <member refid="class_main_window_1a2883a72ff38d78cfb400533cfe7e4db9" kind="slot"><name>on_ty_textEdited</name></member>
+    <member refid="class_main_window_1aa57b51855b787d6482b01b77d5247543" kind="slot"><name>on_tz_textEdited</name></member>
+    <member refid="class_main_window_1ab5d5c67e1d6a349998402bc6f7350bbc" kind="slot"><name>on_alphaSlider_valueChanged</name></member>
+    <member refid="class_main_window_1aebbb5cab1a3857035d2feb041ec67142" kind="slot"><name>on_betaSlider_valueChanged</name></member>
+    <member refid="class_main_window_1a0bb0eeb1aa722807501741cb2bb58cc7" kind="slot"><name>on_gammaSlider_valueChanged</name></member>
+    <member refid="class_main_window_1a7df050ed9d3ca5f73a3ed852b35fc736" kind="slot"><name>on_actionExport_triggered</name></member>
+    <member refid="class_main_window_1a5072b76c950c80922bc6094f509f9868" kind="slot"><name>on_actionTriangular_Pyramid_triggered</name></member>
+    <member refid="class_main_window_1a73334c7e2ae15d7220fd97a4045ddc32" kind="slot"><name>on_actionSquare_Pyramid_triggered</name></member>
+    <member refid="class_main_window_1a35b890d5631629eeb9010c4621bb578c" kind="slot"><name>on_actionTriangular_Prism_triggered</name></member>
+    <member refid="class_main_window_1a7a9424857bc821a245770d54ac402764" kind="slot"><name>on_actionCube_triggered</name></member>
+  </compound>
+  <compound refid="class_model" kind="class"><name>Model</name>
+    <member refid="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" kind="variable"><name>numPoints</name></member>
+    <member refid="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" kind="variable"><name>faces</name></member>
+    <member refid="class_model_1a6436acbcf42bece5621666fe37c71309" kind="variable"><name>points</name></member>
+    <member refid="class_model_1a723a0c631c2ff688fed06c5652879ef7" kind="variable"><name>edges</name></member>
+    <member refid="class_model_1a39cf79e51da0f52f1031f98f1bebd118" kind="function"><name>Model</name></member>
+    <member refid="class_model_1a32e61c8487a2202e9f3f041a8abcb3c2" kind="function"><name>translate</name></member>
+    <member refid="class_model_1ae5999fb77646320aed8d81a669568caa" kind="function"><name>rotate</name></member>
+    <member refid="class_model_1ac62fb1874a6597955c89fe3a9a1663e1" kind="function"><name>convertTo2d</name></member>
+    <member refid="class_model_1abc71b3488f7f944f1c99727a491ee985" kind="function"><name>serialize</name></member>
+    <member refid="class_model_1a98946d1c8d49b43f541dbd6b98b31e52" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="class_model2d" kind="class"><name>Model2d</name>
+    <member refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kind="variable"><name>xy</name></member>
+    <member refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kind="variable"><name>yz</name></member>
+    <member refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kind="variable"><name>zx</name></member>
+    <member refid="class_model2d_1aa07204b20301739146f8ecf525778720" kind="function"><name>Model2d</name></member>
+    <member refid="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" kind="function"><name>convertTo3d</name></member>
+    <member refid="class_model2d_1a9dbe9eafd94b347c3257ac90e743065c" kind="function"><name>serialize</name></member>
+    <member refid="class_model2d_1aa3c8399ef5cf86bb176b111c132f30b7" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="class_projection" kind="class"><name>Projection</name>
+    <member refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kind="variable"><name>points</name></member>
+    <member refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kind="variable"><name>npts</name></member>
+    <member refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kind="variable"><name>edges</name></member>
+    <member refid="class_projection_1a5308ac2fb97e9805c76e3cf767f08a0e" kind="function"><name>Projection</name></member>
+  </compound>
+  <compound refid="class_projection_x" kind="class"><name>ProjectionX</name>
+    <member refid="class_projection_x_1af85d1d33a1a51fa6aef5359f53b98580" kind="variable"><name>model</name></member>
+    <member refid="class_projection_x_1aa9a1f3880a2084eb87cbbe0f98c67a64" kind="variable"><name>wireframe</name></member>
+    <member refid="class_projection_x_1a4d2b6bb8a07ee3a1d9f8ca005564c73f" kind="variable"><name>scl</name></member>
+    <member refid="class_projection_x_1a251536fb76aabbf276ce0cd2341d1dc3" kind="function"><name>ProjectionX</name></member>
+    <member refid="class_projection_x_1a903b7fc4e98525180ec9a3bed152a70a" kind="function"><name>~ProjectionX</name></member>
+    <member refid="class_projection_x_1af94caa374ed76c3cf81c80429c67aee9" kind="function"><name>initializeGL</name></member>
+    <member refid="class_projection_x_1a4fff0844542e49a68b0288c85703b1c4" kind="function"><name>paintGL</name></member>
+    <member refid="class_projection_x_1a7eb1ba9a4266f65982357e53142bc693" kind="function"><name>resizeGL</name></member>
+    <member refid="class_projection_x_1ad1a6cdc49e0cb1000bc67401a6a8b3a9" kind="function"><name>sizeHint</name></member>
+    <member refid="class_projection_x_1a863c01fcbb77cb13856feb3605fc6390" kind="slot"><name>setScale</name></member>
+    <member refid="class_projection_x_1a16849f2ef9fe0332c0ad9f833dc85651" kind="slot"><name>setWireframe</name></member>
+    <member refid="class_projection_x_1a7efa3839fdf999686464fe60ea59a349" kind="slot"><name>update</name></member>
+    <member refid="class_projection_x_1aab00d67a74912bdff9f963664b708c14" kind="slot"><name>setModel</name></member>
+    <member refid="class_projection_x_1afbd612fb2200f0db998239a3640504a5" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_projection_y" kind="class"><name>ProjectionY</name>
+    <member refid="class_projection_y_1a5fef5122782e5ed50e7dd2f302628852" kind="variable"><name>model</name></member>
+    <member refid="class_projection_y_1a8ac9c3d56c5dd9ca94afee7bfe4526d1" kind="variable"><name>wireframe</name></member>
+    <member refid="class_projection_y_1aa271fa705d4e669d02370be3870b495a" kind="variable"><name>scl</name></member>
+    <member refid="class_projection_y_1ada83942857907322b5bad855f34ee893" kind="function"><name>ProjectionY</name></member>
+    <member refid="class_projection_y_1ae04caa820022f1802188835dbc69cf32" kind="function"><name>~ProjectionY</name></member>
+    <member refid="class_projection_y_1aa241c90c6d57dedc345ce447de8b2062" kind="function"><name>initializeGL</name></member>
+    <member refid="class_projection_y_1ad71d2f89a6b30e2979d5cfe2af2a4128" kind="function"><name>paintGL</name></member>
+    <member refid="class_projection_y_1a0e2001d9ee85afa0ce1ad8b2b8f15ad7" kind="function"><name>resizeGL</name></member>
+    <member refid="class_projection_y_1a8d502c7b1fc7cb5c894a84f10fba7368" kind="function"><name>sizeHint</name></member>
+    <member refid="class_projection_y_1a19960a2d4075443ab87fd50147fee276" kind="slot"><name>setScale</name></member>
+    <member refid="class_projection_y_1ab59d0f6245e889c25faf1d0592145d6c" kind="slot"><name>setWireframe</name></member>
+    <member refid="class_projection_y_1a3c709da38e36be432cdc3979cf37d527" kind="slot"><name>update</name></member>
+    <member refid="class_projection_y_1a66e7b460c9bb0c02b649a241d3b9a647" kind="slot"><name>setModel</name></member>
+    <member refid="class_projection_y_1a166eecc5b75d62a5d77cc027f832e4cd" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_projection_z" kind="class"><name>ProjectionZ</name>
+    <member refid="class_projection_z_1a72def73a612bcd05243ae8acad447908" kind="variable"><name>model</name></member>
+    <member refid="class_projection_z_1a24466982ce2e792bb843426c35782222" kind="variable"><name>wireframe</name></member>
+    <member refid="class_projection_z_1a9a333f02e919832420a776d60cc5fa19" kind="variable"><name>scl</name></member>
+    <member refid="class_projection_z_1ac812d46606329365a4e877b6cc58d86d" kind="function"><name>ProjectionZ</name></member>
+    <member refid="class_projection_z_1a5d1f4701bf63635f88924761f26ce173" kind="function"><name>~ProjectionZ</name></member>
+    <member refid="class_projection_z_1aa470131d521e6595d293e12f0fa3425f" kind="function"><name>initializeGL</name></member>
+    <member refid="class_projection_z_1a192e7a4a75e41e9d2c411eb252c2d2d6" kind="function"><name>paintGL</name></member>
+    <member refid="class_projection_z_1a5f276e00f3680aa3ec663030e74df160" kind="function"><name>resizeGL</name></member>
+    <member refid="class_projection_z_1a5baf9e15d828cff9501fd94fa622b32b" kind="function"><name>sizeHint</name></member>
+    <member refid="class_projection_z_1a21e56fe128f64983203888507845847d" kind="slot"><name>setScale</name></member>
+    <member refid="class_projection_z_1a61a7115d258f9324b5f697983dd5ca3d" kind="slot"><name>setWireframe</name></member>
+    <member refid="class_projection_z_1abf7cbd3b5479c7805fbceecf3c68b0be" kind="slot"><name>update</name></member>
+    <member refid="class_projection_z_1af65afd9bf93b40bbf626cd2fba303b3f" kind="slot"><name>setModel</name></member>
+    <member refid="class_projection_z_1aeb85cd14917e560323a837d08a5277fa" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_sample_models" kind="class"><name>SampleModels</name>
+    <member refid="class_sample_models_1ab4f2cabd4d134b925589e2e5e4f3b55b" kind="function"><name>SampleModels</name></member>
+    <member refid="class_sample_models_1ac979fefcbc81571af56a2cf3c415497b" kind="function"><name>TriangularPyramid</name></member>
+    <member refid="class_sample_models_1a0a5afe183db2a5e7e59f825e6ac736e6" kind="function"><name>SquarePyramid</name></member>
+    <member refid="class_sample_models_1ad9be52995d798b78ad2c04c1b3c1f4e4" kind="function"><name>TriangularPrism</name></member>
+    <member refid="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" kind="function"><name>Cuboid</name></member>
+    <member refid="class_sample_models_1a890001f4e859021afe59bd956245e2ad" kind="function"><name>Empty</name></member>
+    <member refid="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" kind="function"><name>Axes</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="glwidget_8cpp" kind="file"><name>glwidget.cpp</name>
+    <member refid="glwidget_8cpp_1a75a0fa69c5c588cf03cf7829e6b996db" kind="function"><name>qNormalizeAngle</name></member>
+  </compound>
+  <compound refid="glwidget_8h" kind="file"><name>glwidget.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+    <member refid="mainwindow_8cpp_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+  <compound refid="model_8cpp" kind="file"><name>model.cpp</name>
+  </compound>
+  <compound refid="model_8h" kind="file"><name>model.h</name>
+  </compound>
+  <compound refid="model2d_8cpp" kind="file"><name>model2d.cpp</name>
+  </compound>
+  <compound refid="model2d_8h" kind="file"><name>model2d.h</name>
+  </compound>
+  <compound refid="projectionx_8cpp" kind="file"><name>projectionx.cpp</name>
+  </compound>
+  <compound refid="projectionx_8h" kind="file"><name>projectionx.h</name>
+  </compound>
+  <compound refid="projectiony_8cpp" kind="file"><name>projectiony.cpp</name>
+  </compound>
+  <compound refid="projectiony_8h" kind="file"><name>projectiony.h</name>
+  </compound>
+  <compound refid="projectionz_8cpp" kind="file"><name>projectionz.cpp</name>
+  </compound>
+  <compound refid="projectionz_8h" kind="file"><name>projectionz.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="samplemodels_8cpp" kind="file"><name>samplemodels.cpp</name>
+  </compound>
+  <compound refid="samplemodels_8h" kind="file"><name>samplemodels.h</name>
+  </compound>
+  <compound refid="window2d_8cpp" kind="file"><name>window2d.cpp</name>
+  </compound>
+  <compound refid="md_src__r_e_a_d_m_e" kind="page"><name>md_src_README</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

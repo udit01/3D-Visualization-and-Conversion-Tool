@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_projection_x" kind="class" language="C++" prot="public">
+    <compoundname>ProjectionX</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projection_x_1af85d1d33a1a51fa6aef5359f53b98580" prot="public" static="no" mutable="no">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model* ProjectionX::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="19" column="1" bodyfile="src/projectionx.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_x_1aa9a1f3880a2084eb87cbbe0f98c67a64" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectionX::wireframe</definition>
+        <argsstring></argsstring>
+        <name>wireframe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="20" column="1" bodyfile="src/projectionx.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_projection_x_1a4d2b6bb8a07ee3a1d9f8ca005564c73f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProjectionX::scl</definition>
+        <argsstring></argsstring>
+        <name>scl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="40" column="1" bodyfile="src/projectionx.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projection_x_1a251536fb76aabbf276ce0cd2341d1dc3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionX::ProjectionX</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>ProjectionX</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="17" column="1" bodyfile="src/projectionx.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_x_1a903b7fc4e98525180ec9a3bed152a70a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionX::~ProjectionX</definition>
+        <argsstring>()</argsstring>
+        <name>~ProjectionX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="18" column="1" bodyfile="src/projectionx.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_projection_x_1af94caa374ed76c3cf81c80429c67aee9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::initializeGL</definition>
+        <argsstring>()</argsstring>
+        <name>initializeGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="25" column="1" bodyfile="src/projectionx.cpp" bodystart="48" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_x_1a4fff0844542e49a68b0288c85703b1c4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::paintGL</definition>
+        <argsstring>()</argsstring>
+        <name>paintGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="26" column="1" bodyfile="src/projectionx.cpp" bodystart="67" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_x_1a7eb1ba9a4266f65982357e53142bc693" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::resizeGL</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>resizeGL</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="27" column="1" bodyfile="src/projectionx.cpp" bodystart="89" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_x_1ad1a6cdc49e0cb1000bc67401a6a8b3a9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QSize</type>
+        <definition>QSize ProjectionX::sizeHint</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeHint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="30" column="1" bodyfile="src/projectionx.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_projection_x_1a863c01fcbb77cb13856feb3605fc6390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::setScale</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="34" column="1" bodyfile="src/projectionx.cpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_x_1a16849f2ef9fe0332c0ad9f833dc85651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::setWireframe</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>setWireframe</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="35" column="1" bodyfile="src/projectionx.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_x_1a7efa3839fdf999686464fe60ea59a349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="36" column="1" bodyfile="src/projectionx.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_x_1aab00d67a74912bdff9f963664b708c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::setModel</definition>
+        <argsstring>(Model *m)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="37" column="1" bodyfile="src/projectionx.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_projection_x_1afbd612fb2200f0db998239a3640504a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionX::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionx.h" line="41" column="1" bodyfile="src/projectionx.cpp" bodystart="106" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="19">
+        <label>ProjectionX</label>
+        <link refid="class_projection_x"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QGLWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="21">
+        <label>ProjectionX</label>
+        <link refid="class_projection_x"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+model</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>QGLWidget</label>
+      </node>
+      <node id="23">
+        <label>Model</label>
+        <link refid="class_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/projectionx.h" line="13" column="1" bodyfile="src/projectionx.h" bodystart="12" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_projection_x_1afbd612fb2200f0db998239a3640504a5" prot="private" virt="non-virtual"><scope>ProjectionX</scope><name>draw</name></member>
+      <member refid="class_projection_x_1af94caa374ed76c3cf81c80429c67aee9" prot="protected" virt="non-virtual"><scope>ProjectionX</scope><name>initializeGL</name></member>
+      <member refid="class_projection_x_1af85d1d33a1a51fa6aef5359f53b98580" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>model</name></member>
+      <member refid="class_projection_x_1a4fff0844542e49a68b0288c85703b1c4" prot="protected" virt="non-virtual"><scope>ProjectionX</scope><name>paintGL</name></member>
+      <member refid="class_projection_x_1a251536fb76aabbf276ce0cd2341d1dc3" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>ProjectionX</name></member>
+      <member refid="class_projection_x_1a7eb1ba9a4266f65982357e53142bc693" prot="protected" virt="non-virtual"><scope>ProjectionX</scope><name>resizeGL</name></member>
+      <member refid="class_projection_x_1a4d2b6bb8a07ee3a1d9f8ca005564c73f" prot="private" virt="non-virtual"><scope>ProjectionX</scope><name>scl</name></member>
+      <member refid="class_projection_x_1aab00d67a74912bdff9f963664b708c14" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>setModel</name></member>
+      <member refid="class_projection_x_1a863c01fcbb77cb13856feb3605fc6390" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>setScale</name></member>
+      <member refid="class_projection_x_1a16849f2ef9fe0332c0ad9f833dc85651" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>setWireframe</name></member>
+      <member refid="class_projection_x_1ad1a6cdc49e0cb1000bc67401a6a8b3a9" prot="protected" virt="non-virtual"><scope>ProjectionX</scope><name>sizeHint</name></member>
+      <member refid="class_projection_x_1a7efa3839fdf999686464fe60ea59a349" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>update</name></member>
+      <member refid="class_projection_x_1aa9a1f3880a2084eb87cbbe0f98c67a64" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>wireframe</name></member>
+      <member refid="class_projection_x_1a903b7fc4e98525180ec9a3bed152a70a" prot="public" virt="non-virtual"><scope>ProjectionX</scope><name>~ProjectionX</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
