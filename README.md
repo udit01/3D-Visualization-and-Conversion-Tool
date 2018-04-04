@@ -1,6 +1,7 @@
 # CAD Software 
+This repository hosts the Mathematical Model, Functional Model, Design Documentation 
 This tool is made as a part of COP290 course under Prof. Subhashish Bannerjee. </br>
-Source Code, Mathematical Model, Functional Specification and Documentation is in this repository. 
+Source Code, Mathematical Model, Functional Specification and Documentation is in this repository.
 
 ## Functionalities
 1. Read ```2D/3D model``` from files.
@@ -30,8 +31,8 @@ Source Code, Mathematical Model, Functional Specification and Documentation is i
 │   ├── include                                       
 │   └── src                                       
 ├── screens                                       
-├── src 
-├── models       
+├── src                                         
+├── models                                         
 └── templates                                       
 
 src contains the main project source files wich have to be built for different platforms.
