@@ -18,8 +18,9 @@ class SampleModels
 public:
     SampleModels();
 //    ~SampleModels();
-
-    static Model* SquareBasedPyramid(float side);
+    static Model* TriangularPyramid(float side, float height);
+    static Model* SquareBasedPyramid(float side, float height);
+    static Model* TriangularPrism(float side, float height);
     static Model* Empty();
     static Model* Axes(float side);
 //    static Model Octahedron(float side);

@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    model = SampleModels::SquareBasedPyramid(1.0);
+    model = SampleModels::TriangularPrism(1.0,1.5);
     wireframe = false;
 
 
@@ -144,7 +144,7 @@ void MainWindow::on_actionImport_triggered()
                     this-> model = Model::deserialize(file_name.toStdString());
                 }
                 else{
-                    this->model = SampleModels::SquareBasedPyramid(1.0);
+                    this->model = SampleModels::SquareBasedPyramid(1.0,1.5);
                 }
                 break;
             default:
