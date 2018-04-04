@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_projection" kind="class" language="C++" prot="public">
+    <compoundname>Projection</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projection_1aa42ba5494690dbfa5f875472adc97789" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* Projection::points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="14" column="1" bodyfile="src/model2d.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Projection::npts</definition>
+        <argsstring></argsstring>
+        <name>npts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="15" column="1" bodyfile="src/model2d.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_1a7943c696e88d15825dee0641b269b5f7" prot="public" static="no" mutable="no">
+        <type>bool **</type>
+        <definition>bool** Projection::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="16" column="1" bodyfile="src/model2d.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projection_1a5308ac2fb97e9805c76e3cf767f08a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Projection::Projection</definition>
+        <argsstring>(int numPoints, float *points, bool **edges)</argsstring>
+        <name>Projection</name>
+        <param>
+          <type>int</type>
+          <declname>numPoints</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>bool **</type>
+          <declname>edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="17" column="1" bodyfile="src/model2d.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="18">
+        <label>Projection</label>
+        <link refid="class_projection"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/model2d.h" line="12" column="1" bodyfile="src/model2d.h" bodystart="11" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" prot="public" virt="non-virtual"><scope>Projection</scope><name>edges</name></member>
+      <member refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" prot="public" virt="non-virtual"><scope>Projection</scope><name>npts</name></member>
+      <member refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" prot="public" virt="non-virtual"><scope>Projection</scope><name>points</name></member>
+      <member refid="class_projection_1a5308ac2fb97e9805c76e3cf767f08a0e" prot="public" virt="non-virtual"><scope>Projection</scope><name>Projection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

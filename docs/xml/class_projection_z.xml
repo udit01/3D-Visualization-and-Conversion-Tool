@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_projection_z" kind="class" language="C++" prot="public">
+    <compoundname>ProjectionZ</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projection_z_1a72def73a612bcd05243ae8acad447908" prot="public" static="no" mutable="no">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model* ProjectionZ::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="19" column="1" bodyfile="src/projectionz.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_z_1a24466982ce2e792bb843426c35782222" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectionZ::wireframe</definition>
+        <argsstring></argsstring>
+        <name>wireframe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="20" column="1" bodyfile="src/projectionz.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_projection_z_1a9a333f02e919832420a776d60cc5fa19" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProjectionZ::scl</definition>
+        <argsstring></argsstring>
+        <name>scl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="39" column="1" bodyfile="src/projectionz.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projection_z_1ac812d46606329365a4e877b6cc58d86d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionZ::ProjectionZ</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>ProjectionZ</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="17" column="1" bodyfile="src/projectionz.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_z_1a5d1f4701bf63635f88924761f26ce173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionZ::~ProjectionZ</definition>
+        <argsstring>()</argsstring>
+        <name>~ProjectionZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="18" column="1" bodyfile="src/projectionz.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_projection_z_1aa470131d521e6595d293e12f0fa3425f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::initializeGL</definition>
+        <argsstring>()</argsstring>
+        <name>initializeGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="24" column="1" bodyfile="src/projectionz.cpp" bodystart="56" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_z_1a192e7a4a75e41e9d2c411eb252c2d2d6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::paintGL</definition>
+        <argsstring>()</argsstring>
+        <name>paintGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="25" column="1" bodyfile="src/projectionz.cpp" bodystart="75" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_z_1a5f276e00f3680aa3ec663030e74df160" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::resizeGL</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>resizeGL</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="26" column="1" bodyfile="src/projectionz.cpp" bodystart="97" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_z_1a5baf9e15d828cff9501fd94fa622b32b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QSize</type>
+        <definition>QSize ProjectionZ::sizeHint</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeHint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="29" column="1" bodyfile="src/projectionz.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_projection_z_1a21e56fe128f64983203888507845847d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::setScale</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="33" column="1" bodyfile="src/projectionz.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_z_1a61a7115d258f9324b5f697983dd5ca3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::setWireframe</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>setWireframe</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="34" column="1" bodyfile="src/projectionz.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_z_1abf7cbd3b5479c7805fbceecf3c68b0be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="35" column="1" bodyfile="src/projectionz.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_z_1af65afd9bf93b40bbf626cd2fba303b3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::setModel</definition>
+        <argsstring>(Model *m)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="36" column="1" bodyfile="src/projectionz.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_projection_z_1aeb85cd14917e560323a837d08a5277fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionZ::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectionz.h" line="40" column="1" bodyfile="src/projectionz.cpp" bodystart="114" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="29">
+        <label>ProjectionZ</label>
+        <link refid="class_projection_z"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>QGLWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="31">
+        <label>ProjectionZ</label>
+        <link refid="class_projection_z"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+model</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>QGLWidget</label>
+      </node>
+      <node id="33">
+        <label>Model</label>
+        <link refid="class_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/projectionz.h" line="13" column="1" bodyfile="src/projectionz.h" bodystart="12" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_projection_z_1aeb85cd14917e560323a837d08a5277fa" prot="private" virt="non-virtual"><scope>ProjectionZ</scope><name>draw</name></member>
+      <member refid="class_projection_z_1aa470131d521e6595d293e12f0fa3425f" prot="protected" virt="non-virtual"><scope>ProjectionZ</scope><name>initializeGL</name></member>
+      <member refid="class_projection_z_1a72def73a612bcd05243ae8acad447908" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>model</name></member>
+      <member refid="class_projection_z_1a192e7a4a75e41e9d2c411eb252c2d2d6" prot="protected" virt="non-virtual"><scope>ProjectionZ</scope><name>paintGL</name></member>
+      <member refid="class_projection_z_1ac812d46606329365a4e877b6cc58d86d" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>ProjectionZ</name></member>
+      <member refid="class_projection_z_1a5f276e00f3680aa3ec663030e74df160" prot="protected" virt="non-virtual"><scope>ProjectionZ</scope><name>resizeGL</name></member>
+      <member refid="class_projection_z_1a9a333f02e919832420a776d60cc5fa19" prot="private" virt="non-virtual"><scope>ProjectionZ</scope><name>scl</name></member>
+      <member refid="class_projection_z_1af65afd9bf93b40bbf626cd2fba303b3f" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>setModel</name></member>
+      <member refid="class_projection_z_1a21e56fe128f64983203888507845847d" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>setScale</name></member>
+      <member refid="class_projection_z_1a61a7115d258f9324b5f697983dd5ca3d" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>setWireframe</name></member>
+      <member refid="class_projection_z_1a5baf9e15d828cff9501fd94fa622b32b" prot="protected" virt="non-virtual"><scope>ProjectionZ</scope><name>sizeHint</name></member>
+      <member refid="class_projection_z_1abf7cbd3b5479c7805fbceecf3c68b0be" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>update</name></member>
+      <member refid="class_projection_z_1a24466982ce2e792bb843426c35782222" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>wireframe</name></member>
+      <member refid="class_projection_z_1a5d1f4701bf63635f88924761f26ce173" prot="public" virt="non-virtual"><scope>ProjectionZ</scope><name>~ProjectionZ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

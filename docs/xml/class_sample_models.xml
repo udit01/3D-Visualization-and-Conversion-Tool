@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_sample_models" kind="class" language="C++" prot="public">
+    <compoundname>SampleModels</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sample_models_1ab4f2cabd4d134b925589e2e5e4f3b55b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SampleModels::SampleModels</definition>
+        <argsstring>()</argsstring>
+        <name>SampleModels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="19" column="1" bodyfile="src/samplemodels.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sample_models_1ac979fefcbc81571af56a2cf3c415497b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::TriangularPyramid</definition>
+        <argsstring>(float side, float height)</argsstring>
+        <name>TriangularPyramid</name>
+        <param>
+          <type>float</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="21" column="1" bodyfile="src/samplemodels.cpp" bodystart="64" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sample_models_1a0a5afe183db2a5e7e59f825e6ac736e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::SquarePyramid</definition>
+        <argsstring>(float side, float height)</argsstring>
+        <name>SquarePyramid</name>
+        <param>
+          <type>float</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="22" column="1" bodyfile="src/samplemodels.cpp" bodystart="102" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sample_models_1ad9be52995d798b78ad2c04c1b3c1f4e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::TriangularPrism</definition>
+        <argsstring>(float side, float height)</argsstring>
+        <name>TriangularPrism</name>
+        <param>
+          <type>float</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="23" column="1" bodyfile="src/samplemodels.cpp" bodystart="143" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::Cuboid</definition>
+        <argsstring>(float a, float b, float c)</argsstring>
+        <name>Cuboid</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="24" column="1" bodyfile="src/samplemodels.cpp" bodystart="186" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sample_models_1a890001f4e859021afe59bd956245e2ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="25" column="1" bodyfile="src/samplemodels.cpp" bodystart="14" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * SampleModels::Axes</definition>
+        <argsstring>(float side)</argsstring>
+        <name>Axes</name>
+        <param>
+          <type>float</type>
+          <declname>side</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/samplemodels.h" line="26" column="1" bodyfile="src/samplemodels.cpp" bodystart="28" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>SampleModels</label>
+        <link refid="class_sample_models"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/samplemodels.h" line="17" column="1" bodyfile="src/samplemodels.h" bodystart="16" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>Axes</name></member>
+      <member refid="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>Cuboid</name></member>
+      <member refid="class_sample_models_1a890001f4e859021afe59bd956245e2ad" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>Empty</name></member>
+      <member refid="class_sample_models_1ab4f2cabd4d134b925589e2e5e4f3b55b" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>SampleModels</name></member>
+      <member refid="class_sample_models_1a0a5afe183db2a5e7e59f825e6ac736e6" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>SquarePyramid</name></member>
+      <member refid="class_sample_models_1ad9be52995d798b78ad2c04c1b3c1f4e4" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>TriangularPrism</name></member>
+      <member refid="class_sample_models_1ac979fefcbc81571af56a2cf3c415497b" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>TriangularPyramid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_model2d" kind="class" language="C++" prot="public">
+    <compoundname>Model2d</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+        <definition>Projection* Model2d::xy</definition>
+        <argsstring></argsstring>
+        <name>xy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="24" column="1" bodyfile="src/model2d.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model2d_1a4d012de876b8bb089bd226e41270df25" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+        <definition>Projection* Model2d::yz</definition>
+        <argsstring></argsstring>
+        <name>yz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="25" column="1" bodyfile="src/model2d.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+        <definition>Projection* Model2d::zx</definition>
+        <argsstring></argsstring>
+        <name>zx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="26" column="1" bodyfile="src/model2d.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_model2d_1aa07204b20301739146f8ecf525778720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Model2d::Model2d</definition>
+        <argsstring>(Projection *xy, Projection *yz, Projection *zx)</argsstring>
+        <name>Model2d</name>
+        <param>
+          <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+          <declname>xy</declname>
+        </param>
+        <param>
+          <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+          <declname>yz</declname>
+        </param>
+        <param>
+          <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
+          <declname>zx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="28" column="1" bodyfile="src/model2d.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * Model2d::convertTo3d</definition>
+        <argsstring>()</argsstring>
+        <name>convertTo3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="32" column="1" bodyfile="src/model2d.cpp" bodystart="27" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model2d_1a9dbe9eafd94b347c3257ac90e743065c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model2d::serialize</definition>
+        <argsstring>(std::string s)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="33" column="1" bodyfile="src/model2d.cpp" bodystart="117" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_model2d_1aa3c8399ef5cf86bb176b111c132f30b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model2d" kindref="compound">Model2d</ref> *</type>
+        <definition>Model2d * Model2d::deserialize</definition>
+        <argsstring>(std::string s)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model2d.h" line="34" column="1" bodyfile="src/model2d.cpp" bodystart="156" bodyend="218"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>Projection</label>
+        <link refid="class_projection"/>
+      </node>
+      <node id="15">
+        <label>Model2d</label>
+        <link refid="class_model2d"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+zx</edgelabel>
+          <edgelabel>+yz</edgelabel>
+          <edgelabel>+xy</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/model2d.h" line="22" column="1" bodyfile="src/model2d.h" bodystart="21" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" prot="public" virt="non-virtual"><scope>Model2d</scope><name>convertTo3d</name></member>
+      <member refid="class_model2d_1aa3c8399ef5cf86bb176b111c132f30b7" prot="public" virt="non-virtual"><scope>Model2d</scope><name>deserialize</name></member>
+      <member refid="class_model2d_1aa07204b20301739146f8ecf525778720" prot="public" virt="non-virtual"><scope>Model2d</scope><name>Model2d</name></member>
+      <member refid="class_model2d_1a9dbe9eafd94b347c3257ac90e743065c" prot="public" virt="non-virtual"><scope>Model2d</scope><name>serialize</name></member>
+      <member refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" prot="public" virt="non-virtual"><scope>Model2d</scope><name>xy</name></member>
+      <member refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" prot="public" virt="non-virtual"><scope>Model2d</scope><name>yz</name></member>
+      <member refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" prot="public" virt="non-virtual"><scope>Model2d</scope><name>zx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

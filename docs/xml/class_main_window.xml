@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_main_window" kind="class" language="C++" prot="public">
+    <compoundname>MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" prot="public" static="no" mutable="no">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model* MainWindow::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="18" column="1" bodyfile="src/mainwindow.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aa63776c884a82936064be5aabe3da6e8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::wireframe</definition>
+        <argsstring></argsstring>
+        <name>wireframe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="19" column="1" bodyfile="src/mainwindow.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_main_window_1a243e9877c34fca99ca8eb8233e602e80" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::tr_x</definition>
+        <argsstring></argsstring>
+        <name>tr_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="28" column="1" bodyfile="src/mainwindow.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a93fc2a7aa546e29b1ec00c81d278d9c2" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::tr_y</definition>
+        <argsstring></argsstring>
+        <name>tr_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="28" column="1" bodyfile="src/mainwindow.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a48e1e4cfdaa4d52f32b46ece5e1e785b" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::tr_z</definition>
+        <argsstring></argsstring>
+        <name>tr_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="28" column="1" bodyfile="src/mainwindow.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a8a40d17a32ac50fc54faf17a3ddc1b21" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::dalpha</definition>
+        <argsstring></argsstring>
+        <name>dalpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="29" column="1" bodyfile="src/mainwindow.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a7a6b42f86582dd883162c70d4a4915c8" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::dbeta</definition>
+        <argsstring></argsstring>
+        <name>dbeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="29" column="1" bodyfile="src/mainwindow.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ac10de49b138c1c838d53e12da4c24d6d" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainWindow::dgamma</definition>
+        <argsstring></argsstring>
+        <name>dgamma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="29" column="1" bodyfile="src/mainwindow.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" static="no" mutable="no">
+        <type>Ui::MainWindow *</type>
+        <definition>Ui::MainWindow* MainWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="50" column="1" bodyfile="src/mainwindow.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ae5cf2f452c5786bd84db5c6ed4408a67" prot="private" static="no" mutable="no">
+        <type><ref refid="class_main_window" kindref="compound">MainWindow</ref> *</type>
+        <definition>MainWindow* MainWindow::newWindow</definition>
+        <argsstring></argsstring>
+        <name>newWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="51" column="1" bodyfile="src/mainwindow.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::MainWindow</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>MainWindow</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="17" column="1" bodyfile="src/mainwindow.cpp" bodystart="21" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::~MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~MainWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="20" column="1" bodyfile="src/mainwindow.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_main_window_1a482b2d965f153134f11f834fcd28fed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::wireframeVal</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>wireframeVal</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a9bd4c07ced537631f1e93c8b5888e78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::getModel</definition>
+        <argsstring>(Model *m)</argsstring>
+        <name>getModel</name>
+        <param>
+          <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="25" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_main_window_1a9c4f542263838b9ecd06eae839a42a34" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::keyPressEvent</definition>
+        <argsstring>(QKeyEvent *event)</argsstring>
+        <name>keyPressEvent</name>
+        <param>
+          <type>QKeyEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="30" column="1" bodyfile="src/mainwindow.cpp" bodystart="73" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_main_window_1ae0e46dc3da4ee07bf66e73e20300220c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_pushButton_2_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_2_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="33" column="1" bodyfile="src/mainwindow.cpp" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a4de79c63c7fa0b8d7c468ac71f20be81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="34" column="1" bodyfile="src/mainwindow.cpp" bodystart="89" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aed8d4c16aaa87ae02a2de2edd5fc91c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionNew_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionNew_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="35" column="1" bodyfile="src/mainwindow.cpp" bodystart="104" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a73be2df93057d846aa541dffb00e7144" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionImport_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionImport_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="36" column="1" bodyfile="src/mainwindow.cpp" bodystart="112" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a189c5a0db0912274f25238a4ea59c8b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_tx_textEdited</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_tx_textEdited</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="37" column="1" bodyfile="src/mainwindow.cpp" bodystart="163" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a2883a72ff38d78cfb400533cfe7e4db9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_ty_textEdited</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_ty_textEdited</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="38" column="1" bodyfile="src/mainwindow.cpp" bodystart="175" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aa57b51855b787d6482b01b77d5247543" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_tz_textEdited</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_tz_textEdited</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="39" column="1" bodyfile="src/mainwindow.cpp" bodystart="187" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab5d5c67e1d6a349998402bc6f7350bbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_alphaSlider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_alphaSlider_valueChanged</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="40" column="1" bodyfile="src/mainwindow.cpp" bodystart="199" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aebbb5cab1a3857035d2feb041ec67142" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_betaSlider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_betaSlider_valueChanged</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="41" column="1" bodyfile="src/mainwindow.cpp" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a0bb0eeb1aa722807501741cb2bb58cc7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_gammaSlider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_gammaSlider_valueChanged</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="42" column="1" bodyfile="src/mainwindow.cpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a7df050ed9d3ca5f73a3ed852b35fc736" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionExport_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionExport_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="43" column="1" bodyfile="src/mainwindow.cpp" bodystart="215" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a5072b76c950c80922bc6094f509f9868" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionTriangular_Pyramid_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionTriangular_Pyramid_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="44" column="1" bodyfile="src/mainwindow.cpp" bodystart="254" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a73334c7e2ae15d7220fd97a4045ddc32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionSquare_Pyramid_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionSquare_Pyramid_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="45" column="1" bodyfile="src/mainwindow.cpp" bodystart="263" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a35b890d5631629eeb9010c4621bb578c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionTriangular_Prism_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionTriangular_Prism_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="46" column="1" bodyfile="src/mainwindow.cpp" bodystart="272" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a7a9424857bc821a245770d54ac402764" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_actionCube_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionCube_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mainwindow.h" line="47" column="1" bodyfile="src/mainwindow.cpp" bodystart="281" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>QMainWindow</label>
+      </node>
+      <node id="7">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>QMainWindow</label>
+      </node>
+      <node id="9">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+model</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Model</label>
+        <link refid="class_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/mainwindow.h" line="13" column="1" bodyfile="src/mainwindow.h" bodystart="12" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_main_window_1a8a40d17a32ac50fc54faf17a3ddc1b21" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>dalpha</name></member>
+      <member refid="class_main_window_1a7a6b42f86582dd883162c70d4a4915c8" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>dbeta</name></member>
+      <member refid="class_main_window_1ac10de49b138c1c838d53e12da4c24d6d" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>dgamma</name></member>
+      <member refid="class_main_window_1a9bd4c07ced537631f1e93c8b5888e78d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>getModel</name></member>
+      <member refid="class_main_window_1a9c4f542263838b9ecd06eae839a42a34" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>keyPressEvent</name></member>
+      <member refid="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>model</name></member>
+      <member refid="class_main_window_1ae5cf2f452c5786bd84db5c6ed4408a67" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>newWindow</name></member>
+      <member refid="class_main_window_1a7a9424857bc821a245770d54ac402764" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionCube_triggered</name></member>
+      <member refid="class_main_window_1a7df050ed9d3ca5f73a3ed852b35fc736" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionExport_triggered</name></member>
+      <member refid="class_main_window_1a73be2df93057d846aa541dffb00e7144" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionImport_triggered</name></member>
+      <member refid="class_main_window_1aed8d4c16aaa87ae02a2de2edd5fc91c7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionNew_triggered</name></member>
+      <member refid="class_main_window_1a73334c7e2ae15d7220fd97a4045ddc32" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionSquare_Pyramid_triggered</name></member>
+      <member refid="class_main_window_1a35b890d5631629eeb9010c4621bb578c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionTriangular_Prism_triggered</name></member>
+      <member refid="class_main_window_1a5072b76c950c80922bc6094f509f9868" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_actionTriangular_Pyramid_triggered</name></member>
+      <member refid="class_main_window_1ab5d5c67e1d6a349998402bc6f7350bbc" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_alphaSlider_valueChanged</name></member>
+      <member refid="class_main_window_1aebbb5cab1a3857035d2feb041ec67142" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_betaSlider_valueChanged</name></member>
+      <member refid="class_main_window_1a0bb0eeb1aa722807501741cb2bb58cc7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_gammaSlider_valueChanged</name></member>
+      <member refid="class_main_window_1ae0e46dc3da4ee07bf66e73e20300220c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_pushButton_2_clicked</name></member>
+      <member refid="class_main_window_1a4de79c63c7fa0b8d7c468ac71f20be81" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a189c5a0db0912274f25238a4ea59c8b3" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_tx_textEdited</name></member>
+      <member refid="class_main_window_1a2883a72ff38d78cfb400533cfe7e4db9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_ty_textEdited</name></member>
+      <member refid="class_main_window_1aa57b51855b787d6482b01b77d5247543" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_tz_textEdited</name></member>
+      <member refid="class_main_window_1a243e9877c34fca99ca8eb8233e602e80" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>tr_x</name></member>
+      <member refid="class_main_window_1a93fc2a7aa546e29b1ec00c81d278d9c2" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>tr_y</name></member>
+      <member refid="class_main_window_1a48e1e4cfdaa4d52f32b46ece5e1e785b" prot="protected" virt="non-virtual"><scope>MainWindow</scope><name>tr_z</name></member>
+      <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui</name></member>
+      <member refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>update</name></member>
+      <member refid="class_main_window_1aa63776c884a82936064be5aabe3da6e8" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>wireframe</name></member>
+      <member refid="class_main_window_1a482b2d965f153134f11f834fcd28fed5" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>wireframeVal</name></member>
+      <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

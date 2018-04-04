@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_projection_y" kind="class" language="C++" prot="public">
+    <compoundname>ProjectionY</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projection_y_1a5fef5122782e5ed50e7dd2f302628852" prot="public" static="no" mutable="no">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model* ProjectionY::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="19" column="1" bodyfile="src/projectiony.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_y_1a8ac9c3d56c5dd9ca94afee7bfe4526d1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectionY::wireframe</definition>
+        <argsstring></argsstring>
+        <name>wireframe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="20" column="1" bodyfile="src/projectiony.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_projection_y_1aa271fa705d4e669d02370be3870b495a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProjectionY::scl</definition>
+        <argsstring></argsstring>
+        <name>scl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="41" column="1" bodyfile="src/projectiony.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projection_y_1ada83942857907322b5bad855f34ee893" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionY::ProjectionY</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>ProjectionY</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="17" column="1" bodyfile="src/projectiony.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_y_1ae04caa820022f1802188835dbc69cf32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectionY::~ProjectionY</definition>
+        <argsstring>()</argsstring>
+        <name>~ProjectionY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="18" column="1" bodyfile="src/projectiony.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_projection_y_1aa241c90c6d57dedc345ce447de8b2062" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::initializeGL</definition>
+        <argsstring>()</argsstring>
+        <name>initializeGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="25" column="1" bodyfile="src/projectiony.cpp" bodystart="56" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_y_1ad71d2f89a6b30e2979d5cfe2af2a4128" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::paintGL</definition>
+        <argsstring>()</argsstring>
+        <name>paintGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="26" column="1" bodyfile="src/projectiony.cpp" bodystart="75" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_y_1a0e2001d9ee85afa0ce1ad8b2b8f15ad7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::resizeGL</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>resizeGL</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="27" column="1" bodyfile="src/projectiony.cpp" bodystart="97" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_y_1a8d502c7b1fc7cb5c894a84f10fba7368" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QSize</type>
+        <definition>QSize ProjectionY::sizeHint</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeHint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="30" column="1" bodyfile="src/projectiony.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_projection_y_1a19960a2d4075443ab87fd50147fee276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::setScale</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="34" column="1" bodyfile="src/projectiony.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_y_1ab59d0f6245e889c25faf1d0592145d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::setWireframe</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>setWireframe</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="35" column="1" bodyfile="src/projectiony.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_y_1a3c709da38e36be432cdc3979cf37d527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="36" column="1" bodyfile="src/projectiony.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_projection_y_1a66e7b460c9bb0c02b649a241d3b9a647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::setModel</definition>
+        <argsstring>(Model *m)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="37" column="1" bodyfile="src/projectiony.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_projection_y_1a166eecc5b75d62a5d77cc027f832e4cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectionY::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/projectiony.h" line="42" column="1" bodyfile="src/projectiony.cpp" bodystart="114" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="24">
+        <label>ProjectionY</label>
+        <link refid="class_projection_y"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>QGLWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>ProjectionY</label>
+        <link refid="class_projection_y"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+model</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>QGLWidget</label>
+      </node>
+      <node id="28">
+        <label>Model</label>
+        <link refid="class_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/projectiony.h" line="13" column="1" bodyfile="src/projectiony.h" bodystart="12" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_projection_y_1a166eecc5b75d62a5d77cc027f832e4cd" prot="private" virt="non-virtual"><scope>ProjectionY</scope><name>draw</name></member>
+      <member refid="class_projection_y_1aa241c90c6d57dedc345ce447de8b2062" prot="protected" virt="non-virtual"><scope>ProjectionY</scope><name>initializeGL</name></member>
+      <member refid="class_projection_y_1a5fef5122782e5ed50e7dd2f302628852" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>model</name></member>
+      <member refid="class_projection_y_1ad71d2f89a6b30e2979d5cfe2af2a4128" prot="protected" virt="non-virtual"><scope>ProjectionY</scope><name>paintGL</name></member>
+      <member refid="class_projection_y_1ada83942857907322b5bad855f34ee893" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>ProjectionY</name></member>
+      <member refid="class_projection_y_1a0e2001d9ee85afa0ce1ad8b2b8f15ad7" prot="protected" virt="non-virtual"><scope>ProjectionY</scope><name>resizeGL</name></member>
+      <member refid="class_projection_y_1aa271fa705d4e669d02370be3870b495a" prot="private" virt="non-virtual"><scope>ProjectionY</scope><name>scl</name></member>
+      <member refid="class_projection_y_1a66e7b460c9bb0c02b649a241d3b9a647" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>setModel</name></member>
+      <member refid="class_projection_y_1a19960a2d4075443ab87fd50147fee276" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>setScale</name></member>
+      <member refid="class_projection_y_1ab59d0f6245e889c25faf1d0592145d6c" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>setWireframe</name></member>
+      <member refid="class_projection_y_1a8d502c7b1fc7cb5c894a84f10fba7368" prot="protected" virt="non-virtual"><scope>ProjectionY</scope><name>sizeHint</name></member>
+      <member refid="class_projection_y_1a3c709da38e36be432cdc3979cf37d527" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>update</name></member>
+      <member refid="class_projection_y_1a8ac9c3d56c5dd9ca94afee7bfe4526d1" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>wireframe</name></member>
+      <member refid="class_projection_y_1ae04caa820022f1802188835dbc69cf32" prot="public" virt="non-virtual"><scope>ProjectionY</scope><name>~ProjectionY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

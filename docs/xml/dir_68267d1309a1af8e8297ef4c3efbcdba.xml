@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="glwidget_8cpp">glwidget.cpp</innerfile>
+    <innerfile refid="glwidget_8h">glwidget.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="mainwindow_8cpp">mainwindow.cpp</innerfile>
+    <innerfile refid="mainwindow_8h">mainwindow.h</innerfile>
+    <innerfile refid="model_8cpp">model.cpp</innerfile>
+    <innerfile refid="model_8h">model.h</innerfile>
+    <innerfile refid="model2d_8cpp">model2d.cpp</innerfile>
+    <innerfile refid="model2d_8h">model2d.h</innerfile>
+    <innerfile refid="projectionx_8cpp">projectionx.cpp</innerfile>
+    <innerfile refid="projectionx_8h">projectionx.h</innerfile>
+    <innerfile refid="projectiony_8cpp">projectiony.cpp</innerfile>
+    <innerfile refid="projectiony_8h">projectiony.h</innerfile>
+    <innerfile refid="projectionz_8cpp">projectionz.cpp</innerfile>
+    <innerfile refid="projectionz_8h">projectionz.h</innerfile>
+    <innerfile refid="samplemodels_8cpp">samplemodels.cpp</innerfile>
+    <innerfile refid="samplemodels_8h">samplemodels.h</innerfile>
+    <innerfile refid="window2d_8cpp">window2d.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

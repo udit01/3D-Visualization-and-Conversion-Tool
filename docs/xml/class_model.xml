@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_model" kind="class" language="C++" prot="public">
+    <compoundname>Model</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Model::numPoints</definition>
+        <argsstring></argsstring>
+        <name>numPoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="62" column="1" bodyfile="src/model.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_face" kindref="compound">Face</ref> * &gt;</type>
+        <definition>std::vector&lt;Face*&gt; Model::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="63" column="1" bodyfile="src/model.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model_1a6436acbcf42bece5621666fe37c71309" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* Model::points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="64" column="1" bodyfile="src/model.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model_1a723a0c631c2ff688fed06c5652879ef7" prot="public" static="no" mutable="no">
+        <type>bool **</type>
+        <definition>bool** Model::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="65" column="1" bodyfile="src/model.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_model_1a39cf79e51da0f52f1031f98f1bebd118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Model::Model</definition>
+        <argsstring>(int numPoints, float *pts, bool **edges, std::vector&lt; Face *&gt; faces)</argsstring>
+        <name>Model</name>
+        <param>
+          <type>int</type>
+          <declname>numPoints</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>bool **</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_face" kindref="compound">Face</ref> *&gt;</type>
+          <declname>faces</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="67" column="1" bodyfile="src/model.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model_1a32e61c8487a2202e9f3f041a8abcb3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model::translate</definition>
+        <argsstring>(float dx, float dy, float dz)</argsstring>
+        <name>translate</name>
+        <param>
+          <type>float</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="69" column="1" bodyfile="src/model.cpp" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model_1ae5999fb77646320aed8d81a669568caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model::rotate</definition>
+        <argsstring>(float alpha, float beta, float gamma)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="70" column="1" bodyfile="src/model.cpp" bodystart="51" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model_1ac62fb1874a6597955c89fe3a9a1663e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model2d" kindref="compound">Model2d</ref> *</type>
+        <definition>Model2d * Model::convertTo2d</definition>
+        <argsstring>()</argsstring>
+        <name>convertTo2d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="80" column="1" bodyfile="src/model.cpp" bodystart="211" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model_1abc71b3488f7f944f1c99727a491ee985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model::serialize</definition>
+        <argsstring>(std::string s)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="81" column="1" bodyfile="src/model.cpp" bodystart="87" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_model_1a98946d1c8d49b43f541dbd6b98b31e52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model * Model::deserialize</definition>
+        <argsstring>(std::string s)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/model.h" line="82" column="1" bodyfile="src/model.cpp" bodystart="134" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>Model</label>
+        <link refid="class_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/model.h" line="60" column="1" bodyfile="src/model.h" bodystart="59" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_model_1ac62fb1874a6597955c89fe3a9a1663e1" prot="public" virt="non-virtual"><scope>Model</scope><name>convertTo2d</name></member>
+      <member refid="class_model_1a98946d1c8d49b43f541dbd6b98b31e52" prot="public" virt="non-virtual"><scope>Model</scope><name>deserialize</name></member>
+      <member refid="class_model_1a723a0c631c2ff688fed06c5652879ef7" prot="public" virt="non-virtual"><scope>Model</scope><name>edges</name></member>
+      <member refid="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" prot="public" virt="non-virtual"><scope>Model</scope><name>faces</name></member>
+      <member refid="class_model_1a39cf79e51da0f52f1031f98f1bebd118" prot="public" virt="non-virtual"><scope>Model</scope><name>Model</name></member>
+      <member refid="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" prot="public" virt="non-virtual"><scope>Model</scope><name>numPoints</name></member>
+      <member refid="class_model_1a6436acbcf42bece5621666fe37c71309" prot="public" virt="non-virtual"><scope>Model</scope><name>points</name></member>
+      <member refid="class_model_1ae5999fb77646320aed8d81a669568caa" prot="public" virt="non-virtual"><scope>Model</scope><name>rotate</name></member>
+      <member refid="class_model_1abc71b3488f7f944f1c99727a491ee985" prot="public" virt="non-virtual"><scope>Model</scope><name>serialize</name></member>
+      <member refid="class_model_1a32e61c8487a2202e9f3f041a8abcb3c2" prot="public" virt="non-virtual"><scope>Model</scope><name>translate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

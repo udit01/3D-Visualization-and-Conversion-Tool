@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="samplemodels_8h" kind="file" language="C++">
+    <compoundname>samplemodels.h</compoundname>
+    <includes refid="model_8h" local="yes">model.h</includes>
+    <includedby refid="glwidget_8cpp" local="yes">src/glwidget.cpp</includedby>
+    <includedby refid="mainwindow_8cpp" local="yes">src/mainwindow.cpp</includedby>
+    <includedby refid="model_8cpp" local="yes">src/model.cpp</includedby>
+    <includedby refid="model2d_8cpp" local="yes">src/model2d.cpp</includedby>
+    <includedby refid="projectionx_8cpp" local="yes">src/projectionx.cpp</includedby>
+    <includedby refid="projectiony_8cpp" local="yes">src/projectiony.cpp</includedby>
+    <includedby refid="projectionz_8cpp" local="yes">src/projectionz.cpp</includedby>
+    <includedby refid="samplemodels_8cpp" local="yes">src/samplemodels.cpp</includedby>
+    <includedby refid="window2d_8cpp" local="yes">src/window2d.cpp</includedby>
+    <incdepgraph>
+      <node id="214">
+        <label>src/samplemodels.h</label>
+        <link refid="samplemodels_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>string</label>
+      </node>
+      <node id="216">
+        <label>vector</label>
+      </node>
+      <node id="219">
+        <label>model2d.h</label>
+        <link refid="model2d_8h_source"/>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>QGL</label>
+      </node>
+      <node id="215">
+        <label>model.h</label>
+        <link refid="model_8h_source"/>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_sample_models" prot="public">SampleModels</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAMPLEMODELS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLEMODELS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>We<sp/>would<sp/>need<sp/>a<sp/>Draw<sp/>Model<sp/>class<sp/>too<sp/>,<sp/>which<sp/>depending<sp/>on<sp/>the<sp/>number<sp/>of<sp/>faces,<sp/>number<sp/>of<sp/>edges</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>and<sp/>points<sp/>in<sp/>each<sp/>face,<sp/>categorizes<sp/>and<sp/>does<sp/>the<sp/>drawing<sp/>with<sp/>a<sp/>single<sp/>call<sp/>,<sp/>but<sp/>is<sp/>that<sp/>possible<sp/>?</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Writing<sp/>code<sp/>for<sp/>something<sp/>in<sp/>a<sp/>void<sp/>function<sp/>and<sp/>invoking<sp/>the<sp/>functions?<sp/>We<sp/>would<sp/>need<sp/>to<sp/>pass<sp/>the</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>OpenGL<sp/>canvas<sp/>pointer<sp/>?</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_sample_models" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sample_models" kindref="compound">SampleModels</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sample_models" kindref="compound">SampleModels</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~SampleModels();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>TriangularPyramid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>SquarePyramid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>TriangularPrism(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Cuboid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Empty();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Axes(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Octahedron(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Cube(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SAMPLEMODELS_H</highlight></codeline>
+    </programlisting>
+    <location file="src/samplemodels.h"/>
+  </compounddef>
+</doxygen>
