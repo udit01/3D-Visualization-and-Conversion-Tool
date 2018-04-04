@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    model = SampleModels::TriangularPrism(1.0,1.5);
+    model = SampleModels::Cuboid(0.5,0.5,0.5);
     wireframe = false;
 
 
@@ -144,7 +144,7 @@ void MainWindow::on_actionImport_triggered()
                     this-> model = Model::deserialize(file_name.toStdString());
                 }
                 else{
-                    this->model = SampleModels::SquareBasedPyramid(1.0,1.5);
+                    this->model = SampleModels::SquarePyramid(1.0,1.5);
                 }
                 break;
             default:
@@ -249,4 +249,40 @@ void MainWindow::on_actionExport_triggered()
                 break;
         }
     }
+}
+
+void MainWindow::on_actionTriangular_Pyramid_triggered()
+{
+    this-> model = SampleModels::TriangularPyramid(0.5,1.0);
+    this-> wireframe = false;
+    emit getModel(this-> model);
+    emit wireframeVal(wireframe);
+    emit update();
+}
+
+void MainWindow::on_actionSquare_Pyramid_triggered()
+{
+    this-> model = SampleModels::SquarePyramid(0.5,1.0);
+    this-> wireframe = false;
+    emit getModel(this-> model);
+    emit wireframeVal(wireframe);
+    emit update();
+}
+
+void MainWindow::on_actionTriangular_Prism_triggered()
+{
+    this-> model = SampleModels::TriangularPrism(0.5,1.0);
+    this-> wireframe = false;
+    emit getModel(this-> model);
+    emit wireframeVal(wireframe);
+    emit update();
+}
+
+void MainWindow::on_actionCube_triggered()
+{
+    this-> model = SampleModels::Cuboid(0.5,0.5,0.5);
+    this-> wireframe = false;
+    emit getModel(this-> model);
+    emit wireframeVal(wireframe);
+    emit update();
 }

@@ -41,6 +41,10 @@ private slots:
     void on_betaSlider_valueChanged(int value);
     void on_gammaSlider_valueChanged(int value);
     void on_actionExport_triggered();
+    void on_actionTriangular_Pyramid_triggered();
+    void on_actionSquare_Pyramid_triggered();
+    void on_actionTriangular_Prism_triggered();
+    void on_actionCube_triggered();
 
 private:
     Ui::MainWindow *ui;

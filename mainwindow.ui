@@ -315,14 +315,14 @@
         <item>
          <widget class="QLabel" name="label_18">
           <property name="text">
-           <string>TOP View</string>
+           <string>YZ View</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_19">
           <property name="text">
-           <string>        FRONT View</string>
+           <string>        ZX View</string>
           </property>
          </widget>
         </item>
@@ -332,7 +332,7 @@
            <string notr="true">color: rgb(91, 5, 5);</string>
           </property>
           <property name="text">
-           <string>                                     SIDE View</string>
+           <string>                                     XY View</string>
           </property>
          </widget>
         </item>
@@ -501,36 +501,23 @@
     <addaction name="actionNew"/>
     <addaction name="actionImport"/>
     <addaction name="actionExport"/>
-    <addaction name="actionCapture"/>
    </widget>
    <widget class="QMenu" name="menuTemplates">
     <property name="title">
      <string>Templates</string>
     </property>
-    <widget class="QMenu" name="menu2D_Templates">
-     <property name="title">
-      <string>2D Templates</string>
-     </property>
-     <addaction name="actionTriangle"/>
-     <addaction name="actionSquare"/>
-     <addaction name="actionn_sided_Polygon"/>
-     <addaction name="actionAdd_2D_Template"/>
-    </widget>
     <widget class="QMenu" name="menu3D_Templates">
      <property name="title">
       <string>3D Templates</string>
      </property>
-     <addaction name="actionTriangular_Pyramid"/>
-     <addaction name="actionSquare_Pyramid"/>
-     <addaction name="actionn_base_Pyramid"/>
-     <addaction name="actionTriangular_Prism"/>
-     <addaction name="actionCube"/>
-     <addaction name="actionn_base_Prism"/>
-     <addaction name="actionAdd_3D_Template"/>
     </widget>
-    <addaction name="menu2D_Templates"/>
     <addaction name="menu3D_Templates"/>
-    <addaction name="actionAdd_Template"/>
+    <addaction name="actionTriangular_Pyramid"/>
+    <addaction name="actionSquare_Pyramid"/>
+    <addaction name="actionn_base_Pyramid"/>
+    <addaction name="actionTriangular_Prism"/>
+    <addaction name="actionCube"/>
+    <addaction name="actionn_base_Prism"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -542,17 +529,14 @@
      <string>Help</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuConvert_To">
+   <widget class="QMenu" name="menuCapture">
     <property name="title">
-     <string>Convert To</string>
+     <string>Capture</string>
     </property>
-    <addaction name="separator"/>
-    <addaction name="action2D_View"/>
-    <addaction name="action3D_Model"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuConvert_To"/>
    <addaction name="menuTemplates"/>
+   <addaction name="menuCapture"/>
    <addaction name="menuHelp"/>
    <addaction name="menuHelp_2"/>
   </widget>
@@ -625,7 +609,7 @@
   </action>
   <action name="actionCube">
    <property name="text">
-    <string>Cube</string>
+    <string>Cuboid</string>
    </property>
   </action>
   <action name="actionn_base_Prism">
