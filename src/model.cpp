@@ -50,38 +50,84 @@ void Model::translate(float dx, float dy, float dz){
 
 void Model::rotate(float alpha, float beta, float gamma){
 // angles lie between 0 to 180 deg
-//    std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
+// std::cout << " Line 44 model alpha: " << alpha << " beta: " << beta << " gamma: " << gamma << "\n";
+    float a;
+    float b;
+    float c;
+
     for (int i=0; i < 3 * numPoints ; i+=3){
-        this->points[ i ] = this->points[i]+ 0 + 0 ;
-        this->points[i+1] = 0 + this->points[i+1]*cos(alpha)  - this->points[i+2]*sin(alpha);
-        this->points[i+2] = 0 + this->points[i+1]*sin(alpha)  + this->points[i+2]*cos(alpha);
+        a = points[i];
+        b = points[i+1];
+        c = points[i+2];
 
-        this->points[ i ] = this->points[i]*cos(beta) + 0 + this->points[i+2]*sin(beta) ;
-        this->points[i+1] = 0 + this->points[i+1] + 0;
-        this->points[i+2] = - this->points[i]*sin(beta) + 0 + this->points[i+2]*cos(beta);
+        points[ i ] = a+ 0 + 0 ;
+        points[i+1] = 0 + b*cos(alpha)  - c*sin(alpha);
+        points[i+2] = 0 + b*sin(alpha)  + c*cos(alpha);
 
-        this->points[ i ] = this->points[i]*cos(gamma) - this->points[i+1]*sin(gamma) + 0 ;
-        this->points[i+1] = this->points[i]*sin(gamma) + this->points[i+1]*cos(gamma) + 0;
-        this->points[i+2]= 0 + 0 + this->points[i+2];
+        a = points[i];
+        b = points[i+1];
+        c = points[i+2];
+
+        points[ i ] = a*cos(beta) + 0 + c*sin(beta) ;
+        points[i+1] = 0 + b + 0;
+        points[i+2] = - a*sin(beta) + 0 + c*cos(beta);
+
+        a = points[i];
+        b = points[i+1];
+        c = points[i+2];
+
+        points[ i ] = a*cos(gamma) - b*sin(gamma) + 0 ;
+        points[i+1] = a*sin(gamma) + b*cos(gamma) + 0;
+        points[i+2] = 0 + 0 + c;
     }
 
-    for (int k = 0 ;  k < this->faces.size() ; k++){
-        Face* f = this->faces[k];
+    for (int k = 0 ;  k < faces.size() ; k++){
+        Face* f = faces[k];
         for(int i = 0 ; i < 3*(f->npts) ; i+=3){
-            f->points[i] = f->points[i] + 0 + 0 ;
-            f->points[i+1] = 0 + f->points[i+1]*cos(alpha)  - f->points[i+2]*sin(alpha);
-            f->points[i+2] = 0 + f->points[i+1]*sin(alpha)  + f->points[i+2]*cos(alpha);
+            a = f->points[i];
+            b = f->points[i+1];
+            c = f->points[i+2];
 
-            f->points[ i ] = f->points[i]*cos(beta) + 0 + f->points[i+2]*sin(beta) ;
-            f->points[i+1] = 0 + f->points[i+1] + 0;
-            f->points[i+2] = - f->points[i]*sin(beta) + 0 + f->points[i+2]*cos(beta);
+            f->points[i] = a + 0 + 0 ;
+            f->points[i+1] = 0 + b*cos(alpha)  - c*sin(alpha);
+            f->points[i+2] = 0 + b*sin(alpha)  + c*cos(alpha);
 
-            f->points[ i ] = f->points[i]*cos(gamma) - f->points[i+1]*sin(gamma) + 0 ;
-            f->points[i+1] = f->points[i]*sin(gamma) + f->points[i+1]*cos(gamma) + 0;
-            f->points[i+2]= 0 + 0 + f->points[i+2];
+            a = f->points[i];
+            b = f->points[i+1];
+            c = f->points[i+2];
+
+            f->points[ i ] = a*cos(beta) + 0 + c*sin(beta) ;
+            f->points[i+1] = 0 + b + 0;
+            f->points[i+2] = - a*sin(beta) + 0 + c*cos(beta);
+
+            a = f->points[i];
+            b = f->points[i+1];
+            c = f->points[i+2];
+            
+            f->points[ i ] = a*cos(gamma) - b*sin(gamma) + 0 ;
+            f->points[i+1] = a*sin(gamma) + b*cos(gamma) + 0;
+            f->points[i+2]= 0 + 0 + c;
         }
     }
-    return;
+
+//    qDebug() << "Angles" ;;
+//    qDebug() << alpha << beta << gamma << "\n" ;;
+//    qDebug() << "Points Array" ;;
+//    for(int i = 0; i < 3 * numPoints; i+=3)
+//    {
+//        qDebug() << points[i] << points[i+1] << points[i+2] << "\n" ;;
+//    }
+//    qDebug() << "Faces" ;;
+//    for (int k = 0 ;  k < this->faces.size() ; k++)
+//    {
+//        Face* f = this->faces[k];
+//        for(int i = 0 ; i < 3*(f->npts) ; i+=3)
+//        {
+//            qDebug() << f-> points[i] << points[i+1] << points[i+2] << "\n" ;;
+//        }
+//        qDebug() << "\n" ;;
+//    }
+//    return;
 }
 
 void Model::serialize(std::string s){//string is the absolute? filepath where file is to be stored

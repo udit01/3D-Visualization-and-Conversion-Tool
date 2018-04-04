@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    model = SampleModels::Cuboid(0.5,0.5,0.5);
+    model = SampleModels::SquarePyramid(0.5,1.0);
     wireframe = false;
 
 
@@ -94,8 +94,7 @@ void MainWindow::on_pushButton_clicked()
     tr_x = 0 ; tr_y = 0; tr_z = 0;
     ui->tx->setText("0.0") ; ui->ty->setText("0.0") ; ui->tz->setText("0.0") ;
     model->rotate(dalpha,dbeta,dgamma);
-
-//    emit getModel(model);
+    emit getModel(model);
     emit update();
 //    qApp->processEvents();
 //    ui->setupUi(this);

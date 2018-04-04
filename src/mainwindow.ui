@@ -506,12 +506,6 @@
     <property name="title">
      <string>Templates</string>
     </property>
-    <widget class="QMenu" name="menu3D_Templates">
-     <property name="title">
-      <string>3D Templates</string>
-     </property>
-    </widget>
-    <addaction name="menu3D_Templates"/>
     <addaction name="actionTriangular_Pyramid"/>
     <addaction name="actionSquare_Pyramid"/>
     <addaction name="actionn_base_Pyramid"/>
