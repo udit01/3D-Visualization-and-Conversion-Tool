@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_direction_cosines_8hpp" kind="file" language="C++">
+    <compoundname>DirectionCosines.hpp</compoundname>
+    <includedby refid="_direction_cosines_8cpp" local="yes">DirectionCosines.cpp</includedby>
+    <includedby refid="_graph_8cpp" local="yes">Graph.cpp</includedby>
+    <includedby refid="_line_8cpp" local="yes">Line.cpp</includedby>
+    <includedby refid="_model3d_8cpp" local="yes">Model3d.cpp</includedby>
+    <includedby refid="_orthographic_views_8cpp" local="yes">OrthographicViews.cpp</includedby>
+    <includedby refid="_plane_8cpp" local="yes">Plane.cpp</includedby>
+    <includedby refid="_point_8cpp" local="yes">Point.cpp</includedby>
+    <includedby refid="_projection_8cpp" local="yes">Projection.cpp</includedby>
+    <invincdepgraph>
+      <node id="14">
+        <label>DirectionCosines.hpp</label>
+        <link refid="_direction_cosines_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Point.cpp</label>
+        <link refid="_point_8cpp"/>
+      </node>
+      <node id="15">
+        <label>DirectionCosines.cpp</label>
+        <link refid="_direction_cosines_8cpp"/>
+      </node>
+      <node id="20">
+        <label>Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="16">
+        <label>Graph.cpp</label>
+        <link refid="_graph_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Line.cpp</label>
+        <link refid="_line_8cpp"/>
+      </node>
+      <node id="22">
+        <label>Projection.cpp</label>
+        <link refid="_projection_8cpp"/>
+      </node>
+      <node id="18">
+        <label>Model3d.cpp</label>
+        <link refid="_model3d_8cpp"/>
+      </node>
+      <node id="19">
+        <label>OrthographicViews.cpp</label>
+        <link refid="_orthographic_views_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_direction_cosines" prot="public">DirectionCosines</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Direction<sp/>Cosines<sp/>Class</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Will<sp/>be<sp/>used<sp/>in<sp/>Line<sp/>and<sp/>Point<sp/>class<sp/>to<sp/>perform<sp/>different<sp/>operations.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_DIRECTIONCOSINES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_DIRECTIONCOSINES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_direction_cosines" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_direction_cosines_1a595e87c5e381f0d877eee26ba75283c7" kindref="member">~DirectionCosines</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_direction_cosines_1a6fde43a3e699635fecf3296c72fe7045" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_direction_cosines_1a6fde43a3e699635fecf3296c72fe7045" kindref="member">xl</ref>;</highlight></codeline>
+<codeline lineno="20" refid="class_direction_cosines_1a277b009af5e287e276d445a6aecef108" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_direction_cosines_1a277b009af5e287e276d445a6aecef108" kindref="member">yl</ref>;</highlight></codeline>
+<codeline lineno="22" refid="class_direction_cosines_1afb263bbd031ba13d68380e367403ec65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_direction_cosines_1afb263bbd031ba13d68380e367403ec65" kindref="member">zl</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_direction_cosines_1a734a1153319e8e5b16d794085a74fe21" kindref="member">dotProduct</ref>(<ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref><sp/>l);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref><sp/><ref refid="class_direction_cosines_1afc5844a79ed93bc86c96ce5c303d816a" kindref="member">crossProduct</ref>(<ref refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kindref="member">DirectionCosine</ref><sp/>l);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>INC_DIRECTIONCOSINES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="DirectionCosines.hpp"/>
+  </compounddef>
+</doxygen>

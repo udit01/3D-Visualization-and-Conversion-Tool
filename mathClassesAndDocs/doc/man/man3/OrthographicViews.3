@@ -1,0 +1,137 @@
+.TH "OrthographicViews" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OrthographicViews \- A Representation for the \fBOrthographicViews\fP Class(2D View) specified using a graph of nodes and edges\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OrthographicViews\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOrthographicViews\fP ()"
+.br
+.RI "Constructor for the OV class\&. "
+.ti -1c
+.RI "\fB~OrthographicViews\fP ()"
+.br
+.RI "Destructor for the OV class\&. "
+.ti -1c
+.RI "string \fBserialize\fP ()"
+.br
+.RI "Serializes the Orthographic Views object for storage/transfer\&. "
+.ti -1c
+.RI "void \fBgenerateWireFrame\fP ()"
+.br
+.RI "generates the wireframe from the view set "
+.ti -1c
+.RI "\fBModel3d\fP \fBconvertTo3D\fP ()"
+.br
+.RI "Returns the 3D model\&. "
+.ti -1c
+.RI "void \fBdisplay\fP ()"
+.br
+.RI "display the projections in the programmer defined view to the user "
+.ti -1c
+.RI "void \fBcheckValid\fP ()"
+.br
+.RI "Returns True if the 3D Model can be generated from the Views provided that the assumptions are followed\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBOrthographicViews\fP \fBdeserialize\fP (string s)"
+.br
+.RI "Deserializes the String object , makes this object from string after receiving\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProjection\fP \fBxy\fP"
+.br
+.ti -1c
+.RI "\fBProjection\fP \fByz\fP"
+.br
+.RI "the YZ-Projection "
+.ti -1c
+.RI "\fBProjection\fP \fBzx\fP"
+.br
+.RI "the ZX-Projection "
+.ti -1c
+.RI "bool \fBareLabelled\fP"
+.br
+.RI "True if the views are labelled\&. "
+.ti -1c
+.RI "int \fBNumProjections\fP"
+.br
+.RI "number of projections specified in the view set "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Representation for the \fBOrthographicViews\fP Class(2D View) specified using a graph of nodes and edges\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "OrthographicViews::OrthographicViews ()"
+
+.PP
+Constructor for the OV class\&. 
+.SS "OrthographicViews::~OrthographicViews ()"
+
+.PP
+Destructor for the OV class\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void OrthographicViews::checkValid ()"
+
+.PP
+Returns True if the 3D Model can be generated from the Views provided that the assumptions are followed\&. 
+.SS "\fBModel3d\fP OrthographicViews::convertTo3D ()"
+
+.PP
+Returns the 3D model\&. 
+.SS "static \fBOrthographicViews\fP OrthographicViews::deserialize (string s)\fC [static]\fP"
+
+.PP
+Deserializes the String object , makes this object from string after receiving\&. 
+.SS "void OrthographicViews::display ()"
+
+.PP
+display the projections in the programmer defined view to the user 
+.SS "void OrthographicViews::generateWireFrame ()"
+
+.PP
+generates the wireframe from the view set 
+.SS "string OrthographicViews::serialize ()"
+
+.PP
+Serializes the Orthographic Views object for storage/transfer\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool OrthographicViews::areLabelled"
+
+.PP
+True if the views are labelled\&. 
+.SS "int OrthographicViews::NumProjections"
+
+.PP
+number of projections specified in the view set 
+.SS "\fBProjection\fP OrthographicViews::xy"
+Three Orthographic Views that will be rendered or used to render the 3D Model the XY-Projection 
+.SS "\fBProjection\fP OrthographicViews::yz"
+
+.PP
+the YZ-Projection 
+.SS "\fBProjection\fP OrthographicViews::zx"
+
+.PP
+the ZX-Projection 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

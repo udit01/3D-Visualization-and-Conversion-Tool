@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_point" kind="class" language="C++" prot="public">
+    <compoundname>Point</compoundname>
+    <includes refid="_point_8hpp" local="no">Point.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_point_1a05dfe2dfbde813ad234b514f30e662f1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Point::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>X-Coordinate of the point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="16" column="1" bodyfile="Point.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a6101960c8d2d4e8ea1d32c9234bbeb8d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Point::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Y-Coordinate of the point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="18" column="1" bodyfile="Point.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a9a666531e0e99adff132be93d2407d0c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Point::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>Z-Coordinate of the point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="20" column="1" bodyfile="Point.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a1e929419353f9bec46732af977adb55a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Point::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>label of the <ref refid="class_point" kindref="compound">Point</ref> - set to Null in case of Unlabelled <ref refid="class_point" kindref="compound">Point</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="22" column="1" bodyfile="Point.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_point_1a30bc8409287de4f43e160664be834636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for unlabelled 2D point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="27" column="1" bodyfile="Point.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aede82dc8eff80efec382853ecd2d31b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(float x, float y, string label)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for labelled 2D point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="30" column="1" bodyfile="Point.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a405838cb39b8fb6119633d9ba7e6b4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for unlabelled 3D point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="33" column="1" bodyfile="Point.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a1336b3425f9c080d170f036c336eaa64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(float x, float y, float z, string label)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for labelled 3D point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="36" column="1" bodyfile="Point.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a395fa04b4ec126b66fc053f829a30cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::~Point</definition>
+        <argsstring>()</argsstring>
+        <name>~Point</name>
+        <briefdescription>
+<para>Destructor for the point object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="39" column="1" bodyfile="Point.cpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a94bcbad2f7120c466739610bfd84932c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Point::distanceFromPoint</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>distanceFromPoint</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns distance from given <ref refid="class_point" kindref="compound">Point</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="42" column="1" bodyfile="Point.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a4975f26f6258a4d5ebd57d180f7677fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Point::distanceFromLine</definition>
+        <argsstring>(Line L)</argsstring>
+        <name>distanceFromLine</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Returns distance from given <ref refid="class_line" kindref="compound">Line</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="45" column="1" bodyfile="Point.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a965dffb2059032cc1ce8c1a33c4d6684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Point::distanceFromPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>distanceFromPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns distance from given <ref refid="class_plane" kindref="compound">Plane</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="48" column="1" bodyfile="Point.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1addde199c01d6de0ce974fd7b89e4cba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Point::liesOnLine</definition>
+        <argsstring>(Line L)</argsstring>
+        <name>liesOnLine</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if <ref refid="class_point" kindref="compound">Point</ref> lies on given <ref refid="class_line" kindref="compound">Line</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="51" column="1" bodyfile="Point.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ace2ed8e26893f5659e9f4fe94dc67094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Point::liesOnPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>liesOnPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if <ref refid="class_point" kindref="compound">Point</ref> lies on given <ref refid="class_plane" kindref="compound">Plane</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="54" column="1" bodyfile="Point.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a61cefcc9a49eed720f97ccea7bed5981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::projectionOnLine</definition>
+        <argsstring>(Line L)</argsstring>
+        <name>projectionOnLine</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Returns projection of point on given <ref refid="class_line" kindref="compound">Line</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="57" column="1" bodyfile="Point.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a6db21f293bd4a7eab01b04882a5021fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::imageInLine</definition>
+        <argsstring>(Line L)</argsstring>
+        <name>imageInLine</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Returns mirror image of point in given <ref refid="class_line" kindref="compound">Line</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="60" column="1" bodyfile="Point.cpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a1085bffb18e2e514d415cdcc2fdb0aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::projectionOnPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>projectionOnPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns projection of point on the given <ref refid="class_plane" kindref="compound">Plane</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="63" column="1" bodyfile="Point.cpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a2350375c6bb6c3bb810ae79c99d2a53c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::imageInPlane</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>imageInPlane</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns image of point on the given <ref refid="class_plane" kindref="compound">Plane</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="66" column="1" bodyfile="Point.cpp" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a8a2ee9e0febd224f86391229e77c2aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::add</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns the added point, treating them as vectors. Doesn&apos;t change coordinates of current point. [this + p]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="69" column="1" bodyfile="Point.cpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ab1d94b20de98b5e73345599d33145195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::sub</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>sub</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns the subtracted point, treating them as vectors. Doesn&apos;t change coordinates of current point. [this - p]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="72" column="1" bodyfile="Point.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1acf25ade0104bfa1c292eeb2da4d5aa2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Point::dotProduct</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>dotProduct</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns the dot product with given point, treating them as vectors. [this . p]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="75" column="1" bodyfile="Point.cpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a99b9491fe4a5527eff77a2db8bd01ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::crossProduct</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>crossProduct</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns the point obtained from cross product, treating them as vectors. [this x p]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="78" column="1" bodyfile="Point.cpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1acf38257ee8ba425115bab283b777ad17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::translate</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>translate</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Returns the translated point. Changes the coordinates of current point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="81" column="1" bodyfile="Point.cpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a3f42404773430a36407ee22224518f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Point::rotate</definition>
+        <argsstring>(DirectionCosines dc)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type><ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref></type>
+          <declname>dc</declname>
+        </param>
+        <briefdescription>
+<para>Returns the translated point. Changes the coordinates of current point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Point.hpp" line="84" column="1" bodyfile="Point.cpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D <ref refid="class_point" kindref="compound">Point</ref> Abstract Data Types with appropriate methods. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Point.hpp" line="12" column="1" bodyfile="Point.hpp" bodystart="11" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_point_1a8a2ee9e0febd224f86391229e77c2aee" prot="public" virt="non-virtual"><scope>Point</scope><name>add</name></member>
+      <member refid="class_point_1a99b9491fe4a5527eff77a2db8bd01ecf" prot="public" virt="non-virtual"><scope>Point</scope><name>crossProduct</name></member>
+      <member refid="class_point_1a4975f26f6258a4d5ebd57d180f7677fd" prot="public" virt="non-virtual"><scope>Point</scope><name>distanceFromLine</name></member>
+      <member refid="class_point_1a965dffb2059032cc1ce8c1a33c4d6684" prot="public" virt="non-virtual"><scope>Point</scope><name>distanceFromPlane</name></member>
+      <member refid="class_point_1a94bcbad2f7120c466739610bfd84932c" prot="public" virt="non-virtual"><scope>Point</scope><name>distanceFromPoint</name></member>
+      <member refid="class_point_1acf25ade0104bfa1c292eeb2da4d5aa2c" prot="public" virt="non-virtual"><scope>Point</scope><name>dotProduct</name></member>
+      <member refid="class_point_1a6db21f293bd4a7eab01b04882a5021fd" prot="public" virt="non-virtual"><scope>Point</scope><name>imageInLine</name></member>
+      <member refid="class_point_1a2350375c6bb6c3bb810ae79c99d2a53c" prot="public" virt="non-virtual"><scope>Point</scope><name>imageInPlane</name></member>
+      <member refid="class_point_1a1e929419353f9bec46732af977adb55a" prot="public" virt="non-virtual"><scope>Point</scope><name>label</name></member>
+      <member refid="class_point_1addde199c01d6de0ce974fd7b89e4cba4" prot="public" virt="non-virtual"><scope>Point</scope><name>liesOnLine</name></member>
+      <member refid="class_point_1ace2ed8e26893f5659e9f4fe94dc67094" prot="public" virt="non-virtual"><scope>Point</scope><name>liesOnPlane</name></member>
+      <member refid="class_point_1a30bc8409287de4f43e160664be834636" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1aede82dc8eff80efec382853ecd2d31b0" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1a405838cb39b8fb6119633d9ba7e6b4fb" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1a1336b3425f9c080d170f036c336eaa64" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1a61cefcc9a49eed720f97ccea7bed5981" prot="public" virt="non-virtual"><scope>Point</scope><name>projectionOnLine</name></member>
+      <member refid="class_point_1a1085bffb18e2e514d415cdcc2fdb0aff" prot="public" virt="non-virtual"><scope>Point</scope><name>projectionOnPlane</name></member>
+      <member refid="class_point_1a3f42404773430a36407ee22224518f39" prot="public" virt="non-virtual"><scope>Point</scope><name>rotate</name></member>
+      <member refid="class_point_1ab1d94b20de98b5e73345599d33145195" prot="public" virt="non-virtual"><scope>Point</scope><name>sub</name></member>
+      <member refid="class_point_1acf38257ee8ba425115bab283b777ad17" prot="public" virt="non-virtual"><scope>Point</scope><name>translate</name></member>
+      <member refid="class_point_1a05dfe2dfbde813ad234b514f30e662f1" prot="public" virt="non-virtual"><scope>Point</scope><name>x</name></member>
+      <member refid="class_point_1a6101960c8d2d4e8ea1d32c9234bbeb8d" prot="public" virt="non-virtual"><scope>Point</scope><name>y</name></member>
+      <member refid="class_point_1a9a666531e0e99adff132be93d2407d0c" prot="public" virt="non-virtual"><scope>Point</scope><name>z</name></member>
+      <member refid="class_point_1a395fa04b4ec126b66fc053f829a30cc1" prot="public" virt="non-virtual"><scope>Point</scope><name>~Point</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

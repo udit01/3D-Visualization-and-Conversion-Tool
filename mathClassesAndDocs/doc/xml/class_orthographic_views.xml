@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_orthographic_views" kind="class" language="C++" prot="public">
+    <compoundname>OrthographicViews</compoundname>
+    <includes refid="_orthographic_views_8hpp" local="no">OrthographicViews.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_orthographic_views_1aaa57dea71b11b77101a5d8d2af776917" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref></type>
+        <definition>Projection OrthographicViews::xy</definition>
+        <argsstring></argsstring>
+        <name>xy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Three Orthographic Views that will be rendered or used to render the 3D Model the XY-Projection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="15" column="1" bodyfile="OrthographicViews.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orthographic_views_1a2d66490dec17aef63631491437e30125" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref></type>
+        <definition>Projection OrthographicViews::yz</definition>
+        <argsstring></argsstring>
+        <name>yz</name>
+        <briefdescription>
+<para>the YZ-Projection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="17" column="1" bodyfile="OrthographicViews.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orthographic_views_1a4aa367ed88820282a04846786007f153" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref></type>
+        <definition>Projection OrthographicViews::zx</definition>
+        <argsstring></argsstring>
+        <name>zx</name>
+        <briefdescription>
+<para>the ZX-Projection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="19" column="1" bodyfile="OrthographicViews.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orthographic_views_1af414df37b5977b4486b8d0351f142a7f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OrthographicViews::areLabelled</definition>
+        <argsstring></argsstring>
+        <name>areLabelled</name>
+        <briefdescription>
+<para>True if the views are labelled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="22" column="1" bodyfile="OrthographicViews.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orthographic_views_1a899ce5fc9774fbf68cd35d2b4bda3d2c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OrthographicViews::NumProjections</definition>
+        <argsstring></argsstring>
+        <name>NumProjections</name>
+        <briefdescription>
+<para>number of projections specified in the view set </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="24" column="1" bodyfile="OrthographicViews.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_orthographic_views_1a4698ffe80819cb2106f61a336590256a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OrthographicViews::OrthographicViews</definition>
+        <argsstring>()</argsstring>
+        <name>OrthographicViews</name>
+        <briefdescription>
+<para>Constructor for the OV class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="27" column="1" bodyfile="OrthographicViews.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1ab6d622dcf326ace286b1bfea8cbdb75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OrthographicViews::~OrthographicViews</definition>
+        <argsstring>()</argsstring>
+        <name>~OrthographicViews</name>
+        <briefdescription>
+<para>Destructor for the OV class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="30" column="1" bodyfile="OrthographicViews.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1a207741d30f67bf0da1356c10cc819731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string OrthographicViews::serialize</definition>
+        <argsstring>()</argsstring>
+        <name>serialize</name>
+        <briefdescription>
+<para>Serializes the Orthographic Views object for storage/transfer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="33" column="1" bodyfile="OrthographicViews.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1ab169cb6a89b9575d7814a683240567ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthographicViews::generateWireFrame</definition>
+        <argsstring>()</argsstring>
+        <name>generateWireFrame</name>
+        <briefdescription>
+<para>generates the wireframe from the view set </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="39" column="1" bodyfile="OrthographicViews.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1a1048d31d2a202a8b5bc40a459d86e43b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model3d" kindref="compound">Model3d</ref></type>
+        <definition>Model3d OrthographicViews::convertTo3D</definition>
+        <argsstring>()</argsstring>
+        <name>convertTo3D</name>
+        <briefdescription>
+<para>Returns the 3D model. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="42" column="1" bodyfile="OrthographicViews.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1a9e5f48f91dd92b22ce9418663cdbf8f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthographicViews::display</definition>
+        <argsstring>()</argsstring>
+        <name>display</name>
+        <briefdescription>
+<para>display the projections in the programmer defined view to the user </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="45" column="1" bodyfile="OrthographicViews.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orthographic_views_1a81792a7d224bada0a04d0917cc5d7a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthographicViews::checkValid</definition>
+        <argsstring>()</argsstring>
+        <name>checkValid</name>
+        <briefdescription>
+<para>Returns True if the 3D Model can be generated from the Views provided that the assumptions are followed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="48" column="1" bodyfile="OrthographicViews.cpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_orthographic_views_1a242a3d205d29bc903936d31d97a5cf4a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_orthographic_views" kindref="compound">OrthographicViews</ref></type>
+        <definition>static OrthographicViews OrthographicViews::deserialize</definition>
+        <argsstring>(string s)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes the String object , makes this object from string after receiving. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrthographicViews.hpp" line="36" column="1" bodyfile="OrthographicViews.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Representation for the <ref refid="class_orthographic_views" kindref="compound">OrthographicViews</ref> Class(2D View) specified using a graph of nodes and edges. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="15">
+        <label>Point</label>
+        <link refid="class_point"/>
+      </node>
+      <node id="13">
+        <label>OrthographicViews</label>
+        <link refid="class_orthographic_views"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>yz</edgelabel>
+          <edgelabel>xy</edgelabel>
+          <edgelabel>zx</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Projection</label>
+        <link refid="class_projection"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>O</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>G</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Graph</label>
+        <link refid="class_graph"/>
+      </node>
+    </collaborationgraph>
+    <location file="OrthographicViews.hpp" line="11" column="1" bodyfile="OrthographicViews.hpp" bodystart="10" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_orthographic_views_1af414df37b5977b4486b8d0351f142a7f" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>areLabelled</name></member>
+      <member refid="class_orthographic_views_1a81792a7d224bada0a04d0917cc5d7a53" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>checkValid</name></member>
+      <member refid="class_orthographic_views_1a1048d31d2a202a8b5bc40a459d86e43b" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>convertTo3D</name></member>
+      <member refid="class_orthographic_views_1a242a3d205d29bc903936d31d97a5cf4a" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>deserialize</name></member>
+      <member refid="class_orthographic_views_1a9e5f48f91dd92b22ce9418663cdbf8f8" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>display</name></member>
+      <member refid="class_orthographic_views_1ab169cb6a89b9575d7814a683240567ac" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>generateWireFrame</name></member>
+      <member refid="class_orthographic_views_1a899ce5fc9774fbf68cd35d2b4bda3d2c" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>NumProjections</name></member>
+      <member refid="class_orthographic_views_1a4698ffe80819cb2106f61a336590256a" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>OrthographicViews</name></member>
+      <member refid="class_orthographic_views_1a207741d30f67bf0da1356c10cc819731" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>serialize</name></member>
+      <member refid="class_orthographic_views_1aaa57dea71b11b77101a5d8d2af776917" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>xy</name></member>
+      <member refid="class_orthographic_views_1a2d66490dec17aef63631491437e30125" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>yz</name></member>
+      <member refid="class_orthographic_views_1a4aa367ed88820282a04846786007f153" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>zx</name></member>
+      <member refid="class_orthographic_views_1ab6d622dcf326ace286b1bfea8cbdb75e" prot="public" virt="non-virtual"><scope>OrthographicViews</scope><name>~OrthographicViews</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

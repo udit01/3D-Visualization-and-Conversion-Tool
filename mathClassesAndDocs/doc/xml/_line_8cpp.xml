@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_line_8cpp" kind="file" language="C++">
+    <compoundname>Line.cpp</compoundname>
+    <includes local="no">bool</includes>
+    <includes local="no">float</includes>
+    <includes local="no">string</includes>
+    <includes refid="_direction_cosines_8hpp" local="yes">DirectionCosines.hpp</includes>
+    <includes refid="_graph_8hpp" local="yes">Graph.hpp</includes>
+    <includes refid="_line_8hpp" local="yes">Line.hpp</includes>
+    <includes refid="_model3d_8hpp" local="yes">Model3d.hpp</includes>
+    <includes refid="_orthographic_views_8hpp" local="yes">OrthographicViews.hpp</includes>
+    <includes refid="_plane_8hpp" local="yes">Plane.hpp</includes>
+    <includes refid="_point_8hpp" local="yes">Point.hpp</includes>
+    <includes refid="_projection_8hpp" local="yes">Projection.hpp</includes>
+    <incdepgraph>
+      <node id="50">
+        <label>DirectionCosines.hpp</label>
+        <link refid="_direction_cosines_8hpp"/>
+      </node>
+      <node id="52">
+        <label>Line.hpp</label>
+        <link refid="_line_8hpp"/>
+      </node>
+      <node id="57">
+        <label>Projection.hpp</label>
+        <link refid="_projection_8hpp"/>
+      </node>
+      <node id="51">
+        <label>Graph.hpp</label>
+        <link refid="_graph_8hpp"/>
+      </node>
+      <node id="49">
+        <label>string</label>
+      </node>
+      <node id="48">
+        <label>float</label>
+      </node>
+      <node id="56">
+        <label>Point.hpp</label>
+        <link refid="_point_8hpp"/>
+      </node>
+      <node id="55">
+        <label>Plane.hpp</label>
+        <link refid="_plane_8hpp"/>
+      </node>
+      <node id="53">
+        <label>Model3d.hpp</label>
+        <link refid="_model3d_8hpp"/>
+      </node>
+      <node id="54">
+        <label>OrthographicViews.hpp</label>
+        <link refid="_orthographic_views_8hpp"/>
+      </node>
+      <node id="47">
+        <label>bool</label>
+      </node>
+      <node id="46">
+        <label>Line.cpp</label>
+        <link refid="_line_8cpp"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>Implementation<sp/>of<sp/>2D/3D<sp/>Line<sp/>Abstract<sp/>Data<sp/>Type</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bool&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;float&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_direction_cosines_8hpp" kindref="compound">DirectionCosines.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_graph_8hpp" kindref="compound">Graph.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_line_8hpp" kindref="compound">Line.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_model3d_8hpp" kindref="compound">Model3d.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_orthographic_views_8hpp" kindref="compound">OrthographicViews.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_plane_8hpp" kindref="compound">Plane.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_point_8hpp" kindref="compound">Point.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_projection_8hpp" kindref="compound">Projection.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line_1ae24f583f6e61000f88a20205e9b7cf1c" kindref="member">Line::Line</ref>(<ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref><sp/>dc,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line_1ae24f583f6e61000f88a20205e9b7cf1c" kindref="member">Line::Line</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>p1,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>p2)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line_1aabe85f48d22d92b62257091f48174fac" kindref="member">Line::~Line</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line_1a8059ce73fc21fafe0ea87939d7d20895" kindref="member">Line::isParallel</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line_1adf08ea54b857c27d783321a3e6858222" kindref="member">Line::isPerpendicular</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_line_1aefe5ec3e42ab38c1f60e65ca09f0fd29" kindref="member">Line::angleWithLine</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_line_1abd11dc16386ee1d5424deac55dea0d1b" kindref="member">Line::angleWithPlane</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/>P){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line" kindref="compound">Line</ref><sp/><ref refid="class_line_1af20457df1ce948794350fab12c16ee14" kindref="member">Line::projectionOnPlane</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/>P){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line" kindref="compound">Line</ref><sp/><ref refid="class_line_1a12787f5d97b7764c5b1836fb9007fb86" kindref="member">Line::imageInPlane</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/>P){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line_1aad7d2a0b6ac395a1bd81d55dd2b7a81d" kindref="member">Line::liesInPlane</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/>P){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line_1a01b3547f05e338ab7d7a4989d379c432" kindref="member">Line::intersects</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_line_1a3abb028a100196d85dd2674c3ef86421" kindref="member">Line::pointOfIntersection</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_line_1a3abb028a100196d85dd2674c3ef86421" kindref="member">Line::pointOfIntersection</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/>P){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line" kindref="compound">Line</ref><sp/><ref refid="class_line_1a959d5169229a29c786deb42848ac8a1f" kindref="member">Line::lineOfShortestDistance</ref>(<ref refid="class_line" kindref="compound">Line</ref><sp/>L){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="Line.cpp"/>
+  </compounddef>
+</doxygen>

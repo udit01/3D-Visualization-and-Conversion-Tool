@@ -1,0 +1,79 @@
+.TH "DirectionCosines" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DirectionCosines \- Class to define the direction cosines in 3d space\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DirectionCosines\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDirectionCosine\fP (float a, float b, float c)"
+.br
+.RI "Class might be initialized with direction cosines or ratios, to make it inclusive of both\&. "
+.ti -1c
+.RI "\fB~DirectionCosines\fP ()"
+.br
+.ti -1c
+.RI "float \fBdotProduct\fP (\fBDirectionCosine\fP l)"
+.br
+.ti -1c
+.RI "\fBDirectionCosine\fP \fBcrossProduct\fP (\fBDirectionCosine\fP l)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBxl\fP"
+.br
+.RI "cosine of the angle made by the line/segment with the x-axis "
+.ti -1c
+.RI "float \fByl\fP"
+.br
+.RI "cosine of the angle made by the line/segment with the y-axis "
+.ti -1c
+.RI "float \fBzl\fP"
+.br
+.RI "cosine of the angle made by the line/segment with the z-axis "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class to define the direction cosines in 3d space\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DirectionCosines::~DirectionCosines ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDirectionCosines\fP DirectionCosines::crossProduct (\fBDirectionCosine\fP l)"
+
+.SS "DirectionCosines::DirectionCosine (float a, float b, float c)"
+
+.PP
+Class might be initialized with direction cosines or ratios, to make it inclusive of both\&. 
+.SS "float DirectionCosines::dotProduct (\fBDirectionCosine\fP l)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float DirectionCosines::xl"
+
+.PP
+cosine of the angle made by the line/segment with the x-axis 
+.SS "float DirectionCosines::yl"
+
+.PP
+cosine of the angle made by the line/segment with the y-axis 
+.SS "float DirectionCosines::zl"
+
+.PP
+cosine of the angle made by the line/segment with the z-axis 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

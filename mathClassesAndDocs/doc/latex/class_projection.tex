@@ -1,0 +1,143 @@
+\hypertarget{class_projection}{}\section{Projection Class Reference}
+\label{class_projection}\index{Projection@{Projection}}
+
+
+The \mbox{\hyperlink{class_projection}{Projection}} Class which simply defines the detailed graph required for our software.  
+
+
+
+
+{\ttfamily \#include $<$Projection.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projection_ae1fb2fe53361eef4e3e8d44dcd710be2}{serialize}} ()
+\begin{DoxyCompactList}\small\item\em Serializes the \mbox{\hyperlink{class_projection}{Projection}} object for storage/transfer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_aba50a4b61db55f82caec3fd15d6c6e61}{scale}} (float factor)
+\begin{DoxyCompactList}\small\item\em scales the view by the specified factor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_a3e6794ba355fe9bd6e5d42d7133c8be4}{rotate}} (\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}} dc)
+\begin{DoxyCompactList}\small\item\em rotates the view anticlockwise by the specifies angles \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_ae8e33f2b836aff2c24b148c1308f1789}{translate}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em translates the view by the given vector/point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_projection}{Projection}} \mbox{\hyperlink{class_projection_ae99d107febc961e7ae8232623d930b82}{deserialize}} (string s)
+\begin{DoxyCompactList}\small\item\em Deserializes the String object , makes this object from string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_projection_a60e6ed7cb3fbdf833d22bbfaa044be42}{G}}
+\begin{DoxyCompactList}\small\item\em defining a graph \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_projection_a9400a70d8820176f4731eae11fce8ca2}{O}}
+\begin{DoxyCompactList}\small\item\em defining the reference origin \end{DoxyCompactList}\item 
+Direction\+Cosine \mbox{\hyperlink{class_projection_a2fdb6f244ddff5e2201c62df694aaae4}{l1}}
+\begin{DoxyCompactList}\small\item\em defining the Direction cosines of reference axis 1 \end{DoxyCompactList}\item 
+Direction\+Cosine \mbox{\hyperlink{class_projection_a70ac3592a798a01019ec35ba2c3247ea}{l2}}
+\begin{DoxyCompactList}\small\item\em defining the Direction cosines of reference axis 2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_projection}{Projection}} Class which simply defines the detailed graph required for our software. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projection_ae99d107febc961e7ae8232623d930b82}\label{class_projection_ae99d107febc961e7ae8232623d930b82}} 
+\index{Projection@{Projection}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_projection}{Projection}} Projection\+::deserialize (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Deserializes the String object , makes this object from string. 
+
+\mbox{\Hypertarget{class_projection_a3e6794ba355fe9bd6e5d42d7133c8be4}\label{class_projection_a3e6794ba355fe9bd6e5d42d7133c8be4}} 
+\index{Projection@{Projection}!rotate@{rotate}}
+\index{rotate@{rotate}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Projection\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}}}]{dc }\end{DoxyParamCaption})}
+
+
+
+rotates the view anticlockwise by the specifies angles 
+
+\mbox{\Hypertarget{class_projection_aba50a4b61db55f82caec3fd15d6c6e61}\label{class_projection_aba50a4b61db55f82caec3fd15d6c6e61}} 
+\index{Projection@{Projection}!scale@{scale}}
+\index{scale@{scale}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Projection\+::scale (\begin{DoxyParamCaption}\item[{float}]{factor }\end{DoxyParamCaption})}
+
+
+
+scales the view by the specified factor 
+
+\mbox{\Hypertarget{class_projection_ae1fb2fe53361eef4e3e8d44dcd710be2}\label{class_projection_ae1fb2fe53361eef4e3e8d44dcd710be2}} 
+\index{Projection@{Projection}!serialize@{serialize}}
+\index{serialize@{serialize}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily string Projection\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Serializes the \mbox{\hyperlink{class_projection}{Projection}} object for storage/transfer. 
+
+\mbox{\Hypertarget{class_projection_ae8e33f2b836aff2c24b148c1308f1789}\label{class_projection_ae8e33f2b836aff2c24b148c1308f1789}} 
+\index{Projection@{Projection}!translate@{translate}}
+\index{translate@{translate}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Projection\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+translates the view by the given vector/point 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projection_a60e6ed7cb3fbdf833d22bbfaa044be42}\label{class_projection_a60e6ed7cb3fbdf833d22bbfaa044be42}} 
+\index{Projection@{Projection}!G@{G}}
+\index{G@{G}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Projection\+::G}
+
+
+
+defining a graph 
+
+\mbox{\Hypertarget{class_projection_a2fdb6f244ddff5e2201c62df694aaae4}\label{class_projection_a2fdb6f244ddff5e2201c62df694aaae4}} 
+\index{Projection@{Projection}!l1@{l1}}
+\index{l1@{l1}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{l1}{l1}}
+{\footnotesize\ttfamily Direction\+Cosine Projection\+::l1}
+
+
+
+defining the Direction cosines of reference axis 1 
+
+\mbox{\Hypertarget{class_projection_a70ac3592a798a01019ec35ba2c3247ea}\label{class_projection_a70ac3592a798a01019ec35ba2c3247ea}} 
+\index{Projection@{Projection}!l2@{l2}}
+\index{l2@{l2}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{l2}{l2}}
+{\footnotesize\ttfamily Direction\+Cosine Projection\+::l2}
+
+
+
+defining the Direction cosines of reference axis 2 
+
+\mbox{\Hypertarget{class_projection_a9400a70d8820176f4731eae11fce8ca2}\label{class_projection_a9400a70d8820176f4731eae11fce8ca2}} 
+\index{Projection@{Projection}!O@{O}}
+\index{O@{O}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{O}{O}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Projection\+::O}
+
+
+
+defining the reference origin 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_projection_8hpp}{Projection.\+hpp}}\item 
+\mbox{\hyperlink{_projection_8cpp}{Projection.\+cpp}}\end{DoxyCompactItemize}

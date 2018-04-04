@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_graph" kind="class" language="C++" prot="public">
+    <compoundname>Graph</compoundname>
+    <includes refid="_graph_8hpp" local="no">Graph.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_graph_1abbffb935f6c2c6723a149d70bdb0762f" prot="public" static="no" mutable="no">
+        <type>list&lt; <ref refid="class_point" kindref="compound">Point</ref> &gt;</type>
+        <definition>list&lt;Point&gt; Graph::Node</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+<para>the abstract Node data member that describes the corners/vertices of the View </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="14" column="1" bodyfile="Graph.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_graph_1aa8bbd434abc0c7a804ad7687b3ec2511" prot="public" static="no" mutable="no">
+        <type>list&lt; <ref refid="class_line" kindref="compound">Line</ref> &gt;</type>
+        <definition>list&lt;Line&gt; Graph::EdgeSet</definition>
+        <argsstring></argsstring>
+        <name>EdgeSet</name>
+        <briefdescription>
+<para>the abstract EdgeSet data member that describes the solid/dashed edges of the View </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="16" column="1" bodyfile="Graph.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_graph_1ae4c72b8ac4d693c49800a4c7e273654f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Graph::Graph</definition>
+        <argsstring>()</argsstring>
+        <name>Graph</name>
+        <briefdescription>
+<para>Constructor for <ref refid="class_graph" kindref="compound">Graph</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="19" column="1" bodyfile="Graph.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1a902c5b3eacb66d60752525ab23297a95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Graph::~Graph</definition>
+        <argsstring>()</argsstring>
+        <name>~Graph</name>
+        <briefdescription>
+<para>Destructor for <ref refid="class_graph" kindref="compound">Graph</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="22" column="1" bodyfile="Graph.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1ae807fc072ac3e93c9718ee326a0d0822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Graph::containsNode</definition>
+        <argsstring>(Point P)</argsstring>
+        <name>containsNode</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if it contains the specified Node else False. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="25" column="1" bodyfile="Graph.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1af7eefeaacac324886fa73f3a2e85f20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Graph::containsEdge</definition>
+        <argsstring>(Line E)</argsstring>
+        <name>containsEdge</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+<para>Returns True if it contains the specified Node else False. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="28" column="1" bodyfile="Graph.cpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1aaf5ccb68d053bd64b6b057783c99608c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Graph::addNode</definition>
+        <argsstring>(Point P)</argsstring>
+        <name>addNode</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>adds a node to the <ref refid="class_graph" kindref="compound">Graph</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="31" column="1" bodyfile="Graph.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1a5c30bae1d7a0bbb2f9d9f0d5ad40f78f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Graph::addEdge</definition>
+        <argsstring>(Line E)</argsstring>
+        <name>addEdge</name>
+        <param>
+          <type><ref refid="class_line" kindref="compound">Line</ref></type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+<para>adds an edge to the <ref refid="class_graph" kindref="compound">Graph</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="34" column="1" bodyfile="Graph.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1a285f720a5e75fc099dcc32fd4a37786a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Graph::updateNode</definition>
+        <argsstring>(Point P1, Point P2)</argsstring>
+        <name>updateNode</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>P1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>P2</declname>
+        </param>
+        <briefdescription>
+<para>updates a Node in the <ref refid="class_graph" kindref="compound">Graph</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="37" column="1" bodyfile="Graph.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1a74d50f92f6f2291675020e038132c85f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Graph::deleteNode</definition>
+        <argsstring>(Point P)</argsstring>
+        <name>deleteNode</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>deletes a node from the <ref refid="class_graph" kindref="compound">Graph</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="40" column="1" bodyfile="Graph.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_graph_1a39031d4b9f6527501333e612cb91cca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Graph::deleteEdge</definition>
+        <argsstring>(Edge E)</argsstring>
+        <name>deleteEdge</name>
+        <param>
+          <type>Edge</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+<para>deletes an edge from the <ref refid="class_graph" kindref="compound">Graph</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Graph.hpp" line="43" column="1" bodyfile="Graph.cpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="class_graph" kindref="compound">Graph</ref> Class to model a 3D or a 2D view. Determine whether to use an Adjcancey List or Adjanceny Matrix representation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Graph.hpp" line="11" column="1" bodyfile="Graph.hpp" bodystart="10" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_graph_1a5c30bae1d7a0bbb2f9d9f0d5ad40f78f" prot="public" virt="non-virtual"><scope>Graph</scope><name>addEdge</name></member>
+      <member refid="class_graph_1aaf5ccb68d053bd64b6b057783c99608c" prot="public" virt="non-virtual"><scope>Graph</scope><name>addNode</name></member>
+      <member refid="class_graph_1af7eefeaacac324886fa73f3a2e85f20a" prot="public" virt="non-virtual"><scope>Graph</scope><name>containsEdge</name></member>
+      <member refid="class_graph_1ae807fc072ac3e93c9718ee326a0d0822" prot="public" virt="non-virtual"><scope>Graph</scope><name>containsNode</name></member>
+      <member refid="class_graph_1a39031d4b9f6527501333e612cb91cca6" prot="public" virt="non-virtual"><scope>Graph</scope><name>deleteEdge</name></member>
+      <member refid="class_graph_1a74d50f92f6f2291675020e038132c85f" prot="public" virt="non-virtual"><scope>Graph</scope><name>deleteNode</name></member>
+      <member refid="class_graph_1aa8bbd434abc0c7a804ad7687b3ec2511" prot="public" virt="non-virtual"><scope>Graph</scope><name>EdgeSet</name></member>
+      <member refid="class_graph_1ae4c72b8ac4d693c49800a4c7e273654f" prot="public" virt="non-virtual"><scope>Graph</scope><name>Graph</name></member>
+      <member refid="class_graph_1abbffb935f6c2c6723a149d70bdb0762f" prot="public" virt="non-virtual"><scope>Graph</scope><name>Node</name></member>
+      <member refid="class_graph_1a285f720a5e75fc099dcc32fd4a37786a" prot="public" virt="non-virtual"><scope>Graph</scope><name>updateNode</name></member>
+      <member refid="class_graph_1a902c5b3eacb66d60752525ab23297a95" prot="public" virt="non-virtual"><scope>Graph</scope><name>~Graph</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

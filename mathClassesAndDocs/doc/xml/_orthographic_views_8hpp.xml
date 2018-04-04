@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_orthographic_views_8hpp" kind="file" language="C++">
+    <compoundname>OrthographicViews.hpp</compoundname>
+    <includedby refid="_direction_cosines_8cpp" local="yes">DirectionCosines.cpp</includedby>
+    <includedby refid="_graph_8cpp" local="yes">Graph.cpp</includedby>
+    <includedby refid="_line_8cpp" local="yes">Line.cpp</includedby>
+    <includedby refid="_model3d_8cpp" local="yes">Model3d.cpp</includedby>
+    <includedby refid="_orthographic_views_8cpp" local="yes">OrthographicViews.cpp</includedby>
+    <includedby refid="_plane_8cpp" local="yes">Plane.cpp</includedby>
+    <includedby refid="_point_8cpp" local="yes">Point.cpp</includedby>
+    <includedby refid="_projection_8cpp" local="yes">Projection.cpp</includedby>
+    <invincdepgraph>
+      <node id="119">
+        <label>Point.cpp</label>
+        <link refid="_point_8cpp"/>
+      </node>
+      <node id="113">
+        <label>DirectionCosines.cpp</label>
+        <link refid="_direction_cosines_8cpp"/>
+      </node>
+      <node id="118">
+        <label>Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="114">
+        <label>Graph.cpp</label>
+        <link refid="_graph_8cpp"/>
+      </node>
+      <node id="112">
+        <label>OrthographicViews.hpp</label>
+        <link refid="_orthographic_views_8hpp"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>Line.cpp</label>
+        <link refid="_line_8cpp"/>
+      </node>
+      <node id="120">
+        <label>Projection.cpp</label>
+        <link refid="_projection_8cpp"/>
+      </node>
+      <node id="116">
+        <label>Model3d.cpp</label>
+        <link refid="_model3d_8cpp"/>
+      </node>
+      <node id="117">
+        <label>OrthographicViews.cpp</label>
+        <link refid="_orthographic_views_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_orthographic_views" prot="public">OrthographicViews</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Implementation<sp/>of<sp/>Orthographic<sp/>Views<sp/>Abstract<sp/>Data<sp/>Type</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_ORTHOGRAPHICVIEWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_ORTHOGRAPHICVIEWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_orthographic_views" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_orthographic_views" kindref="compound">OrthographicViews</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="class_orthographic_views_1aaa57dea71b11b77101a5d8d2af776917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref><sp/><ref refid="class_orthographic_views_1aaa57dea71b11b77101a5d8d2af776917" kindref="member">xy</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_orthographic_views_1a2d66490dec17aef63631491437e30125" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref><sp/><ref refid="class_orthographic_views_1a2d66490dec17aef63631491437e30125" kindref="member">yz</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_orthographic_views_1a4aa367ed88820282a04846786007f153" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref><sp/><ref refid="class_orthographic_views_1a4aa367ed88820282a04846786007f153" kindref="member">zx</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_orthographic_views_1af414df37b5977b4486b8d0351f142a7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1af414df37b5977b4486b8d0351f142a7f" kindref="member">areLabelled</ref>;</highlight></codeline>
+<codeline lineno="24" refid="class_orthographic_views_1a899ce5fc9774fbf68cd35d2b4bda3d2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1a899ce5fc9774fbf68cd35d2b4bda3d2c" kindref="member">NumProjections</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orthographic_views_1a4698ffe80819cb2106f61a336590256a" kindref="member">OrthographicViews</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orthographic_views_1ab6d622dcf326ace286b1bfea8cbdb75e" kindref="member">~OrthographicViews</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1a207741d30f67bf0da1356c10cc819731" kindref="member">serialize</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views" kindref="compound">OrthographicViews</ref><sp/><ref refid="class_orthographic_views_1a242a3d205d29bc903936d31d97a5cf4a" kindref="member">deserialize</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1ab169cb6a89b9575d7814a683240567ac" kindref="member">generateWireFrame</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model3d" kindref="compound">Model3d</ref><sp/><ref refid="class_orthographic_views_1a1048d31d2a202a8b5bc40a459d86e43b" kindref="member">convertTo3D</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1a9e5f48f91dd92b22ce9418663cdbf8f8" kindref="member">display</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orthographic_views_1a81792a7d224bada0a04d0917cc5d7a53" kindref="member">checkValid</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>INC_ORTHOGRAPHICVIEWS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="OrthographicViews.hpp"/>
+  </compounddef>
+</doxygen>

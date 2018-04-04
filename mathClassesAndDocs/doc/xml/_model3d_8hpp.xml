@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_model3d_8hpp" kind="file" language="C++">
+    <compoundname>Model3d.hpp</compoundname>
+    <includedby refid="_direction_cosines_8cpp" local="yes">DirectionCosines.cpp</includedby>
+    <includedby refid="_graph_8cpp" local="yes">Graph.cpp</includedby>
+    <includedby refid="_line_8cpp" local="yes">Line.cpp</includedby>
+    <includedby refid="_model3d_8cpp" local="yes">Model3d.cpp</includedby>
+    <includedby refid="_orthographic_views_8cpp" local="yes">OrthographicViews.cpp</includedby>
+    <includedby refid="_plane_8cpp" local="yes">Plane.cpp</includedby>
+    <includedby refid="_point_8cpp" local="yes">Point.cpp</includedby>
+    <includedby refid="_projection_8cpp" local="yes">Projection.cpp</includedby>
+    <invincdepgraph>
+      <node id="96">
+        <label>Point.cpp</label>
+        <link refid="_point_8cpp"/>
+      </node>
+      <node id="90">
+        <label>DirectionCosines.cpp</label>
+        <link refid="_direction_cosines_8cpp"/>
+      </node>
+      <node id="95">
+        <label>Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="91">
+        <label>Graph.cpp</label>
+        <link refid="_graph_8cpp"/>
+      </node>
+      <node id="89">
+        <label>Model3d.hpp</label>
+        <link refid="_model3d_8hpp"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>Line.cpp</label>
+        <link refid="_line_8cpp"/>
+      </node>
+      <node id="97">
+        <label>Projection.cpp</label>
+        <link refid="_projection_8cpp"/>
+      </node>
+      <node id="93">
+        <label>Model3d.cpp</label>
+        <link refid="_model3d_8cpp"/>
+      </node>
+      <node id="94">
+        <label>OrthographicViews.cpp</label>
+        <link refid="_orthographic_views_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_model3d" prot="public">Model3d</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Implementation<sp/>of<sp/>3DModel<sp/>class</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_MODEL3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_MODEL3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_model3d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_model3d" kindref="compound">Model3d</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="class_model3d_1a829515bcb9101d6cb75d9a7bd4ebe866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_graph" kindref="compound">Graph</ref><sp/><ref refid="class_model3d_1a829515bcb9101d6cb75d9a7bd4ebe866" kindref="member">G</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_model3d_1ab7f731b1e8f73853a6c20128789df465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_plane" kindref="compound">Plane</ref><sp/><ref refid="class_model3d_1ab7f731b1e8f73853a6c20128789df465" kindref="member">P</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_model3d_1a0b3566bc28cf3f7db521492d701ffc40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_model3d_1a0b3566bc28cf3f7db521492d701ffc40" kindref="member">O</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_model3d_1a25fe8f02e27963f4258e33e111767a91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DirectionCosine<sp/><ref refid="class_model3d_1a25fe8f02e27963f4258e33e111767a91" kindref="member">l1</ref>;</highlight></codeline>
+<codeline lineno="21" refid="class_model3d_1a5fdb6197364007eb98da77f39e19a5b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DirectionCosine<sp/><ref refid="class_model3d_1a5fdb6197364007eb98da77f39e19a5b2" kindref="member">l2</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_model3d_1a55a8acbf54092ba872e2ba06f719f9a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DirectionCosine<sp/><ref refid="class_model3d_1a55a8acbf54092ba872e2ba06f719f9a5" kindref="member">l3</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model3d_1a134d35fcc3e1097f4e8471a98a5f566b" kindref="member">Model3d</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model3d_1a7a4ec3be34c901538574d99d95a46b04" kindref="member">~Model3d</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model3d_1a763ebbdb844e7c934f7dc6935934586a" kindref="member">translate</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>p);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model3d_1afe2b497ef9666f0a8b96c8b2de97e7f7" kindref="member">rotate</ref>(<ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref><sp/>dc);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model3d_1a719baa4f43208450d99eb755465e55fa" kindref="member">scale</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref><sp/><ref refid="class_model3d_1a3291f4f760e39b1bf5b6e62a3ea3ed83" kindref="member">generateProjection</ref>(<ref refid="class_plane" kindref="compound">Plane</ref><sp/><ref refid="class_model3d_1ab7f731b1e8f73853a6c20128789df465" kindref="member">P</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_graph" kindref="compound">Graph</ref><sp/><ref refid="class_model3d_1af1a05008f590aa70b58a9d4ff02574a8" kindref="member">getGraph</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model3d_1a22625c8d30e89f11d8b11530db2e811f" kindref="member">render</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_model3d_1a442e583f7f65ba5b4883cd29325c9710" kindref="member">serialized</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model3d" kindref="compound">Model3d</ref><sp/><ref refid="class_model3d_1af45a652605d93085f253b044bfd34e1a" kindref="member">deserialize</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>INC_MODEL3D_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Model3d.hpp"/>
+  </compounddef>
+</doxygen>

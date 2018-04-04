@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_model3d" kind="class" language="C++" prot="public">
+    <compoundname>Model3d</compoundname>
+    <includes refid="_model3d_8hpp" local="no">Model3d.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_model3d_1a829515bcb9101d6cb75d9a7bd4ebe866" prot="public" static="no" mutable="no">
+        <type><ref refid="class_graph" kindref="compound">Graph</ref></type>
+        <definition>Graph Model3d::G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+<para><ref refid="class_graph" kindref="compound">Graph</ref> containing the nodes/points of the model. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="14" column="1" bodyfile="Model3d.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model3d_1ab7f731b1e8f73853a6c20128789df465" prot="public" static="no" mutable="no">
+        <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+        <definition>Plane Model3d::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="15" column="1" bodyfile="Model3d.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model3d_1a0b3566bc28cf3f7db521492d701ffc40" prot="public" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Model3d::O</definition>
+        <argsstring></argsstring>
+        <name>O</name>
+        <briefdescription>
+<para>defining the reference origin </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="17" column="1" bodyfile="Model3d.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model3d_1a25fe8f02e27963f4258e33e111767a91" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Model3d::l1</definition>
+        <argsstring></argsstring>
+        <name>l1</name>
+        <briefdescription>
+<para>defining the Direction cosines of reference axis 1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="19" column="1" bodyfile="Model3d.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model3d_1a5fdb6197364007eb98da77f39e19a5b2" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Model3d::l2</definition>
+        <argsstring></argsstring>
+        <name>l2</name>
+        <briefdescription>
+<para>defining the Direction cosines of reference axis 2 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="21" column="1" bodyfile="Model3d.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_model3d_1a55a8acbf54092ba872e2ba06f719f9a5" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Model3d::l3</definition>
+        <argsstring></argsstring>
+        <name>l3</name>
+        <briefdescription>
+<para>defining the Direction cosines of reference axis 3 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="23" column="1" bodyfile="Model3d.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_model3d_1a134d35fcc3e1097f4e8471a98a5f566b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Model3d::Model3d</definition>
+        <argsstring>()</argsstring>
+        <name>Model3d</name>
+        <briefdescription>
+<para>Constructor for 3d model. </para>        </briefdescription>
+        <detaileddescription>
+<para>A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges.</para><para>Constructor for 3d model </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="26" column="1" bodyfile="Model3d.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a7a4ec3be34c901538574d99d95a46b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Model3d::~Model3d</definition>
+        <argsstring>()</argsstring>
+        <name>~Model3d</name>
+        <briefdescription>
+<para>Destructor for 3d model. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="29" column="1" bodyfile="Model3d.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a763ebbdb844e7c934f7dc6935934586a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model3d::translate</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>translate</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Traslating the whole 3d model by a vector/point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="32" column="1" bodyfile="Model3d.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1afe2b497ef9666f0a8b96c8b2de97e7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model3d::rotate</definition>
+        <argsstring>(DirectionCosines dc)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type><ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref></type>
+          <declname>dc</declname>
+        </param>
+        <briefdescription>
+<para>Rotating the 3d model by given direction Cosines. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="35" column="1" bodyfile="Model3d.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a719baa4f43208450d99eb755465e55fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model3d::scale</definition>
+        <argsstring>(float factor)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>float</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Scale the 3d model by given factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="38" column="1" bodyfile="Model3d.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a3291f4f760e39b1bf5b6e62a3ea3ed83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref></type>
+        <definition>Projection Model3d::generateProjection</definition>
+        <argsstring>(Plane P)</argsstring>
+        <name>generateProjection</name>
+        <param>
+          <type><ref refid="class_plane" kindref="compound">Plane</ref></type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Generate a projection of the 3D model on the given plane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1af1a05008f590aa70b58a9d4ff02574a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_graph" kindref="compound">Graph</ref></type>
+        <definition>Graph Model3d::getGraph</definition>
+        <argsstring>()</argsstring>
+        <name>getGraph</name>
+        <briefdescription>
+<para>Return the graph of the 3D model. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a22625c8d30e89f11d8b11530db2e811f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Model3d::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+<para>Rendering of 3D model on the screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_model3d_1a442e583f7f65ba5b4883cd29325c9710" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Model3d::serialized</definition>
+        <argsstring>()</argsstring>
+        <name>serialized</name>
+        <briefdescription>
+<para>Getting the serialized version of object to store/transfer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_model3d_1af45a652605d93085f253b044bfd34e1a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_model3d" kindref="compound">Model3d</ref></type>
+        <definition>static Model3d Model3d::deserialize</definition>
+        <argsstring>(string s)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Getting the deserialized version of string to retrive object contents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Model3d.hpp" line="53" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>Point</label>
+        <link refid="class_point"/>
+      </node>
+      <node id="8">
+        <label>Model3d</label>
+        <link refid="class_model3d"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>P</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>O</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>G</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Graph</label>
+        <link refid="class_graph"/>
+      </node>
+      <node id="9">
+        <label>Plane</label>
+        <link refid="class_plane"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Model3d.hpp" line="11" column="1" bodyfile="Model3d.hpp" bodystart="10" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_model3d_1af45a652605d93085f253b044bfd34e1a" prot="public" virt="non-virtual"><scope>Model3d</scope><name>deserialize</name></member>
+      <member refid="class_model3d_1a829515bcb9101d6cb75d9a7bd4ebe866" prot="public" virt="non-virtual"><scope>Model3d</scope><name>G</name></member>
+      <member refid="class_model3d_1a3291f4f760e39b1bf5b6e62a3ea3ed83" prot="public" virt="non-virtual"><scope>Model3d</scope><name>generateProjection</name></member>
+      <member refid="class_model3d_1af1a05008f590aa70b58a9d4ff02574a8" prot="public" virt="non-virtual"><scope>Model3d</scope><name>getGraph</name></member>
+      <member refid="class_model3d_1a25fe8f02e27963f4258e33e111767a91" prot="public" virt="non-virtual"><scope>Model3d</scope><name>l1</name></member>
+      <member refid="class_model3d_1a5fdb6197364007eb98da77f39e19a5b2" prot="public" virt="non-virtual"><scope>Model3d</scope><name>l2</name></member>
+      <member refid="class_model3d_1a55a8acbf54092ba872e2ba06f719f9a5" prot="public" virt="non-virtual"><scope>Model3d</scope><name>l3</name></member>
+      <member refid="class_model3d_1a134d35fcc3e1097f4e8471a98a5f566b" prot="public" virt="non-virtual"><scope>Model3d</scope><name>Model3d</name></member>
+      <member refid="class_model3d_1a0b3566bc28cf3f7db521492d701ffc40" prot="public" virt="non-virtual"><scope>Model3d</scope><name>O</name></member>
+      <member refid="class_model3d_1ab7f731b1e8f73853a6c20128789df465" prot="public" virt="non-virtual"><scope>Model3d</scope><name>P</name></member>
+      <member refid="class_model3d_1a22625c8d30e89f11d8b11530db2e811f" prot="public" virt="non-virtual"><scope>Model3d</scope><name>render</name></member>
+      <member refid="class_model3d_1afe2b497ef9666f0a8b96c8b2de97e7f7" prot="public" virt="non-virtual"><scope>Model3d</scope><name>rotate</name></member>
+      <member refid="class_model3d_1a719baa4f43208450d99eb755465e55fa" prot="public" virt="non-virtual"><scope>Model3d</scope><name>scale</name></member>
+      <member refid="class_model3d_1a442e583f7f65ba5b4883cd29325c9710" prot="public" virt="non-virtual"><scope>Model3d</scope><name>serialized</name></member>
+      <member refid="class_model3d_1a763ebbdb844e7c934f7dc6935934586a" prot="public" virt="non-virtual"><scope>Model3d</scope><name>translate</name></member>
+      <member refid="class_model3d_1a7a4ec3be34c901538574d99d95a46b04" prot="public" virt="non-virtual"><scope>Model3d</scope><name>~Model3d</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,228 @@
+\hypertarget{class_model3d}{}\section{Model3d Class Reference}
+\label{class_model3d}\index{Model3d@{Model3d}}
+
+
+A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges.  
+
+
+
+
+{\ttfamily \#include $<$Model3d.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model3d_a134d35fcc3e1097f4e8471a98a5f566b}{Model3d}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for 3d model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model3d_a7a4ec3be34c901538574d99d95a46b04}{$\sim$\+Model3d}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for 3d model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model3d_a763ebbdb844e7c934f7dc6935934586a}{translate}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Traslating the whole 3d model by a vector/point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model3d_afe2b497ef9666f0a8b96c8b2de97e7f7}{rotate}} (\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}} dc)
+\begin{DoxyCompactList}\small\item\em Rotating the 3d model by given direction Cosines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model3d_a719baa4f43208450d99eb755465e55fa}{scale}} (float factor)
+\begin{DoxyCompactList}\small\item\em Scale the 3d model by given factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projection}{Projection}} \mbox{\hyperlink{class_model3d_a3291f4f760e39b1bf5b6e62a3ea3ed83}{generate\+Projection}} (\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_model3d_ab7f731b1e8f73853a6c20128789df465}{P}})
+\begin{DoxyCompactList}\small\item\em Generate a projection of the 3D model on the given plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_model3d_af1a05008f590aa70b58a9d4ff02574a8}{get\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Return the graph of the 3D model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model3d_a22625c8d30e89f11d8b11530db2e811f}{render}} ()
+\begin{DoxyCompactList}\small\item\em Rendering of 3D model on the screen. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model3d_a442e583f7f65ba5b4883cd29325c9710}{serialized}} ()
+\begin{DoxyCompactList}\small\item\em Getting the serialized version of object to store/transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_model3d}{Model3d}} \mbox{\hyperlink{class_model3d_af45a652605d93085f253b044bfd34e1a}{deserialize}} (string s)
+\begin{DoxyCompactList}\small\item\em Getting the deserialized version of string to retrive object contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_model3d_a829515bcb9101d6cb75d9a7bd4ebe866}{G}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_graph}{Graph}} containing the nodes/points of the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_model3d_ab7f731b1e8f73853a6c20128789df465}{P}}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_model3d_a0b3566bc28cf3f7db521492d701ffc40}{O}}
+\begin{DoxyCompactList}\small\item\em defining the reference origin \end{DoxyCompactList}\item 
+Direction\+Cosine \mbox{\hyperlink{class_model3d_a25fe8f02e27963f4258e33e111767a91}{l1}}
+\begin{DoxyCompactList}\small\item\em defining the Direction cosines of reference axis 1 \end{DoxyCompactList}\item 
+Direction\+Cosine \mbox{\hyperlink{class_model3d_a5fdb6197364007eb98da77f39e19a5b2}{l2}}
+\begin{DoxyCompactList}\small\item\em defining the Direction cosines of reference axis 2 \end{DoxyCompactList}\item 
+Direction\+Cosine \mbox{\hyperlink{class_model3d_a55a8acbf54092ba872e2ba06f719f9a5}{l3}}
+\begin{DoxyCompactList}\small\item\em defining the Direction cosines of reference axis 3 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model3d_a134d35fcc3e1097f4e8471a98a5f566b}\label{class_model3d_a134d35fcc3e1097f4e8471a98a5f566b}} 
+\index{Model3d@{Model3d}!Model3d@{Model3d}}
+\index{Model3d@{Model3d}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{Model3d()}{Model3d()}}
+{\footnotesize\ttfamily Model3d\+::\+Model3d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for 3d model. 
+
+A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges.
+
+Constructor for 3d model \mbox{\Hypertarget{class_model3d_a7a4ec3be34c901538574d99d95a46b04}\label{class_model3d_a7a4ec3be34c901538574d99d95a46b04}} 
+\index{Model3d@{Model3d}!````~Model3d@{$\sim$\+Model3d}}
+\index{````~Model3d@{$\sim$\+Model3d}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{$\sim$\+Model3d()}{~Model3d()}}
+{\footnotesize\ttfamily Model3d\+::$\sim$\+Model3d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for 3d model. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model3d_af45a652605d93085f253b044bfd34e1a}\label{class_model3d_af45a652605d93085f253b044bfd34e1a}} 
+\index{Model3d@{Model3d}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_model3d}{Model3d}} Model3d\+::deserialize (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Getting the deserialized version of string to retrive object contents. 
+
+\mbox{\Hypertarget{class_model3d_a3291f4f760e39b1bf5b6e62a3ea3ed83}\label{class_model3d_a3291f4f760e39b1bf5b6e62a3ea3ed83}} 
+\index{Model3d@{Model3d}!generate\+Projection@{generate\+Projection}}
+\index{generate\+Projection@{generate\+Projection}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{generate\+Projection()}{generateProjection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projection}{Projection}} Model3d\+::generate\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Generate a projection of the 3D model on the given plane. 
+
+\mbox{\Hypertarget{class_model3d_af1a05008f590aa70b58a9d4ff02574a8}\label{class_model3d_af1a05008f590aa70b58a9d4ff02574a8}} 
+\index{Model3d@{Model3d}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{get\+Graph()}{getGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Model3d\+::get\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the graph of the 3D model. 
+
+\mbox{\Hypertarget{class_model3d_a22625c8d30e89f11d8b11530db2e811f}\label{class_model3d_a22625c8d30e89f11d8b11530db2e811f}} 
+\index{Model3d@{Model3d}!render@{render}}
+\index{render@{render}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Model3d\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rendering of 3D model on the screen. 
+
+\mbox{\Hypertarget{class_model3d_afe2b497ef9666f0a8b96c8b2de97e7f7}\label{class_model3d_afe2b497ef9666f0a8b96c8b2de97e7f7}} 
+\index{Model3d@{Model3d}!rotate@{rotate}}
+\index{rotate@{rotate}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Model3d\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_direction_cosines}{Direction\+Cosines}}}]{dc }\end{DoxyParamCaption})}
+
+
+
+Rotating the 3d model by given direction Cosines. 
+
+\mbox{\Hypertarget{class_model3d_a719baa4f43208450d99eb755465e55fa}\label{class_model3d_a719baa4f43208450d99eb755465e55fa}} 
+\index{Model3d@{Model3d}!scale@{scale}}
+\index{scale@{scale}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Model3d\+::scale (\begin{DoxyParamCaption}\item[{float}]{factor }\end{DoxyParamCaption})}
+
+
+
+Scale the 3d model by given factor. 
+
+\mbox{\Hypertarget{class_model3d_a442e583f7f65ba5b4883cd29325c9710}\label{class_model3d_a442e583f7f65ba5b4883cd29325c9710}} 
+\index{Model3d@{Model3d}!serialized@{serialized}}
+\index{serialized@{serialized}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{serialized()}{serialized()}}
+{\footnotesize\ttfamily string Model3d\+::serialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getting the serialized version of object to store/transfer. 
+
+\mbox{\Hypertarget{class_model3d_a763ebbdb844e7c934f7dc6935934586a}\label{class_model3d_a763ebbdb844e7c934f7dc6935934586a}} 
+\index{Model3d@{Model3d}!translate@{translate}}
+\index{translate@{translate}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Model3d\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Traslating the whole 3d model by a vector/point. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_model3d_a829515bcb9101d6cb75d9a7bd4ebe866}\label{class_model3d_a829515bcb9101d6cb75d9a7bd4ebe866}} 
+\index{Model3d@{Model3d}!G@{G}}
+\index{G@{G}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Model3d\+::G}
+
+
+
+\mbox{\hyperlink{class_graph}{Graph}} containing the nodes/points of the model. 
+
+\mbox{\Hypertarget{class_model3d_a25fe8f02e27963f4258e33e111767a91}\label{class_model3d_a25fe8f02e27963f4258e33e111767a91}} 
+\index{Model3d@{Model3d}!l1@{l1}}
+\index{l1@{l1}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{l1}{l1}}
+{\footnotesize\ttfamily Direction\+Cosine Model3d\+::l1}
+
+
+
+defining the Direction cosines of reference axis 1 
+
+\mbox{\Hypertarget{class_model3d_a5fdb6197364007eb98da77f39e19a5b2}\label{class_model3d_a5fdb6197364007eb98da77f39e19a5b2}} 
+\index{Model3d@{Model3d}!l2@{l2}}
+\index{l2@{l2}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{l2}{l2}}
+{\footnotesize\ttfamily Direction\+Cosine Model3d\+::l2}
+
+
+
+defining the Direction cosines of reference axis 2 
+
+\mbox{\Hypertarget{class_model3d_a55a8acbf54092ba872e2ba06f719f9a5}\label{class_model3d_a55a8acbf54092ba872e2ba06f719f9a5}} 
+\index{Model3d@{Model3d}!l3@{l3}}
+\index{l3@{l3}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{l3}{l3}}
+{\footnotesize\ttfamily Direction\+Cosine Model3d\+::l3}
+
+
+
+defining the Direction cosines of reference axis 3 
+
+\mbox{\Hypertarget{class_model3d_a0b3566bc28cf3f7db521492d701ffc40}\label{class_model3d_a0b3566bc28cf3f7db521492d701ffc40}} 
+\index{Model3d@{Model3d}!O@{O}}
+\index{O@{O}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{O}{O}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Model3d\+::O}
+
+
+
+defining the reference origin 
+
+\mbox{\Hypertarget{class_model3d_ab7f731b1e8f73853a6c20128789df465}\label{class_model3d_ab7f731b1e8f73853a6c20128789df465}} 
+\index{Model3d@{Model3d}!P@{P}}
+\index{P@{P}!Model3d@{Model3d}}
+\subsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} Model3d\+::P}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_model3d_8hpp}{Model3d.\+hpp}}\item 
+\mbox{\hyperlink{_model3d_8cpp}{Model3d.\+cpp}}\end{DoxyCompactItemize}

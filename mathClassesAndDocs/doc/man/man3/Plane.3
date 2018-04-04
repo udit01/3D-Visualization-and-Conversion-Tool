@@ -1,0 +1,104 @@
+.TH "Plane" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Plane \- A Class for representation of a plane in the 3D space\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Plane\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlane\fP (float a, float b, float c, float d)"
+.br
+.RI "Constructor for plane in form of ax + by + cz + d = 0\&. "
+.ti -1c
+.RI "\fBPlane\fP (\fBLine\fP \fBl\fP, \fBPoint\fP \fBp\fP)"
+.br
+.RI "Constructor for plane in from of it's normal line l and the point p\&. "
+.ti -1c
+.RI "\fBPlane\fP (\fBPoint\fP p1, \fBPoint\fP p2, \fBPoint\fP p3)"
+.br
+.RI "Constructor for plane in form of 3 points p1, p2, p3 lying on it\&. "
+.ti -1c
+.RI "\fB~Plane\fP ()"
+.br
+.RI "Destructor for the plane\&. "
+.ti -1c
+.RI "bool \fBisParallelToPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns True if a plane is parallel to another plane\&. "
+.ti -1c
+.RI "bool \fBisPerpendicularToPlane\fP (\fBPlane\fP P)"
+.br
+.RI "Returns True if a plane is perpendicular to another plane\&. "
+.ti -1c
+.RI "\fBLine\fP \fBlineOfIntersection\fP (\fBPlane\fP P)"
+.br
+.RI "Returns the line of intersection of two Non-Parallel Planes, otherwise null\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "DirectionCosine \fBl\fP"
+.br
+.RI "the direction cosines of the normal to the plane "
+.ti -1c
+.RI "\fBPoint\fP \fBp\fP"
+.br
+.RI "a point that lies on the plane to fix it to a location in the space "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Class for representation of a plane in the 3D space\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Plane::Plane (float a, float b, float c, float d)"
+
+.PP
+Constructor for plane in form of ax + by + cz + d = 0\&. 
+.SS "Plane::Plane (\fBLine\fP l, \fBPoint\fP p)"
+
+.PP
+Constructor for plane in from of it's normal line l and the point p\&. 
+.SS "Plane::Plane (\fBPoint\fP p1, \fBPoint\fP p2, \fBPoint\fP p3)"
+
+.PP
+Constructor for plane in form of 3 points p1, p2, p3 lying on it\&. 
+.SS "Plane::~Plane ()"
+
+.PP
+Destructor for the plane\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Plane::isParallelToPlane (\fBPlane\fP P)"
+
+.PP
+Returns True if a plane is parallel to another plane\&. 
+.SS "bool Plane::isPerpendicularToPlane (\fBPlane\fP P)"
+
+.PP
+Returns True if a plane is perpendicular to another plane\&. 
+.SS "\fBLine\fP Plane::lineOfIntersection (\fBPlane\fP P)"
+
+.PP
+Returns the line of intersection of two Non-Parallel Planes, otherwise null\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "DirectionCosine Plane::l"
+
+.PP
+the direction cosines of the normal to the plane 
+.SS "\fBPoint\fP Plane::p"
+
+.PP
+a point that lies on the plane to fix it to a location in the space 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

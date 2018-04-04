@@ -1,0 +1,163 @@
+.TH "Model3d" 3 "Mon Mar 5 2018" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Model3d \- A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Model3d\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModel3d\fP ()"
+.br
+.RI "Constructor for 3d model\&. "
+.ti -1c
+.RI "\fB~Model3d\fP ()"
+.br
+.RI "Destructor for 3d model\&. "
+.ti -1c
+.RI "void \fBtranslate\fP (\fBPoint\fP p)"
+.br
+.RI "Traslating the whole 3d model by a vector/point\&. "
+.ti -1c
+.RI "void \fBrotate\fP (\fBDirectionCosines\fP dc)"
+.br
+.RI "Rotating the 3d model by given direction Cosines\&. "
+.ti -1c
+.RI "void \fBscale\fP (float factor)"
+.br
+.RI "Scale the 3d model by given factor\&. "
+.ti -1c
+.RI "\fBProjection\fP \fBgenerateProjection\fP (\fBPlane\fP \fBP\fP)"
+.br
+.RI "Generate a projection of the 3D model on the given plane\&. "
+.ti -1c
+.RI "\fBGraph\fP \fBgetGraph\fP ()"
+.br
+.RI "Return the graph of the 3D model\&. "
+.ti -1c
+.RI "void \fBrender\fP ()"
+.br
+.RI "Rendering of 3D model on the screen\&. "
+.ti -1c
+.RI "string \fBserialized\fP ()"
+.br
+.RI "Getting the serialized version of object to store/transfer\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBModel3d\fP \fBdeserialize\fP (string s)"
+.br
+.RI "Getting the deserialized version of string to retrive object contents\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGraph\fP \fBG\fP"
+.br
+.RI "\fBGraph\fP containing the nodes/points of the model\&. "
+.ti -1c
+.RI "\fBPlane\fP \fBP\fP"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBO\fP"
+.br
+.RI "defining the reference origin "
+.ti -1c
+.RI "DirectionCosine \fBl1\fP"
+.br
+.RI "defining the Direction cosines of reference axis 1 "
+.ti -1c
+.RI "DirectionCosine \fBl2\fP"
+.br
+.RI "defining the Direction cosines of reference axis 2 "
+.ti -1c
+.RI "DirectionCosine \fBl3\fP"
+.br
+.RI "defining the Direction cosines of reference axis 3 "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Model3d::Model3d ()"
+
+.PP
+Constructor for 3d model\&. A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges\&.
+.PP
+Constructor for 3d model 
+.SS "Model3d::~Model3d ()"
+
+.PP
+Destructor for 3d model\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBModel3d\fP Model3d::deserialize (string s)\fC [static]\fP"
+
+.PP
+Getting the deserialized version of string to retrive object contents\&. 
+.SS "\fBProjection\fP Model3d::generateProjection (\fBPlane\fP P)"
+
+.PP
+Generate a projection of the 3D model on the given plane\&. 
+.SS "\fBGraph\fP Model3d::getGraph ()"
+
+.PP
+Return the graph of the 3D model\&. 
+.SS "void Model3d::render ()"
+
+.PP
+Rendering of 3D model on the screen\&. 
+.SS "void Model3d::rotate (\fBDirectionCosines\fP dc)"
+
+.PP
+Rotating the 3d model by given direction Cosines\&. 
+.SS "void Model3d::scale (float factor)"
+
+.PP
+Scale the 3d model by given factor\&. 
+.SS "string Model3d::serialized ()"
+
+.PP
+Getting the serialized version of object to store/transfer\&. 
+.SS "void Model3d::translate (\fBPoint\fP p)"
+
+.PP
+Traslating the whole 3d model by a vector/point\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBGraph\fP Model3d::G"
+
+.PP
+\fBGraph\fP containing the nodes/points of the model\&. 
+.SS "DirectionCosine Model3d::l1"
+
+.PP
+defining the Direction cosines of reference axis 1 
+.SS "DirectionCosine Model3d::l2"
+
+.PP
+defining the Direction cosines of reference axis 2 
+.SS "DirectionCosine Model3d::l3"
+
+.PP
+defining the Direction cosines of reference axis 3 
+.SS "\fBPoint\fP Model3d::O"
+
+.PP
+defining the reference origin 
+.SS "\fBPlane\fP Model3d::P"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

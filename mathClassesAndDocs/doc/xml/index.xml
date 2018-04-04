@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_direction_cosines" kind="class"><name>DirectionCosines</name>
+    <member refid="class_direction_cosines_1a6fde43a3e699635fecf3296c72fe7045" kind="variable"><name>xl</name></member>
+    <member refid="class_direction_cosines_1a277b009af5e287e276d445a6aecef108" kind="variable"><name>yl</name></member>
+    <member refid="class_direction_cosines_1afb263bbd031ba13d68380e367403ec65" kind="variable"><name>zl</name></member>
+    <member refid="class_direction_cosines_1a0b0eae6aaa802ed4eed8a163a7da960a" kind="function"><name>DirectionCosine</name></member>
+    <member refid="class_direction_cosines_1a595e87c5e381f0d877eee26ba75283c7" kind="function"><name>~DirectionCosines</name></member>
+    <member refid="class_direction_cosines_1a734a1153319e8e5b16d794085a74fe21" kind="function"><name>dotProduct</name></member>
+    <member refid="class_direction_cosines_1afc5844a79ed93bc86c96ce5c303d816a" kind="function"><name>crossProduct</name></member>
+  </compound>
+  <compound refid="class_graph" kind="class"><name>Graph</name>
+    <member refid="class_graph_1abbffb935f6c2c6723a149d70bdb0762f" kind="variable"><name>Node</name></member>
+    <member refid="class_graph_1aa8bbd434abc0c7a804ad7687b3ec2511" kind="variable"><name>EdgeSet</name></member>
+    <member refid="class_graph_1ae4c72b8ac4d693c49800a4c7e273654f" kind="function"><name>Graph</name></member>
+    <member refid="class_graph_1a902c5b3eacb66d60752525ab23297a95" kind="function"><name>~Graph</name></member>
+    <member refid="class_graph_1ae807fc072ac3e93c9718ee326a0d0822" kind="function"><name>containsNode</name></member>
+    <member refid="class_graph_1af7eefeaacac324886fa73f3a2e85f20a" kind="function"><name>containsEdge</name></member>
+    <member refid="class_graph_1aaf5ccb68d053bd64b6b057783c99608c" kind="function"><name>addNode</name></member>
+    <member refid="class_graph_1a5c30bae1d7a0bbb2f9d9f0d5ad40f78f" kind="function"><name>addEdge</name></member>
+    <member refid="class_graph_1a285f720a5e75fc099dcc32fd4a37786a" kind="function"><name>updateNode</name></member>
+    <member refid="class_graph_1a74d50f92f6f2291675020e038132c85f" kind="function"><name>deleteNode</name></member>
+    <member refid="class_graph_1a39031d4b9f6527501333e612cb91cca6" kind="function"><name>deleteEdge</name></member>
+  </compound>
+  <compound refid="class_line" kind="class"><name>Line</name>
+    <member refid="class_line_1a03e62995fcb8f2cdd535b19f38dc7beb" kind="variable"><name>l</name></member>
+    <member refid="class_line_1ade526d53a83ae2cfad4472affeb9ce8d" kind="variable"><name>p</name></member>
+    <member refid="class_line_1ae24f583f6e61000f88a20205e9b7cf1c" kind="function"><name>Line</name></member>
+    <member refid="class_line_1afeaa676c7d249d582c5766dc732a78e2" kind="function"><name>Line</name></member>
+    <member refid="class_line_1aabe85f48d22d92b62257091f48174fac" kind="function"><name>~Line</name></member>
+    <member refid="class_line_1a8059ce73fc21fafe0ea87939d7d20895" kind="function"><name>isParallel</name></member>
+    <member refid="class_line_1adf08ea54b857c27d783321a3e6858222" kind="function"><name>isPerpendicular</name></member>
+    <member refid="class_line_1aefe5ec3e42ab38c1f60e65ca09f0fd29" kind="function"><name>angleWithLine</name></member>
+    <member refid="class_line_1abd11dc16386ee1d5424deac55dea0d1b" kind="function"><name>angleWithPlane</name></member>
+    <member refid="class_line_1af20457df1ce948794350fab12c16ee14" kind="function"><name>projectionOnPlane</name></member>
+    <member refid="class_line_1a12787f5d97b7764c5b1836fb9007fb86" kind="function"><name>imageInPlane</name></member>
+    <member refid="class_line_1aad7d2a0b6ac395a1bd81d55dd2b7a81d" kind="function"><name>liesInPlane</name></member>
+    <member refid="class_line_1a01b3547f05e338ab7d7a4989d379c432" kind="function"><name>intersects</name></member>
+    <member refid="class_line_1a3abb028a100196d85dd2674c3ef86421" kind="function"><name>pointOfIntersection</name></member>
+    <member refid="class_line_1af5a77b743d209b9aad7b92d1fe2b786a" kind="function"><name>pointOfIntersection</name></member>
+    <member refid="class_line_1a959d5169229a29c786deb42848ac8a1f" kind="function"><name>lineOfShortestDistance</name></member>
+  </compound>
+  <compound refid="class_model3d" kind="class"><name>Model3d</name>
+    <member refid="class_model3d_1a829515bcb9101d6cb75d9a7bd4ebe866" kind="variable"><name>G</name></member>
+    <member refid="class_model3d_1ab7f731b1e8f73853a6c20128789df465" kind="variable"><name>P</name></member>
+    <member refid="class_model3d_1a0b3566bc28cf3f7db521492d701ffc40" kind="variable"><name>O</name></member>
+    <member refid="class_model3d_1a25fe8f02e27963f4258e33e111767a91" kind="variable"><name>l1</name></member>
+    <member refid="class_model3d_1a5fdb6197364007eb98da77f39e19a5b2" kind="variable"><name>l2</name></member>
+    <member refid="class_model3d_1a55a8acbf54092ba872e2ba06f719f9a5" kind="variable"><name>l3</name></member>
+    <member refid="class_model3d_1a134d35fcc3e1097f4e8471a98a5f566b" kind="function"><name>Model3d</name></member>
+    <member refid="class_model3d_1a7a4ec3be34c901538574d99d95a46b04" kind="function"><name>~Model3d</name></member>
+    <member refid="class_model3d_1a763ebbdb844e7c934f7dc6935934586a" kind="function"><name>translate</name></member>
+    <member refid="class_model3d_1afe2b497ef9666f0a8b96c8b2de97e7f7" kind="function"><name>rotate</name></member>
+    <member refid="class_model3d_1a719baa4f43208450d99eb755465e55fa" kind="function"><name>scale</name></member>
+    <member refid="class_model3d_1a3291f4f760e39b1bf5b6e62a3ea3ed83" kind="function"><name>generateProjection</name></member>
+    <member refid="class_model3d_1af1a05008f590aa70b58a9d4ff02574a8" kind="function"><name>getGraph</name></member>
+    <member refid="class_model3d_1a22625c8d30e89f11d8b11530db2e811f" kind="function"><name>render</name></member>
+    <member refid="class_model3d_1a442e583f7f65ba5b4883cd29325c9710" kind="function"><name>serialized</name></member>
+    <member refid="class_model3d_1af45a652605d93085f253b044bfd34e1a" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="class_orthographic_views" kind="class"><name>OrthographicViews</name>
+    <member refid="class_orthographic_views_1aaa57dea71b11b77101a5d8d2af776917" kind="variable"><name>xy</name></member>
+    <member refid="class_orthographic_views_1a2d66490dec17aef63631491437e30125" kind="variable"><name>yz</name></member>
+    <member refid="class_orthographic_views_1a4aa367ed88820282a04846786007f153" kind="variable"><name>zx</name></member>
+    <member refid="class_orthographic_views_1af414df37b5977b4486b8d0351f142a7f" kind="variable"><name>areLabelled</name></member>
+    <member refid="class_orthographic_views_1a899ce5fc9774fbf68cd35d2b4bda3d2c" kind="variable"><name>NumProjections</name></member>
+    <member refid="class_orthographic_views_1a4698ffe80819cb2106f61a336590256a" kind="function"><name>OrthographicViews</name></member>
+    <member refid="class_orthographic_views_1ab6d622dcf326ace286b1bfea8cbdb75e" kind="function"><name>~OrthographicViews</name></member>
+    <member refid="class_orthographic_views_1a207741d30f67bf0da1356c10cc819731" kind="function"><name>serialize</name></member>
+    <member refid="class_orthographic_views_1ab169cb6a89b9575d7814a683240567ac" kind="function"><name>generateWireFrame</name></member>
+    <member refid="class_orthographic_views_1a1048d31d2a202a8b5bc40a459d86e43b" kind="function"><name>convertTo3D</name></member>
+    <member refid="class_orthographic_views_1a9e5f48f91dd92b22ce9418663cdbf8f8" kind="function"><name>display</name></member>
+    <member refid="class_orthographic_views_1a81792a7d224bada0a04d0917cc5d7a53" kind="function"><name>checkValid</name></member>
+    <member refid="class_orthographic_views_1a242a3d205d29bc903936d31d97a5cf4a" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="class_plane" kind="class"><name>Plane</name>
+    <member refid="class_plane_1aafdc7fc15019da566e4cdf760f1eaf17" kind="variable"><name>l</name></member>
+    <member refid="class_plane_1ad289dccce2529d46275e4fb6878a8625" kind="variable"><name>p</name></member>
+    <member refid="class_plane_1a9a1420228e8baa632c7e8ba66f27772f" kind="function"><name>Plane</name></member>
+    <member refid="class_plane_1aa3f7f255d3a4118e39ae6f0f6fd6e908" kind="function"><name>Plane</name></member>
+    <member refid="class_plane_1a14592fa1140200468ddcbeb5ace8dde6" kind="function"><name>Plane</name></member>
+    <member refid="class_plane_1a69abd86051c880dcb44b249ad10c4436" kind="function"><name>~Plane</name></member>
+    <member refid="class_plane_1ab00163f615128de1c6bddd2169995e0a" kind="function"><name>isParallelToPlane</name></member>
+    <member refid="class_plane_1a6b175c15e8964820c56686aa19bf18e8" kind="function"><name>isPerpendicularToPlane</name></member>
+    <member refid="class_plane_1a04a259828a74830947a30834885b9240" kind="function"><name>lineOfIntersection</name></member>
+  </compound>
+  <compound refid="class_point" kind="class"><name>Point</name>
+    <member refid="class_point_1a05dfe2dfbde813ad234b514f30e662f1" kind="variable"><name>x</name></member>
+    <member refid="class_point_1a6101960c8d2d4e8ea1d32c9234bbeb8d" kind="variable"><name>y</name></member>
+    <member refid="class_point_1a9a666531e0e99adff132be93d2407d0c" kind="variable"><name>z</name></member>
+    <member refid="class_point_1a1e929419353f9bec46732af977adb55a" kind="variable"><name>label</name></member>
+    <member refid="class_point_1a30bc8409287de4f43e160664be834636" kind="function"><name>Point</name></member>
+    <member refid="class_point_1aede82dc8eff80efec382853ecd2d31b0" kind="function"><name>Point</name></member>
+    <member refid="class_point_1a405838cb39b8fb6119633d9ba7e6b4fb" kind="function"><name>Point</name></member>
+    <member refid="class_point_1a1336b3425f9c080d170f036c336eaa64" kind="function"><name>Point</name></member>
+    <member refid="class_point_1a395fa04b4ec126b66fc053f829a30cc1" kind="function"><name>~Point</name></member>
+    <member refid="class_point_1a94bcbad2f7120c466739610bfd84932c" kind="function"><name>distanceFromPoint</name></member>
+    <member refid="class_point_1a4975f26f6258a4d5ebd57d180f7677fd" kind="function"><name>distanceFromLine</name></member>
+    <member refid="class_point_1a965dffb2059032cc1ce8c1a33c4d6684" kind="function"><name>distanceFromPlane</name></member>
+    <member refid="class_point_1addde199c01d6de0ce974fd7b89e4cba4" kind="function"><name>liesOnLine</name></member>
+    <member refid="class_point_1ace2ed8e26893f5659e9f4fe94dc67094" kind="function"><name>liesOnPlane</name></member>
+    <member refid="class_point_1a61cefcc9a49eed720f97ccea7bed5981" kind="function"><name>projectionOnLine</name></member>
+    <member refid="class_point_1a6db21f293bd4a7eab01b04882a5021fd" kind="function"><name>imageInLine</name></member>
+    <member refid="class_point_1a1085bffb18e2e514d415cdcc2fdb0aff" kind="function"><name>projectionOnPlane</name></member>
+    <member refid="class_point_1a2350375c6bb6c3bb810ae79c99d2a53c" kind="function"><name>imageInPlane</name></member>
+    <member refid="class_point_1a8a2ee9e0febd224f86391229e77c2aee" kind="function"><name>add</name></member>
+    <member refid="class_point_1ab1d94b20de98b5e73345599d33145195" kind="function"><name>sub</name></member>
+    <member refid="class_point_1acf25ade0104bfa1c292eeb2da4d5aa2c" kind="function"><name>dotProduct</name></member>
+    <member refid="class_point_1a99b9491fe4a5527eff77a2db8bd01ecf" kind="function"><name>crossProduct</name></member>
+    <member refid="class_point_1acf38257ee8ba425115bab283b777ad17" kind="function"><name>translate</name></member>
+    <member refid="class_point_1a3f42404773430a36407ee22224518f39" kind="function"><name>rotate</name></member>
+  </compound>
+  <compound refid="class_projection" kind="class"><name>Projection</name>
+    <member refid="class_projection_1a60e6ed7cb3fbdf833d22bbfaa044be42" kind="variable"><name>G</name></member>
+    <member refid="class_projection_1a9400a70d8820176f4731eae11fce8ca2" kind="variable"><name>O</name></member>
+    <member refid="class_projection_1a2fdb6f244ddff5e2201c62df694aaae4" kind="variable"><name>l1</name></member>
+    <member refid="class_projection_1a70ac3592a798a01019ec35ba2c3247ea" kind="variable"><name>l2</name></member>
+    <member refid="class_projection_1ae1fb2fe53361eef4e3e8d44dcd710be2" kind="function"><name>serialize</name></member>
+    <member refid="class_projection_1aba50a4b61db55f82caec3fd15d6c6e61" kind="function"><name>scale</name></member>
+    <member refid="class_projection_1a3e6794ba355fe9bd6e5d42d7133c8be4" kind="function"><name>rotate</name></member>
+    <member refid="class_projection_1ae8e33f2b836aff2c24b148c1308f1789" kind="function"><name>translate</name></member>
+    <member refid="class_projection_1ae99d107febc961e7ae8232623d930b82" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_direction_cosines_8cpp" kind="file"><name>DirectionCosines.cpp</name>
+  </compound>
+  <compound refid="_direction_cosines_8hpp" kind="file"><name>DirectionCosines.hpp</name>
+  </compound>
+  <compound refid="_graph_8cpp" kind="file"><name>Graph.cpp</name>
+  </compound>
+  <compound refid="_graph_8hpp" kind="file"><name>Graph.hpp</name>
+  </compound>
+  <compound refid="_line_8cpp" kind="file"><name>Line.cpp</name>
+  </compound>
+  <compound refid="_line_8hpp" kind="file"><name>Line.hpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_model3d_8cpp" kind="file"><name>Model3d.cpp</name>
+  </compound>
+  <compound refid="_model3d_8hpp" kind="file"><name>Model3d.hpp</name>
+  </compound>
+  <compound refid="_orthographic_views_8cpp" kind="file"><name>OrthographicViews.cpp</name>
+  </compound>
+  <compound refid="_orthographic_views_8hpp" kind="file"><name>OrthographicViews.hpp</name>
+  </compound>
+  <compound refid="_plane_8cpp" kind="file"><name>Plane.cpp</name>
+  </compound>
+  <compound refid="_plane_8hpp" kind="file"><name>Plane.hpp</name>
+  </compound>
+  <compound refid="_point_8cpp" kind="file"><name>Point.cpp</name>
+  </compound>
+  <compound refid="_point_8hpp" kind="file"><name>Point.hpp</name>
+  </compound>
+  <compound refid="_projection_8cpp" kind="file"><name>Projection.cpp</name>
+  </compound>
+  <compound refid="_projection_8hpp" kind="file"><name>Projection.hpp</name>
+  </compound>
+</doxygenindex>

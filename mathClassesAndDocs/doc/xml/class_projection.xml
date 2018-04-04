@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_projection" kind="class" language="C++" prot="public">
+    <compoundname>Projection</compoundname>
+    <includes refid="_projection_8hpp" local="no">Projection.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projection_1a60e6ed7cb3fbdf833d22bbfaa044be42" prot="public" static="no" mutable="no">
+        <type><ref refid="class_graph" kindref="compound">Graph</ref></type>
+        <definition>Graph Projection::G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+<para>defining a graph </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="14" column="1" bodyfile="Projection.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_1a9400a70d8820176f4731eae11fce8ca2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Projection::O</definition>
+        <argsstring></argsstring>
+        <name>O</name>
+        <briefdescription>
+<para>defining the reference origin </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="16" column="1" bodyfile="Projection.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_1a2fdb6f244ddff5e2201c62df694aaae4" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Projection::l1</definition>
+        <argsstring></argsstring>
+        <name>l1</name>
+        <briefdescription>
+<para>defining the Direction cosines of reference axis 1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="18" column="1" bodyfile="Projection.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projection_1a70ac3592a798a01019ec35ba2c3247ea" prot="public" static="no" mutable="no">
+        <type>DirectionCosine</type>
+        <definition>DirectionCosine Projection::l2</definition>
+        <argsstring></argsstring>
+        <name>l2</name>
+        <briefdescription>
+<para>defining the Direction cosines of reference axis 2 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="20" column="1" bodyfile="Projection.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projection_1ae1fb2fe53361eef4e3e8d44dcd710be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Projection::serialize</definition>
+        <argsstring>()</argsstring>
+        <name>serialize</name>
+        <briefdescription>
+<para>Serializes the <ref refid="class_projection" kindref="compound">Projection</ref> object for storage/transfer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="24" column="1" bodyfile="Projection.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_1aba50a4b61db55f82caec3fd15d6c6e61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Projection::scale</definition>
+        <argsstring>(float factor)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>float</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>scales the view by the specified factor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="30" column="1" bodyfile="Projection.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_1a3e6794ba355fe9bd6e5d42d7133c8be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Projection::rotate</definition>
+        <argsstring>(DirectionCosines dc)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type><ref refid="class_direction_cosines" kindref="compound">DirectionCosines</ref></type>
+          <declname>dc</declname>
+        </param>
+        <briefdescription>
+<para>rotates the view anticlockwise by the specifies angles </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="33" column="1" bodyfile="Projection.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projection_1ae8e33f2b836aff2c24b148c1308f1789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Projection::translate</definition>
+        <argsstring>(Point p)</argsstring>
+        <name>translate</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>translates the view by the given vector/point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="36" column="1" bodyfile="Projection.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_projection_1ae99d107febc961e7ae8232623d930b82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_projection" kindref="compound">Projection</ref></type>
+        <definition>static Projection Projection::deserialize</definition>
+        <argsstring>(string s)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes the String object , makes this object from string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Projection.hpp" line="27" column="1" bodyfile="Projection.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_projection" kindref="compound">Projection</ref> Class which simply defines the detailed graph required for our software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="24">
+        <label>Point</label>
+        <link refid="class_point"/>
+      </node>
+      <node id="23">
+        <label>Projection</label>
+        <link refid="class_projection"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>O</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>G</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Graph</label>
+        <link refid="class_graph"/>
+      </node>
+    </collaborationgraph>
+    <location file="Projection.hpp" line="11" column="1" bodyfile="Projection.hpp" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_projection_1ae99d107febc961e7ae8232623d930b82" prot="public" virt="non-virtual"><scope>Projection</scope><name>deserialize</name></member>
+      <member refid="class_projection_1a60e6ed7cb3fbdf833d22bbfaa044be42" prot="public" virt="non-virtual"><scope>Projection</scope><name>G</name></member>
+      <member refid="class_projection_1a2fdb6f244ddff5e2201c62df694aaae4" prot="public" virt="non-virtual"><scope>Projection</scope><name>l1</name></member>
+      <member refid="class_projection_1a70ac3592a798a01019ec35ba2c3247ea" prot="public" virt="non-virtual"><scope>Projection</scope><name>l2</name></member>
+      <member refid="class_projection_1a9400a70d8820176f4731eae11fce8ca2" prot="public" virt="non-virtual"><scope>Projection</scope><name>O</name></member>
+      <member refid="class_projection_1a3e6794ba355fe9bd6e5d42d7133c8be4" prot="public" virt="non-virtual"><scope>Projection</scope><name>rotate</name></member>
+      <member refid="class_projection_1aba50a4b61db55f82caec3fd15d6c6e61" prot="public" virt="non-virtual"><scope>Projection</scope><name>scale</name></member>
+      <member refid="class_projection_1ae1fb2fe53361eef4e3e8d44dcd710be2" prot="public" virt="non-virtual"><scope>Projection</scope><name>serialize</name></member>
+      <member refid="class_projection_1ae8e33f2b836aff2c24b148c1308f1789" prot="public" virt="non-virtual"><scope>Projection</scope><name>translate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

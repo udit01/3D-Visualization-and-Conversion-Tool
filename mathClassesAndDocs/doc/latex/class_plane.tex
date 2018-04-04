@@ -1,0 +1,143 @@
+\hypertarget{class_plane}{}\section{Plane Class Reference}
+\label{class_plane}\index{Plane@{Plane}}
+
+
+A Class for representation of a plane in the 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Plane.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane_a9a1420228e8baa632c7e8ba66f27772f}{Plane}} (float a, float b, float c, float d)
+\begin{DoxyCompactList}\small\item\em Constructor for plane in form of ax + by + cz + d = 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_aa3f7f255d3a4118e39ae6f0f6fd6e908}{Plane}} (\mbox{\hyperlink{class_line}{Line}} \mbox{\hyperlink{class_plane_aafdc7fc15019da566e4cdf760f1eaf17}{l}}, \mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_plane_ad289dccce2529d46275e4fb6878a8625}{p}})
+\begin{DoxyCompactList}\small\item\em Constructor for plane in from of it\textquotesingle{}s normal line l and the point p. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_a14592fa1140200468ddcbeb5ace8dde6}{Plane}} (\mbox{\hyperlink{class_point}{Point}} p1, \mbox{\hyperlink{class_point}{Point}} p2, \mbox{\hyperlink{class_point}{Point}} p3)
+\begin{DoxyCompactList}\small\item\em Constructor for plane in form of 3 points p1, p2, p3 lying on it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_a69abd86051c880dcb44b249ad10c4436}{$\sim$\+Plane}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_plane_ab00163f615128de1c6bddd2169995e0a}{is\+Parallel\+To\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns True if a plane is parallel to another plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_plane_a6b175c15e8964820c56686aa19bf18e8}{is\+Perpendicular\+To\+Plane}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns True if a plane is perpendicular to another plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line}{Line}} \mbox{\hyperlink{class_plane_a04a259828a74830947a30834885b9240}{line\+Of\+Intersection}} (\mbox{\hyperlink{class_plane}{Plane}} P)
+\begin{DoxyCompactList}\small\item\em Returns the line of intersection of two Non-\/\+Parallel Planes, otherwise null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Direction\+Cosine \mbox{\hyperlink{class_plane_aafdc7fc15019da566e4cdf760f1eaf17}{l}}
+\begin{DoxyCompactList}\small\item\em the direction cosines of the normal to the plane \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_plane_ad289dccce2529d46275e4fb6878a8625}{p}}
+\begin{DoxyCompactList}\small\item\em a point that lies on the plane to fix it to a location in the space \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Class for representation of a plane in the 3D space. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_plane_a9a1420228e8baa632c7e8ba66f27772f}\label{class_plane_a9a1420228e8baa632c7e8ba66f27772f}} 
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d }\end{DoxyParamCaption})}
+
+
+
+Constructor for plane in form of ax + by + cz + d = 0. 
+
+\mbox{\Hypertarget{class_plane_aa3f7f255d3a4118e39ae6f0f6fd6e908}\label{class_plane_aa3f7f255d3a4118e39ae6f0f6fd6e908}} 
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}}}]{l,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Constructor for plane in from of it\textquotesingle{}s normal line l and the point p. 
+
+\mbox{\Hypertarget{class_plane_a14592fa1140200468ddcbeb5ace8dde6}\label{class_plane_a14592fa1140200468ddcbeb5ace8dde6}} 
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p1,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p2,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p3 }\end{DoxyParamCaption})}
+
+
+
+Constructor for plane in form of 3 points p1, p2, p3 lying on it. 
+
+\mbox{\Hypertarget{class_plane_a69abd86051c880dcb44b249ad10c4436}\label{class_plane_a69abd86051c880dcb44b249ad10c4436}} 
+\index{Plane@{Plane}!````~Plane@{$\sim$\+Plane}}
+\index{````~Plane@{$\sim$\+Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{$\sim$\+Plane()}{~Plane()}}
+{\footnotesize\ttfamily Plane\+::$\sim$\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the plane. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plane_ab00163f615128de1c6bddd2169995e0a}\label{class_plane_ab00163f615128de1c6bddd2169995e0a}} 
+\index{Plane@{Plane}!is\+Parallel\+To\+Plane@{is\+Parallel\+To\+Plane}}
+\index{is\+Parallel\+To\+Plane@{is\+Parallel\+To\+Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{is\+Parallel\+To\+Plane()}{isParallelToPlane()}}
+{\footnotesize\ttfamily bool Plane\+::is\+Parallel\+To\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns True if a plane is parallel to another plane. 
+
+\mbox{\Hypertarget{class_plane_a6b175c15e8964820c56686aa19bf18e8}\label{class_plane_a6b175c15e8964820c56686aa19bf18e8}} 
+\index{Plane@{Plane}!is\+Perpendicular\+To\+Plane@{is\+Perpendicular\+To\+Plane}}
+\index{is\+Perpendicular\+To\+Plane@{is\+Perpendicular\+To\+Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{is\+Perpendicular\+To\+Plane()}{isPerpendicularToPlane()}}
+{\footnotesize\ttfamily bool Plane\+::is\+Perpendicular\+To\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns True if a plane is perpendicular to another plane. 
+
+\mbox{\Hypertarget{class_plane_a04a259828a74830947a30834885b9240}\label{class_plane_a04a259828a74830947a30834885b9240}} 
+\index{Plane@{Plane}!line\+Of\+Intersection@{line\+Of\+Intersection}}
+\index{line\+Of\+Intersection@{line\+Of\+Intersection}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{line\+Of\+Intersection()}{lineOfIntersection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_line}{Line}} Plane\+::line\+Of\+Intersection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane}{Plane}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Returns the line of intersection of two Non-\/\+Parallel Planes, otherwise null. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_plane_aafdc7fc15019da566e4cdf760f1eaf17}\label{class_plane_aafdc7fc15019da566e4cdf760f1eaf17}} 
+\index{Plane@{Plane}!l@{l}}
+\index{l@{l}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily Direction\+Cosine Plane\+::l}
+
+
+
+the direction cosines of the normal to the plane 
+
+\mbox{\Hypertarget{class_plane_ad289dccce2529d46275e4fb6878a8625}\label{class_plane_ad289dccce2529d46275e4fb6878a8625}} 
+\index{Plane@{Plane}!p@{p}}
+\index{p@{p}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Plane\+::p}
+
+
+
+a point that lies on the plane to fix it to a location in the space 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_plane_8hpp}{Plane.\+hpp}}\item 
+\mbox{\hyperlink{_plane_8cpp}{Plane.\+cpp}}\end{DoxyCompactItemize}
