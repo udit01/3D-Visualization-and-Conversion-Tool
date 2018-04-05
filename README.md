@@ -22,14 +22,18 @@ The package will have the following functionalities:
 ![Alt text](screens/Interface.png "Screenshot")
 
 ## Directory Structure
-
+                                       
 .                                       
 ├── docs                                       
 │   ├── html                                       
 │   │   └── search                                       
 │   ├── latex                                       
 │   └── xml                                       
-├── mathClasses&Doc                                       
+├── Make                                       
+├── mathClassesAndDocs                                       
+│   └── doc                                       
+│       └── latex                                       
+├── mathClasses & Doc                                       
 │   ├── doc                                       
 │   │   ├── html                                       
 │   │   │   └── search                                       
@@ -40,10 +44,11 @@ The package will have the following functionalities:
 │   │   └── xml                                       
 │   ├── include                                       
 │   └── src                                       
+├── models                                       
 ├── screens                                       
-├── src                                         
-├── models                                         
+├── src                                       
 └── templates                                       
+                                      
 
 src contains the main project source files wich have to be built for different platforms.
 
@@ -55,9 +60,27 @@ Math Classes are the conceptual classes. [Documented in the subfolder]     </br>
 Built and tested on Ubuntu-16.04 .
 
 ## Technologies Used
-
+1. **QT**
+2. **Open-GL**
+3. **C++ std-11**
 
 ## Compilation and Execution Instructions
+1. Run by
+```
+cd Make && ./CadSoftware
+```
+2. Compiling with Makefile, but this makefile is configured for my desktop environment.
+```
+cd Make && make
+```
+3. To execute, run
+```
+./CadSoftware
+```
+4. In case, ```Make``` throws errors becase of difference in build environments, compile from source with qmake :
+```
+qmake CadSoftware.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
+```
 
 ##Authors: </br>
 Udit Jain       - 2016CS10327 [@udit01](https://github.com/udit01/)         </br>
