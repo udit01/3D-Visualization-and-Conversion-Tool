@@ -55,9 +55,9 @@ Math Classes are the conceptual classes. [Documented in the subfolder]     </br>
 
 Following is the description of the directories:
 
-docs : Contains the html, latex, xml documentation of the structure of the software in the respective formats.</br>
-models : Contains the description of mathematics used for building the software and the functional model containing the StarUML structure and the design interface of the software.</br>
-src : Main files containing all the software files including the .h and .cpp files.
+1. **docs** : Contains the html, latex, xml documentation of the structure of the software in the respective formats.</br>
+2. **models** : Contains the description of mathematics used for building the software and the functional model containing the StarUML structure and the design interface of the software.</br>
+3. **src** : Main files containing all the software files including the .h and .cpp files.
 
 ## Platform compatibility
 Built and tested on Ubuntu-16.04.
