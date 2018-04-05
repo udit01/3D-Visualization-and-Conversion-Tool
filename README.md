@@ -18,7 +18,7 @@ The package will have the following functionalities:
 2. Save ```2D/3D model``` in file.
 3. Implicit conversion from 2D file[Projections] to 3D.
 
-## UI Interface
+## UI Interfaces
 ![Alt text](screens/Interface.png "Screenshot")
 
 ## Directory Structure
@@ -49,9 +49,6 @@ The package will have the following functionalities:
 ├── src                                       
 └── templates                                       
                                       
-
-src contains the main project source files wich have to be built for different platforms.
-
 ## Project Description  
 Main Classes and UI are in src/ folder [Documented in docs]                </br> 
 Math Classes are the conceptual classes. [Documented in the subfolder]     </br> 
@@ -66,11 +63,13 @@ src : Main files containing all the software files including the .h and .cpp fil
 Built and tested on Ubuntu-16.04.
 
 ## Technologies Used
-1. **QT**
-2. **Open-GL**
-3. **C++ std-11**
+1. **QT** : Cross-platform application framework that is used for developing application software.
+2. **Open-GL** : Cross-language, cross-platform application programming interface for rendering 2D and 3D vector graphics.
+3. **C++ std-11** : General-purpose programming language.
 
 ## Compilation and Execution Instructions
+Following are the instructions to run the application software:
+
 1. Run by
 ```
 cd Make && ./CadSoftware
@@ -88,8 +87,9 @@ cd Make && make
 qmake CadSoftware.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 ```
 
-##Authors: </br>
+## Authors:
 Udit Jain       - 2016CS10327 [@udit01](https://github.com/udit01/)         </br>
 Shashank Goel   - 2016CS10332 [@ShashuBoy](https://github.com/ShashuBoy)    </br>
 
+Department of Computer Science and Technology
 Indian Institute of Technology, Delhi
