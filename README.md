@@ -89,6 +89,6 @@ qmake CadSoftware.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 
 ## Authors:
 Udit Jain       - 2016CS10327 [@udit01](https://github.com/udit01/)         </br>
-Shashank Goel   - 2016CS10332 [@ShashuBoy](https://github.com/ShashuBoy)    </br>
+Shashank Goel   - 2016CS10332 [@ShashuBoy](https://github.com/ShashuBoy)    </br></br>
 Department of Computer Science and Technology 					</br>
 Indian Institute of Technology, Delhi
