@@ -19,7 +19,7 @@ The package will have the following functionalities:
 3. Implicit conversion from 2D file[Projections] to 3D.
 
 ## UI Interfaces
-![Alt text](screens/Interface.png "Screenshot")
+![Alt text](screenshots/Interface.png "Screenshot")
 
 ## Directory Structure
                                        
@@ -29,10 +29,6 @@ The package will have the following functionalities:
 │   │   └── search                                       
 │   ├── latex                                       
 │   └── xml                                       
-├── Make                                       
-├── mathClassesAndDocs                                       
-│   └── doc                                       
-│       └── latex                                       
 ├── mathClasses & Doc                                       
 │   ├── doc                                       
 │   │   ├── html                                       
@@ -45,9 +41,9 @@ The package will have the following functionalities:
 │   ├── include                                       
 │   └── src                                       
 ├── models                                       
-├── screens                                       
+├── screenshots                                       
 ├── src                                       
-└── templates                                       
+└── templates                                            
                                       
 ## Project Description  
 Main Classes and UI are in src/ folder [Documented in docs]                </br> 
@@ -70,21 +66,26 @@ Built and tested on Ubuntu-16.04.
 ## Compilation and Execution Instructions
 Following are the instructions to run the application software:
 
-1. Run by
+1. Install the dependencies QT, OpenGL, GCC with std-11 support 
+
+2. Clone
 ```
-cd Make && ./CadSoftware
+$ git clone https://github.com/udit01/qGL.git
+$ cd qGL
 ```
-2. Compiling with Makefile, but this makefile is configured for my desktop environment.
+3. Build [See that your anaconda or other paths don't interfere with the paths required by this makefile] 
 ```
-cd Make && make
+$ cd build && mkdir build
+$ qmake ../src/CadSoftware.pro
 ```
-3. To execute, run
+4. Make
 ```
-./CadSoftware
+$ make
+$ make clean # OPTIONAL #for removing object files after make
 ```
-4. In case, ```Make``` throws errors becase of difference in build environments, compile from source with qmake :
+5. To execute, run
 ```
-qmake CadSoftware.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
+$ ./CadSoftware
 ```
 
 ## Authors:
