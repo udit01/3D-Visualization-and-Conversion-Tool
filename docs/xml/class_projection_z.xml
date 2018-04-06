@@ -3,6 +3,7 @@
   <compounddef id="class_projection_z" kind="class" language="C++" prot="public">
     <compoundname>ProjectionZ</compoundname>
     <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+    <includes refid="projectionz_8h" local="no">projectionz.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_projection_z_1a72def73a612bcd05243ae8acad447908" prot="public" static="no" mutable="no">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -10,12 +11,12 @@
         <argsstring></argsstring>
         <name>model</name>
         <briefdescription>
-        </briefdescription>
+<para>the 3d model that describes a xy projection view </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="19" column="1" bodyfile="src/projectionz.h" bodystart="19" bodyend="-1"/>
+        <location file="src/projectionz.h" line="21" column="1" bodyfile="src/projectionz.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projection_z_1a24466982ce2e792bb843426c35782222" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -23,12 +24,12 @@
         <argsstring></argsstring>
         <name>wireframe</name>
         <briefdescription>
-        </briefdescription>
+<para>the wireframe is either enabled or disabled for the projection </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="20" column="1" bodyfile="src/projectionz.h" bodystart="20" bodyend="-1"/>
+        <location file="src/projectionz.h" line="23" column="1" bodyfile="src/projectionz.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -38,12 +39,12 @@
         <argsstring></argsstring>
         <name>scl</name>
         <briefdescription>
-        </briefdescription>
+<para>the scale factor to draw the design </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="39" column="1" bodyfile="src/projectionz.h" bodystart="39" bodyend="-1"/>
+        <location file="src/projectionz.h" line="51" column="1" bodyfile="src/projectionz.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="17" column="1" bodyfile="src/projectionz.cpp" bodystart="16" bodyend="22"/>
+        <location file="src/projectionz.h" line="18" column="1" bodyfile="src/projectionz.cpp" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_z_1a5d1f4701bf63635f88924761f26ce173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -76,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="18" column="1" bodyfile="src/projectionz.cpp" bodystart="24" bodyend="27"/>
+        <location file="src/projectionz.h" line="19" column="1" bodyfile="src/projectionz.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -86,12 +87,12 @@
         <argsstring>()</argsstring>
         <name>initializeGL</name>
         <briefdescription>
-        </briefdescription>
+<para>sets up the OpenGL resources and state. Gets called once before the first time <ref refid="class_projection_z_1a5f276e00f3680aa3ec663030e74df160" kindref="member">resizeGL()</ref> or <ref refid="class_projection_z_1a192e7a4a75e41e9d2c411eb252c2d2d6" kindref="member">paintGL()</ref> is called </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="24" column="1" bodyfile="src/projectionz.cpp" bodystart="56" bodyend="73"/>
+        <location file="src/projectionz.h" line="28" column="1" bodyfile="src/projectionz.cpp" bodystart="56" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_z_1a192e7a4a75e41e9d2c411eb252c2d2d6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,12 +100,12 @@
         <argsstring>()</argsstring>
         <name>paintGL</name>
         <briefdescription>
-        </briefdescription>
+<para>renders the OpenGL scene. Gets called whenever the widget needs to be updated </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="25" column="1" bodyfile="src/projectionz.cpp" bodystart="75" bodyend="95"/>
+        <location file="src/projectionz.h" line="30" column="1" bodyfile="src/projectionz.cpp" bodystart="75" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_z_1a5f276e00f3680aa3ec663030e74df160" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,12 +121,12 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>sets up the OpenGL viewport, projection, etc. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="26" column="1" bodyfile="src/projectionz.cpp" bodystart="97" bodyend="112"/>
+        <location file="src/projectionz.h" line="32" column="1" bodyfile="src/projectionz.cpp" bodystart="97" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_z_1a5baf9e15d828cff9501fd94fa622b32b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>QSize</type>
@@ -133,12 +134,12 @@
         <argsstring>() const</argsstring>
         <name>sizeHint</name>
         <briefdescription>
-        </briefdescription>
+<para>to provide a reasonable default size for the widget </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="29" column="1" bodyfile="src/projectionz.cpp" bodystart="35" bodyend="38"/>
+        <location file="src/projectionz.h" line="36" column="1" bodyfile="src/projectionz.cpp" bodystart="35" bodyend="38"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
@@ -152,12 +153,12 @@
           <declname>factor</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>decide the numerical scale factor for viewing the object </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="33" column="1" bodyfile="src/projectionz.cpp" bodystart="49" bodyend="55"/>
+        <location file="src/projectionz.h" line="41" column="1" bodyfile="src/projectionz.cpp" bodystart="49" bodyend="55"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_z_1a61a7115d258f9324b5f697983dd5ca3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,12 +170,12 @@
           <declname>b</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>set the wrireframe property of the model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="34" column="1" bodyfile="src/projectionz.cpp" bodystart="40" bodyend="42"/>
+        <location file="src/projectionz.h" line="43" column="1" bodyfile="src/projectionz.cpp" bodystart="40" bodyend="42"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_z_1abf7cbd3b5479c7805fbceecf3c68b0be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,12 +183,12 @@
         <argsstring>()</argsstring>
         <name>update</name>
         <briefdescription>
-        </briefdescription>
+<para>the update function just updates the model view based on its currently set parameters/fields </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="35" column="1" bodyfile="src/projectionz.cpp" bodystart="43" bodyend="45"/>
+        <location file="src/projectionz.h" line="45" column="1" bodyfile="src/projectionz.cpp" bodystart="43" bodyend="45"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_z_1af65afd9bf93b40bbf626cd2fba303b3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,12 +200,12 @@
           <declname>m</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>sets the current model to the specified argument </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="36" column="1" bodyfile="src/projectionz.cpp" bodystart="46" bodyend="48"/>
+        <location file="src/projectionz.h" line="47" column="1" bodyfile="src/projectionz.cpp" bodystart="46" bodyend="48"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -214,16 +215,16 @@
         <argsstring>()</argsstring>
         <name>draw</name>
         <briefdescription>
-        </briefdescription>
+<para>creates the current model design </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionz.h" line="40" column="1" bodyfile="src/projectionz.cpp" bodystart="114" bodyend="168"/>
+        <location file="src/projectionz.h" line="53" column="1" bodyfile="src/projectionz.cpp" bodystart="114" bodyend="168"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>defines the projectionZ for the current design to be displayed using the model class </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -255,7 +256,7 @@
         <link refid="class_model"/>
       </node>
     </collaborationgraph>
-    <location file="src/projectionz.h" line="13" column="1" bodyfile="src/projectionz.h" bodystart="12" bodyend="42"/>
+    <location file="src/projectionz.h" line="14" column="1" bodyfile="src/projectionz.h" bodystart="13" bodyend="55"/>
     <listofallmembers>
       <member refid="class_projection_z_1aeb85cd14917e560323a837d08a5277fa" prot="private" virt="non-virtual"><scope>ProjectionZ</scope><name>draw</name></member>
       <member refid="class_projection_z_1aa470131d521e6595d293e12f0fa3425f" prot="protected" virt="non-virtual"><scope>ProjectionZ</scope><name>initializeGL</name></member>

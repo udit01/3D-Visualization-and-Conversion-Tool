@@ -2,8 +2,16 @@
 \label{class_model2d}\index{Model2d@{Model2d}}
 
 
-Collaboration diagram for Model2d\+:
-\nopagebreak
+creates the 2d model for a particular design by defining the necessary attributes  
+
+
+
+
+{\ttfamily \#include $<$model2d.\+h$>$}
+
+
+
+Collaboration diagram for Model2d\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,36 +21,111 @@ Collaboration diagram for Model2d\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model2d_aa07204b20301739146f8ecf525778720}\label{class_model2d_aa07204b20301739146f8ecf525778720}} 
-{\bfseries Model2d} (\mbox{\hyperlink{class_projection}{Projection}} $\ast$xy, \mbox{\hyperlink{class_projection}{Projection}} $\ast$yz, \mbox{\hyperlink{class_projection}{Projection}} $\ast$zx)
-\item 
-\mbox{\Hypertarget{class_model2d_ab39a4f4a2c6430cee2b226a9509ec38b}\label{class_model2d_ab39a4f4a2c6430cee2b226a9509ec38b}} 
-\mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries convert\+To3d} ()
-\item 
-\mbox{\Hypertarget{class_model2d_a9dbe9eafd94b347c3257ac90e743065c}\label{class_model2d_a9dbe9eafd94b347c3257ac90e743065c}} 
-void {\bfseries serialize} (std\+::string s)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_model2d_aa07204b20301739146f8ecf525778720}{Model2d}} (\mbox{\hyperlink{class_projection}{Projection}} $\ast$\mbox{\hyperlink{class_model2d_ad335c0d9899b23996a3f11e61be1d431}{xy}}, \mbox{\hyperlink{class_projection}{Projection}} $\ast$\mbox{\hyperlink{class_model2d_a4d012de876b8bb089bd226e41270df25}{yz}}, \mbox{\hyperlink{class_projection}{Projection}} $\ast$\mbox{\hyperlink{class_model2d_a6c459c26e4c89bbc11ac0149ea07b997}{zx}})
+\begin{DoxyCompactList}\small\item\em constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_model2d_ab39a4f4a2c6430cee2b226a9509ec38b}{convert\+To3d}} ()
+\begin{DoxyCompactList}\small\item\em generates the 3d model object from the current 2d model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model2d_a9dbe9eafd94b347c3257ac90e743065c}{serialize}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em used to generate the text that specifies the 2d model to be saved in a text file \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model2d_aa3c8399ef5cf86bb176b111c132f30b7}\label{class_model2d_aa3c8399ef5cf86bb176b111c132f30b7}} 
-static \mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ {\bfseries deserialize} (std\+::string s)
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ \mbox{\hyperlink{class_model2d_aa3c8399ef5cf86bb176b111c132f30b7}{deserialize}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em used to generate the 2d model from the text code saved in a particular file \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_projection}{Projection}} $\ast$ \mbox{\hyperlink{class_model2d_ad335c0d9899b23996a3f11e61be1d431}{xy}}
+\begin{DoxyCompactList}\small\item\em the xy projection of the 3d model that represents this object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projection}{Projection}} $\ast$ \mbox{\hyperlink{class_model2d_a4d012de876b8bb089bd226e41270df25}{yz}}
+\begin{DoxyCompactList}\small\item\em the yz projection of the 3d model that represents this object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projection}{Projection}} $\ast$ \mbox{\hyperlink{class_model2d_a6c459c26e4c89bbc11ac0149ea07b997}{zx}}
+\begin{DoxyCompactList}\small\item\em the zx projection of the 3d model that represents this object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+creates the 2d model for a particular design by defining the necessary attributes 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model2d_aa07204b20301739146f8ecf525778720}\label{class_model2d_aa07204b20301739146f8ecf525778720}} 
+\index{Model2d@{Model2d}!Model2d@{Model2d}}
+\index{Model2d@{Model2d}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{Model2d()}{Model2d()}}
+{\footnotesize\ttfamily Model2d\+::\+Model2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projection}{Projection}} $\ast$}]{xy,  }\item[{\mbox{\hyperlink{class_projection}{Projection}} $\ast$}]{yz,  }\item[{\mbox{\hyperlink{class_projection}{Projection}} $\ast$}]{zx }\end{DoxyParamCaption})}
+
+
+
+constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model2d_ab39a4f4a2c6430cee2b226a9509ec38b}\label{class_model2d_ab39a4f4a2c6430cee2b226a9509ec38b}} 
+\index{Model2d@{Model2d}!convert\+To3d@{convert\+To3d}}
+\index{convert\+To3d@{convert\+To3d}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{convert\+To3d()}{convertTo3d()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Model2d\+::convert\+To3d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+generates the 3d model object from the current 2d model 
+
+\mbox{\Hypertarget{class_model2d_aa3c8399ef5cf86bb176b111c132f30b7}\label{class_model2d_aa3c8399ef5cf86bb176b111c132f30b7}} 
+\index{Model2d@{Model2d}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ Model2d\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+used to generate the 2d model from the text code saved in a particular file 
+
+\mbox{\Hypertarget{class_model2d_a9dbe9eafd94b347c3257ac90e743065c}\label{class_model2d_a9dbe9eafd94b347c3257ac90e743065c}} 
+\index{Model2d@{Model2d}!serialize@{serialize}}
+\index{serialize@{serialize}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily void Model2d\+::serialize (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+used to generate the text that specifies the 2d model to be saved in a text file 
+
+
+
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_model2d_ad335c0d9899b23996a3f11e61be1d431}\label{class_model2d_ad335c0d9899b23996a3f11e61be1d431}} 
-\mbox{\hyperlink{class_projection}{Projection}} $\ast$ {\bfseries xy}
-\item 
+\index{Model2d@{Model2d}!xy@{xy}}
+\index{xy@{xy}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{xy}{xy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projection}{Projection}}$\ast$ Model2d\+::xy}
+
+
+
+the xy projection of the 3d model that represents this object 
+
 \mbox{\Hypertarget{class_model2d_a4d012de876b8bb089bd226e41270df25}\label{class_model2d_a4d012de876b8bb089bd226e41270df25}} 
-\mbox{\hyperlink{class_projection}{Projection}} $\ast$ {\bfseries yz}
-\item 
+\index{Model2d@{Model2d}!yz@{yz}}
+\index{yz@{yz}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{yz}{yz}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projection}{Projection}}$\ast$ Model2d\+::yz}
+
+
+
+the yz projection of the 3d model that represents this object 
+
 \mbox{\Hypertarget{class_model2d_a6c459c26e4c89bbc11ac0149ea07b997}\label{class_model2d_a6c459c26e4c89bbc11ac0149ea07b997}} 
-\mbox{\hyperlink{class_projection}{Projection}} $\ast$ {\bfseries zx}
-\end{DoxyCompactItemize}
+\index{Model2d@{Model2d}!zx@{zx}}
+\index{zx@{zx}!Model2d@{Model2d}}
+\subsubsection{\texorpdfstring{zx}{zx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projection}{Projection}}$\ast$ Model2d\+::zx}
+
+
+
+the zx projection of the 3d model that represents this object 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/model2d.\+h\item 
-src/model2d.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{model2d_8h}{model2d.\+h}}\item 
+src/\mbox{\hyperlink{model2d_8cpp}{model2d.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+.TH "MainWindow" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainWindow
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mainwindow\&.h>\fP
+.PP
+Inherits QMainWindow\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBwireframeVal\fP (bool b)"
+.br
+.ti -1c
+.RI "void \fBgetModel\fP (\fBModel\fP *m)"
+.br
+.ti -1c
+.RI "void \fBupdate\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~MainWindow\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP * \fBmodel\fP"
+.br
+.ti -1c
+.RI "bool \fBwireframe\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBtr_x\fP"
+.br
+.ti -1c
+.RI "float \fBtr_y\fP"
+.br
+.ti -1c
+.RI "float \fBtr_z\fP"
+.br
+.ti -1c
+.RI "float \fBdalpha\fP"
+.br
+.ti -1c
+.RI "float \fBdbeta\fP"
+.br
+.ti -1c
+.RI "float \fBdgamma\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MainWindow::MainWindow (QWidget * parent = \fC0\fP)\fC [explicit]\fP"
+
+.SS "MainWindow::~MainWindow ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MainWindow::getModel (\fBModel\fP * m)\fC [signal]\fP"
+
+.SS "void MainWindow::keyPressEvent (QKeyEvent * event)\fC [protected]\fP"
+
+.SS "void MainWindow::update ()\fC [signal]\fP"
+
+.SS "void MainWindow::wireframeVal (bool b)\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float MainWindow::dalpha\fC [protected]\fP"
+
+.SS "float MainWindow::dbeta\fC [protected]\fP"
+
+.SS "float MainWindow::dgamma\fC [protected]\fP"
+
+.SS "\fBModel\fP* MainWindow::model"
+
+.SS "float MainWindow::tr_x\fC [protected]\fP"
+
+.SS "float MainWindow::tr_y\fC [protected]\fP"
+
+.SS "float MainWindow::tr_z\fC [protected]\fP"
+
+.SS "bool MainWindow::wireframe"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

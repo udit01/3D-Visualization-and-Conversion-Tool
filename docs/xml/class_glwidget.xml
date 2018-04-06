@@ -3,6 +3,7 @@
   <compounddef id="class_glwidget" kind="class" language="C++" prot="public">
     <compoundname>Glwidget</compoundname>
     <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+    <includes refid="glwidget_8h" local="no">glwidget.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_glwidget_1a160da762ff1b4a6c1bf6f09bfb71e15c" prot="public" static="no" mutable="no">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -143,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="24" column="1" bodyfile="src/glwidget.cpp" bodystart="100" bodyend="120"/>
+        <location file="src/glwidget.h" line="24" column="1" bodyfile="src/glwidget.cpp" bodystart="100" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_glwidget_1a440fe507a9bd647c1a961cf72305da31" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="25" column="1" bodyfile="src/glwidget.cpp" bodystart="122" bodyend="136"/>
+        <location file="src/glwidget.h" line="25" column="1" bodyfile="src/glwidget.cpp" bodystart="157" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="class_glwidget_1a36bd98ea1696cf1a7f5830fde3a16a72" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -177,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="26" column="1" bodyfile="src/glwidget.cpp" bodystart="138" bodyend="153"/>
+        <location file="src/glwidget.h" line="26" column="1" bodyfile="src/glwidget.cpp" bodystart="173" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="class_glwidget_1ac54d1b859e11037f3e86f3193e84970b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -190,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="27" column="1" bodyfile="src/glwidget.cpp" bodystart="176" bodyend="285"/>
+        <location file="src/glwidget.h" line="27" column="1" bodyfile="src/glwidget.cpp" bodystart="211" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="class_glwidget_1a9768cbeb06b6ccfaff47ff443dda1c98" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>QSize</type>
@@ -233,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="30" column="1" bodyfile="src/glwidget.cpp" bodystart="155" bodyend="158"/>
+        <location file="src/glwidget.h" line="30" column="1" bodyfile="src/glwidget.cpp" bodystart="190" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="class_glwidget_1afc8a6da76c5ead92b1c1a4ba8f931310" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -250,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/glwidget.h" line="31" column="1" bodyfile="src/glwidget.cpp" bodystart="160" bodyend="174"/>
+        <location file="src/glwidget.h" line="31" column="1" bodyfile="src/glwidget.cpp" bodystart="195" bodyend="209"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">

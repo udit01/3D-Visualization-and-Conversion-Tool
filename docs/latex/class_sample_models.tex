@@ -2,38 +2,124 @@
 \label{class_sample_models}\index{Sample\+Models@{Sample\+Models}}
 
 
-Collaboration diagram for Sample\+Models\+:
-\nopagebreak
+defines the templates for the software including other necessary designs for base display like the axes  
+
+
+
+
+{\ttfamily \#include $<$samplemodels.\+h$>$}
+
+
+
+Collaboration diagram for Sample\+Models\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=190pt]{class_sample_models__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sample_models_ab4f2cabd4d134b925589e2e5e4f3b55b}{Sample\+Models}} ()
+\begin{DoxyCompactList}\small\item\em blank constructor to intialize a sample model \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_sample_models_ac979fefcbc81571af56a2cf3c415497b}\label{class_sample_models_ac979fefcbc81571af56a2cf3c415497b}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Triangular\+Pyramid} (float side, float height)
-\item 
-\mbox{\Hypertarget{class_sample_models_a0a5afe183db2a5e7e59f825e6ac736e6}\label{class_sample_models_a0a5afe183db2a5e7e59f825e6ac736e6}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Square\+Pyramid} (float side, float height)
-\item 
-\mbox{\Hypertarget{class_sample_models_ad9be52995d798b78ad2c04c1b3c1f4e4}\label{class_sample_models_ad9be52995d798b78ad2c04c1b3c1f4e4}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Triangular\+Prism} (float side, float height)
-\item 
-\mbox{\Hypertarget{class_sample_models_a5e39e1ad1bcaec4b4ce617332e996caf}\label{class_sample_models_a5e39e1ad1bcaec4b4ce617332e996caf}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Cuboid} (float a, float b, float c)
-\item 
-\mbox{\Hypertarget{class_sample_models_a890001f4e859021afe59bd956245e2ad}\label{class_sample_models_a890001f4e859021afe59bd956245e2ad}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Empty} ()
-\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_ac979fefcbc81571af56a2cf3c415497b}{Triangular\+Pyramid}} (float side, float height)
+\begin{DoxyCompactList}\small\item\em constructor to create a triangular pyramid model \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_a0a5afe183db2a5e7e59f825e6ac736e6}{Square\+Pyramid}} (float side, float height)
+\begin{DoxyCompactList}\small\item\em constructor to create a square pyramid model \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_ad9be52995d798b78ad2c04c1b3c1f4e4}{Triangular\+Prism}} (float side, float height)
+\begin{DoxyCompactList}\small\item\em constructor to create a triangular prism model \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_a5e39e1ad1bcaec4b4ce617332e996caf}{Cuboid}} (float a, float b, float c)
+\begin{DoxyCompactList}\small\item\em constructor to create a cuboid model \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_a890001f4e859021afe59bd956245e2ad}{Empty}} ()
+\begin{DoxyCompactList}\small\item\em constructor to create an empty model \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_sample_models_a07f69bc5ff6c60078a642ba7e090bf6c}{Axes}} (float side)
+\begin{DoxyCompactList}\small\item\em constructor to build up the axes model \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+defines the templates for the software including other necessary designs for base display like the axes 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sample_models_ab4f2cabd4d134b925589e2e5e4f3b55b}\label{class_sample_models_ab4f2cabd4d134b925589e2e5e4f3b55b}} 
+\index{Sample\+Models@{Sample\+Models}!Sample\+Models@{Sample\+Models}}
+\index{Sample\+Models@{Sample\+Models}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Sample\+Models()}{SampleModels()}}
+{\footnotesize\ttfamily Sample\+Models\+::\+Sample\+Models (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+blank constructor to intialize a sample model 
+
+
+
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_sample_models_a07f69bc5ff6c60078a642ba7e090bf6c}\label{class_sample_models_a07f69bc5ff6c60078a642ba7e090bf6c}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries Axes} (float side)
-\end{DoxyCompactItemize}
+\index{Sample\+Models@{Sample\+Models}!Axes@{Axes}}
+\index{Axes@{Axes}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Axes()}{Axes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Axes (\begin{DoxyParamCaption}\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to build up the axes model 
+
+\mbox{\Hypertarget{class_sample_models_a5e39e1ad1bcaec4b4ce617332e996caf}\label{class_sample_models_a5e39e1ad1bcaec4b4ce617332e996caf}} 
+\index{Sample\+Models@{Sample\+Models}!Cuboid@{Cuboid}}
+\index{Cuboid@{Cuboid}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Cuboid()}{Cuboid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Cuboid (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to create a cuboid model 
+
+\mbox{\Hypertarget{class_sample_models_a890001f4e859021afe59bd956245e2ad}\label{class_sample_models_a890001f4e859021afe59bd956245e2ad}} 
+\index{Sample\+Models@{Sample\+Models}!Empty@{Empty}}
+\index{Empty@{Empty}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to create an empty model 
+
+\mbox{\Hypertarget{class_sample_models_a0a5afe183db2a5e7e59f825e6ac736e6}\label{class_sample_models_a0a5afe183db2a5e7e59f825e6ac736e6}} 
+\index{Sample\+Models@{Sample\+Models}!Square\+Pyramid@{Square\+Pyramid}}
+\index{Square\+Pyramid@{Square\+Pyramid}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Square\+Pyramid()}{SquarePyramid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Square\+Pyramid (\begin{DoxyParamCaption}\item[{float}]{side,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to create a square pyramid model 
+
+\mbox{\Hypertarget{class_sample_models_ad9be52995d798b78ad2c04c1b3c1f4e4}\label{class_sample_models_ad9be52995d798b78ad2c04c1b3c1f4e4}} 
+\index{Sample\+Models@{Sample\+Models}!Triangular\+Prism@{Triangular\+Prism}}
+\index{Triangular\+Prism@{Triangular\+Prism}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Triangular\+Prism()}{TriangularPrism()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Triangular\+Prism (\begin{DoxyParamCaption}\item[{float}]{side,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to create a triangular prism model 
+
+\mbox{\Hypertarget{class_sample_models_ac979fefcbc81571af56a2cf3c415497b}\label{class_sample_models_ac979fefcbc81571af56a2cf3c415497b}} 
+\index{Sample\+Models@{Sample\+Models}!Triangular\+Pyramid@{Triangular\+Pyramid}}
+\index{Triangular\+Pyramid@{Triangular\+Pyramid}!Sample\+Models@{Sample\+Models}}
+\subsubsection{\texorpdfstring{Triangular\+Pyramid()}{TriangularPyramid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Sample\+Models\+::\+Triangular\+Pyramid (\begin{DoxyParamCaption}\item[{float}]{side,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+constructor to create a triangular pyramid model 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/samplemodels.\+h\item 
-src/samplemodels.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{samplemodels_8h}{samplemodels.\+h}}\item 
+src/\mbox{\hyperlink{samplemodels_8cpp}{samplemodels.\+cpp}}\end{DoxyCompactItemize}

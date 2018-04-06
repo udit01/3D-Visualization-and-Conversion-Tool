@@ -1,0 +1,92 @@
+.TH "Model2d" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Model2d \- creates the 2d model for a particular design by defining the necessary attributes  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <model2d\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModel2d\fP (\fBProjection\fP *\fBxy\fP, \fBProjection\fP *\fByz\fP, \fBProjection\fP *\fBzx\fP)"
+.br
+.RI "constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively "
+.ti -1c
+.RI "\fBModel\fP * \fBconvertTo3d\fP ()"
+.br
+.RI "generates the 3d model object from the current 2d model "
+.ti -1c
+.RI "void \fBserialize\fP (std::string s)"
+.br
+.RI "used to generate the text that specifies the 2d model to be saved in a text file "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBModel2d\fP * \fBdeserialize\fP (std::string s)"
+.br
+.RI "used to generate the 2d model from the text code saved in a particular file "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProjection\fP * \fBxy\fP"
+.br
+.RI "the xy projection of the 3d model that represents this object "
+.ti -1c
+.RI "\fBProjection\fP * \fByz\fP"
+.br
+.RI "the yz projection of the 3d model that represents this object "
+.ti -1c
+.RI "\fBProjection\fP * \fBzx\fP"
+.br
+.RI "the zx projection of the 3d model that represents this object "
+.in -1c
+.SH "Detailed Description"
+.PP 
+creates the 2d model for a particular design by defining the necessary attributes 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Model2d::Model2d (\fBProjection\fP * xy, \fBProjection\fP * yz, \fBProjection\fP * zx)"
+
+.PP
+constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBModel\fP * Model2d::convertTo3d ()"
+
+.PP
+generates the 3d model object from the current 2d model 
+.SS "\fBModel2d\fP * Model2d::deserialize (std::string s)\fC [static]\fP"
+
+.PP
+used to generate the 2d model from the text code saved in a particular file 
+.SS "void Model2d::serialize (std::string s)"
+
+.PP
+used to generate the text that specifies the 2d model to be saved in a text file 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBProjection\fP* Model2d::xy"
+
+.PP
+the xy projection of the 3d model that represents this object 
+.SS "\fBProjection\fP* Model2d::yz"
+
+.PP
+the yz projection of the 3d model that represents this object 
+.SS "\fBProjection\fP* Model2d::zx"
+
+.PP
+the zx projection of the 3d model that represents this object 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

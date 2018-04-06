@@ -2,8 +2,11 @@
 \label{class_projection}\index{Projection@{Projection}}
 
 
-Collaboration diagram for Projection\+:
-\nopagebreak
+{\ttfamily \#include $<$model2d.\+h$>$}
+
+
+
+Collaboration diagram for Projection\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,24 +16,66 @@ Collaboration diagram for Projection\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projection_a5308ac2fb97e9805c76e3cf767f08a0e}\label{class_projection_a5308ac2fb97e9805c76e3cf767f08a0e}} 
-{\bfseries Projection} (int num\+Points, float $\ast$points, bool $\ast$$\ast$edges)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_projection_a5308ac2fb97e9805c76e3cf767f08a0e}{Projection}} (int num\+Points, float $\ast$\mbox{\hyperlink{class_projection_aa42ba5494690dbfa5f875472adc97789}{points}}, bool $\ast$$\ast$\mbox{\hyperlink{class_projection_a7943c696e88d15825dee0641b269b5f7}{edges}})
+\begin{DoxyCompactList}\small\item\em constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projection_aa42ba5494690dbfa5f875472adc97789}\label{class_projection_aa42ba5494690dbfa5f875472adc97789}} 
-float $\ast$ {\bfseries points}
-\item 
-\mbox{\Hypertarget{class_projection_a6972ab0bc1cfa26a5480a940d66e3497}\label{class_projection_a6972ab0bc1cfa26a5480a940d66e3497}} 
-int {\bfseries npts}
-\item 
+float $\ast$ \mbox{\hyperlink{class_projection_aa42ba5494690dbfa5f875472adc97789}{points}}
+\begin{DoxyCompactList}\small\item\em the array of points the specifies a 2d view \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_projection_a6972ab0bc1cfa26a5480a940d66e3497}{npts}}
+\begin{DoxyCompactList}\small\item\em the number of points/vertices in the 2d view \end{DoxyCompactList}\item 
+bool $\ast$$\ast$ \mbox{\hyperlink{class_projection_a7943c696e88d15825dee0641b269b5f7}{edges}}
+\begin{DoxyCompactList}\small\item\em the double array of edges between any two points specified by a bool value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projection_a5308ac2fb97e9805c76e3cf767f08a0e}\label{class_projection_a5308ac2fb97e9805c76e3cf767f08a0e}} 
+\index{Projection@{Projection}!Projection@{Projection}}
+\index{Projection@{Projection}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{Projection()}{Projection()}}
+{\footnotesize\ttfamily Projection\+::\+Projection (\begin{DoxyParamCaption}\item[{int}]{num\+Points,  }\item[{float $\ast$}]{points,  }\item[{bool $\ast$$\ast$}]{edges }\end{DoxyParamCaption})}
+
+
+
+constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments 
+
+
+
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_projection_a7943c696e88d15825dee0641b269b5f7}\label{class_projection_a7943c696e88d15825dee0641b269b5f7}} 
-bool $\ast$$\ast$ {\bfseries edges}
-\end{DoxyCompactItemize}
+\index{Projection@{Projection}!edges@{edges}}
+\index{edges@{edges}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Projection\+::edges}
+
+
+
+the double array of edges between any two points specified by a bool value 
+
+\mbox{\Hypertarget{class_projection_a6972ab0bc1cfa26a5480a940d66e3497}\label{class_projection_a6972ab0bc1cfa26a5480a940d66e3497}} 
+\index{Projection@{Projection}!npts@{npts}}
+\index{npts@{npts}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{npts}{npts}}
+{\footnotesize\ttfamily int Projection\+::npts}
+
+
+
+the number of points/vertices in the 2d view 
+
+\mbox{\Hypertarget{class_projection_aa42ba5494690dbfa5f875472adc97789}\label{class_projection_aa42ba5494690dbfa5f875472adc97789}} 
+\index{Projection@{Projection}!points@{points}}
+\index{points@{points}!Projection@{Projection}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily float$\ast$ Projection\+::points}
+
+
+
+the array of points the specifies a 2d view 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/model2d.\+h\item 
-src/model2d.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{model2d_8h}{model2d.\+h}}\item 
+src/\mbox{\hyperlink{model2d_8cpp}{model2d.\+cpp}}\end{DoxyCompactItemize}

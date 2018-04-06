@@ -1,0 +1,11 @@
+<map id="src/samplemodels.h" name="src/samplemodels.h">
+<area shape="rect" id="node2" href="$glwidget_8cpp.html" title="src/glwidget.cpp" alt="" coords="5,80,121,107"/>
+<area shape="rect" id="node3" href="$mainwindow_8cpp.html" title="src/mainwindow.cpp" alt="" coords="146,80,285,107"/>
+<area shape="rect" id="node4" href="$model_8cpp.html" title="src/model.cpp" alt="" coords="309,80,413,107"/>
+<area shape="rect" id="node5" href="$model2d_8cpp.html" title="src/model2d.cpp" alt="" coords="437,80,556,107"/>
+<area shape="rect" id="node6" href="$projectionx_8cpp.html" title="src/projectionx.cpp" alt="" coords="580,80,712,107"/>
+<area shape="rect" id="node7" href="$projectiony_8cpp.html" title="src/projectiony.cpp" alt="" coords="736,80,868,107"/>
+<area shape="rect" id="node8" href="$projectionz_8cpp.html" title="src/projectionz.cpp" alt="" coords="892,80,1024,107"/>
+<area shape="rect" id="node9" href="$samplemodels_8cpp.html" title="src/samplemodels.cpp" alt="" coords="1048,80,1201,107"/>
+<area shape="rect" id="node10" href="$window2d_8cpp.html" title="src/window2d.cpp" alt="" coords="1226,80,1351,107"/>
+</map>

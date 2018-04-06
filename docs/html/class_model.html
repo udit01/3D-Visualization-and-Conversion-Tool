@@ -71,56 +71,304 @@ $(function() {
 <div class="title">Model Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Model:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model__coll__graph.png" border="0" usemap="#_model_coll__map" alt="Collaboration graph"/></div>
-<map name="_model_coll__map" id="_model_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39cf79e51da0f52f1031f98f1bebd118"><td class="memItemLeft" align="right" valign="top"><a id="a39cf79e51da0f52f1031f98f1bebd118"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b> (int numPoints, float *pts, bool **edges, std::vector&lt; <a class="el" href="class_face.html">Face</a> *&gt; faces)</td></tr>
+<tr class="memitem:a39cf79e51da0f52f1031f98f1bebd118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a39cf79e51da0f52f1031f98f1bebd118">Model</a> (int <a class="el" href="class_model.html#a39ac6e91375d5ac5799a9845c3479d9c">numPoints</a>, float *pts, bool **<a class="el" href="class_model.html#a723a0c631c2ff688fed06c5652879ef7">edges</a>, std::vector&lt; <a class="el" href="class_face.html">Face</a> *&gt; <a class="el" href="class_model.html#a7752ae8e1bbacc53ed94d7bd9c404b6d">faces</a>)</td></tr>
+<tr class="memdesc:a39cf79e51da0f52f1031f98f1bebd118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the 3d model.  <a href="#a39cf79e51da0f52f1031f98f1bebd118">More...</a><br /></td></tr>
 <tr class="separator:a39cf79e51da0f52f1031f98f1bebd118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e61c8487a2202e9f3f041a8abcb3c2"><td class="memItemLeft" align="right" valign="top"><a id="a32e61c8487a2202e9f3f041a8abcb3c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (float dx, float dy, float dz)</td></tr>
+<tr class="memitem:a32e61c8487a2202e9f3f041a8abcb3c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a32e61c8487a2202e9f3f041a8abcb3c2">translate</a> (float dx, float dy, float dz)</td></tr>
+<tr class="memdesc:a32e61c8487a2202e9f3f041a8abcb3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">translates the model by the specified values along the respective directions  <a href="#a32e61c8487a2202e9f3f041a8abcb3c2">More...</a><br /></td></tr>
 <tr class="separator:a32e61c8487a2202e9f3f041a8abcb3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5999fb77646320aed8d81a669568caa"><td class="memItemLeft" align="right" valign="top"><a id="ae5999fb77646320aed8d81a669568caa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate</b> (float alpha, float beta, float gamma)</td></tr>
+<tr class="memitem:ae5999fb77646320aed8d81a669568caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ae5999fb77646320aed8d81a669568caa">rotate</a> (float alpha, float beta, float gamma)</td></tr>
+<tr class="memdesc:ae5999fb77646320aed8d81a669568caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively  <a href="#ae5999fb77646320aed8d81a669568caa">More...</a><br /></td></tr>
 <tr class="separator:ae5999fb77646320aed8d81a669568caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac62fb1874a6597955c89fe3a9a1663e1"><td class="memItemLeft" align="right" valign="top"><a id="ac62fb1874a6597955c89fe3a9a1663e1"></a>
-<a class="el" href="class_model2d.html">Model2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>convertTo2d</b> ()</td></tr>
+<tr class="memitem:ac62fb1874a6597955c89fe3a9a1663e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model2d.html">Model2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ac62fb1874a6597955c89fe3a9a1663e1">convertTo2d</a> ()</td></tr>
+<tr class="memdesc:ac62fb1874a6597955c89fe3a9a1663e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the 2d model object for the current 3d model  <a href="#ac62fb1874a6597955c89fe3a9a1663e1">More...</a><br /></td></tr>
 <tr class="separator:ac62fb1874a6597955c89fe3a9a1663e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc71b3488f7f944f1c99727a491ee985"><td class="memItemLeft" align="right" valign="top"><a id="abc71b3488f7f944f1c99727a491ee985"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (std::string s)</td></tr>
+<tr class="memitem:abc71b3488f7f944f1c99727a491ee985"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#abc71b3488f7f944f1c99727a491ee985">serialize</a> (std::string s)</td></tr>
+<tr class="memdesc:abc71b3488f7f944f1c99727a491ee985"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to generate the text that specifies the 3d model to be saved in a text file  <a href="#abc71b3488f7f944f1c99727a491ee985">More...</a><br /></td></tr>
 <tr class="separator:abc71b3488f7f944f1c99727a491ee985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a98946d1c8d49b43f541dbd6b98b31e52"><td class="memItemLeft" align="right" valign="top"><a id="a98946d1c8d49b43f541dbd6b98b31e52"></a>
-static <a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>deserialize</b> (std::string s)</td></tr>
+<tr class="memitem:a98946d1c8d49b43f541dbd6b98b31e52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a98946d1c8d49b43f541dbd6b98b31e52">deserialize</a> (std::string s)</td></tr>
+<tr class="memdesc:a98946d1c8d49b43f541dbd6b98b31e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to generate the 3d model from the text code saved in a particular file  <a href="#a98946d1c8d49b43f541dbd6b98b31e52">More...</a><br /></td></tr>
 <tr class="separator:a98946d1c8d49b43f541dbd6b98b31e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a39ac6e91375d5ac5799a9845c3479d9c"><td class="memItemLeft" align="right" valign="top"><a id="a39ac6e91375d5ac5799a9845c3479d9c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numPoints</b></td></tr>
+<tr class="memitem:a39ac6e91375d5ac5799a9845c3479d9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a39ac6e91375d5ac5799a9845c3479d9c">numPoints</a></td></tr>
+<tr class="memdesc:a39ac6e91375d5ac5799a9845c3479d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of vertices that describe the model  <a href="#a39ac6e91375d5ac5799a9845c3479d9c">More...</a><br /></td></tr>
 <tr class="separator:a39ac6e91375d5ac5799a9845c3479d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7752ae8e1bbacc53ed94d7bd9c404b6d"><td class="memItemLeft" align="right" valign="top"><a id="a7752ae8e1bbacc53ed94d7bd9c404b6d"></a>
-std::vector&lt; <a class="el" href="class_face.html">Face</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b></td></tr>
+<tr class="memitem:a7752ae8e1bbacc53ed94d7bd9c404b6d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_face.html">Face</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a7752ae8e1bbacc53ed94d7bd9c404b6d">faces</a></td></tr>
+<tr class="memdesc:a7752ae8e1bbacc53ed94d7bd9c404b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the vector containing the faces that describes the 3d model  <a href="#a7752ae8e1bbacc53ed94d7bd9c404b6d">More...</a><br /></td></tr>
 <tr class="separator:a7752ae8e1bbacc53ed94d7bd9c404b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6436acbcf42bece5621666fe37c71309"><td class="memItemLeft" align="right" valign="top"><a id="a6436acbcf42bece5621666fe37c71309"></a>
-float *&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
+<tr class="memitem:a6436acbcf42bece5621666fe37c71309"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a6436acbcf42bece5621666fe37c71309">points</a></td></tr>
+<tr class="memdesc:a6436acbcf42bece5621666fe37c71309"><td class="mdescLeft">&#160;</td><td class="mdescRight">the array of points in 3d  <a href="#a6436acbcf42bece5621666fe37c71309">More...</a><br /></td></tr>
 <tr class="separator:a6436acbcf42bece5621666fe37c71309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723a0c631c2ff688fed06c5652879ef7"><td class="memItemLeft" align="right" valign="top"><a id="a723a0c631c2ff688fed06c5652879ef7"></a>
-bool **&#160;</td><td class="memItemRight" valign="bottom"><b>edges</b></td></tr>
+<tr class="memitem:a723a0c631c2ff688fed06c5652879ef7"><td class="memItemLeft" align="right" valign="top">bool **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a723a0c631c2ff688fed06c5652879ef7">edges</a></td></tr>
+<tr class="memdesc:a723a0c631c2ff688fed06c5652879ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the double array of the edges between the vertices of the model described by a bool value  <a href="#a723a0c631c2ff688fed06c5652879ef7">More...</a><br /></td></tr>
 <tr class="separator:a723a0c631c2ff688fed06c5652879ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a39cf79e51da0f52f1031f98f1bebd118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39cf79e51da0f52f1031f98f1bebd118">&#9670;&nbsp;</a></span>Model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Model::Model </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>pts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool **&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_face.html">Face</a> *&gt;&#160;</td>
+          <td class="paramname"><em>faces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the 3d model. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac62fb1874a6597955c89fe3a9a1663e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62fb1874a6597955c89fe3a9a1663e1">&#9670;&nbsp;</a></span>convertTo2d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model2d.html">Model2d</a> * Model::convertTo2d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generates the 2d model object for the current 3d model </p>
+
+</div>
+</div>
+<a id="a98946d1c8d49b43f541dbd6b98b31e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98946d1c8d49b43f541dbd6b98b31e52">&#9670;&nbsp;</a></span>deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model.html">Model</a> * Model::deserialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>used to generate the 3d model from the text code saved in a particular file </p>
+
+</div>
+</div>
+<a id="ae5999fb77646320aed8d81a669568caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5999fb77646320aed8d81a669568caa">&#9670;&nbsp;</a></span>rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::rotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively </p>
+
+</div>
+</div>
+<a id="abc71b3488f7f944f1c99727a491ee985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc71b3488f7f944f1c99727a491ee985">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::serialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used to generate the text that specifies the 3d model to be saved in a text file </p>
+
+</div>
+</div>
+<a id="a32e61c8487a2202e9f3f041a8abcb3c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e61c8487a2202e9f3f041a8abcb3c2">&#9670;&nbsp;</a></span>translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::translate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>translates the model by the specified values along the respective directions </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a723a0c631c2ff688fed06c5652879ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723a0c631c2ff688fed06c5652879ef7">&#9670;&nbsp;</a></span>edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool** Model::edges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the double array of the edges between the vertices of the model described by a bool value </p>
+
+</div>
+</div>
+<a id="a7752ae8e1bbacc53ed94d7bd9c404b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7752ae8e1bbacc53ed94d7bd9c404b6d">&#9670;&nbsp;</a></span>faces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_face.html">Face</a>*&gt; Model::faces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the vector containing the faces that describes the 3d model </p>
+
+</div>
+</div>
+<a id="a39ac6e91375d5ac5799a9845c3479d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ac6e91375d5ac5799a9845c3479d9c">&#9670;&nbsp;</a></span>numPoints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Model::numPoints</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the number of vertices that describe the model </p>
+
+</div>
+</div>
+<a id="a6436acbcf42bece5621666fe37c71309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6436acbcf42bece5621666fe37c71309">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* Model::points</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the array of points in 3d </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="model_8h_source.html">model.h</a></li>
-<li>src/model.cpp</li>
+<li>src/<a class="el" href="model_8cpp.html">model.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

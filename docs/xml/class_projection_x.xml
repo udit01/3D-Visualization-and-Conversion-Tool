@@ -3,6 +3,7 @@
   <compounddef id="class_projection_x" kind="class" language="C++" prot="public">
     <compoundname>ProjectionX</compoundname>
     <basecompoundref prot="public" virt="non-virtual">QGLWidget</basecompoundref>
+    <includes refid="projectionx_8h" local="no">projectionx.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_projection_x_1af85d1d33a1a51fa6aef5359f53b98580" prot="public" static="no" mutable="no">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -10,12 +11,12 @@
         <argsstring></argsstring>
         <name>model</name>
         <briefdescription>
-        </briefdescription>
+<para>the 3d model that describes a xy projection view </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="19" column="1" bodyfile="src/projectionx.h" bodystart="19" bodyend="-1"/>
+        <location file="src/projectionx.h" line="21" column="1" bodyfile="src/projectionx.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projection_x_1aa9a1f3880a2084eb87cbbe0f98c67a64" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -23,12 +24,12 @@
         <argsstring></argsstring>
         <name>wireframe</name>
         <briefdescription>
-        </briefdescription>
+<para>the wireframe is either enabled or disabled for the projection </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="20" column="1" bodyfile="src/projectionx.h" bodystart="20" bodyend="-1"/>
+        <location file="src/projectionx.h" line="23" column="1" bodyfile="src/projectionx.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -38,12 +39,12 @@
         <argsstring></argsstring>
         <name>scl</name>
         <briefdescription>
-        </briefdescription>
+<para>the scale factor to draw the design </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="40" column="1" bodyfile="src/projectionx.h" bodystart="40" bodyend="-1"/>
+        <location file="src/projectionx.h" line="52" column="1" bodyfile="src/projectionx.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="17" column="1" bodyfile="src/projectionx.cpp" bodystart="16" bodyend="22"/>
+        <location file="src/projectionx.h" line="18" column="1" bodyfile="src/projectionx.cpp" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_x_1a903b7fc4e98525180ec9a3bed152a70a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -76,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="18" column="1" bodyfile="src/projectionx.cpp" bodystart="24" bodyend="27"/>
+        <location file="src/projectionx.h" line="19" column="1" bodyfile="src/projectionx.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -86,12 +87,12 @@
         <argsstring>()</argsstring>
         <name>initializeGL</name>
         <briefdescription>
-        </briefdescription>
+<para>sets up the OpenGL resources and state. Gets called once before the first time <ref refid="class_projection_x_1a7eb1ba9a4266f65982357e53142bc693" kindref="member">resizeGL()</ref> or <ref refid="class_projection_x_1a4fff0844542e49a68b0288c85703b1c4" kindref="member">paintGL()</ref> is called </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="25" column="1" bodyfile="src/projectionx.cpp" bodystart="48" bodyend="65"/>
+        <location file="src/projectionx.h" line="29" column="1" bodyfile="src/projectionx.cpp" bodystart="48" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_x_1a4fff0844542e49a68b0288c85703b1c4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,12 +100,12 @@
         <argsstring>()</argsstring>
         <name>paintGL</name>
         <briefdescription>
-        </briefdescription>
+<para>renders the OpenGL scene. Gets called whenever the widget needs to be updated </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="26" column="1" bodyfile="src/projectionx.cpp" bodystart="67" bodyend="87"/>
+        <location file="src/projectionx.h" line="31" column="1" bodyfile="src/projectionx.cpp" bodystart="95" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_x_1a7eb1ba9a4266f65982357e53142bc693" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,12 +121,12 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>sets up the OpenGL viewport, projection, etc. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="27" column="1" bodyfile="src/projectionx.cpp" bodystart="89" bodyend="104"/>
+        <location file="src/projectionx.h" line="33" column="1" bodyfile="src/projectionx.cpp" bodystart="117" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="class_projection_x_1ad1a6cdc49e0cb1000bc67401a6a8b3a9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>QSize</type>
@@ -133,12 +134,12 @@
         <argsstring>() const</argsstring>
         <name>sizeHint</name>
         <briefdescription>
-        </briefdescription>
+<para>to provide a reasonable default size for the widget </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="30" column="1" bodyfile="src/projectionx.cpp" bodystart="37" bodyend="40"/>
+        <location file="src/projectionx.h" line="37" column="1" bodyfile="src/projectionx.cpp" bodystart="37" bodyend="40"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
@@ -152,12 +153,12 @@
           <declname>factor</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>decide the numerical scale factor for viewing the object </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="34" column="1" bodyfile="src/projectionx.cpp" bodystart="42" bodyend="47"/>
+        <location file="src/projectionx.h" line="42" column="1" bodyfile="src/projectionx.cpp" bodystart="42" bodyend="47"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_x_1a16849f2ef9fe0332c0ad9f833dc85651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,12 +170,12 @@
           <declname>b</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>set the wrireframe property of the model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="35" column="1" bodyfile="src/projectionx.cpp" bodystart="28" bodyend="30"/>
+        <location file="src/projectionx.h" line="44" column="1" bodyfile="src/projectionx.cpp" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_x_1a7efa3839fdf999686464fe60ea59a349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,12 +183,12 @@
         <argsstring>()</argsstring>
         <name>update</name>
         <briefdescription>
-        </briefdescription>
+<para>the update function just updates the model view based on its currently set parameters/fields </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="36" column="1" bodyfile="src/projectionx.cpp" bodystart="31" bodyend="33"/>
+        <location file="src/projectionx.h" line="46" column="1" bodyfile="src/projectionx.cpp" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="slot" id="class_projection_x_1aab00d67a74912bdff9f963664b708c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,12 +200,12 @@
           <declname>m</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>sets the current model to the specified argument </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="37" column="1" bodyfile="src/projectionx.cpp" bodystart="34" bodyend="36"/>
+        <location file="src/projectionx.h" line="48" column="1" bodyfile="src/projectionx.cpp" bodystart="34" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -214,16 +215,16 @@
         <argsstring>()</argsstring>
         <name>draw</name>
         <briefdescription>
-        </briefdescription>
+<para>creates the current model design </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/projectionx.h" line="41" column="1" bodyfile="src/projectionx.cpp" bodystart="106" bodyend="161"/>
+        <location file="src/projectionx.h" line="54" column="1" bodyfile="src/projectionx.cpp" bodystart="134" bodyend="189"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>defines the projectionX for the current design to be displayed using the model class </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -255,7 +256,7 @@
         <link refid="class_model"/>
       </node>
     </collaborationgraph>
-    <location file="src/projectionx.h" line="13" column="1" bodyfile="src/projectionx.h" bodystart="12" bodyend="43"/>
+    <location file="src/projectionx.h" line="14" column="1" bodyfile="src/projectionx.h" bodystart="13" bodyend="56"/>
     <listofallmembers>
       <member refid="class_projection_x_1afbd612fb2200f0db998239a3640504a5" prot="private" virt="non-virtual"><scope>ProjectionX</scope><name>draw</name></member>
       <member refid="class_projection_x_1af94caa374ed76c3cf81c80429c67aee9" prot="protected" virt="non-virtual"><scope>ProjectionX</scope><name>initializeGL</name></member>

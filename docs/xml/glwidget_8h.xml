@@ -11,6 +11,16 @@
     <includedby refid="projectiony_8cpp" local="yes">src/projectiony.cpp</includedby>
     <includedby refid="projectionz_8cpp" local="yes">src/projectionz.cpp</includedby>
     <incdepgraph>
+      <node id="19">
+        <label>src/glwidget.h</label>
+        <link refid="glwidget_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
       <node id="24">
         <label>string</label>
       </node>
@@ -25,7 +35,7 @@
       </node>
       <node id="26">
         <label>model2d.h</label>
-        <link refid="model2d_8h_source"/>
+        <link refid="model2d_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
@@ -38,19 +48,9 @@
       <node id="25">
         <label>QGL</label>
       </node>
-      <node id="19">
-        <label>src/glwidget.h</label>
-        <link refid="glwidget_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
       <node id="22">
         <label>model.h</label>
-        <link refid="model_8h_source"/>
+        <link refid="model_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
@@ -61,6 +61,42 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="32">
+        <label>src/projectionz.cpp</label>
+        <link refid="projectionz_8cpp"/>
+      </node>
+      <node id="27">
+        <label>src/glwidget.h</label>
+        <link refid="glwidget_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>src/projectionx.cpp</label>
+        <link refid="projectionx_8cpp"/>
+      </node>
+      <node id="31">
+        <label>src/projectiony.cpp</label>
+        <link refid="projectiony_8cpp"/>
+      </node>
+      <node id="28">
+        <label>src/glwidget.cpp</label>
+        <link refid="glwidget_8cpp"/>
+      </node>
+      <node id="29">
+        <label>src/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_glwidget" prot="public">Glwidget</innerclass>
     <innernamespace refid="namespace_ui">Ui</innernamespace>
     <briefdescription>
@@ -73,9 +109,9 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGLWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="namespace_ui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_glwidget" kindref="compound">Glwidget</ref>;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
@@ -84,38 +120,38 @@
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_glwidget" kindref="compound">Glwidget</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_glwidget" kindref="compound">Glwidget</ref>();</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model" kindref="compound">Model</ref><sp/>*model;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wireframe;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a498977aa216afadd4adba780063356ac" kindref="member">Glwidget</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_glwidget_1acaef15b194db8b00381aaa0e7e4c9389" kindref="member">~Glwidget</ref>();</highlight></codeline>
+<codeline lineno="19" refid="class_glwidget_1a160da762ff1b4a6c1bf6f09bfb71e15c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model" kindref="compound">Model</ref><sp/>*<ref refid="class_glwidget_1a160da762ff1b4a6c1bf6f09bfb71e15c" kindref="member">model</ref>;</highlight></codeline>
+<codeline lineno="20" refid="class_glwidget_1abe8b6e5adc693200d652414fd8929f46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1abe8b6e5adc693200d652414fd8929f46" kindref="member">wireframe</ref>;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>float<sp/>r1<sp/>;<sp/>float<sp/>r2;<sp/>float<sp/>r3;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeGL();</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paintGL();</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resizeGL(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>draw();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>QSize<sp/>minimumSizeHint()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>QSize<sp/>sizeHint()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mousePressEvent(QMouseEvent<sp/>*event);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mouseMoveEvent(QMouseEvent<sp/>*event);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a5f266609dcd89e1291539a498ce42cbb" kindref="member">initializeGL</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a440fe507a9bd647c1a961cf72305da31" kindref="member">paintGL</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a36bd98ea1696cf1a7f5830fde3a16a72" kindref="member">resizeGL</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1ac54d1b859e11037f3e86f3193e84970b" kindref="member">draw</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>QSize<sp/><ref refid="class_glwidget_1a9768cbeb06b6ccfaff47ff443dda1c98" kindref="member">minimumSizeHint</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>QSize<sp/><ref refid="class_glwidget_1a0dfc5b597184e106d7bcf921ba24b09a" kindref="member">sizeHint</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a0e3f033e0fa941505114a32d35823c70" kindref="member">mousePressEvent</ref>(QMouseEvent<sp/>*event);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1afc8a6da76c5ead92b1c1a4ba8f931310" kindref="member">mouseMoveEvent</ref>(QMouseEvent<sp/>*event);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>slots<sp/>for<sp/>xyz-rotation<sp/>slider</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setXRotation(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setYRotation(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setZRotation(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setScale(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWireframe(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setModel(<ref refid="class_model" kindref="compound">Model</ref>*<sp/>m);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1abdb807d1e98041d3813543dd2f043d9e" kindref="member">setXRotation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a980d52bca9bf5817911029877a68e584" kindref="member">setYRotation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1ad9318fc18c0abc761ce038c6afbf1814" kindref="member">setZRotation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a2ea79df264aadd3584488296749f370c" kindref="member">setScale</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a52a956313956890bf13741c218f8fa3d" kindref="member">setWireframe</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a2b49ec71ab84e52adc78ba062c235ac0" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a2786dcfd2ee92efbbd2c457dc1ac7063" kindref="member">setModel</ref>(<ref refid="class_model" kindref="compound">Model</ref>*<sp/>m);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">signals:</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>signaling<sp/>rotation<sp/>from<sp/>mouse<sp/>movement</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>xRotationChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>yRotationChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>zRotationChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scaleChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a179006a4c52b573f9e6791deb16f1f2a" kindref="member">xRotationChanged</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a7c8d9abf4c47760ea6c6fff8ed12e0a5" kindref="member">yRotationChanged</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1ab1b7ea4daa9671708ba4dd12fa8c52a9" kindref="member">zRotationChanged</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_glwidget_1a874d1da9fed05d5063176ec5195aa483" kindref="member">scaleChanged</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>Ui::Glwidget<sp/>*ui;</highlight><highlight class="normal"></highlight></codeline>

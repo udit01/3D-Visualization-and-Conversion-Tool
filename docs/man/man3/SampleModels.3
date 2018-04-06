@@ -1,0 +1,86 @@
+.TH "SampleModels" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SampleModels \- defines the templates for the software including other necessary designs for base display like the axes  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <samplemodels\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSampleModels\fP ()"
+.br
+.RI "blank constructor to intialize a sample model "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBModel\fP * \fBTriangularPyramid\fP (float side, float height)"
+.br
+.RI "constructor to create a triangular pyramid model "
+.ti -1c
+.RI "static \fBModel\fP * \fBSquarePyramid\fP (float side, float height)"
+.br
+.RI "constructor to create a square pyramid model "
+.ti -1c
+.RI "static \fBModel\fP * \fBTriangularPrism\fP (float side, float height)"
+.br
+.RI "constructor to create a triangular prism model "
+.ti -1c
+.RI "static \fBModel\fP * \fBCuboid\fP (float a, float b, float c)"
+.br
+.RI "constructor to create a cuboid model "
+.ti -1c
+.RI "static \fBModel\fP * \fBEmpty\fP ()"
+.br
+.RI "constructor to create an empty model "
+.ti -1c
+.RI "static \fBModel\fP * \fBAxes\fP (float side)"
+.br
+.RI "constructor to build up the axes model "
+.in -1c
+.SH "Detailed Description"
+.PP 
+defines the templates for the software including other necessary designs for base display like the axes 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SampleModels::SampleModels ()"
+
+.PP
+blank constructor to intialize a sample model 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBModel\fP * SampleModels::Axes (float side)\fC [static]\fP"
+
+.PP
+constructor to build up the axes model 
+.SS "\fBModel\fP * SampleModels::Cuboid (float a, float b, float c)\fC [static]\fP"
+
+.PP
+constructor to create a cuboid model 
+.SS "\fBModel\fP * SampleModels::Empty ()\fC [static]\fP"
+
+.PP
+constructor to create an empty model 
+.SS "\fBModel\fP * SampleModels::SquarePyramid (float side, float height)\fC [static]\fP"
+
+.PP
+constructor to create a square pyramid model 
+.SS "\fBModel\fP * SampleModels::TriangularPrism (float side, float height)\fC [static]\fP"
+
+.PP
+constructor to create a triangular prism model 
+.SS "\fBModel\fP * SampleModels::TriangularPyramid (float side, float height)\fC [static]\fP"
+
+.PP
+constructor to create a triangular pyramid model 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

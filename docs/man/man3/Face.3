@@ -1,0 +1,54 @@
+.TH "Face" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Face \- Holds objects that are used to describe the faces in rendering the 3d model using openGL\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <model\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFace\fP (float *pts, int \fBnpts\fP)"
+.br
+.RI "the Constructor for the face class that takes a pointer to a point object and number of points as its arguments\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float * \fBpoints\fP"
+.br
+.RI "the points that mark the corners/vertices of the face\&. "
+.ti -1c
+.RI "int \fBnpts\fP"
+.br
+.RI "the numbers of vertices that describe the face\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds objects that are used to describe the faces in rendering the 3d model using openGL\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Face::Face (float * pts, int npts)"
+
+.PP
+the Constructor for the face class that takes a pointer to a point object and number of points as its arguments\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int Face::npts"
+
+.PP
+the numbers of vertices that describe the face\&. 
+.SS "float* Face::points"
+
+.PP
+the points that mark the corners/vertices of the face\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

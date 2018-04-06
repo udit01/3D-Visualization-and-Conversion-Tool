@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_sample_models" kind="class" language="C++" prot="public">
     <compoundname>SampleModels</compoundname>
+    <includes refid="samplemodels_8h" local="no">samplemodels.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_sample_models_1ab4f2cabd4d134b925589e2e5e4f3b55b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -9,12 +10,12 @@
         <argsstring>()</argsstring>
         <name>SampleModels</name>
         <briefdescription>
-        </briefdescription>
+<para>blank constructor to intialize a sample model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="19" column="1" bodyfile="src/samplemodels.cpp" bodystart="9" bodyend="12"/>
+        <location file="src/samplemodels.h" line="20" column="1" bodyfile="src/samplemodels.cpp" bodystart="9" bodyend="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -32,12 +33,12 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor to create a triangular pyramid model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="21" column="1" bodyfile="src/samplemodels.cpp" bodystart="64" bodyend="100"/>
+        <location file="src/samplemodels.h" line="23" column="1" bodyfile="src/samplemodels.cpp" bodystart="64" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_sample_models_1a0a5afe183db2a5e7e59f825e6ac736e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -53,12 +54,12 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor to create a square pyramid model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="22" column="1" bodyfile="src/samplemodels.cpp" bodystart="102" bodyend="141"/>
+        <location file="src/samplemodels.h" line="25" column="1" bodyfile="src/samplemodels.cpp" bodystart="102" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="class_sample_models_1ad9be52995d798b78ad2c04c1b3c1f4e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -74,12 +75,12 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor to create a triangular prism model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="23" column="1" bodyfile="src/samplemodels.cpp" bodystart="143" bodyend="184"/>
+        <location file="src/samplemodels.h" line="27" column="1" bodyfile="src/samplemodels.cpp" bodystart="143" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -99,12 +100,12 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor to create a cuboid model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="24" column="1" bodyfile="src/samplemodels.cpp" bodystart="186" bodyend="233"/>
+        <location file="src/samplemodels.h" line="29" column="1" bodyfile="src/samplemodels.cpp" bodystart="186" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="class_sample_models_1a890001f4e859021afe59bd956245e2ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -112,12 +113,12 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
-        </briefdescription>
+<para>constructor to create an empty model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="25" column="1" bodyfile="src/samplemodels.cpp" bodystart="14" bodyend="26"/>
+        <location file="src/samplemodels.h" line="31" column="1" bodyfile="src/samplemodels.cpp" bodystart="14" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -129,16 +130,16 @@
           <declname>side</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor to build up the axes model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/samplemodels.h" line="26" column="1" bodyfile="src/samplemodels.cpp" bodystart="28" bodyend="62"/>
+        <location file="src/samplemodels.h" line="33" column="1" bodyfile="src/samplemodels.cpp" bodystart="28" bodyend="62"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>defines the templates for the software including other necessary designs for base display like the axes </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
@@ -147,7 +148,7 @@
         <link refid="class_sample_models"/>
       </node>
     </collaborationgraph>
-    <location file="src/samplemodels.h" line="17" column="1" bodyfile="src/samplemodels.h" bodystart="16" bodyend="29"/>
+    <location file="src/samplemodels.h" line="17" column="1" bodyfile="src/samplemodels.h" bodystart="16" bodyend="36"/>
     <listofallmembers>
       <member refid="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>Axes</name></member>
       <member refid="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" prot="public" virt="non-virtual"><scope>SampleModels</scope><name>Cuboid</name></member>

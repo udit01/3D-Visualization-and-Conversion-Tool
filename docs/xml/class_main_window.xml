@@ -3,6 +3,7 @@
   <compounddef id="class_main_window" kind="class" language="C++" prot="public">
     <compoundname>MainWindow</compoundname>
     <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" prot="public" static="no" mutable="no">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -265,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="34" column="1" bodyfile="src/mainwindow.cpp" bodystart="89" bodyend="102"/>
+        <location file="src/mainwindow.h" line="34" column="1" bodyfile="src/mainwindow.cpp" bodystart="89" bodyend="101"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aed8d4c16aaa87ae02a2de2edd5fc91c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -278,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="35" column="1" bodyfile="src/mainwindow.cpp" bodystart="104" bodyend="110"/>
+        <location file="src/mainwindow.h" line="35" column="1" bodyfile="src/mainwindow.cpp" bodystart="103" bodyend="109"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a73be2df93057d846aa541dffb00e7144" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -291,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="36" column="1" bodyfile="src/mainwindow.cpp" bodystart="112" bodyend="161"/>
+        <location file="src/mainwindow.h" line="36" column="1" bodyfile="src/mainwindow.cpp" bodystart="111" bodyend="160"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a189c5a0db0912274f25238a4ea59c8b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -308,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="37" column="1" bodyfile="src/mainwindow.cpp" bodystart="163" bodyend="173"/>
+        <location file="src/mainwindow.h" line="37" column="1" bodyfile="src/mainwindow.cpp" bodystart="162" bodyend="172"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a2883a72ff38d78cfb400533cfe7e4db9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -325,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="38" column="1" bodyfile="src/mainwindow.cpp" bodystart="175" bodyend="185"/>
+        <location file="src/mainwindow.h" line="38" column="1" bodyfile="src/mainwindow.cpp" bodystart="174" bodyend="184"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aa57b51855b787d6482b01b77d5247543" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -342,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="39" column="1" bodyfile="src/mainwindow.cpp" bodystart="187" bodyend="197"/>
+        <location file="src/mainwindow.h" line="39" column="1" bodyfile="src/mainwindow.cpp" bodystart="186" bodyend="196"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1ab5d5c67e1d6a349998402bc6f7350bbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -359,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="40" column="1" bodyfile="src/mainwindow.cpp" bodystart="199" bodyend="203"/>
+        <location file="src/mainwindow.h" line="40" column="1" bodyfile="src/mainwindow.cpp" bodystart="198" bodyend="202"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aebbb5cab1a3857035d2feb041ec67142" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -376,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="41" column="1" bodyfile="src/mainwindow.cpp" bodystart="205" bodyend="208"/>
+        <location file="src/mainwindow.h" line="41" column="1" bodyfile="src/mainwindow.cpp" bodystart="204" bodyend="207"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a0bb0eeb1aa722807501741cb2bb58cc7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -393,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="42" column="1" bodyfile="src/mainwindow.cpp" bodystart="210" bodyend="213"/>
+        <location file="src/mainwindow.h" line="42" column="1" bodyfile="src/mainwindow.cpp" bodystart="209" bodyend="212"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a7df050ed9d3ca5f73a3ed852b35fc736" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -406,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="43" column="1" bodyfile="src/mainwindow.cpp" bodystart="215" bodyend="252"/>
+        <location file="src/mainwindow.h" line="43" column="1" bodyfile="src/mainwindow.cpp" bodystart="214" bodyend="251"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a5072b76c950c80922bc6094f509f9868" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -419,7 +420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="44" column="1" bodyfile="src/mainwindow.cpp" bodystart="254" bodyend="261"/>
+        <location file="src/mainwindow.h" line="44" column="1" bodyfile="src/mainwindow.cpp" bodystart="253" bodyend="260"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a73334c7e2ae15d7220fd97a4045ddc32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -432,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="45" column="1" bodyfile="src/mainwindow.cpp" bodystart="263" bodyend="270"/>
+        <location file="src/mainwindow.h" line="45" column="1" bodyfile="src/mainwindow.cpp" bodystart="262" bodyend="269"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a35b890d5631629eeb9010c4621bb578c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -445,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="46" column="1" bodyfile="src/mainwindow.cpp" bodystart="272" bodyend="279"/>
+        <location file="src/mainwindow.h" line="46" column="1" bodyfile="src/mainwindow.cpp" bodystart="271" bodyend="278"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a7a9424857bc821a245770d54ac402764" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -458,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mainwindow.h" line="47" column="1" bodyfile="src/mainwindow.cpp" bodystart="281" bodyend="288"/>
+        <location file="src/mainwindow.h" line="47" column="1" bodyfile="src/mainwindow.cpp" bodystart="280" bodyend="287"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

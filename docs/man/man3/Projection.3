@@ -1,0 +1,58 @@
+.TH "Projection" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Projection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <model2d\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjection\fP (int numPoints, float *\fBpoints\fP, bool **\fBedges\fP)"
+.br
+.RI "constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float * \fBpoints\fP"
+.br
+.RI "the array of points the specifies a 2d view "
+.ti -1c
+.RI "int \fBnpts\fP"
+.br
+.RI "the number of points/vertices in the 2d view "
+.ti -1c
+.RI "bool ** \fBedges\fP"
+.br
+.RI "the double array of edges between any two points specified by a bool value "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Projection::Projection (int numPoints, float * points, bool ** edges)"
+
+.PP
+constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool** Projection::edges"
+
+.PP
+the double array of edges between any two points specified by a bool value 
+.SS "int Projection::npts"
+
+.PP
+the number of points/vertices in the 2d view 
+.SS "float* Projection::points"
+
+.PP
+the array of points the specifies a 2d view 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

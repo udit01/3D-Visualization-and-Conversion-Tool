@@ -2,8 +2,16 @@
 \label{class_face}\index{Face@{Face}}
 
 
-Collaboration diagram for Face\+:
-\nopagebreak
+Holds objects that are used to describe the faces in rendering the 3d model using open\+GL.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Collaboration diagram for Face\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,21 +21,57 @@ Collaboration diagram for Face\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_face_a890f52c15855e434e6c0f853bcf7f40d}\label{class_face_a890f52c15855e434e6c0f853bcf7f40d}} 
-{\bfseries Face} (float $\ast$pts, int npts)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_face_a890f52c15855e434e6c0f853bcf7f40d}{Face}} (float $\ast$pts, int \mbox{\hyperlink{class_face_ac35360914de7ce1903058a598b9fe7ab}{npts}})
+\begin{DoxyCompactList}\small\item\em the Constructor for the face class that takes a pointer to a point object and number of points as its arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_face_a402240ad45f918a772d83f3022f9589f}\label{class_face_a402240ad45f918a772d83f3022f9589f}} 
-float $\ast$ {\bfseries points}
-\item 
+float $\ast$ \mbox{\hyperlink{class_face_a402240ad45f918a772d83f3022f9589f}{points}}
+\begin{DoxyCompactList}\small\item\em the points that mark the corners/vertices of the face. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_face_ac35360914de7ce1903058a598b9fe7ab}{npts}}
+\begin{DoxyCompactList}\small\item\em the numbers of vertices that describe the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds objects that are used to describe the faces in rendering the 3d model using open\+GL. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_face_a890f52c15855e434e6c0f853bcf7f40d}\label{class_face_a890f52c15855e434e6c0f853bcf7f40d}} 
+\index{Face@{Face}!Face@{Face}}
+\index{Face@{Face}!Face@{Face}}
+\subsubsection{\texorpdfstring{Face()}{Face()}}
+{\footnotesize\ttfamily Face\+::\+Face (\begin{DoxyParamCaption}\item[{float $\ast$}]{pts,  }\item[{int}]{npts }\end{DoxyParamCaption})}
+
+
+
+the Constructor for the face class that takes a pointer to a point object and number of points as its arguments. 
+
+
+
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_face_ac35360914de7ce1903058a598b9fe7ab}\label{class_face_ac35360914de7ce1903058a598b9fe7ab}} 
-int {\bfseries npts}
-\end{DoxyCompactItemize}
+\index{Face@{Face}!npts@{npts}}
+\index{npts@{npts}!Face@{Face}}
+\subsubsection{\texorpdfstring{npts}{npts}}
+{\footnotesize\ttfamily int Face\+::npts}
+
+
+
+the numbers of vertices that describe the face. 
+
+\mbox{\Hypertarget{class_face_a402240ad45f918a772d83f3022f9589f}\label{class_face_a402240ad45f918a772d83f3022f9589f}} 
+\index{Face@{Face}!points@{points}}
+\index{points@{points}!Face@{Face}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily float$\ast$ Face\+::points}
+
+
+
+the points that mark the corners/vertices of the face. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/model.\+h\item 
-src/model.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+src/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}

@@ -71,6 +71,11 @@ $(function() {
 <div class="title">Model2d Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>creates the 2d model for a particular design by defining the necessary attributes  
+ <a href="class_model2d.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="model2d_8h_source.html">model2d.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Model2d:</div>
 <div class="dyncontent">
@@ -82,37 +87,193 @@ Collaboration diagram for Model2d:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa07204b20301739146f8ecf525778720"><td class="memItemLeft" align="right" valign="top"><a id="aa07204b20301739146f8ecf525778720"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Model2d</b> (<a class="el" href="class_projection.html">Projection</a> *xy, <a class="el" href="class_projection.html">Projection</a> *yz, <a class="el" href="class_projection.html">Projection</a> *zx)</td></tr>
+<tr class="memitem:aa07204b20301739146f8ecf525778720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#aa07204b20301739146f8ecf525778720">Model2d</a> (<a class="el" href="class_projection.html">Projection</a> *<a class="el" href="class_model2d.html#ad335c0d9899b23996a3f11e61be1d431">xy</a>, <a class="el" href="class_projection.html">Projection</a> *<a class="el" href="class_model2d.html#a4d012de876b8bb089bd226e41270df25">yz</a>, <a class="el" href="class_projection.html">Projection</a> *<a class="el" href="class_model2d.html#a6c459c26e4c89bbc11ac0149ea07b997">zx</a>)</td></tr>
+<tr class="memdesc:aa07204b20301739146f8ecf525778720"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively  <a href="#aa07204b20301739146f8ecf525778720">More...</a><br /></td></tr>
 <tr class="separator:aa07204b20301739146f8ecf525778720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39a4f4a2c6430cee2b226a9509ec38b"><td class="memItemLeft" align="right" valign="top"><a id="ab39a4f4a2c6430cee2b226a9509ec38b"></a>
-<a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>convertTo3d</b> ()</td></tr>
+<tr class="memitem:ab39a4f4a2c6430cee2b226a9509ec38b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#ab39a4f4a2c6430cee2b226a9509ec38b">convertTo3d</a> ()</td></tr>
+<tr class="memdesc:ab39a4f4a2c6430cee2b226a9509ec38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the 3d model object from the current 2d model  <a href="#ab39a4f4a2c6430cee2b226a9509ec38b">More...</a><br /></td></tr>
 <tr class="separator:ab39a4f4a2c6430cee2b226a9509ec38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dbe9eafd94b347c3257ac90e743065c"><td class="memItemLeft" align="right" valign="top"><a id="a9dbe9eafd94b347c3257ac90e743065c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (std::string s)</td></tr>
+<tr class="memitem:a9dbe9eafd94b347c3257ac90e743065c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#a9dbe9eafd94b347c3257ac90e743065c">serialize</a> (std::string s)</td></tr>
+<tr class="memdesc:a9dbe9eafd94b347c3257ac90e743065c"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to generate the text that specifies the 2d model to be saved in a text file  <a href="#a9dbe9eafd94b347c3257ac90e743065c">More...</a><br /></td></tr>
 <tr class="separator:a9dbe9eafd94b347c3257ac90e743065c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3c8399ef5cf86bb176b111c132f30b7"><td class="memItemLeft" align="right" valign="top"><a id="aa3c8399ef5cf86bb176b111c132f30b7"></a>
-static <a class="el" href="class_model2d.html">Model2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>deserialize</b> (std::string s)</td></tr>
+<tr class="memitem:aa3c8399ef5cf86bb176b111c132f30b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model2d.html">Model2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#aa3c8399ef5cf86bb176b111c132f30b7">deserialize</a> (std::string s)</td></tr>
+<tr class="memdesc:aa3c8399ef5cf86bb176b111c132f30b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to generate the 2d model from the text code saved in a particular file  <a href="#aa3c8399ef5cf86bb176b111c132f30b7">More...</a><br /></td></tr>
 <tr class="separator:aa3c8399ef5cf86bb176b111c132f30b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad335c0d9899b23996a3f11e61be1d431"><td class="memItemLeft" align="right" valign="top"><a id="ad335c0d9899b23996a3f11e61be1d431"></a>
-<a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>xy</b></td></tr>
+<tr class="memitem:ad335c0d9899b23996a3f11e61be1d431"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#ad335c0d9899b23996a3f11e61be1d431">xy</a></td></tr>
+<tr class="memdesc:ad335c0d9899b23996a3f11e61be1d431"><td class="mdescLeft">&#160;</td><td class="mdescRight">the xy projection of the 3d model that represents this object  <a href="#ad335c0d9899b23996a3f11e61be1d431">More...</a><br /></td></tr>
 <tr class="separator:ad335c0d9899b23996a3f11e61be1d431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d012de876b8bb089bd226e41270df25"><td class="memItemLeft" align="right" valign="top"><a id="a4d012de876b8bb089bd226e41270df25"></a>
-<a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>yz</b></td></tr>
+<tr class="memitem:a4d012de876b8bb089bd226e41270df25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#a4d012de876b8bb089bd226e41270df25">yz</a></td></tr>
+<tr class="memdesc:a4d012de876b8bb089bd226e41270df25"><td class="mdescLeft">&#160;</td><td class="mdescRight">the yz projection of the 3d model that represents this object  <a href="#a4d012de876b8bb089bd226e41270df25">More...</a><br /></td></tr>
 <tr class="separator:a4d012de876b8bb089bd226e41270df25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c459c26e4c89bbc11ac0149ea07b997"><td class="memItemLeft" align="right" valign="top"><a id="a6c459c26e4c89bbc11ac0149ea07b997"></a>
-<a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>zx</b></td></tr>
+<tr class="memitem:a6c459c26e4c89bbc11ac0149ea07b997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_projection.html">Projection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model2d.html#a6c459c26e4c89bbc11ac0149ea07b997">zx</a></td></tr>
+<tr class="memdesc:a6c459c26e4c89bbc11ac0149ea07b997"><td class="mdescLeft">&#160;</td><td class="mdescRight">the zx projection of the 3d model that represents this object  <a href="#a6c459c26e4c89bbc11ac0149ea07b997">More...</a><br /></td></tr>
 <tr class="separator:a6c459c26e4c89bbc11ac0149ea07b997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>creates the 2d model for a particular design by defining the necessary attributes </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa07204b20301739146f8ecf525778720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07204b20301739146f8ecf525778720">&#9670;&nbsp;</a></span>Model2d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Model2d::Model2d </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_projection.html">Projection</a> *&#160;</td>
+          <td class="paramname"><em>xy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_projection.html">Projection</a> *&#160;</td>
+          <td class="paramname"><em>yz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_projection.html">Projection</a> *&#160;</td>
+          <td class="paramname"><em>zx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab39a4f4a2c6430cee2b226a9509ec38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39a4f4a2c6430cee2b226a9509ec38b">&#9670;&nbsp;</a></span>convertTo3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model.html">Model</a> * Model2d::convertTo3d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generates the 3d model object from the current 2d model </p>
+
+</div>
+</div>
+<a id="aa3c8399ef5cf86bb176b111c132f30b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c8399ef5cf86bb176b111c132f30b7">&#9670;&nbsp;</a></span>deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model2d.html">Model2d</a> * Model2d::deserialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>used to generate the 2d model from the text code saved in a particular file </p>
+
+</div>
+</div>
+<a id="a9dbe9eafd94b347c3257ac90e743065c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbe9eafd94b347c3257ac90e743065c">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model2d::serialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used to generate the text that specifies the 2d model to be saved in a text file </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad335c0d9899b23996a3f11e61be1d431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad335c0d9899b23996a3f11e61be1d431">&#9670;&nbsp;</a></span>xy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_projection.html">Projection</a>* Model2d::xy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the xy projection of the 3d model that represents this object </p>
+
+</div>
+</div>
+<a id="a4d012de876b8bb089bd226e41270df25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d012de876b8bb089bd226e41270df25">&#9670;&nbsp;</a></span>yz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_projection.html">Projection</a>* Model2d::yz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the yz projection of the 3d model that represents this object </p>
+
+</div>
+</div>
+<a id="a6c459c26e4c89bbc11ac0149ea07b997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c459c26e4c89bbc11ac0149ea07b997">&#9670;&nbsp;</a></span>zx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_projection.html">Projection</a>* Model2d::zx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the zx projection of the 3d model that represents this object </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="model2d_8h_source.html">model2d.h</a></li>
-<li>src/model2d.cpp</li>
+<li>src/<a class="el" href="model2d_8cpp.html">model2d.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

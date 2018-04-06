@@ -2,8 +2,11 @@
 \label{class_model}\index{Model@{Model}}
 
 
-Collaboration diagram for Model\+:
-\nopagebreak
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Collaboration diagram for Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,45 +16,144 @@ Collaboration diagram for Model\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_a39cf79e51da0f52f1031f98f1bebd118}\label{class_model_a39cf79e51da0f52f1031f98f1bebd118}} 
-{\bfseries Model} (int num\+Points, float $\ast$pts, bool $\ast$$\ast$edges, std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$$>$ faces)
-\item 
-\mbox{\Hypertarget{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}\label{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}} 
-void {\bfseries translate} (float dx, float dy, float dz)
-\item 
-\mbox{\Hypertarget{class_model_ae5999fb77646320aed8d81a669568caa}\label{class_model_ae5999fb77646320aed8d81a669568caa}} 
-void {\bfseries rotate} (float alpha, float beta, float gamma)
-\item 
-\mbox{\Hypertarget{class_model_ac62fb1874a6597955c89fe3a9a1663e1}\label{class_model_ac62fb1874a6597955c89fe3a9a1663e1}} 
-\mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ {\bfseries convert\+To2d} ()
-\item 
-\mbox{\Hypertarget{class_model_abc71b3488f7f944f1c99727a491ee985}\label{class_model_abc71b3488f7f944f1c99727a491ee985}} 
-void {\bfseries serialize} (std\+::string s)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_model_a39cf79e51da0f52f1031f98f1bebd118}{Model}} (int \mbox{\hyperlink{class_model_a39ac6e91375d5ac5799a9845c3479d9c}{num\+Points}}, float $\ast$pts, bool $\ast$$\ast$\mbox{\hyperlink{class_model_a723a0c631c2ff688fed06c5652879ef7}{edges}}, std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$$>$ \mbox{\hyperlink{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}{faces}})
+\begin{DoxyCompactList}\small\item\em Constructor for the 3d model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}{translate}} (float dx, float dy, float dz)
+\begin{DoxyCompactList}\small\item\em translates the model by the specified values along the respective directions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_ae5999fb77646320aed8d81a669568caa}{rotate}} (float alpha, float beta, float gamma)
+\begin{DoxyCompactList}\small\item\em rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ \mbox{\hyperlink{class_model_ac62fb1874a6597955c89fe3a9a1663e1}{convert\+To2d}} ()
+\begin{DoxyCompactList}\small\item\em generates the 2d model object for the current 3d model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_abc71b3488f7f944f1c99727a491ee985}{serialize}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em used to generate the text that specifies the 3d model to be saved in a text file \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_a98946d1c8d49b43f541dbd6b98b31e52}\label{class_model_a98946d1c8d49b43f541dbd6b98b31e52}} 
-static \mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries deserialize} (std\+::string s)
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_model_a98946d1c8d49b43f541dbd6b98b31e52}{deserialize}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em used to generate the 3d model from the text code saved in a particular file \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_a39ac6e91375d5ac5799a9845c3479d9c}\label{class_model_a39ac6e91375d5ac5799a9845c3479d9c}} 
-int {\bfseries num\+Points}
-\item 
-\mbox{\Hypertarget{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}\label{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}} 
-std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$ $>$ {\bfseries faces}
-\item 
-\mbox{\Hypertarget{class_model_a6436acbcf42bece5621666fe37c71309}\label{class_model_a6436acbcf42bece5621666fe37c71309}} 
-float $\ast$ {\bfseries points}
-\item 
+int \mbox{\hyperlink{class_model_a39ac6e91375d5ac5799a9845c3479d9c}{num\+Points}}
+\begin{DoxyCompactList}\small\item\em the number of vertices that describe the model \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$ $>$ \mbox{\hyperlink{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}{faces}}
+\begin{DoxyCompactList}\small\item\em the vector containing the faces that describes the 3d model \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_model_a6436acbcf42bece5621666fe37c71309}{points}}
+\begin{DoxyCompactList}\small\item\em the array of points in 3d \end{DoxyCompactList}\item 
+bool $\ast$$\ast$ \mbox{\hyperlink{class_model_a723a0c631c2ff688fed06c5652879ef7}{edges}}
+\begin{DoxyCompactList}\small\item\em the double array of the edges between the vertices of the model described by a bool value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_a39cf79e51da0f52f1031f98f1bebd118}\label{class_model_a39cf79e51da0f52f1031f98f1bebd118}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\subsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{int}]{num\+Points,  }\item[{float $\ast$}]{pts,  }\item[{bool $\ast$$\ast$}]{edges,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_face}{Face}} $\ast$$>$}]{faces }\end{DoxyParamCaption})}
+
+
+
+Constructor for the 3d model. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_ac62fb1874a6597955c89fe3a9a1663e1}\label{class_model_ac62fb1874a6597955c89fe3a9a1663e1}} 
+\index{Model@{Model}!convert\+To2d@{convert\+To2d}}
+\index{convert\+To2d@{convert\+To2d}!Model@{Model}}
+\subsubsection{\texorpdfstring{convert\+To2d()}{convertTo2d()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model2d}{Model2d}} $\ast$ Model\+::convert\+To2d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+generates the 2d model object for the current 3d model 
+
+\mbox{\Hypertarget{class_model_a98946d1c8d49b43f541dbd6b98b31e52}\label{class_model_a98946d1c8d49b43f541dbd6b98b31e52}} 
+\index{Model@{Model}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Model@{Model}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} $\ast$ Model\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+used to generate the 3d model from the text code saved in a particular file 
+
+\mbox{\Hypertarget{class_model_ae5999fb77646320aed8d81a669568caa}\label{class_model_ae5999fb77646320aed8d81a669568caa}} 
+\index{Model@{Model}!rotate@{rotate}}
+\index{rotate@{rotate}!Model@{Model}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Model\+::rotate (\begin{DoxyParamCaption}\item[{float}]{alpha,  }\item[{float}]{beta,  }\item[{float}]{gamma }\end{DoxyParamCaption})}
+
+
+
+rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively 
+
+\mbox{\Hypertarget{class_model_abc71b3488f7f944f1c99727a491ee985}\label{class_model_abc71b3488f7f944f1c99727a491ee985}} 
+\index{Model@{Model}!serialize@{serialize}}
+\index{serialize@{serialize}!Model@{Model}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily void Model\+::serialize (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+used to generate the text that specifies the 3d model to be saved in a text file 
+
+\mbox{\Hypertarget{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}\label{class_model_a32e61c8487a2202e9f3f041a8abcb3c2}} 
+\index{Model@{Model}!translate@{translate}}
+\index{translate@{translate}!Model@{Model}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Model\+::translate (\begin{DoxyParamCaption}\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{dz }\end{DoxyParamCaption})}
+
+
+
+translates the model by the specified values along the respective directions 
+
+
+
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_model_a723a0c631c2ff688fed06c5652879ef7}\label{class_model_a723a0c631c2ff688fed06c5652879ef7}} 
-bool $\ast$$\ast$ {\bfseries edges}
-\end{DoxyCompactItemize}
+\index{Model@{Model}!edges@{edges}}
+\index{edges@{edges}!Model@{Model}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Model\+::edges}
+
+
+
+the double array of the edges between the vertices of the model described by a bool value 
+
+\mbox{\Hypertarget{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}\label{class_model_a7752ae8e1bbacc53ed94d7bd9c404b6d}} 
+\index{Model@{Model}!faces@{faces}}
+\index{faces@{faces}!Model@{Model}}
+\subsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_face}{Face}}$\ast$$>$ Model\+::faces}
+
+
+
+the vector containing the faces that describes the 3d model 
+
+\mbox{\Hypertarget{class_model_a39ac6e91375d5ac5799a9845c3479d9c}\label{class_model_a39ac6e91375d5ac5799a9845c3479d9c}} 
+\index{Model@{Model}!num\+Points@{num\+Points}}
+\index{num\+Points@{num\+Points}!Model@{Model}}
+\subsubsection{\texorpdfstring{num\+Points}{numPoints}}
+{\footnotesize\ttfamily int Model\+::num\+Points}
+
+
+
+the number of vertices that describe the model 
+
+\mbox{\Hypertarget{class_model_a6436acbcf42bece5621666fe37c71309}\label{class_model_a6436acbcf42bece5621666fe37c71309}} 
+\index{Model@{Model}!points@{points}}
+\index{points@{points}!Model@{Model}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily float$\ast$ Model\+::points}
+
+
+
+the array of points in 3d 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/model.\+h\item 
-src/model.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+src/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}

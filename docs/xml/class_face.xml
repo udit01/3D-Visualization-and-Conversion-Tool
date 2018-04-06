@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_face" kind="class" language="C++" prot="public">
     <compoundname>Face</compoundname>
+    <includes refid="model_8h" local="no">model.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_face_1a402240ad45f918a772d83f3022f9589f" prot="public" static="no" mutable="no">
         <type>float *</type>
@@ -9,12 +10,12 @@
         <argsstring></argsstring>
         <name>points</name>
         <briefdescription>
-        </briefdescription>
+<para>the points that mark the corners/vertices of the face. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model.h" line="51" column="1" bodyfile="src/model.h" bodystart="51" bodyend="-1"/>
+        <location file="src/model.h" line="54" column="1" bodyfile="src/model.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_face_1ac35360914de7ce1903058a598b9fe7ab" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -22,12 +23,12 @@
         <argsstring></argsstring>
         <name>npts</name>
         <briefdescription>
-        </briefdescription>
+<para>the numbers of vertices that describe the face. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model.h" line="52" column="1" bodyfile="src/model.h" bodystart="52" bodyend="-1"/>
+        <location file="src/model.h" line="56" column="1" bodyfile="src/model.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -45,16 +46,16 @@
           <declname>npts</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>the Constructor for the face class that takes a pointer to a point object and number of points as its arguments. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model.h" line="53" column="1" bodyfile="src/model.cpp" bodystart="12" bodyend="15"/>
+        <location file="src/model.h" line="58" column="1" bodyfile="src/model.cpp" bodystart="12" bodyend="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Holds objects that are used to describe the faces in rendering the 3d model using openGL. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
@@ -63,7 +64,7 @@
         <link refid="class_face"/>
       </node>
     </collaborationgraph>
-    <location file="src/model.h" line="49" column="1" bodyfile="src/model.h" bodystart="48" bodyend="57"/>
+    <location file="src/model.h" line="51" column="1" bodyfile="src/model.h" bodystart="50" bodyend="62"/>
     <listofallmembers>
       <member refid="class_face_1a890f52c15855e434e6c0f853bcf7f40d" prot="public" virt="non-virtual"><scope>Face</scope><name>Face</name></member>
       <member refid="class_face_1ac35360914de7ce1903058a598b9fe7ab" prot="public" virt="non-virtual"><scope>Face</scope><name>npts</name></member>

@@ -1,0 +1,112 @@
+.TH "Model" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Model
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <model\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP (int \fBnumPoints\fP, float *pts, bool **\fBedges\fP, std::vector< \fBFace\fP *> \fBfaces\fP)"
+.br
+.RI "Constructor for the 3d model\&. "
+.ti -1c
+.RI "void \fBtranslate\fP (float dx, float dy, float dz)"
+.br
+.RI "translates the model by the specified values along the respective directions "
+.ti -1c
+.RI "void \fBrotate\fP (float alpha, float beta, float gamma)"
+.br
+.RI "rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively "
+.ti -1c
+.RI "\fBModel2d\fP * \fBconvertTo2d\fP ()"
+.br
+.RI "generates the 2d model object for the current 3d model "
+.ti -1c
+.RI "void \fBserialize\fP (std::string s)"
+.br
+.RI "used to generate the text that specifies the 3d model to be saved in a text file "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBModel\fP * \fBdeserialize\fP (std::string s)"
+.br
+.RI "used to generate the 3d model from the text code saved in a particular file "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBnumPoints\fP"
+.br
+.RI "the number of vertices that describe the model "
+.ti -1c
+.RI "std::vector< \fBFace\fP * > \fBfaces\fP"
+.br
+.RI "the vector containing the faces that describes the 3d model "
+.ti -1c
+.RI "float * \fBpoints\fP"
+.br
+.RI "the array of points in 3d "
+.ti -1c
+.RI "bool ** \fBedges\fP"
+.br
+.RI "the double array of the edges between the vertices of the model described by a bool value "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Model::Model (int numPoints, float * pts, bool ** edges, std::vector< \fBFace\fP *> faces)"
+
+.PP
+Constructor for the 3d model\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBModel2d\fP * Model::convertTo2d ()"
+
+.PP
+generates the 2d model object for the current 3d model 
+.SS "\fBModel\fP * Model::deserialize (std::string s)\fC [static]\fP"
+
+.PP
+used to generate the 3d model from the text code saved in a particular file 
+.SS "void Model::rotate (float alpha, float beta, float gamma)"
+
+.PP
+rotates the object with respect to the axes by the specifies angles along x,y,z axes respectively 
+.SS "void Model::serialize (std::string s)"
+
+.PP
+used to generate the text that specifies the 3d model to be saved in a text file 
+.SS "void Model::translate (float dx, float dy, float dz)"
+
+.PP
+translates the model by the specified values along the respective directions 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool** Model::edges"
+
+.PP
+the double array of the edges between the vertices of the model described by a bool value 
+.SS "std::vector<\fBFace\fP*> Model::faces"
+
+.PP
+the vector containing the faces that describes the 3d model 
+.SS "int Model::numPoints"
+
+.PP
+the number of vertices that describe the model 
+.SS "float* Model::points"
+
+.PP
+the array of points in 3d 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

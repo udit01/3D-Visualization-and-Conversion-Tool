@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_projection" kind="class" language="C++" prot="public">
     <compoundname>Projection</compoundname>
+    <includes refid="model2d_8h" local="no">model2d.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_projection_1aa42ba5494690dbfa5f875472adc97789" prot="public" static="no" mutable="no">
         <type>float *</type>
@@ -9,12 +10,12 @@
         <argsstring></argsstring>
         <name>points</name>
         <briefdescription>
-        </briefdescription>
+<para>the array of points the specifies a 2d view </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="14" column="1" bodyfile="src/model2d.h" bodystart="14" bodyend="-1"/>
+        <location file="src/model2d.h" line="15" column="1" bodyfile="src/model2d.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -22,12 +23,12 @@
         <argsstring></argsstring>
         <name>npts</name>
         <briefdescription>
-        </briefdescription>
+<para>the number of points/vertices in the 2d view </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="15" column="1" bodyfile="src/model2d.h" bodystart="15" bodyend="-1"/>
+        <location file="src/model2d.h" line="17" column="1" bodyfile="src/model2d.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projection_1a7943c696e88d15825dee0641b269b5f7" prot="public" static="no" mutable="no">
         <type>bool **</type>
@@ -35,12 +36,12 @@
         <argsstring></argsstring>
         <name>edges</name>
         <briefdescription>
-        </briefdescription>
+<para>the double array of edges between any two points specified by a bool value </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="16" column="1" bodyfile="src/model2d.h" bodystart="16" bodyend="-1"/>
+        <location file="src/model2d.h" line="19" column="1" bodyfile="src/model2d.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,12 +63,12 @@
           <declname>edges</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="17" column="1" bodyfile="src/model2d.cpp" bodystart="10" bodyend="14"/>
+        <location file="src/model2d.h" line="21" column="1" bodyfile="src/model2d.cpp" bodystart="10" bodyend="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,7 +81,7 @@
         <link refid="class_projection"/>
       </node>
     </collaborationgraph>
-    <location file="src/model2d.h" line="12" column="1" bodyfile="src/model2d.h" bodystart="11" bodyend="19"/>
+    <location file="src/model2d.h" line="12" column="1" bodyfile="src/model2d.h" bodystart="11" bodyend="23"/>
     <listofallmembers>
       <member refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" prot="public" virt="non-virtual"><scope>Projection</scope><name>edges</name></member>
       <member refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" prot="public" virt="non-virtual"><scope>Projection</scope><name>npts</name></member>

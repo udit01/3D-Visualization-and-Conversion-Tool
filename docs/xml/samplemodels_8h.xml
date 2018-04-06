@@ -13,46 +13,106 @@
     <includedby refid="samplemodels_8cpp" local="yes">src/samplemodels.cpp</includedby>
     <includedby refid="window2d_8cpp" local="yes">src/window2d.cpp</includedby>
     <incdepgraph>
-      <node id="214">
+      <node id="249">
         <label>src/samplemodels.h</label>
         <link refid="samplemodels_8h"/>
-        <childnode refid="215" relation="include">
+        <childnode refid="250" relation="include">
         </childnode>
       </node>
-      <node id="217">
+      <node id="252">
         <label>string</label>
       </node>
-      <node id="216">
+      <node id="251">
         <label>vector</label>
       </node>
-      <node id="219">
+      <node id="254">
         <label>model2d.h</label>
-        <link refid="model2d_8h_source"/>
-        <childnode refid="216" relation="include">
+        <link refid="model2d_8h"/>
+        <childnode refid="251" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="252" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="215" relation="include">
+        <childnode refid="250" relation="include">
         </childnode>
       </node>
-      <node id="218">
+      <node id="253">
         <label>QGL</label>
       </node>
-      <node id="215">
+      <node id="250">
         <label>model.h</label>
-        <link refid="model_8h_source"/>
-        <childnode refid="216" relation="include">
+        <link refid="model_8h"/>
+        <childnode refid="251" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="252" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="219" relation="include">
+        <childnode refid="254" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="258">
+        <label>src/model.cpp</label>
+        <link refid="model_8cpp"/>
+      </node>
+      <node id="262">
+        <label>src/projectionz.cpp</label>
+        <link refid="projectionz_8cpp"/>
+      </node>
+      <node id="255">
+        <label>src/samplemodels.h</label>
+        <link refid="samplemodels_8h"/>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>src/projectionx.cpp</label>
+        <link refid="projectionx_8cpp"/>
+      </node>
+      <node id="261">
+        <label>src/projectiony.cpp</label>
+        <link refid="projectiony_8cpp"/>
+      </node>
+      <node id="256">
+        <label>src/glwidget.cpp</label>
+        <link refid="glwidget_8cpp"/>
+      </node>
+      <node id="263">
+        <label>src/samplemodels.cpp</label>
+        <link refid="samplemodels_8cpp"/>
+      </node>
+      <node id="259">
+        <label>src/model2d.cpp</label>
+        <link refid="model2d_8cpp"/>
+      </node>
+      <node id="257">
+        <label>src/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="264">
+        <label>src/window2d.cpp</label>
+        <link refid="window2d_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_sample_models" prot="public">SampleModels</innerclass>
     <briefdescription>
     </briefdescription>
@@ -71,25 +131,24 @@
 <codeline lineno="10"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="class_sample_models" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sample_models" kindref="compound">SampleModels</ref></highlight></codeline>
+<codeline lineno="16" refid="class_sample_models" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sample_models" kindref="compound">SampleModels</ref></highlight></codeline>
 <codeline lineno="17"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sample_models" kindref="compound">SampleModels</ref>();</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~SampleModels();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>TriangularPyramid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>SquarePyramid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>TriangularPrism(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Cuboid(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Empty();</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Axes(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Octahedron(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Cube(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SAMPLEMODELS_H</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sample_models_1ab4f2cabd4d134b925589e2e5e4f3b55b" kindref="member">SampleModels</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~SampleModels();</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1ac979fefcbc81571af56a2cf3c415497b" kindref="member">TriangularPyramid</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1a0a5afe183db2a5e7e59f825e6ac736e6" kindref="member">SquarePyramid</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1ad9be52995d798b78ad2c04c1b3c1f4e4" kindref="member">TriangularPrism</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1a5e39e1ad1bcaec4b4ce617332e996caf" kindref="member">Cuboid</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1a890001f4e859021afe59bd956245e2ad" kindref="member">Empty</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_sample_models_1a07f69bc5ff6c60078a642ba7e090bf6c" kindref="member">Axes</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>side);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Octahedron(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>static<sp/>Model<sp/>Cube(float<sp/>side);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SAMPLEMODELS_H</highlight></codeline>
     </programlisting>
     <location file="src/samplemodels.h"/>
   </compounddef>

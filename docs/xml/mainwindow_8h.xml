@@ -12,56 +12,98 @@
     <includedby refid="projectiony_8cpp" local="yes">src/projectiony.cpp</includedby>
     <includedby refid="projectionz_8cpp" local="yes">src/projectionz.cpp</includedby>
     <incdepgraph>
-      <node id="65">
+      <node id="70">
         <label>QSlider</label>
       </node>
-      <node id="68">
+      <node id="73">
         <label>string</label>
       </node>
-      <node id="64">
+      <node id="69">
         <label>QMainWindow</label>
       </node>
-      <node id="67">
+      <node id="72">
         <label>vector</label>
       </node>
-      <node id="70">
+      <node id="75">
         <label>model2d.h</label>
-        <link refid="model2d_8h_source"/>
-        <childnode refid="67" relation="include">
+        <link refid="model2d_8h"/>
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="69" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
-        <childnode refid="66" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="69">
+      <node id="74">
         <label>QGL</label>
       </node>
-      <node id="63">
-        <label>src/mainwindow.h</label>
-        <link refid="mainwindow_8h"/>
-        <childnode refid="64" relation="include">
+      <node id="71">
+        <label>model.h</label>
+        <link refid="model_8h"/>
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="65" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="66" relation="include">
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
         </childnode>
       </node>
-      <node id="66">
-        <label>model.h</label>
-        <link refid="model_8h_source"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
+      <node id="68">
+        <label>src/mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
         <childnode refid="69" relation="include">
         </childnode>
         <childnode refid="70" relation="include">
         </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="82">
+        <label>src/projectionz.cpp</label>
+        <link refid="projectionz_8cpp"/>
+      </node>
+      <node id="80">
+        <label>src/projectionx.cpp</label>
+        <link refid="projectionx_8cpp"/>
+      </node>
+      <node id="81">
+        <label>src/projectiony.cpp</label>
+        <link refid="projectiony_8cpp"/>
+      </node>
+      <node id="77">
+        <label>src/glwidget.cpp</label>
+        <link refid="glwidget_8cpp"/>
+      </node>
+      <node id="78">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="79">
+        <label>src/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="76">
+        <label>src/mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_main_window" prot="public">MainWindow</innerclass>
     <innernamespace refid="namespace_ui">Ui</innernamespace>
     <briefdescription>
@@ -74,7 +116,7 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QSlider&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_main_window" kindref="compound">MainWindow</ref>;</highlight></codeline>
@@ -85,20 +127,20 @@
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_main_window" kindref="compound">MainWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model" kindref="compound">Model</ref><sp/>*model;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wireframe;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_main_window" kindref="compound">MainWindow</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" kindref="member">MainWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="18" refid="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model" kindref="compound">Model</ref><sp/>*<ref refid="class_main_window_1a6ceb394c6a471fb60dce6bd3f7c78475" kindref="member">model</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_main_window_1aa63776c884a82936064be5aabe3da6e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aa63776c884a82936064be5aabe3da6e8" kindref="member">wireframe</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">~MainWindow</ref>();</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal">signals:</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>wireframeVal(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getModel(<ref refid="class_model" kindref="compound">Model</ref>*<sp/>m);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a482b2d965f153134f11f834fcd28fed5" kindref="member">wireframeVal</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a9bd4c07ced537631f1e93c8b5888e78d" kindref="member">getModel</ref>(<ref refid="class_model" kindref="compound">Model</ref>*<sp/>m);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" kindref="member">update</ref>();</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tr_x<sp/>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tr_y<sp/>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tr_z<sp/>;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dalpha;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dbeta;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dgamma;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>keyPressEvent(QKeyEvent<sp/>*event);</highlight></codeline>
+<codeline lineno="28" refid="class_main_window_1a48e1e4cfdaa4d52f32b46ece5e1e785b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a243e9877c34fca99ca8eb8233e602e80" kindref="member">tr_x</ref><sp/>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a93fc2a7aa546e29b1ec00c81d278d9c2" kindref="member">tr_y</ref><sp/>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a48e1e4cfdaa4d52f32b46ece5e1e785b" kindref="member">tr_z</ref><sp/>;</highlight></codeline>
+<codeline lineno="29" refid="class_main_window_1ac10de49b138c1c838d53e12da4c24d6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a8a40d17a32ac50fc54faf17a3ddc1b21" kindref="member">dalpha</ref>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a7a6b42f86582dd883162c70d4a4915c8" kindref="member">dbeta</ref>;<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ac10de49b138c1c838d53e12da4c24d6d" kindref="member">dgamma</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a9c4f542263838b9ecd06eae839a42a34" kindref="member">keyPressEvent</ref>(QKeyEvent<sp/>*event);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_pushButton_2_clicked();</highlight></codeline>

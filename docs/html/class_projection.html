@@ -70,35 +70,121 @@ $(function() {
 <div class="title">Projection Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="model2d_8h_source.html">model2d.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Projection:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_projection__coll__graph.png" border="0" usemap="#_projection_coll__map" alt="Collaboration graph"/></div>
-<map name="_projection_coll__map" id="_projection_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5308ac2fb97e9805c76e3cf767f08a0e"><td class="memItemLeft" align="right" valign="top"><a id="a5308ac2fb97e9805c76e3cf767f08a0e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Projection</b> (int numPoints, float *points, bool **edges)</td></tr>
+<tr class="memitem:a5308ac2fb97e9805c76e3cf767f08a0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projection.html#a5308ac2fb97e9805c76e3cf767f08a0e">Projection</a> (int numPoints, float *<a class="el" href="class_projection.html#aa42ba5494690dbfa5f875472adc97789">points</a>, bool **<a class="el" href="class_projection.html#a7943c696e88d15825dee0641b269b5f7">edges</a>)</td></tr>
+<tr class="memdesc:a5308ac2fb97e9805c76e3cf767f08a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments  <a href="#a5308ac2fb97e9805c76e3cf767f08a0e">More...</a><br /></td></tr>
 <tr class="separator:a5308ac2fb97e9805c76e3cf767f08a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa42ba5494690dbfa5f875472adc97789"><td class="memItemLeft" align="right" valign="top"><a id="aa42ba5494690dbfa5f875472adc97789"></a>
-float *&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
+<tr class="memitem:aa42ba5494690dbfa5f875472adc97789"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projection.html#aa42ba5494690dbfa5f875472adc97789">points</a></td></tr>
+<tr class="memdesc:aa42ba5494690dbfa5f875472adc97789"><td class="mdescLeft">&#160;</td><td class="mdescRight">the array of points the specifies a 2d view  <a href="#aa42ba5494690dbfa5f875472adc97789">More...</a><br /></td></tr>
 <tr class="separator:aa42ba5494690dbfa5f875472adc97789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6972ab0bc1cfa26a5480a940d66e3497"><td class="memItemLeft" align="right" valign="top"><a id="a6972ab0bc1cfa26a5480a940d66e3497"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>npts</b></td></tr>
+<tr class="memitem:a6972ab0bc1cfa26a5480a940d66e3497"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projection.html#a6972ab0bc1cfa26a5480a940d66e3497">npts</a></td></tr>
+<tr class="memdesc:a6972ab0bc1cfa26a5480a940d66e3497"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of points/vertices in the 2d view  <a href="#a6972ab0bc1cfa26a5480a940d66e3497">More...</a><br /></td></tr>
 <tr class="separator:a6972ab0bc1cfa26a5480a940d66e3497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7943c696e88d15825dee0641b269b5f7"><td class="memItemLeft" align="right" valign="top"><a id="a7943c696e88d15825dee0641b269b5f7"></a>
-bool **&#160;</td><td class="memItemRight" valign="bottom"><b>edges</b></td></tr>
+<tr class="memitem:a7943c696e88d15825dee0641b269b5f7"><td class="memItemLeft" align="right" valign="top">bool **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projection.html#a7943c696e88d15825dee0641b269b5f7">edges</a></td></tr>
+<tr class="memdesc:a7943c696e88d15825dee0641b269b5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the double array of edges between any two points specified by a bool value  <a href="#a7943c696e88d15825dee0641b269b5f7">More...</a><br /></td></tr>
 <tr class="separator:a7943c696e88d15825dee0641b269b5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5308ac2fb97e9805c76e3cf767f08a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5308ac2fb97e9805c76e3cf767f08a0e">&#9670;&nbsp;</a></span>Projection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Projection::Projection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool **&#160;</td>
+          <td class="paramname"><em>edges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor for the 2d projection tha takes number of points, a points array and the double array of edges as its arguments </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7943c696e88d15825dee0641b269b5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7943c696e88d15825dee0641b269b5f7">&#9670;&nbsp;</a></span>edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool** Projection::edges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the double array of edges between any two points specified by a bool value </p>
+
+</div>
+</div>
+<a id="a6972ab0bc1cfa26a5480a940d66e3497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6972ab0bc1cfa26a5480a940d66e3497">&#9670;&nbsp;</a></span>npts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Projection::npts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the number of points/vertices in the 2d view </p>
+
+</div>
+</div>
+<a id="aa42ba5494690dbfa5f875472adc97789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42ba5494690dbfa5f875472adc97789">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* Projection::points</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the array of points the specifies a 2d view </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="model2d_8h_source.html">model2d.h</a></li>
-<li>src/model2d.cpp</li>
+<li>src/<a class="el" href="model2d_8cpp.html">model2d.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

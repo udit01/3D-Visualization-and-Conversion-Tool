@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node2" href="$class_glwidget.html" title="Glwidget" alt="" coords="153,5,225,32"/>
-<area shape="rect" id="node3" href="$class_projection_x.html" title="ProjectionX" alt="" coords="145,56,232,83"/>
-<area shape="rect" id="node4" href="$class_projection_y.html" title="ProjectionY" alt="" coords="144,107,233,133"/>
-<area shape="rect" id="node5" href="$class_projection_z.html" title="ProjectionZ" alt="" coords="145,157,232,184"/>
+<area shape="rect" id="node3" href="$class_projection_x.html" title="defines the projectionX for the current design to be displayed using the model class ..." alt="" coords="145,56,232,83"/>
+<area shape="rect" id="node4" href="$class_projection_y.html" title="defines the projectionY for the current design to be displayed using the model class ..." alt="" coords="144,107,233,133"/>
+<area shape="rect" id="node5" href="$class_projection_z.html" title="defines the projectionZ for the current design to be displayed using the model class ..." alt="" coords="145,157,232,184"/>
 </map>

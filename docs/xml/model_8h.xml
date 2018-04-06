@@ -23,87 +23,203 @@
     <includedby refid="samplemodels_8cpp" local="yes">src/samplemodels.cpp</includedby>
     <includedby refid="window2d_8cpp" local="yes">src/window2d.cpp</includedby>
     <incdepgraph>
-      <node id="87">
+      <node id="98">
         <label>string</label>
       </node>
-      <node id="86">
+      <node id="97">
         <label>vector</label>
       </node>
-      <node id="89">
+      <node id="100">
         <label>model2d.h</label>
-        <link refid="model2d_8h_source"/>
-        <childnode refid="86" relation="include">
+        <link refid="model2d_8h"/>
+        <childnode refid="97" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="98" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="99" relation="include">
         </childnode>
-        <childnode refid="85" relation="include">
+        <childnode refid="96" relation="include">
         </childnode>
       </node>
-      <node id="88">
+      <node id="99">
         <label>QGL</label>
       </node>
-      <node id="85">
+      <node id="96">
         <label>src/model.h</label>
         <link refid="model_8h"/>
-        <childnode refid="86" relation="include">
+        <childnode refid="97" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="98" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="99" relation="include">
         </childnode>
-        <childnode refid="89" relation="include">
+        <childnode refid="100" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="97">
+      <node id="118">
         <label>src/projectionz.h</label>
-        <link refid="projectionz_8h_source"/>
-      </node>
-      <node id="94">
-        <label>src/samplemodels.h</label>
-        <link refid="samplemodels_8h_source"/>
-      </node>
-      <node id="96">
-        <label>src/projectiony.h</label>
-        <link refid="projectiony_8h_source"/>
-      </node>
-      <node id="95">
-        <label>src/projectionx.h</label>
-        <link refid="projectionx_8h_source"/>
-      </node>
-      <node id="92">
-        <label>src/model2d.h</label>
-        <link refid="model2d_8h_source"/>
-        <childnode refid="90" relation="include">
+        <link refid="projectionz_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
         </childnode>
       </node>
-      <node id="93">
-        <label>src/mainwindow.h</label>
-        <link refid="mainwindow_8h_source"/>
+      <node id="109">
+        <label>src/model.cpp</label>
+        <link refid="model_8cpp"/>
       </node>
-      <node id="91">
+      <node id="107">
+        <label>src/projectionz.cpp</label>
+        <link refid="projectionz_8cpp"/>
+      </node>
+      <node id="102">
         <label>src/glwidget.h</label>
-        <link refid="glwidget_8h_source"/>
+        <link refid="glwidget_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
       </node>
-      <node id="90">
+      <node id="113">
+        <label>src/samplemodels.h</label>
+        <link refid="samplemodels_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>src/projectionx.cpp</label>
+        <link refid="projectionx_8cpp"/>
+      </node>
+      <node id="117">
+        <label>src/projectiony.h</label>
+        <link refid="projectiony_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>src/projectiony.cpp</label>
+        <link refid="projectiony_8cpp"/>
+      </node>
+      <node id="103">
+        <label>src/glwidget.cpp</label>
+        <link refid="glwidget_8cpp"/>
+      </node>
+      <node id="114">
+        <label>src/samplemodels.cpp</label>
+        <link refid="samplemodels_8cpp"/>
+      </node>
+      <node id="116">
+        <label>src/projectionx.h</label>
+        <link refid="projectionx_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="110">
+        <label>src/model2d.cpp</label>
+        <link refid="model2d_8cpp"/>
+      </node>
+      <node id="108">
+        <label>src/model2d.h</label>
+        <link refid="model2d_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>src/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="115">
+        <label>src/window2d.cpp</label>
+        <link refid="window2d_8cpp"/>
+      </node>
+      <node id="101">
         <label>src/model.h</label>
         <link refid="model_8h"/>
-        <childnode refid="91" relation="include">
+        <childnode refid="102" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="108" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="111" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+        <childnode refid="103" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
+        <childnode refid="113" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
+        <childnode refid="104" relation="include">
         </childnode>
-        <childnode refid="97" relation="include">
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>src/mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -120,7 +236,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGL&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model2d_8h" kindref="compound">model2d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
 <codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>Another<sp/>model<sp/>could<sp/>be<sp/>to<sp/>include<sp/>the<sp/>points<sp/>and<sp/>lines<sp/>seperately,<sp/>also<sp/>in<sp/>faces<sp/>we<sp/>don&apos;t<sp/>need<sp/>the<sp/>edges,<sp/>we<sp/>minimally<sp/>need<sp/>points,</highlight></codeline>
@@ -159,49 +275,49 @@
 <codeline lineno="43"><highlight class="comment">};</highlight></codeline>
 <codeline lineno="44"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_model2d" kindref="compound">Model2d</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="class_face" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_face" kindref="compound">Face</ref></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*points;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npts;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_face" kindref="compound">Face</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pts,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npts);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~Face();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>store<sp/>what<sp/>?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="class_model" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_model" kindref="compound">Model</ref></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPoints;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Face*&gt;<sp/>faces;<sp/></highlight><highlight class="comment">//<sp/>is<sp/>the<sp/>pointer<sp/>a<sp/>good<sp/>idea<sp/>?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points;<sp/></highlight><highlight class="comment">//<sp/>array<sp/>of<sp/>points<sp/>in<sp/>3d,<sp/>all<sp/>points</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/>edges;<sp/></highlight><highlight class="comment">//<sp/>update<sp/>both<sp/>things<sp/>edges[i][j]<sp/>and<sp/>edges[j][i]<sp/>at<sp/>the<sp/>same<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model" kindref="compound">Model</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPoints,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>pts,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/>edges,<sp/>std::vector&lt;Face*&gt;<sp/>faces<sp/>);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~Model();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>translate(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dz);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rotate(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gamma);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>face<sp/>etc<sp/>functions<sp/>?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//projections<sp/>won&apos;t<sp/>be<sp/>needed<sp/>because<sp/>opengl<sp/>will<sp/>do<sp/>it<sp/>for<sp/>me.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*below<sp/>2<sp/>functions<sp/>are<sp/>for<sp/>generating<sp/>wireframes,<sp/>but<sp/>they<sp/>could<sp/>be<sp/>hard<sp/>to<sp/>make*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::vector&lt;Point*&gt;<sp/>getPointSet();<sp/>//<sp/>Construct<sp/>this<sp/>by<sp/>differnet<sp/>smaller<sp/>point<sp/>sets</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;bool&gt;&gt;<sp/>getEdgeSet();<sp/>//<sp/>We<sp/>will<sp/>have<sp/>to<sp/>construct<sp/>this<sp/>from<sp/>differnt<sp/>smaller<sp/>edge<sp/>sets</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//s<sp/>if<sp/>filename</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model2d" kindref="compound">Model2d</ref>*<sp/>convertTo2d();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(std::string<sp/>s);<sp/></highlight><highlight class="comment">//<sp/>Will<sp/>be<sp/>used<sp/>for<sp/>file<sp/>save/load<sp/>//<sp/>import/export<sp/>.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>deserialize(std::string<sp/>s);</highlight></codeline>
+<codeline lineno="47"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_model2d" kindref="compound">Model2d</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_face" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_face" kindref="compound">Face</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="class_face_1a402240ad45f918a772d83f3022f9589f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*<ref refid="class_face_1a402240ad45f918a772d83f3022f9589f" kindref="member">points</ref>;</highlight></codeline>
+<codeline lineno="56" refid="class_face_1ac35360914de7ce1903058a598b9fe7ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_face_1ac35360914de7ce1903058a598b9fe7ab" kindref="member">npts</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_face_1a890f52c15855e434e6c0f853bcf7f40d" kindref="member">Face</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pts,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_face_1ac35360914de7ce1903058a598b9fe7ab" kindref="member">npts</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~Face();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>store<sp/>what<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_model" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_model" kindref="compound">Model</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68" refid="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" kindref="member">numPoints</ref>;</highlight></codeline>
+<codeline lineno="70" refid="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Face*&gt;<sp/><ref refid="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" kindref="member">faces</ref>;<sp/></highlight><highlight class="comment">//<sp/>is<sp/>the<sp/>pointer<sp/>a<sp/>good<sp/>idea<sp/>?</highlight></codeline>
+<codeline lineno="72" refid="class_model_1a6436acbcf42bece5621666fe37c71309" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="class_model_1a6436acbcf42bece5621666fe37c71309" kindref="member">points</ref>;<sp/></highlight><highlight class="comment">//<sp/>array<sp/>of<sp/>points<sp/>in<sp/>3d,<sp/>all<sp/>points</highlight></codeline>
+<codeline lineno="74" refid="class_model_1a723a0c631c2ff688fed06c5652879ef7" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/><ref refid="class_model_1a723a0c631c2ff688fed06c5652879ef7" kindref="member">edges</ref>;<sp/></highlight><highlight class="comment">//<sp/>update<sp/>both<sp/>things<sp/>edges[i][j]<sp/>and<sp/>edges[j][i]<sp/>at<sp/>the<sp/>same<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model_1a39cf79e51da0f52f1031f98f1bebd118" kindref="member">Model</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_model_1a39ac6e91375d5ac5799a9845c3479d9c" kindref="member">numPoints</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>pts,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/><ref refid="class_model_1a723a0c631c2ff688fed06c5652879ef7" kindref="member">edges</ref>,<sp/>std::vector&lt;Face*&gt;<sp/><ref refid="class_model_1a7752ae8e1bbacc53ed94d7bd9c404b6d" kindref="member">faces</ref><sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>~Model();</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model_1a32e61c8487a2202e9f3f041a8abcb3c2" kindref="member">translate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dz);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model_1ae5999fb77646320aed8d81a669568caa" kindref="member">rotate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gamma);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MODEL_H</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>face<sp/>etc<sp/>functions<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//projections<sp/>won&apos;t<sp/>be<sp/>needed<sp/>because<sp/>opengl<sp/>will<sp/>do<sp/>it<sp/>for<sp/>me.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*below<sp/>2<sp/>functions<sp/>are<sp/>for<sp/>generating<sp/>wireframes,<sp/>but<sp/>they<sp/>could<sp/>be<sp/>hard<sp/>to<sp/>make*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::vector&lt;Point*&gt;<sp/>getPointSet();<sp/>//<sp/>Construct<sp/>this<sp/>by<sp/>differnet<sp/>smaller<sp/>point<sp/>sets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;bool&gt;&gt;<sp/>getEdgeSet();<sp/>//<sp/>We<sp/>will<sp/>have<sp/>to<sp/>construct<sp/>this<sp/>from<sp/>differnt<sp/>smaller<sp/>edge<sp/>sets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//s<sp/>if<sp/>filename</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model2d" kindref="compound">Model2d</ref>*<sp/><ref refid="class_model_1ac62fb1874a6597955c89fe3a9a1663e1" kindref="member">convertTo2d</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model_1abc71b3488f7f944f1c99727a491ee985" kindref="member">serialize</ref>(std::string<sp/>s);<sp/></highlight><highlight class="comment">//<sp/>Will<sp/>be<sp/>used<sp/>for<sp/>file<sp/>save/load<sp/>//<sp/>import/export<sp/>.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_model_1a98946d1c8d49b43f541dbd6b98b31e52" kindref="member">deserialize</ref>(std::string<sp/>s);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MODEL_H</highlight></codeline>
     </programlisting>
     <location file="src/model.h"/>
   </compounddef>

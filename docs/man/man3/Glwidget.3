@@ -1,0 +1,157 @@
+.TH "Glwidget" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Glwidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <glwidget\&.h>\fP
+.PP
+Inherits QGLWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetXRotation\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBsetYRotation\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBsetZRotation\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBsetScale\fP (int factor)"
+.br
+.ti -1c
+.RI "void \fBsetWireframe\fP (bool b)"
+.br
+.ti -1c
+.RI "void \fBupdate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetModel\fP (\fBModel\fP *m)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBxRotationChanged\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fByRotationChanged\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBzRotationChanged\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBscaleChanged\fP (int factor)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGlwidget\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~Glwidget\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP * \fBmodel\fP"
+.br
+.ti -1c
+.RI "bool \fBwireframe\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitializeGL\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaintGL\fP ()"
+.br
+.ti -1c
+.RI "void \fBresizeGL\fP (int width, int height)"
+.br
+.ti -1c
+.RI "void \fBdraw\fP ()"
+.br
+.ti -1c
+.RI "QSize \fBminimumSizeHint\fP () const"
+.br
+.ti -1c
+.RI "QSize \fBsizeHint\fP () const"
+.br
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QMouseEvent *event)"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QMouseEvent *event)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Glwidget::Glwidget (QWidget * parent = \fC0\fP)\fC [explicit]\fP"
+
+.SS "Glwidget::~Glwidget ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Glwidget::draw ()\fC [protected]\fP"
+
+.SS "void Glwidget::initializeGL ()\fC [protected]\fP"
+
+.SS "QSize Glwidget::minimumSizeHint () const\fC [protected]\fP"
+
+.SS "void Glwidget::mouseMoveEvent (QMouseEvent * event)\fC [protected]\fP"
+
+.SS "void Glwidget::mousePressEvent (QMouseEvent * event)\fC [protected]\fP"
+
+.SS "void Glwidget::paintGL ()\fC [protected]\fP"
+
+.SS "void Glwidget::resizeGL (int width, int height)\fC [protected]\fP"
+
+.SS "void Glwidget::scaleChanged (int factor)\fC [signal]\fP"
+
+.SS "void Glwidget::setModel (\fBModel\fP * m)\fC [slot]\fP"
+
+.SS "void Glwidget::setScale (int factor)\fC [slot]\fP"
+
+.SS "void Glwidget::setWireframe (bool b)\fC [slot]\fP"
+
+.SS "void Glwidget::setXRotation (int angle)\fC [slot]\fP"
+
+.SS "void Glwidget::setYRotation (int angle)\fC [slot]\fP"
+
+.SS "void Glwidget::setZRotation (int angle)\fC [slot]\fP"
+
+.SS "QSize Glwidget::sizeHint () const\fC [protected]\fP"
+
+.SS "void Glwidget::update ()\fC [slot]\fP"
+
+.SS "void Glwidget::xRotationChanged (int angle)\fC [signal]\fP"
+
+.SS "void Glwidget::yRotationChanged (int angle)\fC [signal]\fP"
+
+.SS "void Glwidget::zRotationChanged (int angle)\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBModel\fP* Glwidget::model"
+
+.SS "bool Glwidget::wireframe"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

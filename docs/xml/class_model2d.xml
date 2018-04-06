@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_model2d" kind="class" language="C++" prot="public">
     <compoundname>Model2d</compoundname>
+    <includes refid="model2d_8h" local="no">model2d.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" prot="public" static="no" mutable="no">
         <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
@@ -9,12 +10,12 @@
         <argsstring></argsstring>
         <name>xy</name>
         <briefdescription>
-        </briefdescription>
+<para>the xy projection of the 3d model that represents this object </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="24" column="1" bodyfile="src/model2d.h" bodystart="24" bodyend="-1"/>
+        <location file="src/model2d.h" line="30" column="1" bodyfile="src/model2d.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_model2d_1a4d012de876b8bb089bd226e41270df25" prot="public" static="no" mutable="no">
         <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
@@ -22,12 +23,12 @@
         <argsstring></argsstring>
         <name>yz</name>
         <briefdescription>
-        </briefdescription>
+<para>the yz projection of the 3d model that represents this object </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="25" column="1" bodyfile="src/model2d.h" bodystart="25" bodyend="-1"/>
+        <location file="src/model2d.h" line="32" column="1" bodyfile="src/model2d.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" prot="public" static="no" mutable="no">
         <type><ref refid="class_projection" kindref="compound">Projection</ref> *</type>
@@ -35,12 +36,12 @@
         <argsstring></argsstring>
         <name>zx</name>
         <briefdescription>
-        </briefdescription>
+<para>the zx projection of the 3d model that represents this object </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="26" column="1" bodyfile="src/model2d.h" bodystart="26" bodyend="-1"/>
+        <location file="src/model2d.h" line="34" column="1" bodyfile="src/model2d.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,12 +63,12 @@
           <declname>zx</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for the 2d model that takes the 3 projections as it arguments in the order xy,yz,zx respectively </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="28" column="1" bodyfile="src/model2d.cpp" bodystart="18" bodyend="23"/>
+        <location file="src/model2d.h" line="37" column="1" bodyfile="src/model2d.cpp" bodystart="18" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
@@ -75,12 +76,12 @@
         <argsstring>()</argsstring>
         <name>convertTo3d</name>
         <briefdescription>
-        </briefdescription>
+<para>generates the 3d model object from the current 2d model </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="32" column="1" bodyfile="src/model2d.cpp" bodystart="27" bodyend="115"/>
+        <location file="src/model2d.h" line="43" column="1" bodyfile="src/model2d.cpp" bodystart="27" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="class_model2d_1a9dbe9eafd94b347c3257ac90e743065c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -92,12 +93,12 @@
           <declname>s</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>used to generate the text that specifies the 2d model to be saved in a text file </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="33" column="1" bodyfile="src/model2d.cpp" bodystart="117" bodyend="153"/>
+        <location file="src/model2d.h" line="45" column="1" bodyfile="src/model2d.cpp" bodystart="117" bodyend="153"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -111,16 +112,16 @@
           <declname>s</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>used to generate the 2d model from the text code saved in a particular file </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/model2d.h" line="34" column="1" bodyfile="src/model2d.cpp" bodystart="156" bodyend="218"/>
+        <location file="src/model2d.h" line="47" column="1" bodyfile="src/model2d.cpp" bodystart="156" bodyend="218"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>creates the 2d model for a particular design by defining the necessary attributes </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
@@ -138,7 +139,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/model2d.h" line="22" column="1" bodyfile="src/model2d.h" bodystart="21" bodyend="36"/>
+    <location file="src/model2d.h" line="27" column="1" bodyfile="src/model2d.h" bodystart="26" bodyend="49"/>
     <listofallmembers>
       <member refid="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" prot="public" virt="non-virtual"><scope>Model2d</scope><name>convertTo3d</name></member>
       <member refid="class_model2d_1aa3c8399ef5cf86bb176b111c132f30b7" prot="public" virt="non-virtual"><scope>Model2d</scope><name>deserialize</name></member>

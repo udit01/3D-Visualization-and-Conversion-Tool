@@ -1,0 +1,132 @@
+.TH "ProjectionX" 3 "Fri Apr 6 2018" "CAD Software" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectionX \- defines the projectionX for the current design to be displayed using the model class  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectionx\&.h>\fP
+.PP
+Inherits QGLWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetScale\fP (int factor)"
+.br
+.RI "decide the numerical scale factor for viewing the object "
+.ti -1c
+.RI "void \fBsetWireframe\fP (bool b)"
+.br
+.RI "set the wrireframe property of the model "
+.ti -1c
+.RI "void \fBupdate\fP ()"
+.br
+.RI "the update function just updates the model view based on its currently set parameters/fields "
+.ti -1c
+.RI "void \fBsetModel\fP (\fBModel\fP *m)"
+.br
+.RI "sets the current model to the specified argument "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectionX\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~ProjectionX\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP * \fBmodel\fP"
+.br
+.RI "the 3d model that describes a xy projection view "
+.ti -1c
+.RI "bool \fBwireframe\fP"
+.br
+.RI "the wireframe is either enabled or disabled for the projection "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitializeGL\fP ()"
+.br
+.RI "sets up the OpenGL resources and state\&. Gets called once before the first time \fBresizeGL()\fP or \fBpaintGL()\fP is called "
+.ti -1c
+.RI "void \fBpaintGL\fP ()"
+.br
+.RI "renders the OpenGL scene\&. Gets called whenever the widget needs to be updated "
+.ti -1c
+.RI "void \fBresizeGL\fP (int width, int height)"
+.br
+.RI "sets up the OpenGL viewport, projection, etc\&. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically)\&. "
+.ti -1c
+.RI "QSize \fBsizeHint\fP () const"
+.br
+.RI "to provide a reasonable default size for the widget "
+.in -1c
+.SH "Detailed Description"
+.PP 
+defines the projectionX for the current design to be displayed using the model class 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectionX::ProjectionX (QWidget * parent = \fC0\fP)\fC [explicit]\fP"
+
+.SS "ProjectionX::~ProjectionX ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectionX::initializeGL ()\fC [protected]\fP"
+
+.PP
+sets up the OpenGL resources and state\&. Gets called once before the first time \fBresizeGL()\fP or \fBpaintGL()\fP is called 
+.SS "void ProjectionX::paintGL ()\fC [protected]\fP"
+
+.PP
+renders the OpenGL scene\&. Gets called whenever the widget needs to be updated 
+.SS "void ProjectionX::resizeGL (int width, int height)\fC [protected]\fP"
+
+.PP
+sets up the OpenGL viewport, projection, etc\&. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically)\&. 
+.SS "void ProjectionX::setModel (\fBModel\fP * m)\fC [slot]\fP"
+
+.PP
+sets the current model to the specified argument 
+.SS "void ProjectionX::setScale (int factor)\fC [slot]\fP"
+
+.PP
+decide the numerical scale factor for viewing the object 
+.SS "void ProjectionX::setWireframe (bool b)\fC [slot]\fP"
+
+.PP
+set the wrireframe property of the model 
+.SS "QSize ProjectionX::sizeHint () const\fC [protected]\fP"
+
+.PP
+to provide a reasonable default size for the widget 
+.SS "void ProjectionX::update ()\fC [slot]\fP"
+
+.PP
+the update function just updates the model view based on its currently set parameters/fields 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBModel\fP* ProjectionX::model"
+
+.PP
+the 3d model that describes a xy projection view 
+.SS "bool ProjectionX::wireframe"
+
+.PP
+the wireframe is either enabled or disabled for the projection 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CAD Software from the source code\&.

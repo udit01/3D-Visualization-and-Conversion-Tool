@@ -2,8 +2,16 @@
 \label{class_projection_z}\index{ProjectionZ@{ProjectionZ}}
 
 
-Inheritance diagram for ProjectionZ\+:
-\nopagebreak
+defines the projectionZ for the current design to be displayed using the model class  
+
+
+
+
+{\ttfamily \#include $<$projectionz.\+h$>$}
+
+
+
+Inheritance diagram for ProjectionZ\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +20,7 @@ Inheritance diagram for ProjectionZ\+:
 \end{figure}
 
 
-Collaboration diagram for ProjectionZ\+:
-\nopagebreak
+Collaboration diagram for ProjectionZ\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,51 +30,166 @@ Collaboration diagram for ProjectionZ\+:
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projection_z_a21e56fe128f64983203888507845847d}\label{class_projection_z_a21e56fe128f64983203888507845847d}} 
-void {\bfseries set\+Scale} (int factor)
-\item 
-\mbox{\Hypertarget{class_projection_z_a61a7115d258f9324b5f697983dd5ca3d}\label{class_projection_z_a61a7115d258f9324b5f697983dd5ca3d}} 
-void {\bfseries set\+Wireframe} (bool b)
-\item 
-\mbox{\Hypertarget{class_projection_z_abf7cbd3b5479c7805fbceecf3c68b0be}\label{class_projection_z_abf7cbd3b5479c7805fbceecf3c68b0be}} 
-void {\bfseries update} ()
-\item 
-\mbox{\Hypertarget{class_projection_z_af65afd9bf93b40bbf626cd2fba303b3f}\label{class_projection_z_af65afd9bf93b40bbf626cd2fba303b3f}} 
-void {\bfseries set\+Model} (\mbox{\hyperlink{class_model}{Model}} $\ast$m)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_projection_z_a21e56fe128f64983203888507845847d}{set\+Scale}} (int factor)
+\begin{DoxyCompactList}\small\item\em decide the numerical scale factor for viewing the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_z_a61a7115d258f9324b5f697983dd5ca3d}{set\+Wireframe}} (bool b)
+\begin{DoxyCompactList}\small\item\em set the wrireframe property of the model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_z_abf7cbd3b5479c7805fbceecf3c68b0be}{update}} ()
+\begin{DoxyCompactList}\small\item\em the update function just updates the model view based on its currently set parameters/fields \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_z_af65afd9bf93b40bbf626cd2fba303b3f}{set\+Model}} (\mbox{\hyperlink{class_model}{Model}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em sets the current model to the specified argument \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projection_z_ac812d46606329365a4e877b6cc58d86d}\label{class_projection_z_ac812d46606329365a4e877b6cc58d86d}} 
-{\bfseries ProjectionZ} (Q\+Widget $\ast$parent=0)
+\mbox{\hyperlink{class_projection_z_ac812d46606329365a4e877b6cc58d86d}{ProjectionZ}} (Q\+Widget $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_projection_z_a5d1f4701bf63635f88924761f26ce173}{$\sim$\+ProjectionZ}} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projection_z_a72def73a612bcd05243ae8acad447908}\label{class_projection_z_a72def73a612bcd05243ae8acad447908}} 
-\mbox{\hyperlink{class_model}{Model}} $\ast$ {\bfseries model}
-\item 
-\mbox{\Hypertarget{class_projection_z_a24466982ce2e792bb843426c35782222}\label{class_projection_z_a24466982ce2e792bb843426c35782222}} 
-bool {\bfseries wireframe}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_model}{Model}} $\ast$ \mbox{\hyperlink{class_projection_z_a72def73a612bcd05243ae8acad447908}{model}}
+\begin{DoxyCompactList}\small\item\em the 3d model that describes a xy projection view \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_projection_z_a24466982ce2e792bb843426c35782222}{wireframe}}
+\begin{DoxyCompactList}\small\item\em the wireframe is either enabled or disabled for the projection \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{class_projection_z_aa470131d521e6595d293e12f0fa3425f}{initialize\+GL}} ()
+\begin{DoxyCompactList}\small\item\em sets up the Open\+GL resources and state. Gets called once before the first time \mbox{\hyperlink{class_projection_z_a5f276e00f3680aa3ec663030e74df160}{resize\+G\+L()}} or \mbox{\hyperlink{class_projection_z_a192e7a4a75e41e9d2c411eb252c2d2d6}{paint\+G\+L()}} is called \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_z_a192e7a4a75e41e9d2c411eb252c2d2d6}{paint\+GL}} ()
+\begin{DoxyCompactList}\small\item\em renders the Open\+GL scene. Gets called whenever the widget needs to be updated \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_z_a5f276e00f3680aa3ec663030e74df160}{resize\+GL}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em sets up the Open\+GL viewport, projection, etc. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically). \end{DoxyCompactList}\item 
+Q\+Size \mbox{\hyperlink{class_projection_z_a5baf9e15d828cff9501fd94fa622b32b}{size\+Hint}} () const
+\begin{DoxyCompactList}\small\item\em to provide a reasonable default size for the widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+defines the projectionZ for the current design to be displayed using the model class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projection_z_ac812d46606329365a4e877b6cc58d86d}\label{class_projection_z_ac812d46606329365a4e877b6cc58d86d}} 
+\index{ProjectionZ@{ProjectionZ}!ProjectionZ@{ProjectionZ}}
+\index{ProjectionZ@{ProjectionZ}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{Projection\+Z()}{ProjectionZ()}}
+{\footnotesize\ttfamily Projection\+Z\+::\+ProjectionZ (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_projection_z_a5d1f4701bf63635f88924761f26ce173}\label{class_projection_z_a5d1f4701bf63635f88924761f26ce173}} 
+\index{ProjectionZ@{ProjectionZ}!````~ProjectionZ@{$\sim$\+ProjectionZ}}
+\index{````~ProjectionZ@{$\sim$\+ProjectionZ}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{$\sim$\+Projection\+Z()}{~ProjectionZ()}}
+{\footnotesize\ttfamily Projection\+Z\+::$\sim$\+ProjectionZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_projection_z_aa470131d521e6595d293e12f0fa3425f}\label{class_projection_z_aa470131d521e6595d293e12f0fa3425f}} 
-void {\bfseries initialize\+GL} ()
-\item 
+\index{ProjectionZ@{ProjectionZ}!initialize\+GL@{initialize\+GL}}
+\index{initialize\+GL@{initialize\+GL}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{initialize\+G\+L()}{initializeGL()}}
+{\footnotesize\ttfamily void Projection\+Z\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+sets up the Open\+GL resources and state. Gets called once before the first time \mbox{\hyperlink{class_projection_z_a5f276e00f3680aa3ec663030e74df160}{resize\+G\+L()}} or \mbox{\hyperlink{class_projection_z_a192e7a4a75e41e9d2c411eb252c2d2d6}{paint\+G\+L()}} is called 
+
 \mbox{\Hypertarget{class_projection_z_a192e7a4a75e41e9d2c411eb252c2d2d6}\label{class_projection_z_a192e7a4a75e41e9d2c411eb252c2d2d6}} 
-void {\bfseries paint\+GL} ()
-\item 
+\index{ProjectionZ@{ProjectionZ}!paint\+GL@{paint\+GL}}
+\index{paint\+GL@{paint\+GL}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{paint\+G\+L()}{paintGL()}}
+{\footnotesize\ttfamily void Projection\+Z\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+renders the Open\+GL scene. Gets called whenever the widget needs to be updated 
+
 \mbox{\Hypertarget{class_projection_z_a5f276e00f3680aa3ec663030e74df160}\label{class_projection_z_a5f276e00f3680aa3ec663030e74df160}} 
-void {\bfseries resize\+GL} (int width, int height)
-\item 
+\index{ProjectionZ@{ProjectionZ}!resize\+GL@{resize\+GL}}
+\index{resize\+GL@{resize\+GL}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{resize\+G\+L()}{resizeGL()}}
+{\footnotesize\ttfamily void Projection\+Z\+::resize\+GL (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+sets up the Open\+GL viewport, projection, etc. Gets called whenever the widget has been resized (and also when it is shown for the first time because all newly created widgets get a resize event automatically). 
+
+\mbox{\Hypertarget{class_projection_z_af65afd9bf93b40bbf626cd2fba303b3f}\label{class_projection_z_af65afd9bf93b40bbf626cd2fba303b3f}} 
+\index{ProjectionZ@{ProjectionZ}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{set\+Model}{setModel}}
+{\footnotesize\ttfamily void Projection\+Z\+::set\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}} $\ast$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+sets the current model to the specified argument 
+
+\mbox{\Hypertarget{class_projection_z_a21e56fe128f64983203888507845847d}\label{class_projection_z_a21e56fe128f64983203888507845847d}} 
+\index{ProjectionZ@{ProjectionZ}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{set\+Scale}{setScale}}
+{\footnotesize\ttfamily void Projection\+Z\+::set\+Scale (\begin{DoxyParamCaption}\item[{int}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+decide the numerical scale factor for viewing the object 
+
+\mbox{\Hypertarget{class_projection_z_a61a7115d258f9324b5f697983dd5ca3d}\label{class_projection_z_a61a7115d258f9324b5f697983dd5ca3d}} 
+\index{ProjectionZ@{ProjectionZ}!set\+Wireframe@{set\+Wireframe}}
+\index{set\+Wireframe@{set\+Wireframe}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{set\+Wireframe}{setWireframe}}
+{\footnotesize\ttfamily void Projection\+Z\+::set\+Wireframe (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set the wrireframe property of the model 
+
 \mbox{\Hypertarget{class_projection_z_a5baf9e15d828cff9501fd94fa622b32b}\label{class_projection_z_a5baf9e15d828cff9501fd94fa622b32b}} 
-Q\+Size {\bfseries size\+Hint} () const
-\end{DoxyCompactItemize}
+\index{ProjectionZ@{ProjectionZ}!size\+Hint@{size\+Hint}}
+\index{size\+Hint@{size\+Hint}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{size\+Hint()}{sizeHint()}}
+{\footnotesize\ttfamily Q\+Size Projection\+Z\+::size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+to provide a reasonable default size for the widget 
+
+\mbox{\Hypertarget{class_projection_z_abf7cbd3b5479c7805fbceecf3c68b0be}\label{class_projection_z_abf7cbd3b5479c7805fbceecf3c68b0be}} 
+\index{ProjectionZ@{ProjectionZ}!update@{update}}
+\index{update@{update}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily void Projection\+Z\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+the update function just updates the model view based on its currently set parameters/fields 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projection_z_a72def73a612bcd05243ae8acad447908}\label{class_projection_z_a72def73a612bcd05243ae8acad447908}} 
+\index{ProjectionZ@{ProjectionZ}!model@{model}}
+\index{model@{model}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}}$\ast$ Projection\+Z\+::model}
+
+
+
+the 3d model that describes a xy projection view 
+
+\mbox{\Hypertarget{class_projection_z_a24466982ce2e792bb843426c35782222}\label{class_projection_z_a24466982ce2e792bb843426c35782222}} 
+\index{ProjectionZ@{ProjectionZ}!wireframe@{wireframe}}
+\index{wireframe@{wireframe}!ProjectionZ@{ProjectionZ}}
+\subsubsection{\texorpdfstring{wireframe}{wireframe}}
+{\footnotesize\ttfamily bool Projection\+Z\+::wireframe}
+
+
+
+the wireframe is either enabled or disabled for the projection 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/projectionz.\+h\item 
-src/projectionz.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{projectionz_8h}{projectionz.\+h}}\item 
+src/\mbox{\hyperlink{projectionz_8cpp}{projectionz.\+cpp}}\end{DoxyCompactItemize}

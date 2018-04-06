@@ -11,72 +11,72 @@
     <includes refid="model_8h" local="yes">model.h</includes>
     <includes refid="samplemodels_8h" local="yes">samplemodels.h</includes>
     <incdepgraph>
-      <node id="107">
+      <node id="128">
         <label>samplemodels.h</label>
-        <link refid="samplemodels_8h_source"/>
-        <childnode refid="103" relation="include">
+        <link refid="samplemodels_8h"/>
+        <childnode refid="124" relation="include">
         </childnode>
       </node>
-      <node id="101">
+      <node id="122">
         <label>string</label>
       </node>
-      <node id="104">
+      <node id="125">
         <label>fstream</label>
       </node>
-      <node id="106">
+      <node id="127">
         <label>ios</label>
       </node>
-      <node id="100">
+      <node id="121">
         <label>vector</label>
       </node>
-      <node id="98">
+      <node id="119">
         <label>src/model2d.cpp</label>
         <link refid="model2d_8cpp"/>
-        <childnode refid="99" relation="include">
+        <childnode refid="120" relation="include">
         </childnode>
-        <childnode refid="104" relation="include">
+        <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="105" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
-        <childnode refid="106" relation="include">
+        <childnode refid="127" relation="include">
         </childnode>
-        <childnode refid="101" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
-        <childnode refid="100" relation="include">
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="103" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
-        <childnode refid="107" relation="include">
+        <childnode refid="128" relation="include">
         </childnode>
       </node>
-      <node id="99">
+      <node id="120">
         <label>model2d.h</label>
-        <link refid="model2d_8h_source"/>
-        <childnode refid="100" relation="include">
+        <link refid="model2d_8h"/>
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="101" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
-        <childnode refid="103" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
       </node>
-      <node id="105">
+      <node id="126">
         <label>iostream</label>
       </node>
-      <node id="102">
+      <node id="123">
         <label>QGL</label>
       </node>
-      <node id="103">
+      <node id="124">
         <label>model.h</label>
-        <link refid="model_8h_source"/>
-        <childnode refid="100" relation="include">
+        <link refid="model_8h"/>
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="101" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
+        <childnode refid="120" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -85,50 +85,50 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;model2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model2d_8h" kindref="compound">model2d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ios&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;samplemodels.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="samplemodels_8h" kindref="compound">samplemodels.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">Projection::Projection(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPoints,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/>edges){</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;npts<sp/>=<sp/>numPoints;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;points<sp/>=<sp/>points;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;edges<sp/>=<sp/>edges;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_projection_1a5308ac2fb97e9805c76e3cf767f08a0e" kindref="member">Projection::Projection</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPoints,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/>edges){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref><sp/>=<sp/>numPoints;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;points<sp/>=<sp/><ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;edges<sp/>=<sp/><ref refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kindref="member">edges</ref>;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//Projection::~Projection(){</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>delete<sp/><sp/>this;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">Model2d::Model2d(<ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>xy,<sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>yz,<sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>zx)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="class_model2d_1aa07204b20301739146f8ecf525778720" kindref="member">Model2d::Model2d</ref>(<ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>xy,<sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>yz,<sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>zx)</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;xy<sp/>=<sp/>xy;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;yz<sp/>=<sp/>yz;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;zx<sp/>=<sp/>zx;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;xy<sp/>=<sp/><ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;yz<sp/>=<sp/><ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;zx<sp/>=<sp/><ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//Model2d::~Model2d(){</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>delete<sp/>this;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><ref refid="class_model" kindref="compound">Model</ref>*<sp/>Model2d::convertTo3d(){<sp/></highlight><highlight class="comment">//<sp/>check<sp/>the<sp/>correctness<sp/>of<sp/>points<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="class_model" kindref="compound">Model</ref>*<sp/><ref refid="class_model2d_1ab39a4f4a2c6430cee2b226a9509ec38b" kindref="member">Model2d::convertTo3d</ref>(){<sp/></highlight><highlight class="comment">//<sp/>check<sp/>the<sp/>correctness<sp/>of<sp/>points<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>need<sp/>to<sp/>write<sp/>&apos;this&apos;<sp/>,<sp/>it&apos;s<sp/>implicit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tempNumPoints<sp/>=<sp/>xy-&gt;npts<sp/>*<sp/>yz-&gt;npts<sp/>*<sp/>zx-&gt;npts;<sp/></highlight><highlight class="comment">//<sp/>very<sp/>big<sp/>memory<sp/>allocations<sp/>?<sp/>but<sp/>it&apos;s<sp/><sp/>the<sp/>max<sp/>num<sp/>of<sp/>points<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tempNumPoints<sp/>=<sp/><ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref><sp/>*<sp/><ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref><sp/>*<sp/><ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/></highlight><highlight class="comment">//<sp/>very<sp/>big<sp/>memory<sp/>allocations<sp/>?<sp/>but<sp/>it&apos;s<sp/><sp/>the<sp/>max<sp/>num<sp/>of<sp/>points<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tempPoints<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[3*tempNumPoints];</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>backIndices<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[3*tempNumPoints];<sp/></highlight><highlight class="comment">//<sp/>back<sp/>pointers<sp/>to<sp/>extract<sp/>edges</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>realNumPoints<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>2*xy-&gt;npts;<sp/>i+=2){</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j<sp/>&lt;<sp/>2*yz-&gt;npts;<sp/>j+=2){</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((xy-&gt;points[i+1])==(yz-&gt;points[j])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>y&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=0;<sp/>k<sp/>&lt;<sp/>2*zx-&gt;npts;<sp/>k+=2){</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((yz-&gt;points[j+1])==(zx-&gt;points[k])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>z&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((zx-&gt;points[k+1])==(xy-&gt;points[i])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>x&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>2*<ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/>i+=2){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j<sp/>&lt;<sp/>2*<ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/>j+=2){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[i+1])==(<ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[j])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>y&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=0;<sp/>k<sp/>&lt;<sp/>2*<ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/>k+=2){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[j+1])==(<ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[k])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>z&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[k+1])==(<ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[i])){<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>x&apos;s<sp/>match</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//congratulations!<sp/>it&apos;s<sp/>a<sp/>valid<sp/>point!</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints<sp/><sp/>]<sp/>=<sp/>xy-&gt;points[i];</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints+1]<sp/>=<sp/>yz-&gt;points[j];</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints+2]<sp/>=<sp/>zx-&gt;points[k];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints<sp/><sp/>]<sp/>=<sp/><ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[i];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints+1]<sp/>=<sp/><ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[j];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempPoints[3*realNumPoints+2]<sp/>=<sp/><ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[k];</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>back<sp/>pointers<sp/>to<sp/>extract<sp/>edges</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backIndices[3*realNumPoints<sp/><sp/>]<sp/>=<sp/>i/2;</highlight></codeline>
@@ -172,7 +172,7 @@
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j1<sp/>=<sp/>bi[3*p+1];<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j2<sp/>=<sp/>bi[3*q+1];</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k1<sp/>=<sp/>bi[3*p+2];<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k2<sp/>=<sp/>bi[3*q+2];</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>true<sp/>only<sp/>if<sp/>in<sp/>each<sp/>of<sp/>the<sp/>projections,<sp/>it<sp/>has<sp/>atleast<sp/>and<sp/>edge<sp/>or<sp/>superposition<sp/>else<sp/>flase</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edges[q][p]<sp/>=<sp/>edges[p][q]<sp/>=<sp/><sp/>((i1==i2)||(xy-&gt;edges[i1][i2]))<sp/>&amp;&amp;<sp/>((j1==j2)||(yz-&gt;edges[j1][j2]))<sp/>&amp;&amp;<sp/>((k1==k2)||(zx-&gt;edges[k1][k2]))<sp/>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edges[q][p]<sp/>=<sp/>edges[p][q]<sp/>=<sp/><sp/>((i1==i2)||(<ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>-&gt;<ref refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kindref="member">edges</ref>[i1][i2]))<sp/>&amp;&amp;<sp/>((j1==j2)||(<ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>-&gt;<ref refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kindref="member">edges</ref>[j1][j2]))<sp/>&amp;&amp;<sp/>((k1==k2)||(<ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>-&gt;<ref refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kindref="member">edges</ref>[k1][k2]))<sp/>;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
@@ -201,7 +201,7 @@
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
 <codeline lineno="115"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Model2d::serialize(std::string<sp/>s){</highlight><highlight class="comment">//string<sp/>is<sp/>the<sp/>absolute?<sp/>filepath<sp/>where<sp/>file<sp/>is<sp/>to<sp/>be<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_model2d_1a9dbe9eafd94b347c3257ac90e743065c" kindref="member">Model2d::serialize</ref>(std::string<sp/>s){</highlight><highlight class="comment">//string<sp/>is<sp/>the<sp/>absolute?<sp/>filepath<sp/>where<sp/>file<sp/>is<sp/>to<sp/>be<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>if<sp/>file<sp/>has<sp/>the<sp/>extension<sp/>3d<sp/>or<sp/>not<sp/>?</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//out<sp/>file<sp/>is<sp/>a<sp/>new<sp/>file</highlight><highlight class="normal"></highlight></codeline>
@@ -213,24 +213,24 @@
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>newFile.setf(std::ios::showpoint);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reduction<sp/>thus<sp/>preventing<sp/>copy<sp/>paste<sp/>of<sp/>code</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>ps[3]<sp/>=<sp/>{this-&gt;xy,<sp/>this-&gt;yz,<sp/>this-&gt;zx};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_projection" kindref="compound">Projection</ref>*<sp/>ps[3]<sp/>=<sp/>{this-&gt;<ref refid="class_model2d_1ad335c0d9899b23996a3f11e61be1d431" kindref="member">xy</ref>,<sp/>this-&gt;<ref refid="class_model2d_1a4d012de876b8bb089bd226e41270df25" kindref="member">yz</ref>,<sp/>this-&gt;<ref refid="class_model2d_1a6c459c26e4c89bbc11ac0149ea07b997" kindref="member">zx</ref>};</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>std::string<sp/>strs[3]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;PROJECTION_X-Y:\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PROJECTION_Y-Z:\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PROJECTION_Z-X:\n&quot;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>3;<sp/>k++){</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>strs[k];</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;POINTS:\n&quot;</highlight><highlight class="normal"><sp/>;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;npts;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>2*ps[k]-&gt;npts;<sp/>i+=2){</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;points[i]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ps[k]-&gt;points[i+1]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>2*ps[k]-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/>i+=2){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[i]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1aa42ba5494690dbfa5f875472adc97789" kindref="member">points</ref>[i+1]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>;</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;EDGES:\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0<sp/>;<sp/>i<sp/>&lt;<sp/>ps[k]-&gt;npts;<sp/>i++){</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0<sp/>;<sp/>j<sp/>&lt;<sp/>ps[k]-&gt;npts<sp/>;<sp/>j++){</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;edges[i][j]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0<sp/>;<sp/>i<sp/>&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0<sp/>;<sp/>j<sp/>&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1a6972ab0bc1cfa26a5480a940d66e3497" kindref="member">npts</ref><sp/>;<sp/>j++){</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/>ps[k]-&gt;<ref refid="class_projection_1a7943c696e88d15825dee0641b269b5f7" kindref="member">edges</ref>[i][j]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -240,9 +240,9 @@
 <codeline lineno="153"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><ref refid="class_model2d" kindref="compound">Model2d</ref>*<sp/>Model2d::deserialize(std::string<sp/>s)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="class_model2d" kindref="compound">Model2d</ref>*<sp/><ref refid="class_model2d_1aa3c8399ef5cf86bb176b111c132f30b7" kindref="member">Model2d::deserialize</ref>(std::string<sp/>s)</highlight></codeline>
 <codeline lineno="157"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Deserializer<sp/>was<sp/>called:<sp/>args:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Deserializer<sp/>was<sp/>called:<sp/>args:<sp/>&quot;<sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//s<sp/>is<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_model2d" kindref="compound">Model2d</ref>*<sp/>m2;</highlight></codeline>
@@ -253,7 +253,7 @@
 <codeline lineno="166"><highlight class="normal"></highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cmp<sp/>=<sp/>s.compare(s.length()-3,3,ext);</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cmp!=0){</highlight><highlight class="comment">//<sp/>if<sp/>unequal</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(SampleModels::Empty())-&gt;convertTo2d();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_sample_models_1a890001f4e859021afe59bd956245e2ad" kindref="member">SampleModels::Empty</ref>())-&gt;convertTo2d();</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"></highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ifstream<sp/>inFile;</highlight></codeline>
@@ -289,14 +289,14 @@
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps[k]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_projection" kindref="compound">Projection</ref>(numPoints,<sp/>points,<sp/>edges);</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_model2d" kindref="compound">Model2d</ref>(ps[0],<sp/>ps[1],<sp/>ps[2]);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_model2d_1aa07204b20301739146f8ecf525778720" kindref="member">Model2d</ref>(ps[0],<sp/>ps[1],<sp/>ps[2]);</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inFile.close();</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"></highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(<sp/>std::exception<sp/>e){</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>nothing<sp/>but<sp/>return<sp/>below</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2<sp/>=<sp/>(SampleModels::Empty())-&gt;convertTo2d();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2<sp/>=<sp/>(<ref refid="class_sample_models_1a890001f4e859021afe59bd956245e2ad" kindref="member">SampleModels::Empty</ref>())-&gt;convertTo2d();</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"></highlight></codeline>
 <codeline lineno="215"><highlight class="normal"></highlight></codeline>
