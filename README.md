@@ -22,6 +22,7 @@ The package will have the following functionalities:
 ![Alt text](screenshots/Interface.png "Screenshot")
 
 ## Directory Structure
+```
                                        
 .                                       
 ├── docs                                       
@@ -45,6 +46,7 @@ The package will have the following functionalities:
 ├── src                                       
 └── templates                                            
                                       
+```
 ## Project Description  
 Main Classes and UI are in src/ folder [Documented in docs]                </br> 
 Math Classes are the conceptual classes. [Documented in the subfolder]     </br> 
